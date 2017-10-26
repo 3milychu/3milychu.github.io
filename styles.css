@@ -46,3 +46,12 @@
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
 }
+
+#projects{
+    position: fixed;
+    top: 2%;
+    float:right;
+    left: 85%;
+    z-index:8;
+
+}
