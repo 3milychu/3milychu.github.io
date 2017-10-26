@@ -9,7 +9,7 @@ function openNav (){
     }
 
 document.addEventListener('DOMContentLoaded', function(){
-	alert("Ready");
+	// alert("Ready");
 
 	var sideNav = document.getElementById("mySidenav");
 	sideNav.innerHTML += "<a href='index.html'>Home</a>";
