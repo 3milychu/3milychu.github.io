@@ -24,7 +24,7 @@
 	text-transform: uppercase;
 	letter-spacing: 2px;
     text-decoration: none;
-    font-size: 3em;
+    font-size: 1em;
     display: block;
     transition: 0.3s;
 
@@ -53,5 +53,6 @@
     float:right;
     left: 85%;
     z-index:8;
+    color:#c2b59b;
 
 }
