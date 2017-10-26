@@ -1,0 +1,48 @@
+/*sidenav*/
+
+.sidenav {
+    float:right;
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 6;
+    top: 0;
+   	left: 0;
+    background-color: #231f20;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 5%;
+    text-align:center;
+    overflow-y: hidden;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    color: #c2b59b;
+	font-family: 'Spectral', sans-serif;
+	font-weight: lighter;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+    text-decoration: none;
+    font-size: 3em;
+    display: block;
+    transition: 0.3s;
+
+}
+
+.sidenav a:hover{
+     color: #f1f1f1;
+ }
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 80%;
+   	right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
