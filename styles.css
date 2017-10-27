@@ -36,6 +36,8 @@ body .section {
     font-weight:200;
     font-size:2.5em;
     color:#231f20;
+    margin:0;
+    padding:5%;
 }
 
 .post {
