@@ -26,7 +26,9 @@
 
   };
     
-})(jQuery);
+});
+
+// (jQuery);
 
 var win = $(window);
 
