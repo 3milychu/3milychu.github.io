@@ -1,4 +1,4 @@
-@import "compass/css3"
+@import "compass/css3";
 
 h1, h2, h3, p, ul, ol, a, span {
     font-family: 'Assistant', sans-serif;
@@ -35,9 +35,9 @@ body {
 
 section {
   background: #eee;
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
   overflow: hidden;
 }
 
@@ -54,6 +54,12 @@ section {
     margin-right: 0;
   }
   box-shadow: 0 1px 3px rgba(black, 0.2);
+}
+
+body {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/blurry-blue.jpg);
+  background-size: cover;
+  padding: 30px;
 }
  
 .come-in {
