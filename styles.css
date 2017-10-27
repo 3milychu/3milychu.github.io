@@ -8,13 +8,7 @@ body {
     color: #c2b59b;
 }
 
-.section h1 {
-    text-align:center;
-    font-weight:200;
-    font-size:2.5em;
-}
-
-body .section-white .post {
+.section-white .post {
     position:relative;
     float:left;
     background-color:white;
@@ -31,6 +25,12 @@ body .section {
     width:100%;
 }
 
+.section h1 {
+    text-align:center;
+    font-weight:200;
+    font-size:2.5em;
+}
+
 .section-white h1 {
     text-align:center;
     font-weight:200;
@@ -40,7 +40,8 @@ body .section {
 
 .post {
     width:100%;
-    margin:5%;
+    margin:0%;
+    padding:5%;
 }
 
 .post-body {
