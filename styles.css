@@ -19,7 +19,9 @@ body .section-white {
     width:100%;
 }
 
-div.post {
+.section-white .post {
+    position:relative;
+    float:left;
     background-color:white;
     width:100%;
     height:auto;
