@@ -2,6 +2,16 @@ h1, h2, h3, p, ul, ol, a, span {
     font-family: 'Assistant', sans-serif;
 }
 
+body {
+    background-color: #024c52;
+    font-weight: lighter;
+    color: #c2b59b;
+}
+
+#featured {
+    width:100%;
+    height:auto;
+}
 
 /*sidenav*/
 
