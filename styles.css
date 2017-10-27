@@ -101,20 +101,13 @@ body {
     font-weight: bold;
     margin: 0;
 }
-.card-front.bg-violet {
-    background-color: #702082;
-}
-.card-front.bg-magenta {
-    background-color: #c110a0;
-}
-.card-front.bg-blue {
-    background-color: #00a0d2;
-}
-.card-front.bg-green {
-    background-color: #00c389;
+.card-front {
+    background-color:#c7b299;
+    border: 3px solid #c7b299;
 }
 .card-back {
-    background-color: #1e1e1e;
+    background-color: #024c52;
+    border: 3px solid #c7b299;
     -webkit-transform: rotateY(-180deg);
     transform: rotateY(-180deg);
 }
