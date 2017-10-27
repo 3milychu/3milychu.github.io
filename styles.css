@@ -102,12 +102,14 @@ body {
     margin: 0;
 }
 .card-front {
-    background-color:#c7b299;
-    border: 3px solid #c7b299;
+    background-color:#231f20;
+    border: 3px solid;
+    border-color: #c7b299;
 }
 .card-back {
     background-color: #024c52;
-    border: 3px solid #c7b299;
+    border: 3px solid;
+    border-color: #c7b299;
     -webkit-transform: rotateY(-180deg);
     transform: rotateY(-180deg);
 }
