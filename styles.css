@@ -100,8 +100,8 @@ body {
     margin: 10px 0;
 }
 .card-front p.detail {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 12px;
+    font-weight: lighter;
     margin: 0;
 }
 .card-front {
@@ -117,27 +117,15 @@ body {
     transform: rotateY(-180deg);
 }
 .card-back p.title {
-    color: #000;
+    color: white;
     margin-top: 0;
     text-transform: uppercase;
 }
 .card-back p.desc {
-    color: #63666a;
+    color: white;
 }
 .card-back p.link {
-    color: #702082;
-}
-.card-back.bg-violet {
-    background-color: #d8d7df;
-}
-.card-back.bg-magenta {
-    background-color: #ddd0cf;
-}
-.card-back.bg-blue {
-    background-color: #c8d7df;
-}
-.card-back.bg-green {
-    background-color: #d9e6dc;
+    color: #c7b299;
 }
 
 /*-------- cards / flip effect --------*/
