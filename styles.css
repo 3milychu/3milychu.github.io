@@ -25,7 +25,7 @@ body .section {
     position:relative;
     float:left;
     background-color:white;
-    width:100%;
+    width:90%;
     height:auto;
 }
 
@@ -55,6 +55,7 @@ body .section {
     float:left;
     position:relative;
     padding:0%;
+    margin-left:20%;
 }
 
 .post-media{
