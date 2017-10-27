@@ -76,8 +76,8 @@ body {
 }
 
 @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 5%;}
-    .sidenav a {font-size: 1em;}
+    .sidenav {padding-top: 25px;}
+    .sidenav a {font-size: 18px;}
 }
 
 #projects{
