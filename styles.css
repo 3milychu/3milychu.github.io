@@ -3,6 +3,7 @@ h1, h2, h3, p, ul, ol, a, span {
 }
 
 body {
+    background-color: #231f20;
     font-weight: 200;
     color: #c2b59b;
 }
@@ -27,7 +28,6 @@ body .section-white {
 }
 
 body .section {
-    background-color: #231f20;
     width:100%;
 }
 
