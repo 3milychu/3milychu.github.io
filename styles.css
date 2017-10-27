@@ -119,10 +119,12 @@ body {
 .card-back p.title {
     color: white;
     margin-top: 0;
-    text-transform: uppercase;
+    font-weight:normal;
 }
 .card-back p.desc {
-    color: white;
+    color:white;
+    font-size: 12px;
+    font-weight: lighter;
 }
 .card-back p.link {
     color: #c7b299;
