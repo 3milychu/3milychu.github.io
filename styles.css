@@ -3,7 +3,6 @@ h1, h2, h3, p, ul, ol, a, span {
 }
 
 body {
-    background-color: #231f20;
     font-weight: 200;
     color: #c2b59b;
 }
@@ -24,6 +23,11 @@ body .section-white .post {
 
 body .section-white {
     background-color:white;
+    width:100%;
+}
+
+body .section {
+    background-color: #231f20;
     width:100%;
 }
 
@@ -65,6 +69,7 @@ body .section-white {
 }
 
 #featured{
+    background-color: #231f20;
     margin:0;
     padding:0;
     width:100%;
