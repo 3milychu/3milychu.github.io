@@ -63,6 +63,7 @@ body .section {
     position:relative;
     padding:0%;
     width:50%;
+    left:5%;
     overflow:hidden;
 }
 
@@ -114,6 +115,7 @@ body .section {
 
 .container {
     margin: 50px;
+    margin-top:-10%;
 }
 
 /*-------- flex container --------*/
