@@ -2,10 +2,25 @@ h1, h2, h3, p, ul, ol, a, span {
     font-family: 'Assistant', sans-serif;
 }
 
+h1{
+    font-weight:200;
+    font-size:2em;
+}
+
 body {
     background-color: #231f20;
-    font-weight: lighter;
+    font-weight: 200;
     color: #c2b59b;
+}
+
+section.h1 {
+    text-align:center;
+}
+
+#featured{
+    margin:0;
+    padding:0;
+    width:100%;
 }
 
 #desktop {
@@ -96,12 +111,12 @@ body {
 }
 .card-front h4 {
     font-size: 18px;
-    font-weight: normal;
+    font-weight: 400;
     margin: 10px 0;
 }
 .card-front p.detail {
     font-size: 12px;
-    font-weight: lighter;
+    font-weight: 200;
     margin: 0;
 }
 .card-front {
@@ -185,7 +200,8 @@ body {
 }
 
 @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 35px;}
+    .sidenav {padding-top: 15px;}
+    .sidenav {padding-bottom:15px;}
     .sidenav a {font-size: 18px;}
 }
 
