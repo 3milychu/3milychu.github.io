@@ -1,3 +1,8 @@
+h1, h2, h3, p, ul, ol, a {
+    font-family: 'Assistant', sans-serif;
+}
+
+
 /*sidenav*/
 
 .sidenav {
@@ -19,7 +24,7 @@
 .sidenav a {
     padding: 8px 8px 8px 32px;
     color: #c2b59b;
-	font-family: 'Spectral', sans-serif;
+	font-family: 'Assistant', sans-serif;
 	font-weight: lighter;
 	text-transform: uppercase;
 	letter-spacing: 2px;
