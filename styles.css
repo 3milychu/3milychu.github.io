@@ -61,6 +61,7 @@ body .section {
     float:right;
     position:relative;
     padding:0%;
+    width:50%;
 }
 
 .post h2 {
