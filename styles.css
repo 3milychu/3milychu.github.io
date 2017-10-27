@@ -9,8 +9,13 @@ body {
 }
 
 #featured {
-    height:100%;
-    width:auto;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+
+#whoiam {
+    width:100%;
 }
 
 /*sidenav*/
