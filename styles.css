@@ -8,7 +8,7 @@ body {
     color: #c2b59b;
 }
 
-.section {
+body .section {
     background-color:white;
     width:100%;
 }
@@ -17,6 +17,7 @@ body {
     text-align:center;
     font-weight:200;
     font-size:2.5em;
+    color:#231f20;
 }
 
 .post {
@@ -28,7 +29,7 @@ body {
 .post-body {
     float:left;
     position:relative;
-    padding:10%;
+    padding:30%;
 }
 
 .post-media{
@@ -39,8 +40,15 @@ body {
 
 .post h2 {
     text-align:center;
-    font-size:1em;
+    font-size:0.8em;
     font-weight:200;
+    color:#231f20;
+}
+
+.post p{
+    font-size:0.5em;
+    font-weight:200;
+    color:#231f20;
 }
 
 #featured{
