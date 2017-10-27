@@ -8,12 +8,8 @@ body {
     color: #c2b59b;
 }
 
-.section-white .post {
-    position:relative;
-    float:left;
-    background-color:white;
-    width:100%;
-    height:auto;
+em {
+    font-style:italic;
 }
 
 body .section-white {
@@ -23,6 +19,14 @@ body .section-white {
 
 body .section {
     width:100%;
+}
+
+.section-white .post {
+    position:relative;
+    float:left;
+    background-color:white;
+    width:100%;
+    height:auto;
 }
 
 .section h1 {
@@ -157,7 +161,7 @@ body .section {
     -webkit-transition: -webkit-transform 0.3s;
     transition: transform 0.3s;
     justify-content: flex-end;
-    border: 3px solid;
+    border: 1px solid;
     border-color: #c7b299;
 }
 .card-front i.tile-icon {
@@ -177,7 +181,7 @@ body .section {
 }
 .card-front {
     background-color:#231f20;
-    border: 3px solid;
+    border: 2px solid;
     border-color: #c7b299;
 }
 .card-back {
