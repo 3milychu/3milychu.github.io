@@ -1,3 +1,5 @@
+@import "compass/css3";
+
 h1, h2, h3, p, ul, ol, a, span {
     font-family: 'Assistant', sans-serif;
 }
@@ -6,12 +8,6 @@ body {
     background-color: #231f20;
     font-weight: lighter;
     color: #c2b59b;
-}
-
-#featured {
-    width:100%;
-    margin:0;
-    padding:0;
 }
 
 #desktop {
@@ -29,6 +25,57 @@ body {
 @media screen and (max-height: 450px) {
     #desktop {display: none;}
     #mobile {display:inline;}
+}
+
+/*sections*/
+
+* {
+  @include box-sizing(border-box); 
+}
+
+section {
+  background: #eee;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.module {
+  width: 48%;
+  min-height: 200px;
+  background: white;
+  position: relative;
+  float: left;
+  padding: 20px;
+  margin-right: 4%;
+  margin-bottom: 4%;
+  &:nth-child(even) {
+    margin-right: 0;
+  }
+  box-shadow: 0 1px 3px rgba(black, 0.2);
+}
+
+body {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/blurry-blue.jpg);
+  background-size: cover;
+  padding: 30px;
+}
+ 
+.come-in {
+  transform: translateY(150px);
+  animation: come-in 0.8s ease forwards;
+}
+.come-in:nth-child(odd) {
+  animation-duration: 0.6s;
+}
+.already-visible {
+  transform: translateY(0);
+  animation: none;
+}
+
+@keyframes come-in {
+  to { transform: translateY(0); }
 }
 
 /*sidenav*/
@@ -76,7 +123,7 @@ body {
 }
 
 @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 25px;}
+    .sidenav {padding-top: 35px;}
     .sidenav a {font-size: 18px;}
 }
 
