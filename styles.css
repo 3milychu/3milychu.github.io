@@ -26,6 +26,7 @@ body {
 }
 
 /*flexbox*/
+
 .container {
     margin: 50px;
 }
@@ -85,6 +86,8 @@ body {
     -webkit-transition: -webkit-transform 0.3s;
     transition: transform 0.3s;
     justify-content: flex-end;
+    border: 3px solid;
+    border-color: #c7b299;
 }
 .card-front i.tile-icon {
     display: block;
@@ -107,7 +110,7 @@ body {
     border-color: #c7b299;
 }
 .card-back {
-    background-color: #024c52;
+    background-color: #095352;
     border: 3px solid;
     border-color: #c7b299;
     -webkit-transform: rotateY(-180deg);
