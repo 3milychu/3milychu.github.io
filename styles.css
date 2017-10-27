@@ -3,7 +3,7 @@ h1, h2, h3, p, ul, ol, a, span {
 }
 
 body {
-    background-color: #024c52;
+    background-color: white;
     font-weight: lighter;
     color: #c2b59b;
 }
@@ -14,8 +14,21 @@ body {
     padding:0;
 }
 
-#whoiam {
+#desktop {
     width:100%;
+    display:inline;
+    margin:0;
+    padding:0;
+}
+
+#mobile {
+    width:100%;
+    display:none;
+}
+
+@media screen and (max-height: 450px) {
+    #desktop {display: none;}
+    #mobile {display:inline;}
 }
 
 /*sidenav*/
@@ -63,8 +76,8 @@ body {
 }
 
 @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+    .sidenav {padding-top: 5%;}
+    .sidenav a {font-size: 1em;}
 }
 
 #projects{
