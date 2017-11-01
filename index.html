@@ -6,24 +6,42 @@
 		<link rel="stylesheet" type="text/css" href="styles.css">
 		<link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-		<script src="js/jquery.easing.1.3.js"></script>
-		<script src="js/jquery.js"></script>
-		<script src="js/d3.min.js"></script>
-		<script src="js/main.js"></script>
 	</head>
 
 	<body>
 		
 		<!-- responsive menu -->
-		<div id="mySidenav" class="sidenav"><span style="cursor:pointer">
-    	<a class="closebtn"onmouseover="closeNav()">&times;</a></span>
-		</div>
-		<span style ="font-size:20px;cursor:pointer" onmouseover="openNav()" id="projects">&#9776; 3milychu
+		<div id="mySidenav" class="sidenav">
+
+			<!-- navigation -->
+			<a href="index.html#featured">/#</a>
+			<a href="index.html#featuredWorks">/featuredWorks</a>
+			<a href="index.html#dataArt">/dataArt</a>
+			<a href="index.html#ai">/AI</a>
+			<a href="index.html#gis">/GIS</a>
+			<a href="index.html#animation">/Animation</a>
+			<a href="index.html#interactionDesign">/interactionDesign</a>
+
+			<!-- about me -->
+			<img id="profilepic" src="assets/3milychu.png">
+			<p>Hi! I'm Emily. You can also call me 3milychu, a name snowball-created by my gmail account c.8/2005. I am a designer, data visualizer, animator and programmer - in that order. I am best when working for healthcare, conflict management and R&amp;D-related projects. My top 5 CliftonStrengths are: Ideation, Learner, Connectedness, Self-Assurance and Strategic thinking. My Fascination Advantage comes from being a Catalyst (Passion + Innovation) with Trust as a Dormant Advantage.
+			<br>
+			<br>
+			<span style class="about">
+			<a class="about" target="_blank" href="https://github.com/3milychu">Github</a>
+			<a class="about" target="_blank" href="https://www.linkedin.com/in/3milychu">LinkedIn</a>
+			</p>
+			</span>
+
+			<span style="cursor:pointer">
+	    	<a class="closebtn"onmouseover="closeNav()">&times;</a></span>
+	    	<span style ="font-size:20px;cursor:pointer" onmouseover="openNav()" id="projects">&#9776; 3milychu
 		</span>
+		</div>
 
 		<!-- Cover Video -->
 		<div id = "featured">
-			<video src="assets/summary.mp4" autoplay id="desktop" poster="assets/summary.jpg">
+			<video src="assets/summarybanner.mp4" autoplay id="desktop">
 					  Oh no! Your browser won't let you play the video. Maybe try another browser?
 			</video>
 		</div>
@@ -71,12 +89,12 @@
 	                    <a href="#">
 	                        <div class="card-front">
 	                            <i class="fa fa-heart fa-3x tile-icon icon-white"></i>
-	                            <h4>MS Data Visualization</h4>
+	                            <h4>MS Data Visualization Student</h4>
 	                            <p class="detail">Parsons School of Design<br>New York, NY</p>
 	                        </div>
 	                        <div class="card-back">
 	                            <p class="title">Projects</p>
-	                            <p class="desc">Interactive Data, Web Apps, GIS Mapping, AI</p>
+	                            <p class="desc">Interactive Data, Web Apps, GIS Mapping, AI, R, RStudio</p>
 	                            <p class="link">Languages and Libraries<i class="fa fa-chevron-circle-right"></i>
 	                            <ul>
 	                            	<li>HTML/CSS/Javscript, Processing, d3</li>
@@ -143,10 +161,10 @@
 
 		<!-- Section:Featured Works -->
 		<div class = "section-white">
-			<h1>Featured Works</h1>
+			<h1 id="featuredWorks">Featured Works</h1>
 
 				<!-- Time Blocks -->
-				<div class ="post">
+				<div class ="post" id="dataArt">
 					<div class ="post-body">
 						<h2><em>Playing with Hours of Music Played</em><br>Northside Festival</h2>
 							<p>
@@ -154,12 +172,8 @@
 							Instructor: Christian Swinehart <br><br>
 
 							This web app explores time and its behaviors as physical symbols.
-							Data regarding venues, artists and shows listed for Brooklyn's 2017
-							Northside Festival was scraped by the instructor. I connected the
-							respective JSON files, parsed by shows per venue, created arrays to store
-							duration of all shows played per venue, and visualized the result as a
-							simple rectangle shape which, upon hover, returns the
-							number of hours played at each venue in number of 360 degree counter-clockwise spins.<br>
+							Using RStudio, I looked for interesting patterns in the data. Data regarding venues, artists and shows listed for Brooklyn's 2017 were scraped into respective JSON files, parsed by shows per venue, and created arrays to store
+							duration of all shows played per venue. The visualized result returns a simple rectangle shape which, upon hover, returns the number of hours played at each venue in number of 360 degree counter-clockwise spins.<br>
 							</p>
 					</div>
 						<div class ="post-media">
@@ -168,26 +182,26 @@
 				</div>
 
 				<!-- ROAM AI Jam -->
-				<div class ="post">
+				<div class ="post" id="ai">
 					<div class ="post-body">
 						<h2><em>R O A M Concept</em><br>Parsons/Verizon A.I. Jam 2017</h2>
 							<p>
 							Videography: Rik Ghosh<br>
-							Animations and Motion Graphics: Emily Chu
+							Voiceover, Motion Graphics: Emily Chu<br>
+							Actors: Quixote Vassilakis, Salman Patwary, Emily Chu
 							<br>
 							<br>
-							ROAM is an artificial intelligence ring-operated adventure maker.
-							This video was built in 36 hours to demonstrate use cases for ROAM. Our  ideation celebrated AI's capabilities to act as extensions of natural human capabilities. To support human beings' natural spontaneity, UHDV affirmed precedents in ring-operated AI technologies that augment intuition and discoverability. 
+							ROAM is an artificial intelligence ring-operated adventure maker. This video was built in 36 hours to demonstrate use cases for ROAM. Our  ideation celebrated AI's capabilities to act as extensions of natural human capabilities. To support human beings' natural spontaneity, UHDV affirmed precedents in ring-operated AI technologies that augment intuition and discoverability. 
 							</p>
 					</div>
 						<div class ="post-media">
-							<iframe id="roam" width="560" height="315" src="https://www.youtube.com/embed/CX0AdOXKaM4" frameborder="0" allowfullscreen></iframe>
+							<iframe id="roam" width="560" height="315" src="https://www.youtube.com/embed/CX0AdOXKaM4?rel=0" frameborder="0" allowfullscreen></iframe>
 						</div>
 				</div>
 
 				<!-- Earthquakes Web App -->
 
-				<div class ="post">
+				<div class ="post" id="gis">
 					<div class ="post-body">
 						<h2><em>Recent Earthquakes Investigator</em>
 						<br>USGS Earthquake Hazards Program</h2>
@@ -196,7 +210,7 @@
 							</p>
 					</div>
 						<div class ="post-media">
-							<iframe id="USGS" width="560" height="315" src="https://www.youtube.com/embed/v-oHuSf_uIs" frameborder="0" gesture="media" allowfullscreen></iframe>
+							<iframe id="USGS" width="560" height="315" src="https://www.youtube.com/embed/v-oHuSf_uIs?rel=0" frameborder="0" gesture="media" allowfullscreen></iframe>
 						</div>
 				</div>
 
@@ -219,23 +233,46 @@
 				</div>
 
 				<!-- Day in the Life of Content -->
-				<div class ="post">
+				<div class ="post" id="animation">
 					<div class ="post-body">
 						<h2><em>Day in the Life of Content</em><br>
 						ADURO, Inc.</h2>
 							<p>
 							Writer: Ali Valdez<br>
-							Illustrator, Animator, Producer: Emily Chu
+							Illustrator, Voiceover, Animator, Producer: Emily Chu
 							<br><br>
 							As Visual Data Producer at ADURO, one of my main charges is to work with stakeholders such as Product and Marketing to design for compelling content for a new mobile app. I moved to the Content team after 3 years in Marketing. As part of a small nascent team, this video was created to introduce our team players, our responsibilities, roadmap and KPIs to spearheard department growth.
 							</p>
 					</div>
 						<div class ="post-media">
-							<iframe id="ditl" width="560" height="315" src="https://www.youtube.com/embed/u8UETBnia3U" frameborder="0" allowfullscreen></iframe>
+							<iframe id="ditl" width="560" height="315" src="https://www.youtube.com/embed/u8UETBnia3U?rel=0" frameborder="0" allowfullscreen></iframe>
+						</div>
+				</div>
+
+				<!-- Visual Tone HP Suites -->
+				<div class ="post" id="interactionDesign">
+					<div class ="post-body">
+						<h2><em>Health Path by Visual Tone Mockups</em><br>
+						ADURO, Inc.</h2>
+							<p>
+							UX Designer: Thomas Phan<br>
+							Content Producer, Motion Designer: Emily Chu
+							<br><br>
+							As Content diversifies scope and reach of paths (educational modules) in our mobile health learning app, spanning lifestyle management to chronic conditions and behavioral health, UX and Content must continually work together to visually match the tone of each type of path.
+							<br><br>
+							<em>Note: </em>Resolution is limited to protect privacy and IP of  current app under development.
+							</p>
+					</div>
+						<div class ="post-media">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/KacRnSRWX4Y?rel=0" frameborder="0" allowfullscreen></iframe>
 						</div>
 				</div>
 
 		</div>
+
+		<script src="js/jquery.js"></script>
+		<script src="js/d3.min.js"></script>
+		<script src="js/main.js"></script>
 
 	</body>
 

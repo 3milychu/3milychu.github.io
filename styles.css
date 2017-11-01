@@ -73,6 +73,7 @@ ul {
     position:relative;
     padding:0%;
     width:60%;
+    top:5%;
     left:5%;
     overflow:hidden;
 }
@@ -92,16 +93,16 @@ ul {
 
 #featured{
     background-color: #231f20;
-    margin:0;
+    margin:auto;
     padding:0;
     width:100%;
 }
 
 #desktop {
     width:100%;
-    display:inline;
-    margin:0;
+    display:block;
     padding:0;
+    margin: auto;
 }
 
 #mobile {
@@ -125,7 +126,7 @@ ul {
 
 .container {
     margin: 50px;
-    margin-top:-10%;
+    margin-top:1%;
 }
 
 /*-------- flex container --------*/
@@ -164,7 +165,7 @@ ul {
     width: 100%;
 }
 .flex-item-inner a {
-    color: #fff;
+    color: #998976;
     cursor: pointer;
 }
 
@@ -192,6 +193,7 @@ ul {
     text-align: center;
 }
 .card-front h4 {
+    color:white;
     font-size: 18px;
     font-weight: 400;
     margin: 10px 0;
@@ -214,7 +216,7 @@ ul {
     transform: rotateY(-180deg);
 }
 .card-back p.title {
-    color: white;
+    color: #998976;
     margin-top: 0;
     font-weight:normal;
 }
@@ -224,7 +226,7 @@ ul {
     font-weight: lighter;
 }
 .card-back p.link {
-    color: #c7b299;
+    color:#998976;
 }
 
 /*-------- cards / flip effect --------*/
@@ -241,7 +243,7 @@ ul {
 
 .sidenav {
     float:right;
-    height: 0%;
+    height: 10%;
     width: 100%;
     position: fixed;
     z-index: 6;
@@ -250,35 +252,45 @@ ul {
     background-color: #231f20;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 5%;
+/*    padding-top: 5%;*/
     text-align:center;
     overflow-y: hidden;
 }
 
 .sidenav a {
     padding: 8px 8px 8px 32px;
-    color: #c2b59b;
+    color: white;
 	font-family: 'Assistant', sans-serif;
 	font-weight: lighter;
-	text-transform: uppercase;
-	letter-spacing: 2px;
+/*	text-transform: uppercase;*/
+/*	letter-spacing: 2px;*/
     text-decoration: none;
-    font-size: 1em;
+    font-size: 12px;
     display: block;
     transition: 0.3s;
-
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    left:20px;
 }
 
 .sidenav a:hover{
-     color: #f1f1f1;
+     color: #c7b299;
  }
+
+.sidenav a:active{
+    color: #c7b299;
+}
+
 
 .sidenav .closebtn {
     position: absolute;
     top: 80%;
    	right: 25px;
     font-size: 36px;
-    margin-left: 50px;
+    margin-left: 80%;
 }
 
 @media screen and (max-height: 450px) {
@@ -295,6 +307,27 @@ ul {
     z-index:8;
     color:#c2b59b;
     font-family: 'Assistant', sans-serif;
+}
 
+#profilepic {
+    padding:5% 20% 1% 20%;
+    width:10%;
+    margin:auto;
+}
+
+.sidenav p {
+    position:relative;
+    width:30%;
+    margin:auto;
+
+}
+
+.about a{
+    display:block !important;
+    margin:auto;
+    float:none;
+    padding:0;
+    font-size:0.8em;
+    line-height:1.5em;
 
 }
