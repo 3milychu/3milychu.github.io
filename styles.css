@@ -59,6 +59,11 @@ u {
     margin:0;
 }
 
+iframe {
+        width:100%;
+    }
+
+
 @media screen and (max-width: 414px) {
     .post-body {
         width:100%!important;
@@ -70,9 +75,6 @@ u {
         display:block;
         margin:auto;
         padding:5% 0% 0% 0%;
-    }
-    iframe {
-        width:50%;
     }
 }
 
