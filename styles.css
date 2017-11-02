@@ -316,7 +316,10 @@ summary {
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav {padding-bottom:15px;}
-    .sidenav a {font-size: 18px;}
+    .sidenav a {font-size: 0.5em;}
+    #projects {
+        font-size:0.5em;
+    }
 }
 
 @media screen and (min-height: 2560px) {
