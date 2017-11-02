@@ -367,6 +367,14 @@ summary {
         #menu8 {
             display:none;
         }
+        iframe {
+            width:80%;
+            height:80%;
+        }
+        .postImage {
+            width:80%;
+            height:auto;
+    }
 
     /*small phones*/
 
