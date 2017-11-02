@@ -30,6 +30,11 @@ ul {
     padding-left:0;
 }
 
+u {    
+    border-bottom: 1px dotted #095352;
+    text-decoration: none;
+}
+
 .section-white .post {
     position:relative;
     float:left;
