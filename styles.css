@@ -66,12 +66,13 @@ u {
         margin:auto;
     }
     .post-media {
-        width:300px!important;
-        height:auto!important;
         float:left!important;
         display:block;
         margin:auto;
         padding:5% 0% 0% 0%;
+    }
+    iframe {
+        width:50%;
     }
 }
 
