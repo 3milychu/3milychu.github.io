@@ -354,6 +354,7 @@ summary {
         }
         #profilepic {
             padding-top:10%;
+            width:30%;
         }
      }
 
@@ -401,6 +402,7 @@ summary {
         .sidenav a {font-size: 1em;}
         #projects {
             font-size:1em;
+            left:60%;
         }
         .post-body {
             width:100%!important;
