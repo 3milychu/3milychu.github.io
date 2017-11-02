@@ -149,7 +149,7 @@ summary {
 
 @media screen and (max-width: 415px) {
     #desktop {
-        top:5%;
+        top:10%;
     }
 }
 
@@ -368,6 +368,7 @@ summary {
     }
     #projects {
         font-size:0.5em;
+        left:50%!important;
     }
     .post-media{
         width:315px;
