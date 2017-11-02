@@ -61,14 +61,17 @@ u {
 
 @media screen and (max-height: 731px) {
     .post-body {
-        width:100%;
+        width:100%!important;
         display:block;
         margin:auto;
     }
     .post-media {
-        width:100%;
+        width:300px!important;
+        height:auto!important;
+        float:left!important;
         display:block;
         margin:auto;
+        padding:0;
     }
 }
 
@@ -93,7 +96,6 @@ u {
     width:60%;
     top:5%;
     left:5%;
-    overflow:hidden;
 }
 
 .post h2 {
