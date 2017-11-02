@@ -337,6 +337,33 @@ summary {
     }
 }
 
+@media screen and (max-width:400px) {
+    #menu3 {
+        display:none;
+    }
+    #menu4 {
+        display:none;
+    }
+    #menu5 {
+        display:none;
+    }
+    #menu6 {
+        display:none;
+    }
+    #menu7 {
+        display:none;
+    }
+    #menu8 {
+        display:none;
+    }
+    #projects {
+        font-size:0.5em;
+    }
+    .post-media{
+        width:315px;
+    }
+}
+
 #projects{
     position: fixed;
     top: 3px;
