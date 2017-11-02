@@ -59,32 +59,6 @@ u {
     margin:0;
 }
 
-@media screen and (max-width: 414px) {
-    .post-body {
-        width:100%!important;
-        display:block;
-        margin:auto;
-    }
-    .post-media {
-        float:left!important;
-        display:block;
-        margin:auto;
-        padding:5% 0% 0% 0%;
-    }
-    iframe {
-        width:230px;
-        height:107px;
-    }
-}
-
-@media screen and (min-width: 415px) and (max-width: 768px){
-    iframe {
-        width:510px;
-        height:265px;
-    }
-}
-
-
 .post {
     width:100%;
     margin:0%;
@@ -145,12 +119,6 @@ summary {
 #mobile {
     width:100%;
     display:none;
-}
-
-@media screen and (max-width: 415px) {
-    #featured {
-        top:10%;
-    }
 }
 
 /*Specific Post Media*/
@@ -331,50 +299,6 @@ summary {
     margin-left: 80%;
 }
 
-@media screen and (max-width: 414px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav {padding-bottom:15px;}
-    .sidenav a {font-size: 1em;}
-    #projects {
-        font-size:1em;
-    }
-}
-
-@media screen and (min-height: 2560px) {
-    .sidenav {
-        height:2%;
-        left:70%!important;
-    }
-}
-
-@media screen and (max-width:400px) {
-    #menu3 {
-        display:none;
-    }
-    #menu4 {
-        display:none;
-    }
-    #menu5 {
-        display:none;
-    }
-    #menu6 {
-        display:none;
-    }
-    #menu7 {
-        display:none;
-    }
-    #menu8 {
-        display:none;
-    }
-    #projects {
-        font-size:0.5em;
-        left:55%!important;
-    }
-    .post-media{
-        width:315px;
-    }
-}
-
 #projects{
     position: fixed;
     top: 3px;
@@ -410,4 +334,72 @@ summary {
 
 #menu8 {
     color:#231f20;
+}
+
+/*responsive*/
+
+@media screen and (max-width: 414px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav {padding-bottom:15px;}
+    .sidenav a {font-size: 1em;}
+    #projects {
+        font-size:1em;
+    }
+    .post-body {
+        width:100%!important;
+        display:block;
+        margin:auto;
+    }
+    .post-media {
+        float:left!important;
+        width:100%;
+        display:block;
+        margin:auto;
+        padding:5% 0% 0% 0%;
+    }
+    iframe {
+        width:60%;
+    }
+}
+
+
+@media screen and (max-width: 415px) {
+    #featured {
+        top:10%;
+    }
+}
+
+@media screen and (min-height: 2560px) {
+    .sidenav {
+        height:2%;
+        left:70%!important;
+    }
+}
+
+@media screen and (max-width:400px) {
+    #menu3 {
+        display:none;
+    }
+    #menu4 {
+        display:none;
+    }
+    #menu5 {
+        display:none;
+    }
+    #menu6 {
+        display:none;
+    }
+    #menu7 {
+        display:none;
+    }
+    #menu8 {
+        display:none;
+    }
+    #projects {
+        font-size:0.5em;
+        left:60%;
+    }
+    iframe {
+        width:50%;
+    }
 }
