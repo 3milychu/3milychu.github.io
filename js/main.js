@@ -1,3 +1,13 @@
+// Menu
+
+document.addEventListener('DOMContentLoaded', function(){
+    // alert("Ready");
+
+    var sideNav = document.getElementById("mySidenav");
+    // sideNav.innerHTML += "<a href='index.html'>Featured Works</a>";
+    // sideNav.innerHTML += "<a href='about.html'>About</a>";
+});
+
 function openNav (){
     	//transition the width of our Sidenav div
     	document.getElementById("mySidenav").style.height ="100%";
@@ -8,38 +18,32 @@ function openNav (){
     	document.getElementById("mySidenav").style.height="5%";
     };
 
-document.addEventListener('DOMContentLoaded', function(){
-	// alert("Ready");
+    // Menu Links: on hover anchor links
 
-	var sideNav = document.getElementById("mySidenav");
-	// sideNav.innerHTML += "<a href='index.html'>Featured Works</a>";
-	// sideNav.innerHTML += "<a href='about.html'>About</a>";
-});
+    function menu1 (){
+        location.hash = "#" + "featured";
+    };
 
-function menu1 (){
-    location.hash = "#" + "featured";
-};
+    function menu2 (){
+        location.hash = "#" + "featuredWorks";
+    };
 
-function menu2 (){
-    location.hash = "#" + "featuredWorks";
-};
+    function menu3 (){
+        location.hash = "#" + "dataArt";
+    };
 
-function menu3 (){
-    location.hash = "#" + "dataArt";
-};
+    function menu4 (){
+        location.hash = "#" + "ai";
+    };
 
-function menu4 (){
-    location.hash = "#" + "ai";
-};
+    function menu5 (){
+        location.hash = "#" + "gis";
+    };
 
-function menu5 (){
-    location.hash = "#" + "gis";
-};
+    function menu6 (){
+        location.hash = "#" + "animation";
+    };
 
-function menu6 (){
-    location.hash = "#" + "animation";
-};
-
-function menu7 (){
-    location.hash = "#" + "interactionDesign";
-};
+    function menu7 (){
+        location.hash = "#" + "interactionDesign";
+    };
