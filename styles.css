@@ -386,6 +386,10 @@ summary {
         .postImage {
             width:80%;
             height:auto;
+        }
+        #featured {
+        padding-top:10%;
+        }
     }
 
     /*small phones*/
