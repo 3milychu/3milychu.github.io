@@ -20,30 +20,30 @@ function openNav (){
 
     // Menu Links: on hover anchor links
 
-    function menu1 (){
-        location.hash = "#" + "featured";
-    };
+    // function menu1 (){
+    //     location.hash = "#" + "featured";
+    // };
 
-    function menu2 (){
-        location.hash = "#" + "featuredWorks";
-    };
+    // function menu2 (){
+    //     location.hash = "#" + "featuredWorks";
+    // };
 
-    function menu3 (){
-        location.hash = "#" + "dataArt";
-    };
+    // function menu3 (){
+    //     location.hash = "#" + "dataArt";
+    // };
 
-    function menu4 (){
-        location.hash = "#" + "ai";
-    };
+    // function menu4 (){
+    //     location.hash = "#" + "ai";
+    // };
 
-    function menu5 (){
-        location.hash = "#" + "gis";
-    };
+    // function menu5 (){
+    //     location.hash = "#" + "gis";
+    // };
 
-    function menu6 (){
-        location.hash = "#" + "animation";
-    };
+    // function menu6 (){
+    //     location.hash = "#" + "animation";
+    // };
 
-    function menu7 (){
-        location.hash = "#" + "interactionDesign";
-    };
+    // function menu7 (){
+    //     location.hash = "#" + "interactionDesign";
+    // };
