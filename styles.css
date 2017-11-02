@@ -358,21 +358,26 @@ summary {
         padding:5% 0% 0% 0%;
     }
     iframe {
-        width:60%;
+        width:80%;
+        height:auto;
+    }
+    .postImage {
+        width:80%;
+        height:auto;
     }
 }
 
 
 @media screen and (max-width: 415px) {
     #featured {
-        top:10%;
+        padding-top:10%;
     }
 }
 
 @media screen and (min-height: 2560px) {
     .sidenav {
-        height:2%;
-        left:70%!important;
+        height:5%;
+        left:70%;
     }
 }
 
