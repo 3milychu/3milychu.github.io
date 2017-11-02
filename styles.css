@@ -59,7 +59,7 @@ u {
     margin:0;
 }
 
-@media screen and (max-height: 736px) {
+@media screen and (max-width: 414px) {
     .post-body {
         width:100%!important;
         display:block;
@@ -96,6 +96,7 @@ u {
     width:60%;
     top:5%;
     left:5%;
+    overflow:hidden;
 }
 
 .post h2 {
@@ -136,7 +137,7 @@ summary {
     display:none;
 }
 
-@media screen and (max-height: 736px) {
+@media screen and (max-width: 414px) {
     #desktop {display: none;}
     #mobile {display:inline;}
 }
@@ -319,7 +320,7 @@ summary {
     margin-left: 80%;
 }
 
-@media screen and (max-height: 736px) {
+@media screen and (max-width: 414px) {
     .sidenav {padding-top: 15px;}
     .sidenav {padding-bottom:15px;}
     .sidenav a {font-size: 1em;}
