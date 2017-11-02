@@ -5,8 +5,8 @@ function openNav (){
 
     function closeNav (){
     	//transition the width of our Sidenav div when closed
-    	document.getElementById("mySidenav").style.height="10%";
-    }
+    	document.getElementById("mySidenav").style.height="5%";
+    };
 
 document.addEventListener('DOMContentLoaded', function(){
 	// alert("Ready");
@@ -15,3 +15,31 @@ document.addEventListener('DOMContentLoaded', function(){
 	// sideNav.innerHTML += "<a href='index.html'>Featured Works</a>";
 	// sideNav.innerHTML += "<a href='about.html'>About</a>";
 });
+
+function menu1 (){
+    location.hash = "#" + "featured";
+};
+
+function menu2 (){
+    location.hash = "#" + "featuredWorks";
+};
+
+function menu3 (){
+    location.hash = "#" + "dataArt";
+};
+
+function menu4 (){
+    location.hash = "#" + "ai";
+};
+
+function menu5 (){
+    location.hash = "#" + "gis";
+};
+
+function menu6 (){
+    location.hash = "#" + "animation";
+};
+
+function menu7 (){
+    location.hash = "#" + "interactionDesign";
+};

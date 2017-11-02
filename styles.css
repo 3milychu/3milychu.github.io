@@ -243,7 +243,7 @@ ul {
 
 .sidenav {
     float:right;
-    height: 10%;
+    height: 5%;
     width: 100%;
     position: fixed;
     z-index: 6;
@@ -270,7 +270,7 @@ ul {
     transition: 0.3s;
     float: left;
     text-align: center;
-    padding: 14px 16px;
+    padding: 5px 16px;
     text-decoration: none;
     font-size: 17px;
     left:20px;
@@ -301,7 +301,7 @@ ul {
 
 #projects{
     position: fixed;
-    top: 2%;
+    top: 3px;
     float:right;
     left: 85%;
     z-index:8;
