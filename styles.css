@@ -59,6 +59,15 @@ u {
     margin:0;
 }
 
+@media screen and (max-height: 450px) {
+    .post-body {
+        width:100%;
+    }
+    .post-media {
+        width:100%;
+    }
+}
+
 .post {
     width:100%;
     margin:0%;
@@ -310,11 +319,17 @@ summary {
     .sidenav a {font-size: 18px;}
 }
 
+@media screen and (min-height: 2560px) {
+    .sidenav {
+        height:2%;
+    }
+}
+
 #projects{
     position: fixed;
     top: 3px;
     float:right;
-    left: 85%;
+    left: 80%;
     z-index:8;
     color:#c2b59b;
     font-family: 'Assistant', sans-serif;
