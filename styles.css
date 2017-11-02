@@ -346,6 +346,14 @@ summary {
         }
     }
 
+    /*tablets only */
+
+     @media screen and (min-width:600) and (max-width:769px) {
+        .sidenav {
+            height:3%;
+        }
+     }
+
     /*tablets and smaller*/
 
     @media screen and (max-width:769px) {
