@@ -71,7 +71,7 @@ u {
         float:left!important;
         display:block;
         margin:auto;
-        padding:0;
+        padding:5% 0% 0% 0%;
     }
 }
 
@@ -138,8 +138,9 @@ summary {
 }
 
 @media screen and (max-width: 415px) {
-    #desktop {display: none;}
-    #mobile {display:inline;}
+    #desktop {
+        top:5%;
+    }
 }
 
 /*Specific Post Media*/
