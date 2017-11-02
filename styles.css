@@ -72,10 +72,18 @@ u {
         padding:5% 0% 0% 0%;
     }
     iframe {
-        width:280px;
-        height:157px;
+        width:230px;
+        height:107px;
     }
 }
+
+@media screen and (min-width: 415px) and (max-width: 768px){
+    iframe {
+        width:510px;
+        height:265px;
+    }
+}
+
 
 .post {
     width:100%;
