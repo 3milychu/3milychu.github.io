@@ -111,6 +111,7 @@ ul {
 }
 
 @media screen and (max-height: 450px) {
+    #featured{height:0;}
     #desktop {display: none;}
     #mobile {display:inline;}
 }
