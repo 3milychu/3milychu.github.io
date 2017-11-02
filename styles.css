@@ -338,73 +338,80 @@ summary {
 
 /*responsive*/
 
-@media screen and (max-width: 414px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav {padding-bottom:15px;}
-    .sidenav a {font-size: 1em;}
-    #projects {
-        font-size:1em;
-    }
-    .post-body {
-        width:100%!important;
-        display:block;
-        margin:auto;
-    }
-    .post-media {
-        float:left!important;
-        width:100%;
-        display:block;
-        margin:auto;
-        padding:5% 0% 0% 0%;
-    }
-    iframe {
-        width:80%;
-        height:auto;
-    }
-    .postImage {
-        width:80%;
-        height:auto;
-    }
-}
+    /*monitors*/
 
+    @media screen and (min-height: 2560px) {
+        .sidenav {
+            height:5%;
+            left:70%;
+        }
+    }
 
-@media screen and (max-width: 415px) {
+    /*tablets and smaller*/
+
+    @media screen and (max-width:769px) {
+        #menu3 {
+            display:none;
+        }
+        #menu4 {
+            display:none;
+        }
+        #menu5 {
+            display:none;
+        }
+        #menu6 {
+            display:none;
+        }
+        #menu7 {
+            display:none;
+        }
+        #menu8 {
+            display:none;
+        }
+
+    /*small phones*/
+
+    @media screen and (max-width: 415px) {
     #featured {
         padding-top:10%;
     }
 }
 
-@media screen and (min-height: 2560px) {
-    .sidenav {
-        height:5%;
-        left:70%;
+    @media screen and (max-width: 414px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav {padding-bottom:15px;}
+        .sidenav a {font-size: 1em;}
+        #projects {
+            font-size:1em;
+        }
+        .post-body {
+            width:100%!important;
+            display:block;
+            margin:auto;
+        }
+        .post-media {
+            float:left!important;
+            width:100%;
+            display:block;
+            margin:auto;
+            padding:5% 0% 0% 0%;
+        }
+        iframe {
+            width:80%;
+            height:80%;
+        }
+        .postImage {
+            width:80%;
+            height:auto;
+        }
     }
-}
 
-@media screen and (max-width:400px) {
-    #menu3 {
-        display:none;
+    @media screen and (max-width:400px) {
+        #projects {
+            font-size:0.5em;
+            left:60%;
+        }
+        iframe {
+            width:50%;
+        }
     }
-    #menu4 {
-        display:none;
-    }
-    #menu5 {
-        display:none;
-    }
-    #menu6 {
-        display:none;
-    }
-    #menu7 {
-        display:none;
-    }
-    #menu8 {
-        display:none;
-    }
-    #projects {
-        font-size:0.5em;
-        left:60%;
-    }
-    iframe {
-        width:50%;
-    }
-}
