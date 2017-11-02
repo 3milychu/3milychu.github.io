@@ -59,7 +59,7 @@ u {
     margin:0;
 }
 
-@media screen and (max-height: 450px) {
+@media screen and (max-height: 731px) {
     .post-body {
         width:100%;
         display:block;
@@ -134,7 +134,7 @@ summary {
     display:none;
 }
 
-@media screen and (max-height: 450px) {
+@media screen and (max-height: 731px) {
     #desktop {display: none;}
     #mobile {display:inline;}
 }
@@ -317,7 +317,7 @@ summary {
     margin-left: 80%;
 }
 
-@media screen and (max-height: 450px) {
+@media screen and (max-height: 731px) {
     .sidenav {padding-top: 15px;}
     .sidenav {padding-bottom:15px;}
     .sidenav a {font-size: 0.5em;}
