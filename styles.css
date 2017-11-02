@@ -343,7 +343,6 @@ summary {
     @media screen and (min-height: 2560px) {
         .sidenav {
             height:5%;
-            left:70%;
         }
     }
 
@@ -378,8 +377,8 @@ summary {
 }
 
     @media screen and (max-width: 414px) {
-        .sidenav {padding-top: 15px;}
-        .sidenav {padding-bottom:15px;}
+        .sidenav {padding-top: 5px;}
+        .sidenav {padding-bottom:5px;}
         .sidenav a {font-size: 1em;}
         #projects {
             font-size:1em;
