@@ -62,9 +62,13 @@ u {
 @media screen and (max-height: 450px) {
     .post-body {
         width:100%;
+        display:block;
+        margin:auto;
     }
     .post-media {
         width:100%;
+        display:block;
+        margin:auto;
     }
 }
 
