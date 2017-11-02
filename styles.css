@@ -353,8 +353,8 @@ summary {
             height:3%;
         }
         #profilepic {
-            padding-top:10%;
-            width:30%;
+            padding-top:10%!important;
+            width:auto;
         }
      }
 
