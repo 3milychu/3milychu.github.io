@@ -352,6 +352,9 @@ summary {
         .sidenav {
             height:3%;
         }
+        #profilepic {
+            padding-top:10%;
+        }
      }
 
     /*tablets and smaller*/
