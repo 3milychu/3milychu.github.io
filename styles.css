@@ -59,7 +59,7 @@ u {
     margin:0;
 }
 
-@media screen and (max-height: 731px) {
+@media screen and (max-height: 736px) {
     .post-body {
         width:100%!important;
         display:block;
@@ -136,7 +136,7 @@ summary {
     display:none;
 }
 
-@media screen and (max-height: 731px) {
+@media screen and (max-height: 736px) {
     #desktop {display: none;}
     #mobile {display:inline;}
 }
@@ -319,18 +319,19 @@ summary {
     margin-left: 80%;
 }
 
-@media screen and (max-height: 731px) {
+@media screen and (max-height: 736px) {
     .sidenav {padding-top: 15px;}
     .sidenav {padding-bottom:15px;}
-    .sidenav a {font-size: 0.5em;}
+    .sidenav a {font-size: 1em;}
     #projects {
-        font-size:0.5em;
+        font-size:1em;
     }
 }
 
 @media screen and (min-height: 2560px) {
     .sidenav {
         height:2%;
+        left:70%!important;
     }
 }
 
