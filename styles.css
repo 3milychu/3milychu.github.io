@@ -9,11 +9,12 @@ body {
 }
 
 em {
-    font-style:italic;
+    font-weight:bold;
+    font-style:normal;
 }
 
 body .section-white {
-    background-color:white;
+    background-color:#f2f2f2;
     width:100%;
 }
 
@@ -55,7 +56,8 @@ u {
     font-size:2.5em;
     color:#231f20;
     padding:0;
-    padding-top:5%;
+    padding-top:2%;
+    padding-bottom:2%;
     margin:0;
 }
 
@@ -93,7 +95,21 @@ u {
 summary {
     font-size:1em;
     font-weight:200;
-    color:#231f20;
+/*    color:#231f20;*/
+    padding:1% 1% 1% 2%;
+    color:white;
+}
+
+.aduro {
+    background-color:#701a6d;
+}
+
+.artist {
+    background-color:#049aa6;
+}
+
+.student {
+    background-color:#d3922a;
 }
 
 .post p{
@@ -121,6 +137,33 @@ summary {
     display:none;
 }
 
+#dataArt{
+    background-color:#f2f2f2;
+}
+
+#ai {
+    background-color:#e6e6e6;
+}
+
+#gis {
+    background-color:#f2f2f2;
+}
+
+#gis2 {
+    background-color:#e6e6e6;
+}
+
+#animation {
+    background-color:#f2f2f2;
+}
+
+#interactionDesign{
+    background-color:#e6e6e6;
+}
+
+#dataMarketing{
+    background-color:#f2f2f2;
+}
 /*Specific Post Media*/
 
     /*Playing with Time Blocks*/
@@ -412,9 +455,10 @@ summary {
     #featured {
         padding-top:10%;
     }
-    .sidenav {padding-top: 5px;}
-    .sidenav {padding-bottom:5px;}
-}
+    
+    .sidenav {
+        height:5%;
+    }
 
     @media screen and (max-width: 414px) {
         .sidenav {padding-top: 5px;}
