@@ -466,7 +466,7 @@ summary#employers:focus {
 
      @media screen and (min-width:600) and (max-width:769px) {
         .sidenav {
-            height:5%;
+            height:3%;
         }
         #profilepic {
             padding-top:10%!important;
@@ -512,7 +512,7 @@ summary#employers:focus {
         padding-top:10%;
     }
     .sidenav {
-        height:5%;
+        height:3%;
     }
 
     @media screen and (max-width: 414px) {
