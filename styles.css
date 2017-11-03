@@ -190,8 +190,8 @@ summary {
     -webkit-transition: -webkit-transform 0.3s;
     transition: transform 0.3s;
     justify-content: flex-end;
-    border: 1px solid;
-    border-color: #c7b299;
+/*    border: 1px solid;*/
+/*    border-color: #c7b299;*/
 }
 .card-front i.tile-icon {
     display: block;
@@ -206,18 +206,32 @@ summary {
 }
 .card-front p.detail {
     font-size: 12px;
+    color:white;
     font-weight: 200;
     margin: 0;
 }
-.card-front {
+/*.card-front {
     background-color:#231f20;
     border: 2px solid;
     border-color: #c7b299;
+}*/
+
+#purple {
+    background-color:#701a6d;
 }
+
+#gold {
+    background-color:#d3922a;
+}
+
+#teal {
+    background-color:#049aa6;
+}
+
 .card-back {
-    background-color: #095352;
+    background-color: #231f20;
     border: 3px solid;
-    border-color: #c7b299;
+/*    border-color: #c7b299;*/
     -webkit-transform: rotateY(-180deg);
     transform: rotateY(-180deg);
 }
@@ -398,6 +412,8 @@ summary {
     #featured {
         padding-top:10%;
     }
+    .sidenav {padding-top: 5px;}
+    .sidenav {padding-bottom:5px;}
 }
 
     @media screen and (max-width: 414px) {
