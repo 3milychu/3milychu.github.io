@@ -475,7 +475,7 @@ summary:focus {
 
     /*tablets and smaller*/
 
-    @media screen and (max-width:769px) {
+    @media screen and (max-width:1000px) {
         #menu3 {
             display:none;
         }
@@ -496,11 +496,27 @@ summary:focus {
         }
 /*        iframe {
             width:100%;
-            /*height:80%;*/*/
-        }
+            /*height:80%;*/
         .postImage {
             width:80%;
             height:auto;
+        }
+        .post-body {
+            width:80%;
+        }
+        .post-media {
+            width:100%;
+            margin-top:2%;
+        }
+        #featured {
+            overflow:hidden;
+        }
+        #desktop {
+            width:130%;
+            margin-left:-11%;
+        }
+        #projects {
+            left:70%;
         }
     }
 
