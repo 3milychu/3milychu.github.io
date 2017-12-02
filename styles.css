@@ -192,11 +192,18 @@ summary {
     float:right;
     margin-top:-40%;
     padding:1% 3% 1% 3%;
+}
 
+#theories a{
+    text-decoration:none;
+    color:black;
+}
+
+#theories a:hover {
+    color:#049aa6;
 }
 
 #theories:hover {
-    color:#049aa6;
     padding:1% 5% 1% 5%;
     transition: padding 0.2s linear;
 }
