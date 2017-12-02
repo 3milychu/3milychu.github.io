@@ -602,19 +602,22 @@ summary:focus {
             font-size:3em;
             letter-spacing:-0.07em;
         }
+        .sidenav {
+        padding-top:1%;
+        padding-bottom:2%;
+        }
     }
 
     /*small phones*/
-
-    @media screen and (max-width: 415px) {
-    #featured {
+    
+    @media screen and (max-width: 550px) {
+        #featured {
         padding-top:10%;
-    }
-    .sidenav {
-        height:3%;
-    }
-
-    @media screen and (max-width: 414px) {
+        }
+        .sidenav {
+        height:5%;
+        padding-top:2%;
+        }
         .sidenav a {font-size: 1em;}
         #projects {
             font-size:1em;
