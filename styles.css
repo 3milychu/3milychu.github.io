@@ -1,10 +1,10 @@
 h1, h2, h3, p, ul, ol, a, span, summary {
-    font-family: 'Assistant', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 body {
     background-color: #231f20;
-    font-weight: 200;
+    font-weight: 100;
     color: #c2b59b;
 }
 
@@ -92,7 +92,7 @@ iframe{
 
 .post h2 {
     text-align:left;
-    font-size:1.5em;
+    font-size:2em;
     font-weight:200;
     color:#231f20;
 }
@@ -127,7 +127,7 @@ summary {
 
 .post p {
     font-size:1em;
-    font-weight:200;
+    font-weight:400;
     color:#231f20;
 }
 
@@ -192,8 +192,7 @@ summary {
 /*flexbox*/
 
 .container {
-    margin: 50px;
-    margin-top:1%;
+    margin:2%;
 }
 
 /*-------- flex container --------*/
@@ -340,8 +339,8 @@ summary {
 .sidenav a {
     padding: 5px 8px 8px 32px;
     color: white;
-	font-family: 'Assistant', sans-serif;
-	font-weight: lighter;
+	font-family: 'Lato', sans-serif;
+	font-weight: 100;
     text-decoration: none;
     font-size: 12px;
     display: block;
@@ -376,7 +375,7 @@ summary {
     left: 85%;
     z-index:8;
     color:#c2b59b;
-    font-family: 'Assistant', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 #profilePic {
@@ -408,8 +407,8 @@ summary {
     width:100%;
     color:#c2b59b;
     font-size:0.8em;
-    font-weight:200;
-    font-family: 'Assistant', sans-serif;
+    font-weight:100;
+    font-family: 'Lato', sans-serif;
 }
 
 #footer a{
@@ -511,10 +510,10 @@ summary:focus {
         #featured {
             overflow:hidden;
         }
-        #desktop {
+        /*#desktop {
             width:130%;
             margin-left:-11%;
-        }
+        }*/
         #projects {
             left:70%;
         }
