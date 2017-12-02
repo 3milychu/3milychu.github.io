@@ -577,19 +577,23 @@ summary:focus {
             left:70%;
         }
         #philosophy {
-            margin-top:-60%;
-            font-size:0.5em;
+            margin-top:-70%;
+            font-size:1em;
         }
         #theories {
-            margin-top:-45%;
-            font-size:0.5em;
+            margin-top:-55%;
+            font-size:1em;
         }
         #WIP {
-            margin-top:-30%;
-            font-size:0.5em;
+            margin-top:-40%;
+            font-size:1em;
         }
         .sidenav a {
             font-size:1.5em;
+        }
+        .section-white h1 {
+            font-size:3em;
+            letter-spacing:-0.07em;
         }
     }
 
