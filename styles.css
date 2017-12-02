@@ -168,10 +168,17 @@ summary {
 
 }
 
+#philosophy a{
+    text-decoration:none;
+    color:black;
+}
+
+#philosophy a:hover {
+    color:#049aa6;
+}
+
 #philosophy:hover {
-    color:#ffe41b;
     padding:1% 5% 1% 5%;
-    background-color:black;
     transition: padding 0.2s linear;
 }
 
@@ -189,9 +196,8 @@ summary {
 }
 
 #theories:hover {
-    color:#ffe41b;
+    color:#049aa6;
     padding:1% 5% 1% 5%;
-    background-color:black;
     transition: padding 0.2s linear;
 }
 
@@ -209,9 +215,8 @@ summary {
 }
 
 #WIP:hover {
-    color:#ffe41b;
+    color:#049aa6;
     padding:1% 5% 1% 5%;
-    background-color:black;
     transition: padding 0.2s linear;
 }
 
@@ -526,14 +531,6 @@ summary:focus {
         }
     }
 
-    /*tablets only */
-
-     @media screen and (min-width:600) and (max-width:769px) {
-        .sidenav {
-            height:3%;
-        }
-     }
-
     /*tablets and smaller*/
 
     @media screen and (max-width:1000px) {
@@ -591,6 +588,9 @@ summary:focus {
             margin-top:-30%;
             font-size:0.5em;
         }
+        .sidenav a {
+            font-size:1.5em;
+        }
     }
 
     /*small phones*/
@@ -636,3 +636,12 @@ summary:focus {
             width:80%;
         }
     }
+
+/*Philosophy Page*/
+.turquoise-break-one {
+    width:55%;
+    height:50px;
+    background-color:#049aa6;
+    float:left;
+    position:relative;
+}
