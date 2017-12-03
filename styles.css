@@ -153,7 +153,7 @@ summary {
 }
 
 #philosophy {
-    background-color:#ffe41b;
+    background-color:#FEE5D7;
     color:black;
     font-weight:5em;
     border:2em black;
@@ -180,7 +180,7 @@ summary {
 }
 
 #theories {
-    background-color:#ffe41b;
+    background-color:#FEE5D7;
     color:black;
     font-weight:5em;
     border:2em black;
@@ -206,7 +206,7 @@ summary {
 }
 
 #WIP {
-    background-color:#ffe41b;
+    background-color:#FEE5D7;
     color:black;
     font-weight:5em;
     border:2em black;
@@ -624,8 +624,23 @@ summary:focus {
             letter-spacing:-0.07em;
         }
         .sidenav {
-        padding-top:1%;
-        padding-bottom:2%;
+            padding-top:1%;
+            padding-bottom:2%;
+        }
+        ul{
+            font-weight:400;
+        }
+        .card-front p.detail {
+            font-weight:400;
+        }
+        .post h2 {
+            font-weight:400;
+        }
+        .card-back p.desc {
+            font-weight:400;
+        }
+        #footer a{
+            font-weight:300;
         }
     }
 
@@ -672,4 +687,21 @@ summary:focus {
         }
     }
 
-/*Philosophy Page*/
+/*WIP Page*/
+
+.button {
+    padding:3%;
+    border: 2px solid #231f20;
+    border-radius:3px;
+    width:22%;
+}
+
+.button a{
+    text-decoration:none;
+    font-weight:900;
+    color:#231f20;
+}
+
+.button a:hover {
+    color:#c2b59b;
+}
