@@ -218,6 +218,14 @@ summary {
 
 }
 
+#WIP a{
+    text-decoration:none;
+    color:black;
+}
+
+#WIP a:hover {
+    color:#049aa6;
+}
 #WIP:hover {
     color:#049aa6;
     padding:1% 5% 1% 5%;
