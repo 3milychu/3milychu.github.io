@@ -9,7 +9,7 @@ body {
 }
 
 em {
-    font-weight:bold;
+    font-weight:900;
     font-style:normal;
 }
 
@@ -725,6 +725,14 @@ summary:focus {
         }
         #footer a, h2, p{
             font-weight:400;
+        }
+
+        #footer-child a{
+            font-weight:400;
+        }
+
+        #bio h2 {
+            font-size:2em;
         }
         p{
             font-weight:400 !important;
