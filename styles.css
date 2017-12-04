@@ -68,7 +68,6 @@ iframe{
     padding:0;
     padding-top:2%;
     padding-bottom:2%;
-    margin:0;
 }
 
 .post {
@@ -251,11 +250,11 @@ summary {
 }
 
 #dataArt{
-    background-color:#f2f2f2;
+    background-color:white;
 }
 
 #ai {
-    background-color:#e6e6e6;
+    background-color:white;
 }
 
 #gis {
@@ -499,7 +498,7 @@ summary {
 
 #footer {
     background-color:#231f20;
-    width:100%;
+    width:90%;
     top:0;
     left:-2%;
     height:100%;
@@ -516,6 +515,28 @@ summary {
 }
 
 #footer a:hover {
+    color:#c2b59b;
+}
+
+#footer-child{
+    background-color:#231f20;
+    width:100%;
+    top:0;
+    left:-2%;
+    height:100%;
+}
+
+#footer-child h2 {
+    color:white;
+}
+
+#footer-child a{
+    color:white;
+    text-decoration:none;
+    font-size:0.8em;
+}
+
+#footer-child a:hover {
     color:#c2b59b;
 }
 
@@ -584,6 +605,7 @@ summary:focus {
     background-color:white;
     white-space: nowrap;
     overflow: scroll;
+     -webkit-overflow-scrolling: touch;
 }
 
 .overlay {
@@ -621,6 +643,9 @@ summary:focus {
     /*tablets and smaller*/
 
     @media screen and (max-width:1000px) {
+        #menu2 {
+            display:none;
+        }
         #menu3 {
             display:none;
         }
@@ -698,14 +723,21 @@ summary:focus {
         .card-back p.desc {
             font-weight:400;
         }
-        #footer a{
-            font-weight:300;
+        #footer a, h2, p{
+            font-weight:400;
+        }
+        p{
+            font-weight:400 !important;
         }
         .media-holder {
         width:90%;
         }
         .overlay h4 {
         font-size:1em;
+        }
+        .section-white h1 {
+        text-align:left;
+        margin:0% 0% 0% 3%;
         }
     }
 

@@ -16,7 +16,7 @@
 		<title>Emily Chu</title>
 		<link rel="stylesheet" type="text/css" href="styles.css">
 		<link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Lato:100,200,400,900" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,900" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	</head>
 
@@ -27,12 +27,10 @@
 
 			<!-- navigation -->
 			<a id="menu1" onmouseover="menu1()" href="index.html#featured">Home</a>
-			<a id="menu2" onmouseover="menu2()" href="index.html#featuredWorks">Work</a>
-			<a id="menu3" onmouseover="menu3()" href="index.html#dataArt">Data Art</a>
-			<a id="menu4" onmouseover="menu4()" href="index.html#ai">AI</a>
-			<a id="menu5" onmouseover="menu5()" href="index.html#gis">GIS</a>
-			<a id="menu6" onmouseover="menu6()" href="index.html#animation">Motion Graphics</a>
-			<a id="menu7" onmouseover="menu7()" href="index.html#interactionDesign">Interaction Design</a>
+			<a id="menu2" onmouseover="menu2()" href="index.html#motion">Motion Design</a>
+			<a id="menu3" onmouseover="menu3()" href="index.html#ai">Machine Learning</a>
+			<a id="menu4" onmouseover="menu4()" href="index.html#interactives">Interactives</a>
+			<a id="menu5" onmouseover="menu5()" href="index.html#decision">Decision Support</a>
 			<a id="menu8" onmouseover="menu1()" href="index.html#featured">________________</a>
 			
 			<span style="cursor:pointer">
@@ -51,7 +49,6 @@
 			<img src="assets/spheres.gif" autoplay id="desktop">
 			<span id="philosophy"><h1><a href="philosophy.html">Style</a></h1></span>
 			<span id="theories"><h1><a href="theories.html">Motivators</a></h1></span>
-			<span id="WIP"><h1><a href="wip.html">Works in Progress</a></h1></span>
 		</div>
 
 		<!-- FlexBox:Roles -->
@@ -128,7 +125,7 @@
 	                        <div class="card-back">
 	                            <p class="title">Projects</p>
 	                            <p class="desc">Sketches, Digital Illustration</p>
-	                            <p class="link">Mediums<i class="fa fa-chevron-circle-right"></i>
+	                            <p class="title">Mediums<i class="fa fa-chevron-circle-right"></i>
 	                            <ul>
 	                            	<li>Illustration, Painting, Encaustics,</li>
 	                            	<li>Digital New Media, Photography</li>
@@ -149,26 +146,34 @@
 		<div class = "section-white" id="featuredWorks">
 
 
-		<!-- Section:Current Works -->
-			<h1>Current Work</h1>
-
-				<div class ="scroll-post" id="current">
+		<!-- Section:Distance Learning -->
+				<h1 id="motion">Motion Design</h1>
+				<div class ="scroll-post">
+				
 						
-						<!-- Lifestyle Education -->
+						<!-- Distance Learning 1 -->
 						<div class="media-holder">
 							<a href="informationinmotion.html"><img class ="media-cover" src="assets/savings101.png">
 							<div class="overlay"><h4><em>#information in #motion</em></h4></div>
 							</a>
 						</div>
 
-						<!-- Lifestyle Education 2 -->
+						<!-- Distance Learning 2 -->
 						<div class="media-holder">
 							<a href="positiveillustration.html"><img class ="media-cover" src="assets/BACM.png">
-							<div class="overlay"><h4><em>#illustration for #good</em></h4></div>
+							<div class="overlay"><h4><em>#illustration #equality</em></h4></div>
 							</a>
 						</div>
 
-						<!-- Lifestyle Education 2 -->
+						<!-- Distance Learning 3 -->
+						<div class="media-holder">
+							<a href="ux-health-media.html">
+							<img class ="media-cover" src="assets/ux-health-media.jpg">
+							<div class="overlay"><h4><em>#health #media #ux</em></h4></div>
+							</a>
+						</div>
+
+						<!-- Distance Learning 4 -->
 						<div class="media-holder">
 							<a href="refreshedresearch.html">
 							<img class ="media-cover" src="assets/SME.png">
@@ -176,153 +181,78 @@
 							</a>
 						</div>
 
+				</div>
 
+		<!-- Section:Machine Learning-->
+				<h1 id="ai">Machine Learning</h1>
+				<div class ="scroll-post">
+
+						<!-- Machine Learning 1 -->
+						<div class="media-holder">
+							<a href="ai-health-diet.html"><img class ="media-cover" src="assets/nucook.jpg">
+							<div class="overlay"><h4><em>#responsive #recipes</em></h4></div>
+							</a>
+						</div>
+
+						<!-- Machine Learning 2 -->
+						<div class="media-holder">
+							<a href="roam.html"><img class ="media-cover" src="assets/roam.png">
+							<div class="overlay"><h4><em>#verizon #ai #jam #2017</em></h4></div>
+							</a>
+						</div>
 
 				</div>
 
+		<!-- Section:Interactives-->
+				<h1 id="interactives">Interactives</h1>
+				<div class ="scroll-post" id="interactives">
 
-			<!-- Section:Past Works -->
-			<h1>Past Work</h1>
+						<!-- Interactive 1 -->
+						<div class="media-holder">
+							<a href="magselector.html"><img class ="media-cover" src="assets/magselector.jpg">
+							<div class="overlay"><h4><em>#interactive #mapping</em></h4></div>
+							</a>
+						</div>
 
-				<!-- Time Blocks -->
+						<!-- Interactive 2 -->
+						<div class="media-holder">
+							<a href="timeplay.html"><img class ="media-cover" src="assets/timeplay.jpg">
+							<div class="overlay"><h4><em>#musical #squares</em></h4></div>
+							</a>
+						</div>
+
+						<!-- Interactive 3 -->
+						<div class="media-holder">
+							<a href="biometrictracking.html"><img class ="media-cover" src="assets/biometrictracker.jpg">
+							<div class="overlay"><h4><em>#biometric #tracking</em></h4></div>
+							</a>
+						</div>
+
+				</div>
+
+			<!-- Section:Strategy & Decision-Making Support -->
+				<h1 id="decision">Strategy &amp; Decision Support</h1>
+				<div class ="scroll-post">
+
+						<!-- Interactive 1 -->
+						<div class="media-holder">
+							<a href="businessreview.html"><img class ="media-cover" src="assets/ditl.jpg">
+							<div class="overlay"><h4><em>#department #review</em></h4></div>
+							</a>
+						</div>
+
+						<!-- Interactive 2 -->
+						<div class="media-holder">
+							<a href="spatialanalysis.html"><img class ="media-cover" src="assets/Kosovo_ERWZones.jpg">
+							<div class="overlay"><h4><em>#geoprocessing</em></h4></div>
+							</a>
+						</div>
+
+				</div>
+
+				<!-- Data, Art, Media, Technology -->
+
 				<div class ="post" id="dataArt">
-					<div class ="post-body">
-						<h2><em>Data Art</em><br>Northside Festival, 2017</h2>
-							<details>
-								<summary class="artist">Methods &amp; Goals</summary>
-									<p>
-									Course: Data Aesthetics and Information Visualization<br>
-									Instructor: Christian Swinehart <br><br>
-
-									This web app explores time and its behaviors as physical symbols. Data is sourced from Brooklyn's 2017 Northside Festival. Data analysis was performed in RStudio. The visualized result returns a simple rectangle shape which, upon hover, returns the number of hours played at each venue in number of 360 degree counter-clockwise spins.<br>
-									</p>
-							</details>
-					</div>
-						<div class ="post-media">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/7oIAyTWW4CM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-						</div>
-				</div>
-
-				<!-- ROAM AI Jam -->
-				<div class ="post" id="ai">
-					<div class ="post-body">
-						<h2><em>Machine Learning</em><br>Parsons/Verizon A.I. Jam 2017</h2>
-							<details>
-								<summary class="student">Methods &amp; Goals</summary>
-									<p>
-									Videography: Rik Ghosh<br>
-									Voiceover, Motion Graphics: <u>Emily Chu</u><br>
-									Actors: Quixote Vassilakis, Salman Patwary, <u>Emily Chu</u>
-									<br>
-									<br>
-									ROAM is an artificial intelligence ring-operated adventure maker. This video was built in 36 hours to demonstrate use cases for ROAM, an AI ring that helps you complete your goals through a warm and cool indicator band. We wanted to affirm using AI as extensions of natural human capabilities - in this case - intuition.
-									</p>
-							</details>
-					</div>
-						<div class ="post-media">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/CX0AdOXKaM4?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-						</div>
-				</div>
-
-				<!-- Earthquakes Web App -->
-
-				<div class ="post" id="gis">
-					<div class ="post-body">
-						<h2><em>Interactive Mapping</em>
-						<br>USGS Earthquake Hazards Program</h2>
-							<details>
-								<summary class="student">Methods &amp; Goals</summary>
-								<p>
-								This web app was created as an exercise in using public data to make meaningful spatial representations of data. I used USGS Earthquake Hazard Program's data feed of earthquakes occuring in the last 30 days using the interactive map library Leaflet. The slider selects earthquakes within 0.04 magnitude of the slider value. Users are able to dive into an interesting earthquake down to the neighborhood of origin.
-								</p>
-							</details>
-					</div>
-						<div class ="post-media">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/vOTX-R7cuIs?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-						</div>
-				</div>
-
-				<!-- ERW Zones GIS -->
-				<div class ="post" id="gis2">
-					<div class ="post-body">
-						<h2><em>Spatial Analysis</em>
-						<br>Explosive Remants of War (ERW) Zones in Kosovo</h2>
-							<details>
-								<summary class="student">Methods &amp; Goals</summary>
-								<p>
-								Course: Geographic Information Systems<br>
-								Instructor: Stephen Metts
-								<br>
-								<br>
-								These maps were created using ArcMap from ArcGIS, using administrative, landmines and cluster bomb shapefiles. Using geoprocessing tools, areas of interest were clipped and intersected for analysis. Final maps used Python to calculate percentage of contamination as symbology.
-								</p>
-							</details>	
-					</div>
-						<div class ="post-media">
-								<a href="assets/Kosovo_ERWZones.pdf">
-								<img class= "postImage" width="560" src="assets/Kosovo_ERWZones.jpg">
-								</a>
-						</div>
-				</div>
-
-				<!-- Day in the Life of Content -->
-				<div class ="post" id="animation">
-					<div class ="post-body">
-						<h2><em>Motion Graphics</em><br>
-						ADURO, Inc., 2017</h2>
-							<details>
-								<summary class="aduro">Methods &amp; Goals</summary>
-								<p>
-								Writer: Ali Valdez<br>
-								Illustrator, Voiceover, Animator, Producer: <u>Emily Chu</u>
-								<br><br>
-								As Visual Data Producer at ADURO, one of my main charges is to work with stakeholders such as Product and Marketing to design for compelling content for a new mobile app. This video was created to introduce our team players, our responsibilities, roadmap and KPIs to spearheard department growth.
-								</p>
-							</details>
-					</div>
-						<div class ="post-media">
-							<iframe src="https://player.vimeo.com/video/241812091" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-							<!-- <iframe id="ditl" width="560" height="315" src="https://player2.vimeo.com/video/241812091" frameborder="0" allowfullscreen></iframe> -->
-						</div>
-				</div>
-
-				<!-- Visual Tone HP Suites -->
-				<div class ="post" id="interactionDesign">
-					<div class ="post-body">
-						<h2><em>Media for Health Apps</em><br>
-						ADURO, Inc., 2017</h2>
-							<details>
-							<summary class="aduro">Methods &amp; Goals</summary>
-								<p>
-								UX Designer: Thomas Phan<br>
-								Content Producer, Motion Designer: <u>Emily Chu</u>
-								<br><br>
-								Ongoing initiative to visually organize diversifying scope of modules in our mobile health learning app, expanding form lifestyle management to chronic conditions and behavioral health.
-								</p>
-							</details>
-					</div>
-						<div class ="post-media">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/gn1MbAUgvgk?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-						</div>
-				</div>
-
-				<!-- Data Marketing -->
-				<div class ="post" id="dataMarketing">
-					<div class ="post-body">
-						<h2><em>Interactive Biometric Screening Dashboard</em><br>
-						ADURO, Inc., 2016</h2>
-							<details>
-							<summary class="aduro">Methods &amp; Goals</summary>
-								<p>
-								Data Analyst, Designer, Programmer: <u>Emily Chu</u>
-								<br><br>
-								This was created in DOMO by connecting data from Salesforce reports and setting up ETL flows. The resulting data studio demonstrated weekly highlights and progress reports on clients' biometric registration and participation.
-								</p>
-							</details>
-					</div>
-						<div class ="post-media">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/mcWC8qkLRg0?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-						</div>
 				</div>
 
 				<!-- about me / bio -->
@@ -392,8 +322,6 @@
 			
 
 
-
-		</div>
 		<script src="js/jquery.js"></script>
 		<script src="js/d3.min.js"></script>
 		<script src="js/main.js"></script>
