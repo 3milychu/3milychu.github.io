@@ -42,6 +42,10 @@ iframe{
     height:;
 }
 
+.heading {
+    margin-top:20%;
+}
+
 .section-white .post {
     position:relative;
     float:left;
@@ -495,6 +499,10 @@ summary {
 
 #footer {
     background-color:#231f20;
+    width:100%;
+    top:0;
+    left:-2%;
+    height:100%;
 }
 
 #footer h2 {
@@ -695,6 +703,10 @@ summary:focus {
         }
         .media-holder {
         width:90%;
+        }
+        .overlay h4 {
+        font-size:1em;
+        }
     }
 
     /*small phones*/
@@ -727,6 +739,9 @@ summary:focus {
         .postImage {
             width:80%;
             height:auto;
+        }
+        .overlay h4 {
+        font-size:0.5em;
         }
     }
 
