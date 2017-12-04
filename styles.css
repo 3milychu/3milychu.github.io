@@ -242,6 +242,10 @@ summary {
     margin:-20% 45%;
 }
 
+#current{
+    background-color:white;
+}
+
 #dataArt{
     background-color:#f2f2f2;
 }
@@ -549,6 +553,53 @@ summary:focus {
 #menu9:hover {
     color:#049aa6;
 }
+
+.media-holder {
+    width:40%;
+    overflow:hidden;
+    position:relative;
+    display:inline-block;
+}
+
+.media-holder:hover {
+    transform:scale(0.9,0.9);
+    transition:0.2s ease-in;
+
+}
+
+.media-cover {
+    width:100%;
+/*    left:-25%;*/
+}
+
+.scroll-post {
+    background-color:white;
+    white-space: nowrap;
+    overflow: scroll;
+}
+
+.overlay {
+    background-color:black;
+    position:absolute;
+    top:0;
+    padding:1%;
+    width:40%;
+    height:13%;
+    overflow:hidden;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.overlay h4 {
+    color:#c2b59b !important;
+    font-size:0.8em;
+    font-weight:400;
+    margin:0;
+    padding: 5%;
+    color:white;
+    font-family: 'Lato', sans-serif;
+
+}
+
 /*responsive
 
     /*monitors*/
@@ -642,6 +693,8 @@ summary:focus {
         #footer a{
             font-weight:300;
         }
+        .media-holder {
+        width:90%;
     }
 
     /*small phones*/
