@@ -3,7 +3,7 @@ h1, h2, h3, p, ul, ol, a, span, summary {
 }
 
 body {
-    background-color: #231f20;
+    background-color: white;
     font-weight: 200;
     color: #c2b59b;
 }
@@ -295,7 +295,7 @@ summary {
 /*flexbox*/
 
 .container {
-    margin:2%;
+    margin:5%;
 }
 
 /*-------- flex container --------*/
@@ -314,7 +314,7 @@ summary {
 }
 .flex-item {
     color: #fff;
-    height: 210px;
+    height: 80%;
     margin: 10px 0;
     padding: 0;
     width: 225px;
@@ -329,8 +329,8 @@ summary {
     flex-direction: column;
     justify-content: flex-start;
     height: 210px;
-    margin: 0;
-    padding: 0;
+    margin: 2%;
+    padding: 5%;
     width: 100%;
 }
 .flex-item-inner a {
@@ -345,7 +345,7 @@ summary {
     top: 0;
     left: 0;
     width: 185px;
-    height: 170px;
+    height: 85%;
     padding: 20px;
     margin: 0;
     -webkit-backface-visibility: hidden;
@@ -353,8 +353,6 @@ summary {
     -webkit-transition: -webkit-transform 0.3s;
     transition: transform 0.3s;
     justify-content: flex-end;
-/*    border: 1px solid;*/
-/*    border-color: #c7b299;*/
 }
 .card-front i.tile-icon {
     display: block;
@@ -364,7 +362,7 @@ summary {
 .card-front h4 {
     font-family: 'Lato', sans-serif;
     color:white;
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: 900;
     margin: 10px 0;
 }
@@ -375,11 +373,6 @@ summary {
     font-weight: 200;
     margin: 0;
 }
-/*.card-front {
-    background-color:#231f20;
-    border: 2px solid;
-    border-color: #c7b299;
-}*/
 
 #purple {
     background-color:#701a6d;
@@ -394,24 +387,29 @@ summary {
 }
 
 .card-back {
-    background-color: #231f20;
-    border: 3px solid;
-/*    border-color: #c7b299;*/
+    color: #231f20;
+    background-color: white;
+    border: 0;
     -webkit-transform: rotateY(-180deg);
     transform: rotateY(-180deg);
 }
 .card-back p.title {
-    color: #998976;
+    color: #231f20;
     margin-top: 0;
-    font-weight:normal;
+    font-size:1.2em;
+    font-weight:900 !important;
 }
 .card-back p.desc {
-    color:white;
-    font-size: 12px;
-    font-weight: 200;
+    color:#231f20;
+    font-size: 1em;
+    font-weight: 300;
 }
 .card-back p.link {
-    color:#998976;
+    color:#231f20;
+    font-size:1em;
+}
+.card-back p.li {
+    color:#231f20;
 }
 
 /*-------- cards / flip effect --------*/
@@ -507,9 +505,10 @@ summary {
 
 #footer {
     background-color:#231f20;
-    width:90%;
+    width:93%;
     top:0;
     left:-2%;
+    margin:0;
     height:100%;
 }
 
