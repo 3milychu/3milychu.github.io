@@ -43,7 +43,7 @@ iframe{
 }
 
 .heading {
-    margin-top:20%;
+    margin-top:10%;
 }
 
 .section-white .post {
@@ -747,6 +747,9 @@ summary:focus {
         text-align:left;
         margin:0% 0% 0% 3%;
         }
+        .heading {
+        margin-top:20%;
+}
     }
 
     /*small phones*/
@@ -781,7 +784,7 @@ summary:focus {
             height:auto;
         }
         .overlay h4 {
-        font-size:0.5em;
+        font-size:0.8em;
         }
     }
 
