@@ -104,26 +104,25 @@ iframe{
 summary {
     font-size:1em;
     font-weight:400;
-/*    color:#231f20;*/
     padding:1% 1% 1% 2%;
-    color:white;
+    color:#FEE5D7;
 }
 
-.aduro {
-    background-color:#701a6d;
+/*.aduro {
+    background-color:#FEE5D7;
 }
 
 .artist {
-    background-color:#049aa6;
+    background-color:#FEE5D7;
 }
 
 .student {
-    background-color:#d3922a;
+    background-color:#FEE5D7;
 }
 
 .roadmap {
-    background-color:#095352;
-}
+    background-color:#FEE5D7;
+}*/
 
 .post p {
     font-size:1em;
@@ -519,7 +518,7 @@ summary {
 }
 
 #footer-child{
-    background-color:#231f20;
+    background-color:white;
     width:100%;
     top:0;
     left:-2%;
@@ -527,11 +526,11 @@ summary {
 }
 
 #footer-child h2 {
-    color:white;
+    color:#231f20;
 }
 
 #footer-child a{
-    color:white;
+    color:#231f20;
     text-decoration:none;
     font-size:0.8em;
 }
