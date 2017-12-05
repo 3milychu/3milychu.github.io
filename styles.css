@@ -645,9 +645,6 @@ summary:focus {
     /*monitors*/
 
     @media screen and (min-height: 2560px) {
-        .sidenav {
-            height:5%;
-        }
     }
 
     /*tablets and smaller*/
@@ -711,7 +708,7 @@ summary:focus {
             font-size:1em;
         }
         .sidenav a {
-            font-size:1.5em;
+            font-size:2em;
         }
         .section-white h1 {
             font-size:3em;
@@ -719,6 +716,12 @@ summary:focus {
         }
         .sidenav {
             padding-top:10%;
+        }
+        #name {
+            padding-top:1%;
+        }
+        #projects {
+            padding-top:1%;
         }
         ul{
             font-weight:400;
