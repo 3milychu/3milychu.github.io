@@ -317,7 +317,7 @@ summary {
 .flex-item {
     color: #fff;
     height: 80%;
-    margin: 10px 0;
+    margin: 3%;
     padding: 0;
     width: 225px;
     position: relative;
@@ -346,27 +346,22 @@ summary {
     position: absolute;
     top: 0;
     left: 0;
-    width: 185px;
+    width: 100%;
     height: 85%;
-    padding: 20px;
-    margin: 0;
+    padding: 10%;
+    margin: 1%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     -webkit-transition: -webkit-transform 0.3s;
     transition: transform 0.3s;
     justify-content: flex-end;
 }
-.card-front i.tile-icon {
-    display: block;
-    margin: 10px auto 20px auto;
-    text-align: center;
-}
 .card-front h4 {
     font-family: 'Lato', sans-serif;
     color:white;
-    font-size: 1.2em;
+    font-size: 1.5em;
     font-weight: 900;
-    margin: 10px 0;
+    margin:0;
 }
 .card-front p.detail {
     font-family: 'Lato', sans-serif;
@@ -398,12 +393,12 @@ summary {
 .card-back p.title {
     color: #231f20;
     margin-top: 0;
-    font-size:1.2em;
+    font-size:1.3em;
     font-weight:900 !important;
 }
 .card-back p.desc {
     color:#231f20;
-    font-size: 1em;
+    font-size: 1.1em;
     font-weight: 300;
 }
 .card-back p.link {
@@ -537,17 +532,17 @@ summary {
 }
 
 #footer-child h2 {
-    color:#231f20;
+    color:#c2b59b;
 }
 
 #footer-child a{
-    color:#231f20;
+    color:#c2b59b;
     text-decoration:none;
     font-size:0.8em;
 }
 
 #footer-child a:hover {
-    color:#c2b59b;
+    color:#231f20;
 }
 
 .breadcrumb {
@@ -726,6 +721,7 @@ summary:focus {
         }
         .card-front p.detail {
             font-weight:400;
+            font-size:1.2em;
         }
         .post h2 {
             font-weight:400;
