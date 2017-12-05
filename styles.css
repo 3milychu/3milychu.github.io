@@ -741,7 +741,10 @@ summary:focus {
         }
 
         #bio h2 {
-            font-size:2em;
+            font-size:3em;
+        }
+        #bio a{
+            font-size:1.5em;
         }
         p{
             font-weight:400 !important;
@@ -763,11 +766,13 @@ summary:focus {
         margin:auto;
         float:none;
         }
-
         #footer .post-media {
         width:100%;
         padding:5% 0% 0% 0%;
-}
+        }
+        details {
+            font-size:1.5em;
+        }
     }
 
     /*small phones*/
