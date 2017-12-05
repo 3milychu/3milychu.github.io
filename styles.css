@@ -712,13 +712,16 @@ summary:focus {
             letter-spacing:-0.07em;
         }
         .sidenav {
-            padding-top:10%;
+            padding-top:15%;
         }
         #name {
-            padding-top:1%;
+            padding-top:2%;
+            font-size:1.5em;
         }
         #projects {
             padding-top:1%;
+            font-size:4em;
+            left:85%;
         }
         ul{
             font-weight:400;
@@ -775,7 +778,7 @@ summary:focus {
             font-size:1.5em;
         }
         .sidenav .closebtn {
-        top: 80%;
+        top: 70%;
         }
     }
 
@@ -786,7 +789,7 @@ summary:focus {
         padding-top:10%;
         }
         .sidenav {
-            padding-top:15%;
+            padding-top:25%;
         }
         .sidenav a {
             padding-top:5%;
