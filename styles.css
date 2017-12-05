@@ -459,8 +459,8 @@ summary {
 .sidenav .closebtn {
     position: absolute;
     top: 70%;
-   	right: 25px;
-    font-size: 36px;
+   	right: 5%;
+    font-size: 2em;
     margin-left: 80%;
 }
 
@@ -692,9 +692,6 @@ summary:focus {
             width:150%;
             margin-left:-25%;
         }
-        /*#projects {
-            left:80%;
-        }*/
         #philosophy {
             margin-top:-70%;
             font-size:1em;
@@ -776,6 +773,9 @@ summary:focus {
         }
         details {
             font-size:1.5em;
+        }
+        .sidenav .closebtn {
+        top: 80%;
         }
     }
 
