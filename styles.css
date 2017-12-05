@@ -108,6 +108,16 @@ summary {
     color:#FEE5D7;
 }
 
+#footer .post-body {
+    width:40%;
+}
+
+#footer .post-media {
+    float:right;
+    width:50%;
+    padding:10% 0% 0% 0%;
+}
+
 /*.aduro {
     background-color:#FEE5D7;
 }
@@ -748,6 +758,15 @@ summary:focus {
         }
         .heading {
         margin-top:20%;
+        }
+        #footer .post-body {
+        margin:auto;
+        float:none;
+        }
+
+        #footer .post-media {
+        width:100%;
+        padding:5% 0% 0% 0%;
 }
     }
 
