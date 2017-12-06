@@ -622,16 +622,16 @@ summary:focus {
     background-color:black;
     position:absolute;
     top:0;
-    padding:1%;
-    width:40%;
-    height:13%;
+    padding:2% 5% 2% 2%;
+    width:auto;
+    height:auto;
     overflow:hidden;
     border-radius: 0px 5px 5px 0px;
 }
 
 .overlay h4 {
     color:#c2b59b !important;
-    font-size:0.8em;
+    font-size:1em;
     font-weight:400;
     margin:0;
     padding: 5%;
@@ -757,7 +757,7 @@ summary:focus {
         width:90%;
         }
         .overlay h4 {
-        font-size:1em;
+        font-size:1.2em;
         }
         .section-white h1 {
         text-align:left;
@@ -810,15 +810,6 @@ summary:focus {
         .postImage {
             width:80%;
             height:auto;
-        }
-        .overlay h4 {
-        font-size:0.8em;
-        }
-    }
-
-    @media screen and (max-width:400px) {
-        iframe {
-            width:80%;
         }
     }
 
