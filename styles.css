@@ -779,6 +779,7 @@ summary:focus {
         }
         .sidenav .closebtn {
         top: 70%;
+        font-size:3em;
         }
     }
 
