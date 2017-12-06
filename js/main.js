@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function(){
     var sideNav = document.getElementById("mySidenav");
     sideNav.innerHTML += "<a href='index.html'>Home</a>";
     sideNav.innerHTML += "<a href='mailto:3milychu@gmail.com'>Contact</a>";
+    sideNav.innerHTML += "<a href='assets/resume.pdf' target='_blank'>Resume</a>";
 });
 
 function openNav (){
