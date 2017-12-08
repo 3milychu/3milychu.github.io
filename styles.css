@@ -16,7 +16,7 @@ em {
 body .section-white {
 /*    background-color:#f2f2f2;*/
     background-color:white;
-    width:105%;
+    width:100%;
 }
 
 body .section {
@@ -37,25 +37,9 @@ u {
     text-decoration: none;
 }
 
-/*iframe{
+iframe{
     width:80%;
     height:;
-}
-
-*/
-
-.videoWrapper {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
-    padding-top: 25px;
-    height: 0;
-}
-.videoWrapper iframe {
-    position: absolute;
-    top: 0;
-    left:0;
-    width: 80%;
-    height: 80%;
 }
 
 .heading {
@@ -137,15 +121,12 @@ summary {
 /*.aduro {
     background-color:#FEE5D7;
 }
-
 .artist {
     background-color:#FEE5D7;
 }
-
 .student {
     background-color:#FEE5D7;
 }
-
 .roadmap {
     background-color:#FEE5D7;
 }*/
@@ -475,7 +456,7 @@ summary {
 .sidenav .closebtn {
     position: absolute;
     top: 70%;
-   	right: 5%;
+    right: 5%;
     font-size: 2em;
     margin-left: 80%;
 }
@@ -522,7 +503,7 @@ summary {
 
 #footer {
     background-color:#231f20;
-    width:105%;
+    width:95%;
     top:0;
     left:-2%;
     margin:0;
@@ -569,7 +550,6 @@ summary {
 .breadcrumb {
     width:40%;
     margin:auto;
-    margin-left:40%;
 }
 
 .sidenav p {
@@ -658,7 +638,6 @@ summary:focus {
 }
 
 /*responsive
-
     /*monitors*/
 
     @media screen and (min-height: 2560px) {
@@ -694,10 +673,6 @@ summary:focus {
         .postImage {
             width:80%;
             height:auto;
-        }
-        .post {
-            margin:0;
-            padding:3% 0% 3% 0%;
         }
         .post-body {
             width:80%;
@@ -832,10 +807,6 @@ summary:focus {
             width:80%;
             height:auto;
         }
-        .videoWrapper iframe {
-        width: 100% !important;
-        height: 100% !important;
-}
     }
 
 /*WIP Page*/
