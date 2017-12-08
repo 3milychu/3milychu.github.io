@@ -16,7 +16,7 @@ em {
 body .section-white {
 /*    background-color:#f2f2f2;*/
     background-color:white;
-    width:100%;
+    width:105%;
 }
 
 body .section {
@@ -54,8 +54,8 @@ u {
     position: absolute;
     top: 0;
     left:0;
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
 }
 
 .heading {
@@ -522,7 +522,7 @@ summary {
 
 #footer {
     background-color:#231f20;
-    width:95%;
+    width:105%;
     top:0;
     left:-2%;
     margin:0;
@@ -569,6 +569,7 @@ summary {
 .breadcrumb {
     width:40%;
     margin:auto;
+    margin-left:40%;
 }
 
 .sidenav p {
@@ -699,7 +700,7 @@ summary:focus {
             padding:3% 0% 3% 0%;
         }
         .post-body {
-            width:100%;
+            width:80%;
         }
         .post-media {
             width:100%;
@@ -831,6 +832,10 @@ summary:focus {
             width:80%;
             height:auto;
         }
+        .videoWrapper iframe {
+        width: 100% !important;
+        height: 100% !important;
+}
     }
 
 /*WIP Page*/
