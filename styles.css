@@ -42,6 +42,10 @@ iframe{
     height:;
 }
 
+a {
+    text-decoration:none;
+}
+
 .heading {
     margin-top:10%;
 }
@@ -812,18 +816,20 @@ summary:focus {
 /*WIP Page*/
 
 .button {
-    padding:3%;
+    padding:3% 0% 3% 3%;
     border: 2px solid #231f20;
     border-radius:3px;
-    width:22%;
-}
-
-.button a{
+    width:18%;
     text-decoration:none;
     font-weight:900;
     color:#231f20;
 }
 
-.button a:hover {
+.button:hover {
     color:#c2b59b;
+    border: 2px solid #c2b59b;
+}
+
+.button:visited {
+    text-decoration:none;
 }
