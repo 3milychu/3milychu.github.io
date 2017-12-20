@@ -167,6 +167,7 @@ summary {
     padding:0;
     margin: auto;
     left:-2%;
+    border: 2px white;
 }
 
 #mobile {
