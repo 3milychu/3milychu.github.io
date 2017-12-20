@@ -140,8 +140,7 @@ summary:focus {
     background-color: #231f20;
     margin:auto;
     padding:0;
-    width:105%;
-    margin-left:-2%;
+    width:100%;
 }
 
 #desktop {
@@ -149,7 +148,6 @@ summary:focus {
     display:block;
     padding:0;
     margin: auto;
-    left:-2%;
     border: 2px white;
 }
 
@@ -587,8 +585,9 @@ summary:focus {
             overflow:hidden;
         }
         #desktop {
-            width:150%;
+            width:155%;
             margin-top:10%;
+            overflow:hidden;
             margin-left:-25%;
         }
         /*menu*/
