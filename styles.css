@@ -6,6 +6,9 @@ body {
     background-color: white;
     font-weight: 200;
     color: #c2b59b;
+    top:0%;
+    left:0%;
+    margin:0;
 }
 
 em {
@@ -14,7 +17,6 @@ em {
 }
 
 body .section-white {
-/*    background-color:#f2f2f2;*/
     background-color:white;
     width:100%;
 }
@@ -35,11 +37,6 @@ ul {
 u {    
     border-bottom: 1px dotted #095352;
     text-decoration: none;
-}
-
-iframe{
-    width:80%;
-    height:;
 }
 
 a {
@@ -81,6 +78,8 @@ a {
     padding-bottom:2%;
 }
 
+
+/*The post */
 .post {
     width:100%;
     margin:0%;
@@ -112,6 +111,14 @@ a {
     color:#231f20;
 }
 
+.post p {
+    font-size:1em;
+    font-weight:400;
+    color:#231f20;
+}
+
+/*summary*/
+
 summary {
     font-size:1em;
     font-weight:400;
@@ -119,39 +126,15 @@ summary {
     color:#FEE5D7;
 }
 
-#footer .post-body {
-    width:40%;
+summary:active {
+    outline-width: 0;
 }
 
-#footer .post-media {
-    float:right;
-    width:50%;
-    padding:10% 0% 0% 0%;
+summary:focus {
+    outline-width: 0;
 }
 
-/*.aduro {
-    background-color:#FEE5D7;
-}
-.artist {
-    background-color:#FEE5D7;
-}
-.student {
-    background-color:#FEE5D7;
-}
-.roadmap {
-    background-color:#FEE5D7;
-}*/
-
-.post p {
-    font-size:1em;
-    font-weight:400;
-    color:#231f20;
-}
-
-#bio h2 {
-    color:white;
-    margin-bottom:0;
-}
+/*cover media*/
 
 #featured{
     background-color: #231f20;
@@ -170,90 +153,6 @@ summary {
     border: 2px white;
 }
 
-#mobile {
-    width:100%;
-    display:none;
-}
-
-#philosophy {
-    background-color:#FEE5D7;
-    color:black;
-    font-weight:5em;
-    border:2em black;
-    position:relative;
-    display:block;
-    float:right;
-    margin-top:-50%;
-    padding:1% 10% 1% 3%;
-
-}
-
-#philosophy a{
-    text-decoration:none;
-    color:black;
-}
-
-#philosophy a:hover {
-    color:#049aa6;
-}
-
-#philosophy:hover {
-    padding:1% 15% 1% 5%;
-    transition: padding 0.2s linear;
-}
-
-#theories {
-    background-color:#FEE5D7;
-    color:black;
-    font-weight:5em;
-    border:2em black;
-    position:relative;
-    display:block;
-    float:right;
-    margin-top:-40%;
-    padding:1% 10% 1% 3%;
-}
-
-#theories a{
-    text-decoration:none;
-    color:black;
-}
-
-#theories a:hover {
-    color:#049aa6;
-}
-
-#theories:hover {
-    padding:1% 15% 1% 5%;
-    transition: padding 0.2s linear;
-}
-
-#WIP {
-    background-color:#FEE5D7;
-    color:black;
-    font-weight:5em;
-    border:2em black;
-    position:relative;
-    display:block;
-    float:right;
-    margin-top:-30%;
-    padding:1% 3% 1% 3%;
-
-}
-
-#WIP a{
-    text-decoration:none;
-    color:black;
-}
-
-#WIP a:hover {
-    color:#049aa6;
-}
-#WIP:hover {
-    color:#049aa6;
-    padding:1% 5% 1% 5%;
-    transition: padding 0.2s linear;
-}
 
 #scroll {
     color:black;
@@ -265,10 +164,6 @@ summary {
     margin:-20% 45%;
 }
 
-#current{
-    background-color:white;
-}
-
 #dataArt{
     background-color:white;
 }
@@ -276,32 +171,6 @@ summary {
 #ai {
     background-color:white;
 }
-
-#gis {
-    background-color:#f2f2f2;
-}
-
-#gis2 {
-    background-color:#e6e6e6;
-}
-
-#animation {
-    background-color:#f2f2f2;
-}
-
-#interactionDesign{
-    background-color:#e6e6e6;
-}
-
-#dataMarketing{
-    background-color:#f2f2f2;
-}
-/*Specific Post Media*/
-
-    /*Playing with Time Blocks*/
-    #nftime {
-        width:80%;
-    }
 
 /*break*/
 
@@ -521,6 +390,13 @@ summary {
     margin-left: 80%;
 }
 
+.sidenav p {
+    position:relative;
+    width:30%;
+    margin:auto;
+
+}
+
 #projects{
     position: fixed;
     top: 0;
@@ -537,6 +413,24 @@ summary {
     left: 5%;
     z-index:8;
     font-size:1em;
+}
+
+/*footer*/
+
+#footer .post-body {
+    width:40%;
+}
+
+#footer .post-media {
+    float:right;
+    width:50%;
+    padding:10% 0% 0% 0%;
+}
+
+
+#bio h2 {
+    color:white;
+    margin-bottom:0;
 }
 
 #profilePic {
@@ -563,9 +457,9 @@ summary {
 
 #footer {
     background-color:#231f20;
-    width:95%;
+    width:100%;
     top:0;
-    left:-2%;
+    left:0%;
     margin:0;
     height:100%;
 }
@@ -586,9 +480,9 @@ summary {
 
 #footer-child{
     background-color:white;
-    width:90%;
+    width:100%;
     top:0;
-    left:-2%;
+    left:0%;
     height:100%;
 }
 
@@ -613,23 +507,6 @@ summary {
     margin:auto;
 }
 
-.sidenav p {
-    position:relative;
-    width:30%;
-    margin:auto;
-
-}
-
-summary:active {
-    outline-width: 0;
-}
-
-summary:focus {
-    outline-width: 0;
-}
-
-}
-
 .about a{
     display:block !important;
     margin:auto;
@@ -639,17 +516,7 @@ summary:focus {
     line-height:1.5em;
 }
 
-#menu8 {
-    color:#231f20;
-}
-
-#menu9{
-    color:#c2b59b;
-}
-
-#menu9:hover {
-    color:#049aa6;
-}
+/*scroll-post */
 
 .media-holder {
     width:40%;
@@ -707,42 +574,6 @@ summary:focus {
     /*tablets and smaller*/
 
     @media screen and (max-width:1000px) {
-        #menu2 {
-            display:none;
-        }
-        #menu3 {
-            display:none;
-        }
-        #menu4 {
-            display:none;
-        }
-        #menu5 {
-            display:none;
-        }
-        #menu6 {
-            display:none;
-        }
-        #menu7 {
-            display:none;
-        }
-        #menu8 {
-            display:none;
-        }
-/*        iframe {
-            width:100%;
-            /*height:80%;*/
-        .postImage {
-            width:80%;
-            height:auto;
-        }
-        .post-body {
-            width:80%;
-            margin-top:20%;
-        }
-        .post-media {
-            width:100%;
-            margin-top:2%;
-        }
         #featured {
             overflow:hidden;
         }
@@ -751,20 +582,14 @@ summary:focus {
             margin-top:10%;
             margin-left:-25%;
         }
-        #philosophy {
-            margin-top:-70%;
-            font-size:1em;
-        }
-        #theories {
-            margin-top:-45%;
-            font-size:1em;
-        }
-        #WIP {
-            margin-top:-40%;
-            font-size:1em;
-        }
         .sidenav a {
             font-size:2em;
+        }
+        .section-white .post{
+            width:100%;
+            margin:0%;
+            left:0%;
+            padding:0%;
         }
         .section-white h1 {
             font-size:3em;
@@ -845,19 +670,36 @@ summary:focus {
         font-size:3em;
         }
         .videoWrapper img {
-        width:120%;
+        width:100%;
+        margin:0%;
         }
 
         .videoWrapper iframe {
             position: absolute;
             top: 0;
             left: 0;
-            width: 120%;
-            height: 120%;
+            width: 100%;
+            height: 100%;
+        }
+
+        .post{
+            padding:0px;
+            margin:0px;
+        }
+        .post-body {
+            width:80%;
+            padding:5%;
         }
         .post-media{
-            left:-8%;
+            width:100%;
+            margin-top:5%;
+            top:0%;
+            left:0%;
             overflow:visible;
+        }
+        .break h2{
+            font-weight:900;
+            font-size:1.5em;
         }
     }
 
@@ -879,15 +721,10 @@ summary:focus {
             margin:auto;
         }
         .post-media {
-            float:left!important;
             width:100%;
             display:block;
             margin:auto;
-            padding:5% 0% 0% 0%;
-        }
-        .postImage {
-            width:80%;
-            height:auto;
+            padding:0%;
         }
     }
 
