@@ -478,7 +478,7 @@ summary:focus {
 
 #footer-child{
     background-color:white;
-    width:100%;
+    width:90%;
     top:0;
     left:0%;
     height:100%;
@@ -505,6 +505,7 @@ summary:focus {
     margin:auto;
     padding:5%;
     margin-bottom:10%;
+    left:0;
 }
 
 .about a{
@@ -533,7 +534,6 @@ summary:focus {
 
 .media-cover {
     width:100%;
-/*    left:-25%;*/
 }
 
 .scroll-post {
