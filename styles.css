@@ -362,7 +362,7 @@ summary:focus {
 }
 
 .sidenav a {
-    padding: 5% 2% 0% 10%;
+    padding: 2% 2% 0% 10%;
     color: #c2b59b;
     font-family: 'Lato', sans-serif;
     font-weight: 900;
@@ -593,6 +593,7 @@ summary:focus {
         /*menu*/
         .sidenav a {
             font-size:2em;
+            padding: 5% 2% 0% 10%;
         }
         .sidenav {
             padding-top:15%;
