@@ -666,7 +666,9 @@ summary:focus {
         #footer a, h2, p{
             font-weight:400;
         }
-
+        #footer-child{
+            width:100%;
+        }
         #footer-child a{
             font-weight:400;
         }
