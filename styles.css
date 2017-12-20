@@ -433,8 +433,8 @@ summary:focus {
 
 #profilePic {
     width:40%;
-    margin:auto;
-    padding:0% 30% 15% 30%;
+    margin-top:-15%;
+    padding:0% 40% 50% 10%;
 }
 
 #bio a{
@@ -677,6 +677,12 @@ summary:focus {
         #bio a{
             font-size:1.5em;
         }
+        #profilePic {
+            width:40%;
+            margin:auto;
+            padding:0% 30% 15% 30%;
+        }
+
         /*scroll-post*/
         .media-holder {
         width:90%;
