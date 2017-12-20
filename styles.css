@@ -747,6 +747,7 @@ summary:focus {
         }
         #desktop {
             width:150%;
+            margin-top:10%;
             margin-left:-25%;
         }
         #philosophy {
