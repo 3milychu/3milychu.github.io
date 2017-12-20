@@ -574,6 +574,13 @@ summary:focus {
     /*tablets and smaller*/
 
     @media screen and (max-width:1000px) {
+        ul{
+            font-weight:400;
+        }
+        p{
+            font-weight:400 !important;
+        }
+        /*cover*/
         #featured {
             overflow:hidden;
         }
@@ -582,21 +589,16 @@ summary:focus {
             margin-top:10%;
             margin-left:-25%;
         }
+        /*menu*/
         .sidenav a {
             font-size:2em;
         }
-        .section-white .post{
-            width:100%;
-            margin:0%;
-            left:0%;
-            padding:0%;
-        }
-        .section-white h1 {
-            font-size:3em;
-            letter-spacing:-0.07em;
-        }
         .sidenav {
             padding-top:15%;
+        }
+        .sidenav .closebtn {
+        top: 70%;
+        font-size:3em;
         }
         #name {
             padding-top:2%;
@@ -607,41 +609,19 @@ summary:focus {
             font-size:4em;
             left:85%;
         }
-        ul{
-            font-weight:400;
-        }
-        .card-front p.detail {
-            font-weight:400;
-            font-size:1.2em;
-        }
+        /*post*/
         .post h2 {
             font-weight:400;
         }
-        .card-back p.desc {
-            font-weight:400;
+        .section-white .post{
+            width:100%;
+            margin:0%;
+            left:0%;
+            padding:0%;
         }
-        #footer a, h2, p{
-            font-weight:400;
-        }
-
-        #footer-child a{
-            font-weight:400;
-        }
-
-        #bio h2 {
+        .section-white h1 {
             font-size:3em;
-        }
-        #bio a{
-            font-size:1.5em;
-        }
-        p{
-            font-weight:400 !important;
-        }
-        .media-holder {
-        width:90%;
-        }
-        .overlay h4 {
-        font-size:1.2em;
+            letter-spacing:-0.07em;
         }
         .section-white h1 {
         text-align:left;
@@ -654,34 +634,6 @@ summary:focus {
             margin-top:20%;
             text-align:center;
         }
-        #footer .post-body {
-        margin:auto;
-        float:none;
-        }
-        #footer .post-media {
-        width:100%;
-        padding:5% 0% 0% 0%;
-        }
-        details {
-            font-size:1.5em;
-        }
-        .sidenav .closebtn {
-        top: 70%;
-        font-size:3em;
-        }
-        .videoWrapper img {
-        width:100%;
-        margin:0%;
-        }
-
-        .videoWrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
         .post{
             padding:0px;
             margin:0px;
@@ -701,6 +653,61 @@ summary:focus {
             font-weight:900;
             font-size:1.5em;
         }
+        /*flexbox*/
+        .card-front p.detail {
+            font-weight:400;
+            font-size:1.2em;
+        }
+        .card-back p.desc {
+            font-weight:400;
+        }
+        /*footer*/
+        #footer a, h2, p{
+            font-weight:400;
+        }
+
+        #footer-child a{
+            font-weight:400;
+        }
+
+        #bio h2 {
+            font-size:3em;
+        }
+        #bio a{
+            font-size:1.5em;
+        }
+        /*scroll-post*/
+        .media-holder {
+        width:90%;
+        }
+        .overlay h4 {
+        font-size:1.2em;
+        }
+        #footer .post-body {
+        margin:auto;
+        float:none;
+        }
+        #footer .post-media {
+        width:100%;
+        padding:5% 0% 0% 0%;
+        }
+        /*summary*/
+        details {
+            font-size:1.5em;
+        }
+        /*videowrapper*/
+        .videoWrapper img {
+        width:100%;
+        margin:0%;
+        }
+
+        .videoWrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     }
 
     /*small phones*/
@@ -715,20 +722,9 @@ summary:focus {
         .sidenav a {
             padding-top:5%;
         }
-        .post-body {
-            width:100%!important;
-            display:block;
-            margin:auto;
-        }
-        .post-media {
-            width:100%;
-            display:block;
-            margin:auto;
-            padding:0%;
-        }
     }
 
-/*WIP Page*/
+/*button*/
 
 .button {
     padding:3% 0% 3% 3%;
