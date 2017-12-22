@@ -499,6 +499,10 @@ summary:focus {
     color:#231f20;
 }
 
+#footer-child em {
+    color:#231f20;
+}
+
 .breadcrumb {
     width:50%;
     text-align:center;
