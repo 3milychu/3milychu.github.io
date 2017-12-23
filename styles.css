@@ -102,6 +102,15 @@ a {
     color:#049aa6;;
 }
 
+.break a{
+    color:#c2b59b;
+    font-weight:bolder;
+}
+
+.post-body a:hover {
+    color:#049aa6;;
+}
+
 .post-media{
     float:right;
     position:relative;
