@@ -94,6 +94,14 @@ a {
     margin-left:5%;
 }
 
+.post-body a{
+    color:#c2b59b;
+}
+
+.post-body a:hover {
+    color:#049aa6;;
+}
+
 .post-media{
     float:right;
     position:relative;
@@ -499,10 +507,6 @@ summary:focus {
     color:#231f20;
 }
 
-#footer-child em {
-    color:#231f20;
-}
-
 .breadcrumb {
     width:50%;
     text-align:center;
@@ -627,10 +631,8 @@ summary:focus {
         }
         .section-white h1 {
             font-size:3em;
-            letter-spacing:-0.07em;
         }
         .section-white h1 {
-        text-align:left;
         margin:0% 0% 0% 3%;
         }
         .heading2 {
@@ -680,14 +682,19 @@ summary:focus {
 
         #bio h2 {
             font-size:3em;
+            text-align:center;
+            padding-bottom:5%;
         }
         #bio a{
             font-size:1.5em;
+            display:block;
+            text-align:center;
+            padding-top:1%;
         }
         #profilePic {
             width:40%;
             margin:auto;
-            padding:0% 30% 15% 30%;
+            padding:5% 30% 15% 30%;
         }
 
         /*scroll-post*/
