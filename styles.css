@@ -610,7 +610,8 @@ summary:focus {
 .excerpt p{
     padding-left:3%;
     padding-right:3%;
-    margin-bottom:3%;
+    margin-top:0;
+    margin-bottom:2%;
     font-size:0.8em;
     font-weight:400;
 }
@@ -806,14 +807,13 @@ summary:focus {
         }
         .excerpt p {
             font-size:1em;
-            padding-top:2%;
         }
         #highlights{
             margin-top:20%;
         }
         .blurb {
             width:60%;
-            padding-bottom:8%;
+            padding-bottom:6%;
         }
     }
 
