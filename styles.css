@@ -610,7 +610,7 @@ summary:focus {
 .excerpt p{
     padding-left:3%;
     padding-right:3%;
-    margin-bottom:2%;
+    margin-bottom:3%;
     font-size:0.8em;
     font-weight:400;
 }
@@ -629,14 +629,16 @@ summary:focus {
     text-align:center;
     margin:auto;
     color:black;
-    padding-bottom:2%;
+    padding-bottom:3%;
 }
 
 #highlights {
-    margin-top:8%;
-    padding-bottom:1%;
+    margin-top:6%;
     margin-bottom:0%;
-    text-align:center;
+    padding-top:2%;
+    padding-bottom:2%;
+    font-weight:900;
+    color:#C7B299;
 }
 
 /*responsive
@@ -796,11 +798,22 @@ summary:focus {
             height: 100%;
         }
         /*excerpt*/
+        .excerpt h1 {
+            font-size:1em;
+        }
+        .excerpt h4 {
+            font-weight:900;
+        }
+        .excerpt p {
+            font-size:1em;
+            padding-top:2%;
+        }
         #highlights{
             margin-top:20%;
         }
         .blurb {
             width:60%;
+            padding-bottom:8%;
         }
     }
 
