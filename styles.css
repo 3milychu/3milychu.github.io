@@ -313,15 +313,24 @@ summary:focus {
 }
 
 #purple {
-    background-color:#701a6d;
+    /*background-color:#701a6d;*/
+   /* background-color:#F2F2F2;*/
+   background-image: url("assets/pp1.jpg");
+   background-size:100%;
 }
 
 #gold {
-    background-color:#d3922a;
+    /*background-color:#d3922a;*/
+    background-color:#F2F2F2;
+    background-image: url("assets/pp3.jpg");
+    background-size:100%;
 }
 
 #teal {
-    background-color:#049aa6;
+    /*background-color:#049aa6;*/
+    background-color:#F2F2F2;
+    background-image: url("assets/pp2.jpg");
+    background-size:100%;
 }
 
 .card-back {
@@ -438,7 +447,7 @@ summary:focus {
 
 #footer .post-media {
     float:right;
-    width:50%;
+    width:40%;
     padding:10% 0% 0% 0%;
 }
 
@@ -451,7 +460,7 @@ summary:focus {
 #profilePic {
     width:40%;
     margin-top:-15%;
-    padding:0% 40% 50% 10%;
+    padding:0% 0% 50% 0%;
 }
 
 #bio a{
@@ -541,6 +550,7 @@ summary:focus {
     overflow:hidden;
     position:relative;
     display:inline-block;
+    background-color:#F2F2F2;
 }
 
 .media-holder:hover {
@@ -556,7 +566,8 @@ summary:focus {
 .scroll-post {
     background-color:white;
     white-space: nowrap;
-    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y:hidden;
      -webkit-overflow-scrolling: touch;
 }
 
@@ -580,6 +591,52 @@ summary:focus {
     color:white;
     font-family: 'Lato', sans-serif;
 
+}
+
+/*excerpt*/
+
+.excerpt {
+    background-color:#F2F2F2;
+}
+
+.excerpt h4 {
+    padding-left:3%;
+    padding-right:3%;
+    padding-top:2%;
+    margin-top:0;
+    margin-bottom:2%;
+}
+
+.excerpt p{
+    padding-left:3%;
+    padding-right:3%;
+    margin-bottom:2%;
+    font-size:0.8em;
+    font-weight:400;
+}
+
+.excerpt h4 {
+    font-weight:100;
+    font-size:1.5em;
+}
+
+.excerpt a, p, h4 {
+    color:#231F20;
+}
+
+.blurb {
+    width:40%;
+    text-align:center;
+    margin:auto;
+    color:black;
+    padding-bottom:2%;
+}
+
+#highlights {
+    margin-top:8%;
+    padding-bottom:1%;
+    margin-bottom:0%;
+    text-align:center;
 }
 
 /*responsive
@@ -737,6 +794,13 @@ summary:focus {
             left: 0;
             width: 100%;
             height: 100%;
+        }
+        /*excerpt*/
+        #highlights{
+            margin-top:20%;
+        }
+        .blurb {
+            width:60%;
         }
     }
 
