@@ -804,16 +804,21 @@ summary:focus {
         }
         .excerpt h4 {
             font-weight:900;
+            margin-bottom:0;
+            padding-bottom:1%;
         }
         .excerpt p {
             font-size:1em;
+            padding-top:0;
+            margin-top:0;
         }
         #highlights{
             margin-top:20%;
         }
         .blurb {
             width:60%;
-            padding-bottom:6%;
+            padding-bottom:5%;
+            font-size:1em;
         }
     }
 
