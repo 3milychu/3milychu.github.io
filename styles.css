@@ -69,13 +69,23 @@ a {
 }
 
 .section-white h1 {
-    text-align:center;
-    font-weight:300;
-    font-size:2em;
+    text-align:left
+    font-weight:900;
+    font-size:1em;
     color:#231f20;
-    padding:0;
+    padding-left:3%;
     padding-top:2%;
     padding-bottom:2%;
+}
+
+#all {
+    margin:0% 10% 0% 10%;
+    letter-spacing:-0.05em;
+    font-size:2em;
+    font-weight:900;
+    text-align:center;
+    color:#c2b59b;
+
 }
 
 
@@ -239,6 +249,7 @@ summary:focus {
 
 .container {
     margin:5%;
+    margin-left:0%;
 }
 
 /*-------- flex container --------*/
@@ -640,6 +651,8 @@ summary:focus {
     padding-bottom:2%;
     font-weight:900;
     color:#C7B299;
+    font-size:2em;
+    text-align:center;
 }
 
 /*responsive
@@ -699,10 +712,8 @@ summary:focus {
             padding:0%;
         }
         .section-white h1 {
-            font-size:3em;
-        }
-        .section-white h1 {
-        margin:0% 0% 0% 3%;
+            font-size:1em;
+            margin:0% 0% 0% 3%;
         }
         .heading2 {
         margin-top:20%;
