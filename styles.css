@@ -819,7 +819,7 @@ summary:focus {
             font-weight:900;
             margin-bottom:0;
             padding-bottom:1%;
-            font-size:2.5em;
+            font-size:2em;
         }
         .excerpt p {
             font-size:1.5em;
@@ -828,11 +828,12 @@ summary:focus {
         }
         #highlights{
             margin-top:20%;
+            font-size:3em;
         }
         .blurb {
             width:60%;
             padding-bottom:5%;
-            font-size:1em;
+            font-size:1.5em;
         }
     }
 
