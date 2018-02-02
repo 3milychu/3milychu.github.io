@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function(){
     sideNav.innerHTML += "<a href='philosophy.html'>Style</a>";
     sideNav.innerHTML += "<a href='mailto:3milychu@gmail.com'>Contact</a>";
     sideNav.innerHTML += "<a href='assets/resume.pdf' target='_blank'>Resume</a>";
+    sideNav.innerHTML += "<a href='about.html'>About</a>";
 });
 
 // Menu Open/Close

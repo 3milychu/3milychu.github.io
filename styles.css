@@ -497,6 +497,7 @@ summary:focus {
     left:0%;
     margin:0;
     height:100%;
+    margin-top:10%;
 }
 
 #footer h2 {
@@ -712,12 +713,12 @@ summary:focus {
             padding:0%;
         }
         .section-white h1 {
-            font-size:1em;
+            font-size:1.5em;
             margin:0% 0% 0% 3%;
             padding-left:0%;
         }
         .heading2 {
-        margin-top:20%;
+            margin-top:20%;
         }
         .heading2 h1{
             margin-top:20%;
@@ -818,9 +819,10 @@ summary:focus {
             font-weight:900;
             margin-bottom:0;
             padding-bottom:1%;
+            font-size:2.5em;
         }
         .excerpt p {
-            font-size:1em;
+            font-size:1.5em;
             padding-top:0;
             margin-top:0;
         }
