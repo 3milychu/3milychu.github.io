@@ -325,22 +325,22 @@ summary:focus {
 
 #purple {
     /*background-color:#701a6d;*/
-   /* background-color:#F2F2F2;*/
-   background-image: url("assets/pp1.jpg");
+    background-color:#F2F2F2;
+   background-image: url("assets/processart-1.jpg");
    background-size:100%;
 }
 
 #gold {
     /*background-color:#d3922a;*/
     background-color:#F2F2F2;
-    background-image: url("assets/pp3.jpg");
+    background-image: url("assets/processart-2.jpg");
     background-size:100%;
 }
 
 #teal {
     /*background-color:#049aa6;*/
     background-color:#F2F2F2;
-    background-image: url("assets/pp2.jpg");
+    background-image: url("assets/processart-3.jpg");
     background-size:100%;
 }
 
