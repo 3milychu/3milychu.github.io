@@ -390,7 +390,8 @@ summary:focus {
     z-index: 6;
     top: 0;
     left: 0;
-    background-color: #231f20;
+    background-color: white;
+    border-bottom: 0.05em solid #231f20;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 5%;
@@ -470,8 +471,8 @@ summary:focus {
 
 #profilePic {
     width:40%;
-    margin-top:-15%;
-    padding:0% 0% 50% 0%;
+    margin-left:30%;
+    vertical-align:center;
 }
 
 #bio a{
@@ -491,7 +492,6 @@ summary:focus {
 }
 
 #footer {
-    background-color:#231f20;
     width:100%;
     top:0;
     left:0%;
@@ -558,19 +558,36 @@ summary:focus {
 /*scroll-post */
 
 .media-holder {
-    width:40%;
+    width:30%;
+    margin-left:3%;
     overflow:hidden;
     position:relative;
     display:inline-block;
     background-color:#F2F2F2;
 }
 
-.media-holder:hover {
+/*.media-holder:hover {
+    transform:scale(0.9,0.9);
+    transition:0.2s ease-in;
+
+}*/
+
+
+.media-holder-featured {
+    width:50%;
+    margin-left:3%;
+    overflow:hidden;
+    position:relative;
+    display:inline-block;
+    background-color:#F2F2F2;
+}
+/*
+.media-holder-featured:hover {
     transform:scale(0.9,0.9);
     transition:0.2s ease-in;
 
 }
-
+*/
 .media-cover {
     width:100%;
 }
@@ -617,6 +634,8 @@ summary:focus {
     padding-top:2%;
     margin-top:0;
     margin-bottom:2%;
+    font-weight:100;
+    font-size:1.5em;
 }
 
 .excerpt p{
@@ -626,15 +645,13 @@ summary:focus {
     margin-bottom:2%;
     font-size:0.8em;
     font-weight:400;
-}
 
-.excerpt h4 {
-    font-weight:100;
-    font-size:1.5em;
 }
 
 .excerpt a, p, h4 {
     color:#231F20;
+    white-space: pre-line;
+
 }
 
 .blurb {
@@ -775,14 +792,10 @@ summary:focus {
         }
         #profilePic {
             width:40%;
-            margin:auto;
-            padding:5% 30% 5% 30%;
+            text-align:center;
         }
 
         /*scroll-post*/
-        .media-holder {
-        width:90%;
-        }
         .overlay h4 {
         font-size:1.2em;
         }
