@@ -854,7 +854,7 @@ summary:focus {
         .media-holder-featured {
             width:90%;
         }
-        .section-heading{
+        #motion, #ux, #apps, #drawing{
             margin-top:10%;
         }
     }
