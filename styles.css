@@ -848,6 +848,12 @@ summary:focus {
             padding-bottom:5%;
             font-size:1.5em;
         }
+        .media-holder {
+            width:40%;
+        }
+        .media-holder-featured {
+            width:90%;
+        }
     }
 
     /*small phones*/
