@@ -854,6 +854,9 @@ summary:focus {
         .media-holder-featured {
             width:90%;
         }
+        .section-heading{
+            margin-top:10%;
+        }
     }
 
     /*small phones*/
