@@ -43,6 +43,14 @@ a {
     text-decoration:none;
 }
 
+label {
+    display:inline;
+    border: 0.01em black solid;
+    line-height:4em;
+    padding:2%;
+    margin:2%;
+}
+
 .heading {
     margin-top:10%;
 }
