@@ -53,17 +53,17 @@ label {
 
 .textdesc {
     width:100%;
-    height:200px;
-    background-color:#c2b59b;
+    height:150px;
+    background-color:white;
 }
 
 .textdesc h1{
     margin:auto;
     text-align:center;
-    padding-top:25%!important;
-    font-weight:300;
-    color:white!important;
-    size:4em!important;
+    padding-top:10%!important;
+    font-weight:400;
+    color:#c2b59b!important;
+    font-size:1.2em!important;
     padding-left:0%!important;
     white-space: pre-line;
 }
@@ -435,7 +435,7 @@ summary:focus {
 }
 
 .sidenav a:hover{
-     color: #049aa6;
+     color: #231f20;
  }
 
 .sidenav a:active{
