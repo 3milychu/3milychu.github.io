@@ -51,6 +51,21 @@ label {
     margin:2%;
 }
 
+.textdesc {
+    width:100%;
+    height:200px;
+    background-color:#c2b59b;
+}
+
+.textdesc h1{
+    margin:auto;
+    text-align:center;
+    padding-top:25%!important;
+    color:white!important;
+    size:4em!important;
+    padding-left:0%!important;
+}
+
 .heading {
     margin-top:10%;
 }
