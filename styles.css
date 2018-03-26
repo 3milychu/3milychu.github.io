@@ -61,9 +61,11 @@ label {
     margin:auto;
     text-align:center;
     padding-top:25%!important;
+    font-weight:300;
     color:white!important;
     size:4em!important;
     padding-left:0%!important;
+    white-space: pre-line;
 }
 
 .heading {
