@@ -2,6 +2,11 @@ h1, h2, h3, p, ul, ol, a, span, summary {
     font-family: 'Lato', sans-serif;
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
 body {
     background-color: white;
     font-weight: 200;
