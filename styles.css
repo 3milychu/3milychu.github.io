@@ -264,7 +264,7 @@ summary:focus {
 
 .videoWrapper {
     position: relative;
-    padding-bottom: 56.10%; /* 16:9 */
+    padding-bottom: 56.25%; /* 16:9 */
     padding-top: 0%;
     height: 0;
     background-color:white;
