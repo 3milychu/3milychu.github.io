@@ -889,6 +889,10 @@ summary:focus {
         #motion, #ux, #apps, #drawing{
             margin-top:10%;
         }
+        .github {
+            margin-top:8%;
+            width:14%;
+        }
     }
 
     /*small phones*/
@@ -902,6 +906,10 @@ summary:focus {
         }
         .sidenav a {
             padding-top:5%;
+        }
+        .github {
+            margin-top:0%;
+            width:15%;
         }
     }
 
