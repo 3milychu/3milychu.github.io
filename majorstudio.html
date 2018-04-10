@@ -177,6 +177,115 @@
 
 
 <div class = "section-white">
+
+	<!-- post-->
+		<div class ="post">
+
+					<div class ="post-media">
+						<div class="videoWrapper">
+								<a href="assets/project3/prototype/prototype.pdf">
+									<img src="assets/project3/prototype/cover.png">
+								</a>
+						</div>
+					</div>
+
+					<div class ="post-body">
+						<h2 style="color:#231f20;"><em>Clustering Fashion with K-means</em>
+						<br>Major Studio MSDV 2018</h2>
+								<p style="color:#231f20;font-weight:300;">
+									Using machine learning, this project fits features to a k-means model to cluster objects from the Metropolitan Museum of Art's Costume Institute. The project focuses on understanding what happens when different cluster thresholds are set for the dataset, and allows views to zoom into centroids of interest.
+								</p>
+
+								<a href="https://3milychu.github.io/epochrunway" target="new">
+									<div class="button">
+										Web App Goes Here
+									</div>
+								</a>
+					</div>
+					
+		</div>
+
+<details open><summary style="color:#2d1f20;margin-left:8%;font-size:1.2em;">Process</summary>
+		<!-- post-->
+		<div class ="post">
+
+					<div class ="post-media">
+						<div class="videoWrapper">
+								<img src="assets/project3/process/1.png">
+						</div>
+					</div>
+
+					<div class ="post-body">
+						<h2 style="color:#231f20;">
+						<br>1) Image Processing</h2>
+								<p style="color:#231f20;font-weight:300;">
+									Process images in the dataset for machine learning. This method used hierarchical segmentation with a threshold of 80 segments. This technique first identifies blocks of dominant color, condenses the image so that it is composed of those segments, and then converts it to greyscale with an exaggerated outline by adjusting the entropy.
+								</p>
+					</div>
+					
+		</div>
+
+
+		<!-- post-->
+		<div class ="post">
+
+					<div class ="post-media">
+						<div class="videoWrapper">
+								<img src="assets/project3/process/2.png">
+						</div>
+					</div>
+
+					<div class ="post-body">
+						<h2 style="color:#231f20;">
+						<br>2) Save Image Representations</h2>
+								<p style="color:#231f20;font-weight:300;">
+									After comparing the before and after transformation to adjust towards the desired result, the image transformations were then converted into 2d arrays of pixel values. This was done for all 7.6k images and saved as a flat feature set for later use.
+								</p>
+					</div>
+					
+		</div>
+
+
+		<!-- post-->
+		<div class ="post">
+
+					<div class ="post-media">
+						<div class="videoWrapper">
+								<img src="assets/project3/process/3.png">
+						</div>
+					</div>
+
+					<div class ="post-body">
+						<h2 style="color:#231f20;">
+						<br>3) Run K-means</h2>
+								<p style="color:#231f20;font-weight:300;">
+									K-means was selected as the model to cluster images based on similarity of shapes. The model was trained on creating 56 clusters from the dataset. Displayed are 3 example centroids from the model.
+								</p>
+					</div>
+					
+		</div>
+
+
+		<!-- post-->
+		<div class ="post">
+
+					<div class ="post-media">
+						<div class="videoWrapper">
+								<img src="assets/project3/process/5.png">
+						</div>
+					</div>
+
+					<div class ="post-body">
+						<h2 style="color:#231f20;">
+						<br>4) Join results to MET dataset and convert to JSON</h2>
+								<p style="color:#231f20;font-weight:300;">
+									The results of the kmeans model, with labelling of data by clusters and centroids, were joined to the original MET Costume Institute dataset. This was converted to JSON in preparation for data visualization.
+								</p>
+					</div>
+					
+		</div>
+
+</details>
 </div>
 
 	<!-- clear -->
@@ -186,11 +295,9 @@
 		<!-- Break -->
 		<div class="break">
 			<p>
-			<em>Process</em>
+			<em>Archive</em>
 
-			<a href="assets/project3/sketches/sketch.jpg" target="_blank">Sketch</a>
-			<a href="assets/project3/sketches/milestones.jpg" target="_blank">Milestones</a>
-			<a href="assets/project3/prototype/storyboard.pdf" target="_blank">Static Mockup</a>
+			<a href="assets/project3/prototype/prototype.pdf" target="_blank">Static Mockup</a>
 		</div>
 
 
