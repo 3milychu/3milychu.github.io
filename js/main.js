@@ -9,6 +9,29 @@ document.addEventListener('DOMContentLoaded', function(){
     sideNav.innerHTML += "<a href='mailto:3milychu@gmail.com'>Contact</a>";
     sideNav.innerHTML += "<a href='assets/resume.pdf' target='_blank'>Resume</a>";
     sideNav.innerHTML += "<a href='about.html'>About</a>";
+
+    var breadcrumb = document.getElementById("breadcrumb");
+    breadcrumb.innerHTML += "<a style='font-size:1em' href='majorstudio.html'>Clustering Images With Kmeans</a>";
+    breadcrumb.innerHTML += "<a style='font-size:1.5em;' href='computationalart.html'>Computational Art</a>";
+    breadcrumb.innerHTML += "<a style='font-size:1.2em;' href='culturaldata.html'>Cultural Data</a>";
+    breadcrumb.innerHTML += "<a style='font-size:1em' href='managerial-landscape.html'>The Managerial Landscape</a>";
+    breadcrumb.innerHTML += "<a style='font-size:1.5em' href='magselector.html'>Interactive Mapping</a>";
+    breadcrumb.innerHTML += "<a style='font-size:1.2em' href='timeplay.html'>Time Play</a>";
+    breadcrumb.innerHTML += "<a style='font-size:1em' href='biometrictracking.html'>Biometric Tracking</a>";
+    breadcrumb.innerHTML += "<a style='font-size:1.5em' href='shortstory.html'>Short Story</a>";
+    breadcrumb.innerHTML += "<a style='font-size:1.2em' href='revive.html'>Revive</a>";
+    breadcrumb.innerHTML += "<a style='font-size:1em' href='informationinmotion.html'>Information in Motion</a>";
+    breadcrumb.innerHTML += "<a style='font-size:1.5em' href='positiveillustration.html'>Positive Illustration</a>";
+    breadcrumb.innerHTML += "<a style='font-size:1.2em' href='ux-health-media.html'>Media for Health App</a>";
+    breadcrumb.innerHTML += "<a style='font-size:1em' href='refreshedresearch.html'>Refreshed Research</a>";
+    breadcrumb.innerHTML += "<a style='font-size:1.5em' href='ai-health-diet.html'>Diet Learning Across the Lifespan</a>";
+    breadcrumb.innerHTML += "<a style='font-size:1.2em' href='roam.html'>Augmenting Intuition &amp; Play</a>";
+    breadcrumb.innerHTML += "<a style='font-size:1em' href='businessreview.html'>Business Review</a>";
+    breadcrumb.innerHTML += "<a style='font-size:1.5em; href='spatialanalysis.html'>Spatial Analysis</a>";
+    breadcrumb.innerHTML += "<a style='font-size:1.2em' href='philosophy.html'>Style</a>";
+    breadcrumb.innerHTML += "<a style='font-size:1em' href='theories.html'>Motivators</a>";
+    breadcrumb.innerHTML += "<a style='font-size:1.5em' href='about.html'>About</a>";
+
 });
 
 // Menu Open/Close

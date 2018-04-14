@@ -583,6 +583,10 @@ summary:focus {
     left:0;
 }
 
+.breadcrumb a {
+    padding-right:2%;
+}
+
 .about a{
     display:block !important;
     margin:auto;
