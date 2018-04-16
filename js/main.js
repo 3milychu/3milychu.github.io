@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function(){
     sideNav.innerHTML += "<a href='about.html'>About</a>";
 
     var breadcrumb = document.getElementById("breadcrumb");
-    breadcrumb.innerHTML += "<a style='font-size:1em' href='majorstudio.html'>Clustering Images With Kmeans</a>";
+    breadcrumb.innerHTML += "<a style='font-size:1em' href='kmeansfashion.html'>Clustering Images With Kmeans</a>";
     breadcrumb.innerHTML += "<a style='font-size:1.5em;' href='computationalart.html'>Computational Art</a>";
     breadcrumb.innerHTML += "<a style='font-size:1.2em;' href='culturaldata.html'>Cultural Data</a>";
     breadcrumb.innerHTML += "<a style='font-size:1em' href='managerial-landscape.html'>The Managerial Landscape</a>";
