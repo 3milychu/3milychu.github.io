@@ -723,6 +723,12 @@ summary:focus {
         label {
             line-height:6em;
         }
+        #name {
+            top:3%;
+        }
+        #projects {
+            top:3%;
+        }
     }
 
     /*tablets and smaller*/
