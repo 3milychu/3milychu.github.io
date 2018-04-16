@@ -603,7 +603,7 @@ summary:focus {
     overflow:hidden;
     position:relative;
     display:inline-block;
-    background-color:#F2F2F2;
+/*    background-color:#F2F2F2;*/
 }
 
 .media-holder:hover {
@@ -728,6 +728,10 @@ summary:focus {
         }
         #projects {
             top:3%;
+        }
+        ::-webkit-scrollbar {
+            width: 5px;
+            background: #F2F2F2; /* make scrollbar transparent */
         }
     }
 
