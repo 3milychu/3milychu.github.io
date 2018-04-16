@@ -732,6 +732,12 @@ summary:focus {
         #projects {
             top:3%;
         }
+        .excerpt h4 {
+            font-size:2em;
+        }
+        .excerpt p{
+            font-size:1em;
+        }
     }
 
     /*tablets and smaller*/
