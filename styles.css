@@ -2,10 +2,15 @@ h1, h2, h3, p, ul, ol, a, span, summary {
     font-family: 'Lato', sans-serif;
 }
 
-::-webkit-scrollbar {
-    width: 0px;
-    background: transparent; /* make scrollbar transparent */
-}
+::-webkit-scrollbar-thumb {
+            width: 0.05px;
+            border-radius:100px;
+            border:0.05em black solid;
+        }
+        ::-webkit-scrollbar{
+            width: 1px;
+            background:transparent;
+        }
 
 body {
     background-color: white;
@@ -729,15 +734,6 @@ summary:focus {
         #projects {
             top:3%;
         }
-        ::-webkit-scrollbar-thumb {
-            width: 0.05px;
-            border-radius:100px;
-            border:0.05em black solid;
-        }
-        ::-webkit-scrollbar{
-            width: 1px;
-            background:transparent;
-        }
     }
 
     /*tablets and smaller*/
@@ -921,6 +917,10 @@ summary:focus {
         .github {
             margin-top:8%;
             width:14%;
+        }
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent; /* make scrollbar transparent */
         }
     }
 
