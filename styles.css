@@ -716,7 +716,7 @@ summary:focus {
 /*responsive
     /*monitors*/
 
-    @media screen and (min-height: 2000px) {
+    @media screen and (min-width: 2000px) {
         #mySidenav {
             padding-top:3%;
         }
