@@ -5,10 +5,11 @@ h1, h2, h3, p, ul, ol, a, span, summary {
 ::-webkit-scrollbar-thumb {
             width: 0.05px;
             border-radius:100px;
-            border:0.05em black solid;
+            /*border:0.05em black solid;*/
+            background-color:#F2F2F2;
         }
         ::-webkit-scrollbar{
-            width: 1px;
+            height:0.5em;
             background:transparent;
         }
 
@@ -63,7 +64,7 @@ label {
 
 .textdesc {
     width:100%;
-    padding:10%;
+    padding:10% 1% 15% 1%;
 }
 
 .textdesc h1{
@@ -643,6 +644,7 @@ summary:focus {
     overflow-x: scroll;
     overflow-y:hidden;
      -webkit-overflow-scrolling: touch;
+     padding-bottom:5%;
 }
 
 .overlay {
@@ -671,12 +673,10 @@ summary:focus {
 
 .excerpt {
     background-color:#F2F2F2;
+    padding:5%;
 }
 
 .excerpt h4 {
-    padding-left:3%;
-    padding-right:3%;
-    padding-top:2%;
     margin-top:0;
     margin-bottom:2%;
     font-weight:100;
@@ -684,8 +684,6 @@ summary:focus {
 }
 
 .excerpt p{
-    padding-left:3%;
-    padding-right:3%;
     margin-top:0;
     margin-bottom:2%;
     font-size:0.8em;
