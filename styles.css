@@ -690,6 +690,10 @@ summary:focus {
             width:100%;
             padding-left:5%;
         }
+        .section-dark h1{
+            width:100%;
+            padding-left:5%;
+        }
         .section-dark .post-body{
             width:80%;
         }
