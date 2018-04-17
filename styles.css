@@ -688,14 +688,22 @@ summary:focus {
     @media screen and (max-width:1000px) {
         .section-dark .post{
             width:100%;
-            padding-left:5%;
+            margin:0%;
+            left:0%;
+            padding:0%;
         }
-        .section-dark h1{
-            width:100%;
-            padding-left:5%;
+        .section-dark h1 {
+            font-size:1.5em;
+            margin:0% 0% 0% 3%;
+            padding-left:0%;
         }
         .section-dark .post-body{
             width:80%;
+            margin-left:10%;
+        }
+        .section-dark .post-media{
+            width:90%;
+            padding-left:3%;
         }
         #upper-fix {
             margin-top:-25%;
