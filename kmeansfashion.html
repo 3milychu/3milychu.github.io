@@ -41,7 +41,7 @@
 		</div>
 
 
-<div class = "section-white">
+<div class="section-white">
 
 	<!-- post-->
 		<div class ="post">
@@ -67,92 +67,98 @@
 					</div>
 					
 		</div>
-
-<details open><summary style="color:#2d1f20;margin-left:8%;font-size:1.2em;">Process</summary>
-		<!-- post-->
-		<div class ="post">
-
-					<div class ="post-media">
-						<div class="videoWrapper">
-								<img src="assets/project3/process/1.png">
-						</div>
-					</div>
-
-					<div class ="post-body">
-						<h2 style="color:#231f20;">
-						<br>1) Image Processing</h2>
-								<p style="color:#231f20;font-weight:300;">
-									Process images in the dataset for machine learning. This method used hierarchical segmentation with a threshold of 80 segments. This technique first identifies blocks of dominant color, condenses the image so that it is composed of those segments, and then converts it to greyscale with an exaggerated outline by adjusting the entropy.
-								</p>
-					</div>
-					
-		</div>
-
-
-		<!-- post-->
-		<div class ="post">
-
-					<div class ="post-media">
-						<div class="videoWrapper">
-								<img src="assets/project3/process/2.png">
-						</div>
-					</div>
-
-					<div class ="post-body">
-						<h2 style="color:#231f20;">
-						<br>2) Save Image Representations</h2>
-								<p style="color:#231f20;font-weight:300;">
-									After comparing the before and after transformation to adjust towards the desired result, the image transformations were then converted into 2d arrays of pixel values. This was done for all 7.6k images and saved as a flat feature set for later use.
-								</p>
-					</div>
-					
-		</div>
-
-
-		<!-- post-->
-		<div class ="post">
-
-					<div class ="post-media">
-						<div class="videoWrapper">
-								<img src="assets/project3/process/3.png">
-						</div>
-					</div>
-
-					<div class ="post-body">
-						<h2 style="color:#231f20;">
-						<br>3) Run K-means</h2>
-								<p style="color:#231f20;font-weight:300;">
-									K-means was selected as the model to cluster images based on similarity of shapes. The model was trained on creating 56 clusters from the dataset. Displayed are 3 example centroids from the model.
-								</p>
-					</div>
-					
-		</div>
-
-
-		<!-- post-->
-		<div class ="post">
-
-					<div class ="post-media">
-						<div class="videoWrapper">
-								<img src="assets/project3/process/5.png">
-						</div>
-					</div>
-
-					<div class ="post-body">
-						<h2 style="color:#231f20;">
-						<br>4) Join results to MET dataset and convert to JSON</h2>
-								<p style="color:#231f20;font-weight:300;">
-									The results of the kmeans model, with labelling of data by clusters and centroids, were joined to the original MET Costume Institute dataset. This was converted to JSON in preparation for data visualization.
-								</p>
-					</div>
-					
-		</div>
-
-</details>
 </div>
 
 	<!-- clear -->
-<div class="clear" style="color:white;">.
+<div class="clear" style="color:transparent;">.
+</div>
+
+<div class="section-dark">
+<h1 id="process">Process</h1>
+
+	<div class="post">
+		<h1>Extracting Form: B&amp;W Edge Detection</h1>
+
+		<div class="post-media">
+			<div class="videoWrapper-dark">
+				<img src="assets/project3/process/1.png">
+			</div>
+		</div>
+
+		<div class="post-body" id="upper-fix">
+		<p>To "focus" only on form, I extracted the edge outlines of each image. This ignores color, dimensions and all other metadata such as date of creation, title of object and origins. The method used simply employs sobel edge detection to draw outlines around a black and white version of the image. It then blurs and accentuates detected edges and downscales the image. </p>
+		</div>
+	</div>
+
+	<div class="post" style="margin-top:-15%;">
+		<h1>Prepare Machine Learning Features</h1>
+
+		<div class="post-media">
+			<div class="videoWrapper-dark">
+				<img src="assets/project3/process/2.jpg">
+			</div>
+		</div>
+
+		<div class="post-body" id="upper-fix">
+		<p>To prepare features for machine learning, each image after transformation is processed as a 15x35 pixel-by-pixel list representation of the image. This information is stored against the image name for easy retrieval and data joining in later steps.</p>
+		</div>
+	</div>
+
+	<div class="post" style="margin-top:-15%;">
+		<h1>Run K-Means</h1>
+
+		<div class="post-media">
+			<div class="videoWrapper-dark">
+				<img src="assets/project3/process/3.jpg">
+			</div>
+		</div>
+
+		<div class="post-body" id="upper-fix">
+		<p>K-means was selected as the model to cluster images based on similarity of shapes. The model was trained on creating 56 clusters from the dataset. Displayed are 3 examples from three different clusters from the model.</p>
+		</div>
+	</div>
+
+	<div class="post" style="margin-top:-15%;">
+		<h1>Prepare Data for Visualization</h1>
+
+		<div class="post-media">
+			<div class="videoWrapper-dark">
+				<img src="assets/project3/process/8.jpg">
+			</div>
+		</div>
+
+		<div class="post-body">
+		<p>After joining the feature representations to the original MET dataset containing metadata for all 7.6k items, a flat json was generated.<br><br>
+		From here, the flat json was converted into a hierarchical parent-child json for data visualization in d3.<br><br>
+		Each item is grouped a child of their parent cluster. Metadata preserved for display purposed includes: the title, link, src path, year, medium and culture for each item.</p>
+		</div>
+	</div>
+
+	<div class="post" style="margin-top:1%;">
+		<h1>Analysis and Visualization</h1>
+
+		<div class="post-media">
+					<div class="videoWrapper-dark">
+						<img src="assets/project3/process/ss1.gif">
+					</div>
+			</div>
+
+		<div class="post-body" style="margin-bottom:5%;">
+		<p>I began with filtering the visualization by model clusters, or groups of items that clustered quite well by the criteria I was aiming for: similarity in geometric form.<br><br>
+		I added the capability to see quick details about each item in a cluster on hover, and a more detailed view that showed the original image of each item, or the metadata I pulled out when creating the hierarchical json.<br><br>
+		Examining the model clusters helped me formulate a hypothesis on when extracting form is useful when grouping objects in this dataset together. </p>
+		</div>
+
+
+	</div>
+</div>
+
+
+
+
+
+	<!-- clear -->
+<div class="clear" style="background-color:#272822;color:#272822;">.
 </div>
 
 		<!-- Break -->
@@ -163,9 +169,8 @@
 
 			<label>Python</label> <label>opencv</label> <label>scikit-learn</label> <label>html/css/js</label> <label>d3.js</label> <label>jquery</label> <label>Illustrator</label> <label>Aftereffects</label>
 
-			<em>Process</em>
+			<em>Archive &amp; Resources</em>
 
-			<a href="assets/project3/prototype/prototype.pdf" target="_blank">Static Mockup</a>
 			<a href="https://github.com/3milychu/clusteringfashion" target="_blank">Github Repo</a>
 
 			</p>
