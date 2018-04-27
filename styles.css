@@ -40,14 +40,16 @@ body .section-dark {
 }
 
 #process {
-    font-size:2em;
-    padding-top:5%;
+    font-size:3em;
+    font-weight:600;
+    padding-top:10%;
     padding-left:8%;
 }
 
 .section-dark .post h1{
+    color: white;
     font-weight:100;
-    font-size:2em;
+    font-size:3em;
     margin-bottom:2%;
 }
 
@@ -58,12 +60,11 @@ body .section-dark {
 
 .section-dark .post p {
     color:white;
+    letter-spacing:0.05em;
     font-weight:300!important;
 }
 
 .section-dark .post-body {
-    border-left:5px solid #61C8D6;
-    padding:2%;
     width:30%;
     margin-left:3%;
 }
@@ -687,11 +688,9 @@ summary:focus {
 
     @media screen and (max-width:1000px) {
         #process {
-            font-size:3em;
             color: white;
-            text-align:center;
-            padding-left:0%;
-            margin-left:0%;
+            padding-left:5%;
+            margin-left:5%;
             padding-bottom:5%;
             margin-bottom:-1%
         }
@@ -701,30 +700,25 @@ summary:focus {
             left:0%;
             padding:0%;
         }
-        .section-dark .post p{
-            color: #c2b59b;
-        }
         .section-dark h1 {
             color: white;
-            font-size:1em;
+            font-size:5em!important;
             font-weight:400;
             margin:0% 0% 0% 5%;
-            padding-left:0%;
+            padding-left:5%;
         }
         .section-dark .post-body{
             width:80%;
-            margin: 5% 5%;
-            border:none;
-            font-size:0.5em;
+        }
+        .section-dark .post-body p {
+            padding-left:2%;
+            margin-left:0%;
+            font-size:0.8em;
             letter-spacing:0.1em;
         }
         .section-dark .post-media{
             width:90%;
             padding-left:3%;
-        }
-        #upper-fix {
-            margin-top:-25%;
-            margin-bottom:20%;
         }
         ul{
             font-weight:400;

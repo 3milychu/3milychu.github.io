@@ -10,7 +10,7 @@
 
 		  gtag('config', 'UA-41817854-5');
 		</script>
-	<title>Clustering Images with K-Means</title>
+	<title>Image Clustering with K-Means</title>
 	<meta property='og:url' content='https://www.youtube.com/embed/kJhEYMM-9kA?vq=hd1080&amp;rel=0&amp;showinfo=0' />
 	<meta property="og:image" content="https://3milychu.github.io/assets/meterials-cover.gif">
   	<link rel="image_src" href="https://3milychu.github.io/assets/meterials-gif.gif">
@@ -77,7 +77,11 @@
 <h1 id="process">Process</h1>
 
 	<div class="post">
-		<h1>Extracting Form: B&amp;W Edge Detection</h1>
+		<h1>Edge Detection</h1>
+
+		<div class="post-body" >
+		<p>To "focus" only on form, I extracted the edge outlines of each image. The method used simply employs sobel edge detection to draw outlines around a black and white version of the image. It then blurs and accentuates detected edges and downscales the image. </p>
+		</div>
 
 		<div class="post-media">
 			<div class="videoWrapper-dark">
@@ -85,13 +89,15 @@
 			</div>
 		</div>
 
-		<div class="post-body" id="upper-fix">
-		<p>To "focus" only on form, I extracted the edge outlines of each image. This ignores color, dimensions and all other metadata such as date of creation, title of object and origins. The method used simply employs sobel edge detection to draw outlines around a black and white version of the image. It then blurs and accentuates detected edges and downscales the image. </p>
-		</div>
 	</div>
 
-	<div class="post" style="margin-top:-15%;">
-		<h1>Prepare Machine Learning Features</h1>
+	<div class="post">
+		<h1>Pixel Representation</h1>
+
+		<div class="post-body">
+		<p>To prepare features for machine learning, each image after transformation is processed as a 15x35 pixel-by-pixel list representation of the image. This information is stored against the image name for easy retrieval and data joining in later steps.</p>
+		</div>
+
 
 		<div class="post-media">
 			<div class="videoWrapper-dark">
@@ -99,13 +105,14 @@
 			</div>
 		</div>
 
-		<div class="post-body" id="upper-fix">
-		<p>To prepare features for machine learning, each image after transformation is processed as a 15x35 pixel-by-pixel list representation of the image. This information is stored against the image name for easy retrieval and data joining in later steps.</p>
-		</div>
 	</div>
 
-	<div class="post" style="margin-top:-15%;">
-		<h1>Run K-Means</h1>
+	<div class="post">
+		<h1>K-Means Model</h1>
+
+		<div class="post-body">
+		<p>K-means was selected as the model to cluster images based on similarity of shapes. The model was trained on creating 56 clusters from the dataset. Displayed are 3 examples from three different clusters from the model.</p>
+		</div>
 
 		<div class="post-media">
 			<div class="videoWrapper-dark">
@@ -113,13 +120,16 @@
 			</div>
 		</div>
 
-		<div class="post-body" id="upper-fix">
-		<p>K-means was selected as the model to cluster images based on similarity of shapes. The model was trained on creating 56 clusters from the dataset. Displayed are 3 examples from three different clusters from the model.</p>
-		</div>
 	</div>
 
-	<div class="post" style="margin-top:-15%;">
-		<h1>Prepare Data for Visualization</h1>
+	<div class="post" style="margin-bottom:20%;">
+		<h1>Data Structure</h1>
+
+		<div class="post-body">
+		<p>After joining the feature representations to the original MET dataset containing metadata for all 7.6k items, a flat json was generated.<br>
+		From here, the flat json was converted into a hierarchical parent-child json for data visualization in d3.<br>
+		Each item is grouped a child of their parent cluster. Metadata preserved for display purposed includes: the title, link, src path, year, medium and culture for each item.</p>
+		</div>
 
 		<div class="post-media">
 			<div class="videoWrapper-dark">
@@ -127,15 +137,17 @@
 			</div>
 		</div>
 
-		<div class="post-body">
-		<p>After joining the feature representations to the original MET dataset containing metadata for all 7.6k items, a flat json was generated.<br><br>
-		From here, the flat json was converted into a hierarchical parent-child json for data visualization in d3.<br><br>
-		Each item is grouped a child of their parent cluster. Metadata preserved for display purposed includes: the title, link, src path, year, medium and culture for each item.</p>
-		</div>
 	</div>
 
-	<div class="post" style="margin-top:3%;">
-		<h1>Analysis and Visualization</h1>
+<!-- 	<div class="post">
+		<h1>Data Visualization</h1>
+
+		<div class="post-body">
+		<p>I began with filtering the visualization by model clusters, or groups of items that clustered quite well by the criteria I was aiming for: similarity in geometric form.<br>
+		I added the capability to see quick details about each item in a cluster on hover, and a more detailed view that showed the original image of each item, or the metadata I pulled out when creating the hierarchical json.<br>
+		Examining the model clusters helped me formulate a hypothesis on when extracting form is useful when grouping objects in this dataset together. </p>
+		</div>
+
 
 		<div class="post-media">
 					<div class="videoWrapper-dark">
@@ -143,17 +155,19 @@
 					</div>
 			</div>
 
-		<div class="post-body" style="margin-bottom:5%;">
-		<p>I began with filtering the visualization by model clusters, or groups of items that clustered quite well by the criteria I was aiming for: similarity in geometric form.<br><br>
-		I added the capability to see quick details about each item in a cluster on hover, and a more detailed view that showed the original image of each item, or the metadata I pulled out when creating the hierarchical json.<br><br>
-		Examining the model clusters helped me formulate a hypothesis on when extracting form is useful when grouping objects in this dataset together. </p>
-		</div>
-
 
 	</div>
 
-	<div class="post" style="margin-top:1%;">
-		<h1>Storytelling &amp; Narrative</h1>
+	<div class="post">
+		<h1>Interactive Storytelling</h1>
+
+		<div class="post-body" style="margin-bottom:5%;">
+		<p>To guide readers through my analysis, hypothesis and conclusions, various levels of interaction are embedded based on the viewer's literacy.<br>
+		The web app begins with highlighted findings.<br>
+		At any point, the viewer can scroll down to view a summary video on the project and its goals and findings.<br>
+		Finally, the viewer can explore the complete cluster map of the Costume Institute in two ways: 1) the interactive view or 2) the annotated view.</p>
+		</div>
+
 
 		<div class="post-media">
 					<div class="videoWrapper-dark">
@@ -161,15 +175,7 @@
 					</div>
 			</div>
 
-		<div class="post-body" style="margin-bottom:5%;">
-		<p>To guide readers through my analysis, hypothesis and conclusions, various levels of interaction are embedded based on the viewer's literacy.<br><br>
-		The web app begins with highlighted findings.<br><br>
-		At any point, the viewer can scroll down to view a summary video on the project and its goals and findings.<br><br>
-		Finally, the viewer can explore the complete cluster map of the Costume Institute in two ways: 1) the interactive view or 2) the annotated view.</p>
-		</div>
-
-
-	</div>
+	</div> -->
 </div>
 
 
