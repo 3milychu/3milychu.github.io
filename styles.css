@@ -1,5 +1,5 @@
 h1, h2, h3, p, ul, ol, a, span, summary {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -58,7 +58,7 @@ body .section-dark {
 
 .section-dark .post p {
     color:white;
-    font-weight:300;
+    font-weight:300!important;
 }
 
 .section-dark .post-body {
@@ -387,7 +387,7 @@ summary:focus {
 .sidenav a {
     padding: 2% 2% 0% 10%;
     color: #c2b59b;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
     font-weight: 900;
     text-decoration: none;
     font-size: 2em;
@@ -473,7 +473,7 @@ summary:focus {
     color:#c2b59b;
     font-size:0.8em;
     font-weight:200;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
 }
 
 #footer {
@@ -608,7 +608,7 @@ summary:focus {
     margin:0;
     padding: 5%;
     color:white;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
 
 }
 
@@ -686,20 +686,37 @@ summary:focus {
     /*tablets and smaller*/
 
     @media screen and (max-width:1000px) {
+        #process {
+            font-size:3em;
+            color: white;
+            text-align:center;
+            padding-left:0%;
+            margin-left:0%;
+            padding-bottom:5%;
+            margin-bottom:-1%
+        }
         .section-dark .post{
             width:100%;
             margin:0%;
             left:0%;
             padding:0%;
         }
+        .section-dark .post p{
+            color: #c2b59b;
+        }
         .section-dark h1 {
-            font-size:1.5em;
-            margin:0% 0% 0% 3%;
+            color: white;
+            font-size:1em;
+            font-weight:400;
+            margin:0% 0% 0% 5%;
             padding-left:0%;
         }
         .section-dark .post-body{
             width:80%;
-            margin-left:10%;
+            margin: 5% 5%;
+            border:none;
+            font-size:0.5em;
+            letter-spacing:0.1em;
         }
         .section-dark .post-media{
             width:90%;
@@ -881,8 +898,8 @@ summary:focus {
             margin-top:10%;
         }
         .github {
-            margin-top:8%;
-            width:14%;
+            margin-top:3%;
+            width:11%;
         }
         ::-webkit-scrollbar {
             width: 0px;
