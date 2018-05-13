@@ -10,8 +10,8 @@
 
 		  gtag('config', 'UA-41817854-5');
 		</script>
-	<title>Image Clustering with K-Means</title>
-	<meta property='og:url' content='https://www.youtube.com/embed/kJhEYMM-9kA?vq=hd1080&amp;rel=0&amp;showinfo=0' />
+	<title>Forms of Attraction</title>
+	<meta property='og:url' content='https://www.youtube.com/embed/MfMc4-nFW5E?vq=hd1080&amp;rel=0&amp;showinfo=0' />
 	<meta property="og:image" content="https://3milychu.github.io/assets/meterials-cover.gif">
   	<link rel="image_src" href="https://3milychu.github.io/assets/meterials-gif.gif">
 	<link rel="stylesheet" type="text/css" href="styles.css">
@@ -21,8 +21,9 @@
 </head>
 <body style="background-color:white;">
 
-	<!-- github ribbon -->
-	<a  href="https://github.com/3milychu/clusteringfashion"><img class="github" style="position: absolute; top: 7%; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+		<!-- github ribbon -->
+	<a href="https://github.com/3milychu/epochrunway"><img class="github" style="position: absolute; top: 7%; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
 
 	<!-- responsive menu -->
 		<div id="mySidenav" class="sidenav">
@@ -36,171 +37,231 @@
 
 		<!-- Heading -->
 
-		<div class="heading2">
-			<h1>Image Clustering</h1>
+		<div class="heading2" style="text-align:center;">
+			<h1>Forms of Attraction</h1>
 		</div>
 
+<div class = "section-white">
 
-<div class="section-white">
 
-	<!-- post-->
-		<div class ="post">
-
-					<div class ="post-media">
-						<div class="videoWrapper">
-								<iframe width="560" height="315" src="https://www.youtube.com/embed/gpviyveKx2s?vq=hd1080&amp;rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-						</div>
-					</div>
-
-					<div class ="post-body">
-						<h2 style="color:#231f20;"><em>Forms of Attraction: The Data Behind the Forms We Wear</em>
-						<br>Major Studio MSDV 2018</h2>
-								<p style="color:#231f20;font-weight:300;">
-									This is a project that seeks to understand how popular forms in clothing originated from humble beginnings and gained momentum over time. Machine learning was used to extract form from images at the MET's Costume Institute. Items were then clustered with kmeans, a statistical model that can be used to train machines to predict the items that are most similar from the information given.
-								</p>
-
-								<a href="https://3milychu.github.io/clusteringfashion" target="new">
-									<div class="button">
-										Launch Web App
-									</div>
-								</a>
-					</div>
-					
-		</div>
-</div>
-
-	<!-- clear -->
-<div class="clear" style="color:transparent;">.
-</div>
-
-<div class="section-dark">
-<h1 id="process">Process</h1>
-
-	<div class="post">
-		<h1>Edge Detection</h1>
-
-		<div class="post-body" >
-		<p>To "focus" only on form, I extracted the edge outlines of each image. The method used simply employs sobel edge detection to draw outlines around a black and white version of the image. It then blurs and accentuates detected edges and downscales the image. </p>
-		</div>
-
-		<div class="post-media">
-			<div class="videoWrapper-dark">
-				<img src="assets/project3/process/1.png">
-			</div>
-		</div>
-
+<!-- Post -->
+<div class ="post" style="padding-bottom:10%;">
+	<div style="margin:auto;text-align:center;padding-bottom:10%;">
+			<iframe src="https://player.vimeo.com/video/269415003?&autoplay=1&loop=1" width="640" height="360" frameborder="0" allowfullscreen></iframe>
 	</div>
 
-	<div class="post">
-		<h1>Pixel Representation</h1>
-
-		<div class="post-body">
-		<p>To prepare features for machine learning, each image after transformation is processed as a 15x35 pixel-by-pixel list representation of the image. This information is stored against the image name for easy retrieval and data joining in later steps.</p>
-		</div>
-
-
-		<div class="post-media">
-			<div class="videoWrapper-dark">
-				<img src="assets/project3/process/2.jpg">
-			</div>
-		</div>
-
-	</div>
-
-	<div class="post">
-		<h1>K-Means Model</h1>
-
-		<div class="post-body">
-		<p>K-means was selected as the model to cluster images based on similarity of shapes. The model was trained on creating 56 clusters from the dataset. Displayed are 3 examples from three different clusters from the model.</p>
-		</div>
-
-		<div class="post-media">
-			<div class="videoWrapper-dark">
-				<img src="assets/project3/process/3.jpg">
-			</div>
-		</div>
-
-	</div>
-
-	<div class="post" style="margin-bottom:20%;">
-		<h1>Data Structure</h1>
-
-		<div class="post-body">
-		<p>After joining the feature representations to the original MET dataset containing metadata for all 7.6k items, a flat json was generated.<br>
-		From here, the flat json was converted into a hierarchical parent-child json for data visualization in d3.<br>
-		Each item is grouped a child of their parent cluster. Metadata preserved for display purposed includes: the title, link, src path, year, medium and culture for each item.</p>
-		</div>
-
-		<div class="post-media">
-			<div class="videoWrapper-dark">
-				<img src="assets/project3/process/8.jpg">
-			</div>
-		</div>
-
-	</div>
-
-<!-- 	<div class="post">
-		<h1>Data Visualization</h1>
-
-		<div class="post-body">
-		<p>I began with filtering the visualization by model clusters, or groups of items that clustered quite well by the criteria I was aiming for: similarity in geometric form.<br>
-		I added the capability to see quick details about each item in a cluster on hover, and a more detailed view that showed the original image of each item, or the metadata I pulled out when creating the hierarchical json.<br>
-		Examining the model clusters helped me formulate a hypothesis on when extracting form is useful when grouping objects in this dataset together. </p>
-		</div>
-
-
-		<div class="post-media">
-					<div class="videoWrapper-dark">
-						<img src="assets/project3/process/ss1.gif">
-					</div>
-			</div>
-
-
-	</div>
-
-	<div class="post">
-		<h1>Interactive Storytelling</h1>
-
-		<div class="post-body" style="margin-bottom:5%;">
-		<p>To guide readers through my analysis, hypothesis and conclusions, various levels of interaction are embedded based on the viewer's literacy.<br>
-		The web app begins with highlighted findings.<br>
-		At any point, the viewer can scroll down to view a summary video on the project and its goals and findings.<br>
-		Finally, the viewer can explore the complete cluster map of the Costume Institute in two ways: 1) the interactive view or 2) the annotated view.</p>
-		</div>
-
-
-		<div class="post-media">
-					<div class="videoWrapper-dark">
-						<img src="assets/project3/process/story.gif">
-					</div>
-			</div>
-
-	</div> -->
+	<a href="https://3milychu.github.io/clusteringfashion" target="new">
+		<div class="button" style="width:20%;margin:auto;padding:2%;">Launch Forms of Attraction</div>
+	</a>
 </div>
 
 
+<!-- Post -->
+<div style="background-color:#FCFCFF;padding-bottom:10%;">
+	<div style="width:50%;margin:auto;text-align:center;padding:10% 0% 5% 0%;">
+		<h1 style="font-size:5em;display:inline;">00</h1>
+		<h1 style="display:inline;">Project Objective</h1>
+		<p>
+		Forms of Attraction clusters images from the MET's Costume Institute into items sharing similar form. This was done through machine learning to uncover new relationships between items beyond available metadata.
+		</p>
+	</div>
+
+	<div style="width:70%;overflow:hidden;margin:auto;">
+			<img class="lazy" style="width:100%" data-src="assets/forms/clustering.gif">
+	</div>
+</div>
+
+<!-- Post -->
+<div style="background-color:#F7F7F7;height:auto;padding-bottom:30%;">
+	<div style="width:50%;margin:auto;text-align:center;padding:10% 0% 5% 0%">
+		<h1 style="font-size:5em;display:inline;">01</h1>
+		<h1 style="display:inline;">Batch Image Extraction</h1>
+		<p>
+		Costume Institue images were identified and downloaded from the MET API. Then, using opencv, an open computer vision library, all 7.6k costume images were extracted from their background to remove noise and information that can otherwise distract from the subject of the image.
+		</p>
+	</div>
+
+	<div style="width:35%;overflow:hidden;margin:auto;">
+			<img class="lazy" style="width:110%" data-src="assets/epoch/downloading.png">
+	</div>
+
+	<div style="width:35%;overflow:hidden;margin:auto;display:block">
+			<img class="lazy" style="width:110%" data-src="assets/epoch/opencv.png">
+	</div>
+
+	<div style="width:15%;overflow:hidden;display:inline-block;position:absolute;margin-top:8%;margin-left:20%;">
+			<img class="lazy" style="width:100%" data-src="assets/epoch/original.jpg">
+	</div>
+
+	<div style="width:19%;overflow:hidden;display:inline-block;position:absolute;margin-top:8%;margin-left:40%;">
+			<img class="lazy" style="width:100%" data-src="assets/epoch/extracted.png">
+	</div>
+
+	<div style="width:15%;overflow:hidden;display:inline-block;position:absolute;margin-top:8%;margin-left:63%;">
+			<img class="lazy" style="width:100%" data-src="assets/epoch/new.png">
+	</div>
+
+	
+</div>
+
+<!-- Post -->
+<div style="background-color:#272822;padding-bottom:10%;">
+	<div style="width:50%;margin:auto;text-align:center;padding:10% 0%;">
+		<h1 style="font-size:5em;display:inline;color:white;">02</h1>
+		<h1 style="display:inline;color:white;">Edge Detection</h1>
+		<p style="color:white;">
+		To "focus" only on form, I extracted the edge outlines of each image. The method used simply employs sobel edge detection to draw outlines around a black and white version of the image. It then blurs and accentuates detected edges and downscales the image.
+		</p>
+	</div>
+
+	<div style="width:50%;height:10%;overflow:hidden;margin:auto;padding-bottom:5%;">
+			<img class="lazy" style="width:100%" data-src="assets/project3/process/1.png">
+	</div>
+
+	<div style="width:50%;height:10%;overflow:hidden;margin:auto;">
+			<img class="lazy" style="width:100%" data-src="assets/forms/sobel.gif">
+	</div>
+</div>
 
 
+<!-- Post -->
+<div style="background-color:#272822;padding-bottom:10%;">
+	<div style="width:50%;margin:auto;text-align:center;padding:10% 0%;">
+		<h1 style="font-size:5em;display:inline;color:white;">03</h1>
+		<h1 style="display:inline;color:white;">Pixel Representation</h1>
+		<p style="color:white;">
+		To prepare features for machine learning, each image after transformation is processed as a 15x35 pixel-by-pixel list representation of the image. This is done to reduce the form into information the machine can easily read and draw comparisons and therefore patterns from: a clear list ofnumbers.
+		</p>
+	</div>
 
-	<!-- clear -->
-<div class="clear" style="background-color:#272822;color:#272822;">.
+	<div style="width:40%;height:10%;overflow:hidden;margin:auto;padding-bottom:5%;">
+			<img class="lazy" style="width:100%" data-src="assets/forms/features.png">
+	</div>
+
+	<div style="width:30%;height:10%;overflow:hidden;margin:auto;">
+			<img class="lazy" style="width:100%" data-src="assets/forms/pixelrep.png">
+	</div>
+</div>
+
+
+<!-- Post -->
+<div style="background-color:#272822;padding-bottom:10%;">
+	<div style="width:50%;margin:auto;text-align:center;padding:10% 0%;">
+		<h1 style="font-size:5em;display:inline;color:white;">04</h1>
+		<h1 style="display:inline;color:white;">KMeans Model</h1>
+		<p style="color:white;">
+		K-means was selected as the model to cluster images based on similarity of shapes. The model was trained on creating 56 clusters from the dataset. Displayed are 3 examples from three different clusters from the model.
+		</p>
+	</div>
+
+	<div style="width:50%;height:10%;overflow:hidden;margin:auto;padding-bottom:5%;">
+			<img class="lazy" style="width:100%" data-src="assets/project3/process/3.jpg">
+	</div>
+</div>
+
+
+<!-- Post -->
+<div style="background-color:#272822;padding-bottom:10%;">
+	<div style="width:50%;margin:auto;text-align:center;padding:10% 0%;">
+		<h1 style="font-size:5em;display:inline;color:white;">05</h1>
+		<h1 style="display:inline;color:white;">Data Structure</h1>
+		<p style="color:white;">
+		After joining the feature representations to the original MET dataset containing metadata for all 7.6k items, a flat json was generated.The flat json was converted into a hierarchical parent-child json for data visualization in d3. Each item is grouped a child of their parent cluster. Metadata preserved for display purposed includes: the title, link, src path, year, medium and culture for each item.
+		</p>
+	</div>
+
+	<div style="width:50%;height:10%;overflow:hidden;margin:auto;padding-bottom:5%;">
+			<img class="lazy" style="width:100%" data-src="assets/project3/process/8.jpg">
+	</div>
+</div>
+
+<!-- Post -->
+<div style="background-color:#FCFCFF;padding-bottom:10%;">
+	<div style="width:50%;margin:auto;text-align:center;padding:10% 0% 5% 0%;">
+		<h1 style="font-size:5em;display:inline;">06</h1>
+		<h1 style="display:inline;">Results: Model Clusters</h1>
+		<p>
+		Model Clusters are grouping that performed best against my subjective visual criteria: similarity in outline form. These highlighted findings reveal strong patterns that carry a certain weight. In other words, I considered them as characteristic "forms of attraction".
+		</p>
+	</div>
+
+	<div style="width:70%;overflow:hidden;margin:auto;">
+			<img class="lazy" style="width:100%" data-src="assets/forms/modelclusters.gif">
+	</div>
+</div>
+
+<!-- Post -->
+<div style="background-color:#FCFCFF;padding-bottom:10%;">
+	<div style="width:50%;margin:auto;text-align:center;padding:10% 0% 5% 0%;">
+		<h1 style="font-size:5em;display:inline;">07</h1>
+		<h1 style="display:inline;">Results: Evolution Across the Ages</h1>
+		<p>
+		This is perhaps the most exciting finding from this exploratory machine learning analysis of costumes by form in the MET. When filtering the final cluster analysis by century, one can unmistakeably with the naked eye see how certain forms began to carry a certain type of gravity. During the industrial revolution, when textile manufacturing became mechanized instead of handmade, we see a clear demarcation between the era of sparse unique forms and an era where the visual vocabulary finds standard and organization.
+		</p>
+	</div>
+
+	<div style="width:70%;overflow:hidden;margin:auto;">
+			<img class="lazy" style="width:100%" data-src="assets/forms/centuries.gif">
+	</div>
+</div>
+
+
+<!-- Post -->
+<div style="background-color:#F7F7F7;padding-bottom:10%;">
+	<div style="width:50%;margin:auto;text-align:center;padding:10% 0%;">
+		<h1 style="font-size:5em;display:inline;">05</h1>
+		<h1 style="display:inline;">Dive In</h1>
+	</div>
+	<a href="https://3milychu.github.io/clusteringfashion" target="new">
+		<div class="button" style="width:20%;margin:auto;padding:2%;">Launch Forms of Attraction</div>
+	</a>
+
+</div>
+
+<!-- clear -->
+<div class="clear" style="color:#F7F7F7;background-color:#F7F7F7;">.
 </div>
 
 		<!-- Break -->
 		<div class="break">
 			<p>
-			<em>Tools</em>
+			<em>Data Source</em>
+			<img class="lazy" style="width:30%;" data-src="http://logok.org/wp-content/uploads/2015/01/The-Met-Logo-2016-640x480.png">
 
+
+			<em>Tools</em>
+			
 
 			<label>Python</label> <label>opencv</label> <label>scikit-learn</label> <label>html/css/js</label> <label>d3.js</label> <label>jquery</label> <label>Illustrator</label> <label>Aftereffects</label>
 
-			<em>Archive &amp; Resources</em>
+
+			<em>Special Thanks</em>
+
+
+			Great appreciation goes out to those who provided instrumental feedback and guidance as well as generous provision of data sources that are the foundation of this project.
+
+			Aaron Hill
+			Director of Parson's MS Data Visualization, Machine Learning Professor
+
+			Richard The
+			Design + Technology Professor at Parsons
+
+			Jenni Choi
+			General Information Manager at the MET
+
+			Loic Tallon
+			Chief Digital Officer at the MET
+
+
+
+			<em>Project Archive</em>
+
 
 			<a href="https://github.com/3milychu/clusteringfashion" target="_blank">Github Repo</a>
 
 			</p>
-		</div>
 
+		</div>
 
 
 	    <!-- Related Links-->
@@ -210,7 +271,23 @@
 			</div>
 		</div>
 
+
 <script src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.lazy.min.js"></script>
+<script>
+$(document).ready(function() { $(function() {
+	     $('.lazy').Lazy({
+        scrollDirection: 'vertical',
+        effect: 'fadeIn',
+        effectTime: 500,
+        threshold: 0,
+        visibleOnly: true,
+        onError: function(element) {
+            console.log('error loading ' + element.data('src'));
+        }
+    });
+	    });});
+</script>
 <script src="js/d3.min.js"></script>
 <script src="js/main.js"></script>
 </body>
