@@ -3,12 +3,12 @@ document.addEventListener('DOMContentLoaded', function(){
     // alert("Ready");
 
     var sideNav = document.getElementById("mySidenav");
-    sideNav.innerHTML += "<a href='index.html'>Home</a>";
-    sideNav.innerHTML += "<a href='collabs.html'>Collaborations</a>";
-    sideNav.innerHTML += "<a href='philosophy.html'>Style</a>";
+    sideNav.innerHTML += "<a href='https://3milychu.github.io/index.html'>Home</a>";
+    sideNav.innerHTML += "<a href='https://3milychu.github.io/collabs.html'>Collaborations</a>";
+    sideNav.innerHTML += "<a href='https://3milychu.github.io/philosophy.html'>Style</a>";
     sideNav.innerHTML += "<a href='mailto:3milychu@gmail.com'>Contact</a>";
-    sideNav.innerHTML += "<a href='assets/resume.pdf' target='_blank'>Resume</a>";
-    sideNav.innerHTML += "<a href='about.html'>About</a>";
+    sideNav.innerHTML += "<a href='https://3milychu.github.io/assets/resume.pdf' target='_blank'>Resume</a>";
+    sideNav.innerHTML += "<a href='https://3milychu.github.io/about.html'>About</a>";
 
     var breadcrumb = document.getElementById("breadcrumb");
     breadcrumb.innerHTML += "<a style='font-size:1em' href='kmeansfashion.html'>Clustering Images With Kmeans</a>";
