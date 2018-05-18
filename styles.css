@@ -92,6 +92,7 @@ a {
 }
 
 label {
+    color:black;
     display:inline;
     border: 0.01em black solid;
     line-height:4em;
@@ -564,8 +565,9 @@ summary:focus {
 
 
 .media-holder-featured {
-    width:40%;
+    width:45%;
     margin-left:3%;
+    margin-bottom:3%; 
     overflow:hidden;
     position:relative;
     display:inline-block;
