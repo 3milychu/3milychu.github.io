@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function(){
     sideNav.innerHTML += "<a href='https://3milychu.github.io/pages/collabs.html'>Collaborations</a>";
     sideNav.innerHTML += "<a href='https://3milychu.github.io/pages/philosophy.html'>Style</a>";
     sideNav.innerHTML += "<a href='mailto:3milychu@gmail.com'>Contact</a>";
-    sideNav.innerHTML += "<a href='https://3milychu.github.io/assets/resume.pdf' target='_blank'>Resume</a>";
+    sideNav.innerHTML += "<a href='https://linkedin.com/in/3milychu' target='_blank'>LinkedIn</a>";
     sideNav.innerHTML += "<a href='https://3milychu.github.io/pages/about.html'>About</a>";
 
     var breadcrumb = document.getElementById("breadcrumb");
