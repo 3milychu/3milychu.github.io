@@ -92,9 +92,10 @@ a {
 }
 
 label {
-    color:black;
+    color:white;
     display:inline;
-    border: 0.01em black solid;
+    background-color:#C2B59C;
+    border: 0.01em #C2B59C solid;
     line-height:4em;
     padding:2%;
     margin:2%;
@@ -114,7 +115,7 @@ label {
     padding-left:0%!important;
     white-space: pre-line;
     color:#231f20;
-    letter-spacing:0.05em;
+/*    letter-spacing:0.05em;*/
 }
 
 .textdesc h1:hover {
@@ -128,7 +129,7 @@ label {
 
 .heading2 h1 {
     margin:10% 10% 0% 10%;
-    letter-spacing:-0.05em;
+/*    letter-spacing:-0.05em;*/
     font-size:3em;
     font-weight:900
 }
@@ -378,7 +379,8 @@ summary:focus {
     top: 0;
     left: 0;
     background-color: white;
-    border-bottom: 0.05em solid #231f20;
+     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+    /*border-bottom: 0.05em solid #231f20;*/
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 5%;
@@ -563,6 +565,12 @@ summary:focus {
 
 }
 
+.bounding {
+   width:100%;
+   height:45vh;
+   overflow:hidden;
+   position:relative;"
+}
 
 .media-holder-featured {
     width:45%;
@@ -572,6 +580,8 @@ summary:focus {
     position:relative;
     display:inline-block;
     background-color:#F2F2F2;
+/*    border-radius:0.5em;*/
+     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
 }
 /*
 .media-holder-featured:hover {
@@ -582,6 +592,13 @@ summary:focus {
 */
 .media-cover {
     width:100%;
+    transform:scale(1);
+    transform-origin: 50% 50%;
+    transition:0.5s;
+}
+
+.media-cover:hover {
+    transform:scale(1.2, 1.2);
 }
 
 .scroll-post {
@@ -688,7 +705,13 @@ summary:focus {
 
     /*tablets and smaller*/
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1024px) {
+        .media-holder-featured {
+            margin-left:5%;
+        }
+        .bounding {
+            height:25vh;
+        }
         #process {
             color: white;
             padding-left:5%;
@@ -919,6 +942,9 @@ summary:focus {
         .github {
             margin-top:0%;
             width:15%;
+        }
+         .bounding {
+            height:25vh;
         }
     }
 
