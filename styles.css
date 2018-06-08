@@ -706,6 +706,9 @@ summary:focus {
     /*tablets and smaller*/
 
     @media screen and (max-width:1024px) {
+        label {
+            font-weight:600;
+        }
         .media-holder-featured {
             margin-left:5%;
         }
