@@ -233,6 +233,20 @@ label {
     vertical-align:middle;
 }
 
+.post-media-single{
+    position:relative;
+    padding:0%;
+    width:60%;
+    top:10%;
+    left:5%;
+    overflow:none;
+    vertical-align:middle;
+    text-align:center;
+    margin:auto;
+    padding-top:5%;
+
+}
+
 .post h2 {
     text-align:left;
     font-size:1.5em;
@@ -367,7 +381,29 @@ summary:focus {
     height: 80%;
 }
 
+/*videowrapper2*/
 
+.post-media-wide{
+    width:100%;
+    margin-top:5%;
+    top:0%;
+    left:0%;
+    overflow:visible;
+}
+
+/*.videoWrapper2 img {
+width:100%;
+margin:0%;
+}
+
+.videoWrapper2 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+*/
 /*sidenav*/
 
 .sidenav {
@@ -818,6 +854,13 @@ summary:focus {
             padding:10%;
         }
         .post-media{
+            width:100%;
+            margin-top:5%;
+            top:0%;
+            left:0%;
+            overflow:visible;
+        }
+        .post-media-single{
             width:100%;
             margin-top:5%;
             top:0%;
