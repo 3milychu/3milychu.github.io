@@ -789,7 +789,8 @@ margin:0%;
             font-weight:400;
         }
         p{
-            font-weight:400 !important;
+            font-weight:300 !important;
+            font-size:2em;
         }
         /*cover*/
         #featured {
@@ -833,7 +834,7 @@ margin:0%;
             padding:0%;
         }
         .section-white h1 {
-            font-size:1.5em;
+            font-size:3em;
             margin:0% 0% 0% 3%;
             padding-left:0%;
         }
@@ -971,6 +972,12 @@ margin:0%;
         ::-webkit-scrollbar {
             width: 0px;
             background: transparent; /* make scrollbar transparent */
+        }
+        .breadcrumb {
+            margin: 10% 0%;
+            font-size:1.5em;
+            width:90%;
+            line-height:2.5em;
         }
     }
 
