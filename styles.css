@@ -99,6 +99,10 @@ label {
     line-height:4em;
     padding:2%;
     margin:2%;
+    text-transform:uppercase;
+    letter-spacing:0.2em;
+    font-size:0.5em;
+    font-weight:100;
 }
 
 .textdesc {
@@ -827,24 +831,22 @@ margin:0%;
             padding: 5% 2% 5% 10%;
         }
         .sidenav {
-            padding-top:25%;
+            padding-top:20%;
         }
         .sidenav .closebtn {
         top: 80%;
         font-size:3em;
         }
         #name {
-            color: #231f20;
-            border: 0.1em solid #231f20;
             padding:3%;
             text-transform:uppercase;
-            letter-spacing:0.1em;
+            letter-spacing:0.3em;
             padding-top:3%;
-            font-size:0.8em;
-            margin-top:5%;
+            font-size:0.5em;
+            margin-top:3%;
         }
         #projects {
-            padding-top:8%;
+            padding-top:4%;
             font-size:4em;
             left:85%;
         }
