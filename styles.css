@@ -419,7 +419,7 @@ margin:0%;
     /*border-bottom: 0.05em solid #231f20;*/
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 5%;
+    padding-top: 8%;
     text-align:center;
     overflow-y: hidden;
 }
@@ -465,6 +465,7 @@ margin:0%;
     left: 90%;
     z-index:8;
     font-size:2.5em;
+    margin-top:2%;
 }
 
 #name{
@@ -473,7 +474,13 @@ margin:0%;
     float:left;
     left: 5%;
     z-index:8;
-    font-size:1em;
+    color: #231f20;
+    border: 0.2em solid #231f20;
+    padding:1%;
+    text-transform:uppercase;
+    letter-spacing:0.4em;
+    font-size:0.3em;
+    margin-top:2%;
 }
 
 /*footer*/
@@ -705,7 +712,7 @@ margin:0%;
 }
 
 #highlights {
-    margin-top:6%;
+    margin-top:10%;
     margin-bottom:0%;
     padding-top:2%;
     padding-bottom:2%;
@@ -813,18 +820,24 @@ margin:0%;
             padding: 5% 2% 5% 10%;
         }
         .sidenav {
-            padding-top:15%;
+            padding-top:25%;
         }
         .sidenav .closebtn {
-        top: 60%;
+        top: 80%;
         font-size:3em;
         }
         #name {
-            padding-top:2%;
-            font-size:1.5em;
+            color: #231f20;
+            border: 0.1em solid #231f20;
+            padding:3%;
+            text-transform:uppercase;
+            letter-spacing:0.1em;
+            padding-top:3%;
+            font-size:0.8em;
+            margin-top:5%;
         }
         #projects {
-            padding-top:1.5%;
+            padding-top:8%;
             font-size:4em;
             left:85%;
         }
@@ -953,7 +966,7 @@ margin:0%;
             margin-top:0;
         }
         #highlights{
-            margin-top:20%;
+            margin-top:30%;
             font-size:3em;
         }
         .blurb {
