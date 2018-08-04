@@ -442,6 +442,11 @@ margin:0%;
     color: #c7b299;
 }
 
+#name:hover {
+    color: #231f20;
+    border: 0.2em solid #231f20;
+    background-color:white;
+}
 
 .sidenav .closebtn {
     position: absolute;
@@ -474,14 +479,16 @@ margin:0%;
     float:left;
     left: 5%;
     z-index:8;
-    color: #231f20;
-    border: 0.2em solid #231f20;
+    color:white;
+    background-color:#c7b299;
+    border: 0.2em solid #c7b299;
     padding:1%;
     text-transform:uppercase;
     letter-spacing:0.4em;
     font-size:0.3em;
     margin-top:2%;
 }
+
 
 /*footer*/
 
