@@ -94,15 +94,16 @@ a {
 label {
     color:white;
     display:inline;
-    background-color:#C2B59C;
-    border: 0.01em #C2B59C solid;
+    border-radius:1em;
+    color: #231f20;
+    border: 0.1em #231f20 solid;
     line-height:4em;
     padding:2%;
     margin:2%;
     text-transform:uppercase;
     letter-spacing:0.2em;
     font-size:0.5em;
-    font-weight:100;
+    font-weight:300;
 }
 
 .textdesc {
