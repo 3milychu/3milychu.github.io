@@ -768,6 +768,8 @@ margin:0%;
         }
         label {
             font-weight:600;
+            font-size:1em;
+            line-height:4em;
         }
         .media-holder-featured {
             margin-left:5%;
@@ -870,7 +872,7 @@ margin:0%;
             margin-top:20%;
         }
         .heading2 h1{
-            margin-top:20%;
+            margin-top:30%;
             margin-bottom:5%;
             text-align:center;
         }
