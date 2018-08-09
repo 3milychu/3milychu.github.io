@@ -39,6 +39,18 @@ body .section-dark {
     color:white;
 }
 
+.section-header {
+    margin-bottom:0%;
+    padding-bottom:2%;
+    font-weight:100;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:#231F20;
+    font-size:1em;
+    text-align:center;
+
+}
+
 #process {
     font-size:3em;
     font-weight:600;
@@ -134,9 +146,12 @@ label {
 
 .heading2 h1 {
     margin:10% 10% 0% 10%;
-/*    letter-spacing:-0.05em;*/
     font-size:3em;
     font-weight:900
+}
+
+.heading3 {
+    margin: 0%;
 }
 
 .section-white .post {
@@ -735,7 +750,6 @@ margin:0%;
     font-size:1em;
     text-align:center;
 }
-
 /*responsive
     /*monitors*/
 
