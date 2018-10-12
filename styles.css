@@ -156,6 +156,7 @@ label {
 
 .heading3 {
     margin: 0%;
+    padding-bottom:5%;
 }
 
 .section-white .post {
@@ -1026,6 +1027,9 @@ margin:0%;
             font-size:1.5em;
             width:90%;
             line-height:2.5em;
+        }
+        .heading3 {
+            padding-top:5%;
         }
     }
 
