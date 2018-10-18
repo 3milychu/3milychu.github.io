@@ -272,7 +272,8 @@ var images = document.getElementsByTagName('img');
 var close = document.querySelector('.close');
 for(i=0;i<images.length;i++){
 	images[i].style.cursor="pointer";
-	// console.log(this.attr("data-src"));
+	images[i].setAttribute("id","pic"+[i]);
+	img_list.push(images[i].getAttribute("data-src"));
 	images[i].onclick=function() {
 		lightbox.style.display="block";
 		lightbox_frame.innerHTML="";
@@ -298,10 +299,40 @@ console.log(img_list);
 close.addEventListener("click", function() {
 	lightbox.style.display="none";
 })
-function keyPress (e) {
-    if(e.key === "Escape") {
-    	lightbox.style.display="none";
-    }
+
+// On escape or close button, remove lightbox slider; get next image on right and left
+document.onkeydown = function(evt) {
+
+	evt = evt || window.event;
+	if(evt.keyCode ==27 ) {
+		lightbox.style.display= "none";
+	} else if (evt.keyCode == 39){
+		el = document.querySelector('.lightbox img')
+		currentImg = el.src;
+		console.log(currentImg);
+		
+		var index = img_list.findIndex(img => img === currentImg)
+		var next = index+1;
+		// el.src = next;
+
+		nextSrc = img_list[next];
+		console.log(next);
+
+		el.src = nextSrc;
+	} else if (evt.keyCode == 37){
+		el = document.querySelector('.lightbox img')
+		currentImg = el.src;
+		console.log(currentImg);
+		
+		var index = img_list.findIndex(img => img === currentImg)
+		var next = index-1;
+		el.src = next;
+
+		nextSrc = img_list[next];
+
+		el.src = nextSrc;
+	}
+
 }
 </script>
 <script src="../js/d3.min.js"></script>
