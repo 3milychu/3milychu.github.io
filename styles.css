@@ -771,8 +771,9 @@ margin:0%;
 /*    background-color:red;*/
     width:50%;
     height:50%;
-    margin:auto;
-    margin-top:10%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:12.5%;
 }
 .close {
     position:absolute;
@@ -1067,6 +1068,17 @@ margin:0%;
         }
         .heading3 {
             padding-top:5%;
+        }
+        .lightbox-frame {
+            margin-top:55%;
+            width:95%;
+        }
+        .close {
+            font-size:2em;
+            right:0%;
+            margin:10%;
+            padding:3% 4% 3% 3%;
+            border: 0.1em solid #c2b59b;
         }
     }
 
