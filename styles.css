@@ -755,6 +755,43 @@ margin:0%;
     font-size:1em;
     text-align:center;
 }
+.lightbox {
+    top:0;
+    left:0;
+    margin:0;
+    padding:0;
+    position:fixed;
+    z-index:200;
+    width:100%;
+    height:100%;
+    background-color:white;
+    display:none;
+}
+.lightbox-frame {
+/*    background-color:red;*/
+    width:50%;
+    height:50%;
+    margin:auto;
+    margin-top:10%;
+}
+.close {
+    position:absolute;
+    right:1%;
+    margin:2%;
+    font-weight:900;
+    padding:1%;
+    font-family:'Nunito', sans-serif;
+    color:#c2b59b;
+    border:0.05em solid #c2b59b;
+    width:1%;
+    cursor:pointer;
+
+}
+.close:hover {
+    background-color:#231F20;
+    border:0.05em solid #231F20;
+    color:white;
+}
 /*responsive
     /*monitors*/
 

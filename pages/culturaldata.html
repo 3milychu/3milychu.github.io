@@ -22,9 +22,13 @@
 </head>
 <body style="background-color:white;">
 
+	<div class="lightbox">
+		<div class="close">X</div>
+		<div class="lightbox-frame">
+		</div>
+	</div>
 		<!-- github ribbon -->
 	<a href="https://github.com/3milychu/met-erials"><img class="github" style="position: absolute; top: 7%; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
-
 
 	<!-- responsive menu -->
 		<div id="mySidenav" class="sidenav">
@@ -72,7 +76,7 @@
 	</div>
 
 	<div style="width:70%;overflow:hidden;margin:auto;">
-			<img class="lazy" style="width:100%" data-src=" ../assets/meterials/selection.gif">
+			<iframe src="https://player.vimeo.com/video/295723328?&background=1" width="900" height="360" frameborder="0" allowfullscreen></iframe>
 	</div>
 </div>
 
@@ -82,7 +86,7 @@
 		<h1 style="font-size:5em;display:inline;">01</h1>
 		<h1 style="display:inline;">Identifying Top Materials</h1>
 		<p>
-		Using natural language processing, the "Mediums" text paragraph field was parsed for the most frequently used words in the MET's database of over 400k objects.
+		Using natural language processing, the "Mediums" text paragraph field was parsed for the most frequently used words in the MET's database of over 400k objects, resulting in a dataset of ~190k items in the top 9 materials.
 		</p>
 	</div>
 
@@ -260,6 +264,45 @@ $(document).ready(function() { $(function() {
         }
     });
 	    });});
+
+var img_list = [];
+var lightbox = document.querySelector('.lightbox');
+var lightbox_frame = document.querySelector('.lightbox-frame');
+var images = document.getElementsByTagName('img');
+var close = document.querySelector('.close');
+for(i=0;i<images.length;i++){
+	images[i].style.cursor="pointer";
+	// console.log(this.attr("data-src"));
+	images[i].onclick=function() {
+		lightbox.style.display="block";
+		lightbox_frame.innerHTML="";
+		var src = this.src;
+		var img = document.createElement('img');
+		var parent_width = this.parentElement.offsetWidth;
+		var img_width = this.width;
+			if(img_width>parent_width){
+				img.style.width="100%";
+				img.style.marginTop="auto";
+				img.style.marginBottom="auto";
+			} else {
+				img.style.height="100%";
+				img.style.marginLeft="auto";
+				img.style.marginRight="auto";
+			}
+		img.style.display="block";
+		img.src=src;
+		lightbox_frame.append(img);
+	}
+}
+console.log(img_list);
+close.addEventListener("click", function() {
+	lightbox.style.display="none";
+})
+function keyPress (e) {
+    if(e.key === "Escape") {
+    	lightbox.style.display="none";
+    }
+}
 </script>
 <script src="../js/d3.min.js"></script>
 <script src="../js/main.js"></script>
