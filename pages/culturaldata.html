@@ -267,6 +267,7 @@ $(document).ready(function() { $(function() {
     });
 	    });});
 
+// Image lightbox
 var img_list = [];
 var lightbox = document.querySelector('.lightbox');
 var lightbox_frame = document.querySelector('.lightbox-frame');
@@ -311,7 +312,7 @@ document.onkeydown = function(evt) {
 	} else if (evt.keyCode == 39){
 		el = document.querySelector('.lightbox img')
 		currentImg = el.src;
-		console.log(currentImg);
+		// console.log(currentImg);
 		
 		var index = img_list.findIndex(img => img === currentImg)
 		var next = index+1;
@@ -330,9 +331,8 @@ document.onkeydown = function(evt) {
 				el.style.marginRight="auto";
 			}
 		el.style.display="block";
-
 		nextSrc = img_list[next];
-		console.log(next);
+		// console.log(next);
 
 		el.src = nextSrc;
 	} else if (evt.keyCode == 37){
@@ -359,12 +359,9 @@ document.onkeydown = function(evt) {
 			}
 
 		el.style.display="block";
-
 		nextSrc = img_list[next];
-
 		el.src = nextSrc;
 	}
-
 }
 </script>
 <script src="../js/d3.min.js"></script>

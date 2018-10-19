@@ -381,11 +381,10 @@ document.onkeydown = function(evt) {
 				el.style.marginRight="auto";
 			}
 		el.style.display="block";
-
 		nextSrc = img_list[next];
-		console.log(next);
-
+		// console.log(next);
 		el.src = nextSrc;
+		
 	} else if (evt.keyCode == 37){
 		el = document.querySelector('.lightbox img')
 		currentImg = el.src;
@@ -408,14 +407,10 @@ document.onkeydown = function(evt) {
 				el.style.marginLeft="auto";
 				el.style.marginRight="auto";
 			}
-
 		el.style.display="block";
-
 		nextSrc = img_list[next];
-
 		el.src = nextSrc;
 	}
-
 }
 </script>
 <script src="../js/d3.min.js"></script>

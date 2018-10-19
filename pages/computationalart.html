@@ -22,24 +22,30 @@
 </head>
 <body style="background-color:white;">
 
-		<!-- github ribbon -->
-	<a href="https://github.com/3milychu/epochrunway"><img class="github" style="position: absolute; top: 7%; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
-
-
-	<!-- responsive menu -->
-		<div id="mySidenav" class="sidenav">
-			
-			<span style="cursor:pointer">
-	    	<a class="closebtn"onmouseover="closeNav()">&times;</a></span>
-	    	<a href="../index.html"><span id="name">3milychu</span></a>
-	    	<span style ="cursor:pointer" id="projects" onmouseover="openNav()">&#9776;</span>
+<!-- Image lightbox -->
+	<div class="lightbox">
+		<div class="close">X</div>
+		<div class="lightbox-frame">
 		</div>
+	</div>
 
-		<!-- Heading -->
+<!-- github ribbon -->
+<a href="https://github.com/3milychu/epochrunway"><img class="github" style="position: absolute; top: 7%; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 
-		<div class="heading2" style="text-align:center;">
-			<h1>Epoch Runway</h1>
-		</div>
+<!-- responsive menu -->
+<div id="mySidenav" class="sidenav">
+	
+	<span style="cursor:pointer">
+	<a class="closebtn"onmouseover="closeNav()">&times;</a></span>
+	<a href="../index.html"><span id="name">3milychu</span></a>
+	<span style ="cursor:pointer" id="projects" onmouseover="openNav()">&#9776;</span>
+</div>
+
+<!-- Heading -->
+
+<div class="heading2" style="text-align:center;">
+	<h1>Epoch Runway</h1>
+</div>
 
 <div class = "section-white">
 
@@ -71,8 +77,8 @@
 		</p>
 	</div>
 
-	<div style="width:70%;overflow:hidden;margin:auto;">
-			<img class="lazy" style="width:100%" data-src="../assets/epoch/hover.gif">
+	<div style="margin:auto;text-align:center;padding-bottom:10%;">
+			<iframe src="https://player.vimeo.com/video/295958796?&background=1" width="640" height="360" frameborder="0" allowfullscreen></iframe>
 	</div>
 </div>
 
@@ -87,23 +93,23 @@
 	</div>
 
 	<div style="width:35%;overflow:hidden;margin:auto;">
-			<img class="lazy" style="width:110%" data-src="../assets//epoch/downloading.png">
+			<img class="lazy" style="width:110%" data-src="https://3milychu.github.io/assets//epoch/downloading.png">
 	</div>
 
 	<div style="width:35%;overflow:hidden;margin:auto;display:block">
-			<img class="lazy" style="width:110%" data-src="../assets//epoch/opencv.png">
+			<img class="lazy" style="width:110%" data-src="https://3milychu.github.io/assets//epoch/opencv.png">
 	</div>
 
 	<div style="width:15%;overflow:hidden;display:inline-block;position:absolute;margin-top:8%;margin-left:20%;">
-			<img class="lazy" style="width:100%" data-src="../assets//epoch/original.jpg">
+			<img class="lazy" style="width:100%" data-src="https://3milychu.github.io/assets//epoch/original.jpg">
 	</div>
 
 	<div style="width:19%;overflow:hidden;display:inline-block;position:absolute;margin-top:8%;margin-left:40%;">
-			<img class="lazy" style="width:100%" data-src="../assets//epoch/extracted.png">
+			<img class="lazy" style="width:100%" data-src="https://3milychu.github.io/assets//epoch/extracted.png">
 	</div>
 
 	<div style="width:15%;overflow:hidden;display:inline-block;position:absolute;margin-top:8%;margin-left:63%;">
-			<img class="lazy" style="width:100%" data-src="../assets//epoch/new.png">
+			<img class="lazy" style="width:100%" data-src="https://3milychu.github.io/assets//epoch/new.png">
 	</div>
 
 	
@@ -199,9 +205,9 @@
 			<em>Project Archive</em>
 
 
-			<a href="../assets//costume_analysis.nb.html" target="_blank">Data Analysis: Reclass in R by Body Part</a>
+			<a href="https://3milychu.github.io/assets//costume_analysis.nb.html" target="_blank">Data Analysis: Reclass in R by Body Part</a>
 			<a href="https://github.com/3milychu/majorstudio/blob/master/data/clothes/grabcut-costumes.ipynb" target="_blank">Image Extraction: Batch Image Extraction in Python</a>
-			<a href="../assets//ER-prototype.pdf" target="_blank">Mockups of Scenes</a>
+			<a href="https://3milychu.github.io/assets//ER-prototype.pdf" target="_blank">Mockups of Scenes</a>
 			<a href="https://github.com/3milychu/epochrunway" target="_blank">Github Repo</a>
 
 			</p>
@@ -232,6 +238,103 @@ $(document).ready(function() { $(function() {
         }
     });
 	    });});
+
+
+// Image lightbox
+var img_list = [];
+var lightbox = document.querySelector('.lightbox');
+var lightbox_frame = document.querySelector('.lightbox-frame');
+var images = document.getElementsByTagName('img');
+var close = document.querySelector('.close');
+for(i=1;i<images.length;i++){
+	images[i].style.cursor="pointer";
+	images[i].setAttribute("id","pic"+[i]);
+	img_list.push(images[i].getAttribute("data-src"));
+	images[i].onclick=function() {
+		lightbox.style.display="block";
+		lightbox_frame.innerHTML="";
+		var src = this.src;
+		var img = document.createElement('img');
+		var parent_width = this.parentElement.offsetWidth;
+		var img_width = this.width;
+			if(img_width>parent_width){
+				img.style.width="100%";
+				img.style.marginTop="auto";
+				img.style.marginBottom="auto";
+			} else {
+				img.style.height="100%";
+				img.style.marginLeft="auto";
+				img.style.marginRight="auto";
+			}
+		img.style.display="block";
+		img.src=src;
+		lightbox_frame.append(img);
+	}
+}
+console.log(img_list);
+close.addEventListener("click", function() {
+	lightbox.style.display="none";
+})
+
+// On escape or close button, remove lightbox slider; get next image on right and left
+document.onkeydown = function(evt) {
+
+	evt = evt || window.event;
+	if(evt.keyCode ==27 ) {
+		lightbox.style.display= "none";
+	} else if (evt.keyCode == 39){
+		el = document.querySelector('.lightbox img')
+		currentImg = el.src;
+		// console.log(currentImg);
+		
+		var index = img_list.findIndex(img => img === currentImg)
+		var next = index+1;
+
+		var parent_width = el.parentElement.offsetWidth;
+		var img_width = el.width;
+			if(img_width>parent_width){
+				el.style.width="100%";
+				el.style.height="auto";
+				el.style.marginTop="auto";
+				el.style.marginBottom="auto";
+			} else {
+				el.style.height="100%";
+				el.style.width="auto";
+				el.style.marginLeft="auto";
+				el.style.marginRight="auto";
+			}
+		el.style.display="block";
+		nextSrc = img_list[next];
+		// console.log(next);
+		el.src = nextSrc;
+		
+	} else if (evt.keyCode == 37){
+		el = document.querySelector('.lightbox img')
+		currentImg = el.src;
+		console.log(currentImg);
+		
+		var index = img_list.findIndex(img => img === currentImg)
+		var next = index-1;
+		el.src = next;
+
+		var parent_width = el.parentElement.offsetWidth;
+		var img_width = el.width;
+			if(img_width>parent_width){
+				el.style.width="100%";
+				el.style.height="auto";
+				el.style.marginTop="auto";
+				el.style.marginBottom="auto";
+			} else {
+				el.style.height="100%";
+				el.style.width="auto";
+				el.style.marginLeft="auto";
+				el.style.marginRight="auto";
+			}
+		el.style.display="block";
+		nextSrc = img_list[next];
+		el.src = nextSrc;
+	}
+}
 </script>
 <script src="../js/d3.min.js"></script>
 <script src="../js/main.js"></script>
