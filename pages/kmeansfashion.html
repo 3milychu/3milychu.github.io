@@ -323,7 +323,7 @@ var lightbox = document.querySelector('.lightbox');
 var lightbox_frame = document.querySelector('.lightbox-frame');
 var images = document.getElementsByTagName('img');
 var close = document.querySelector('.close');
-for(i=1;i<images.length;i++){
+for(i=0;i<images.length;i++){
 	images[i].style.cursor="pointer";
 	images[i].setAttribute("id","pic"+[i]);
 	img_list.push(images[i].getAttribute("data-src"));
