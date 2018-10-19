@@ -20,21 +20,27 @@
 </head>
 <body style="background-color:white;">
 
-		<!-- responsive menu -->
-		<div id="mySidenav" class="sidenav">
-			
-			<span style="cursor:pointer">
-	    	<a class="closebtn"onmouseover="closeNav()">&times;</a></span>
-
-	    	<a href="../index.html"><span id="name">3milychu</span></a>
-	    	<span style ="cursor:pointer" id="projects" onmouseover="openNav()">&#9776;</span>
+<!-- Image lightbox -->
+	<div class="lightbox">
+		<div class="close">X</div>
+		<div class="lightbox-frame">
 		</div>
+	</div>
 
-		<!-- Heading -->
+<!-- responsive menu -->
+<div id="mySidenav" class="sidenav">
+	
+	<span style="cursor:pointer">
+	<a class="closebtn"onmouseover="closeNav()">&times;</a></span>
 
-		<div class="heading2">
-			<h1>Diet Learning Across the Lifespan</h1>
-		</div>
+	<a href="../index.html"><span id="name">3milychu</span></a>
+	<span style ="cursor:pointer" id="projects" onmouseover="openNav()">&#9776;</span>
+</div>
+
+<!-- Heading -->
+<div class="heading2">
+	<h1>Diet Learning Across the Lifespan</h1>
+</div>
 
 <div class = "section-white">
 
@@ -43,7 +49,7 @@
 
 					<div class ="post-media"">
 								<div class="videoWrapper">
-								<iframe src="https://www.youtube.com/embed/oPP0L0F33mE?showinfo=0&amp;autoplay=1&amp;mute=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+								<iframe src="https://player.vimeo.com/video/295960006?&autoplay=1&muted=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 								</div>
 						
 					</div>
@@ -74,7 +80,7 @@
 	</div>
 
 	<div style="width:40%;overflow:hidden;margin:auto;">
-			<img class="lazy" style="width:100%;" data-src="../assets/nucook.png">
+			<img class="lazy" style="width:100%;" data-src="https://3milychu.github.io/assets/nucook.png">
 	</div>
 </div>
 
@@ -216,6 +222,101 @@ $(document).ready(function() { $(function() {
         }
     });
 	    });});
+// Image lightbox
+var img_list = [];
+var lightbox = document.querySelector('.lightbox');
+var lightbox_frame = document.querySelector('.lightbox-frame');
+var images = document.getElementsByTagName('img');
+var close = document.querySelector('.close');
+for(i=1;i<images.length;i++){
+	images[i].style.cursor="pointer";
+	images[i].setAttribute("id","pic"+[i]);
+	img_list.push(images[i].getAttribute("data-src"));
+	images[i].onclick=function() {
+		lightbox.style.display="block";
+		lightbox_frame.innerHTML="";
+		var src = this.src;
+		var img = document.createElement('img');
+		var parent_width = this.parentElement.offsetWidth;
+		var img_width = this.width;
+			if(img_width>parent_width){
+				img.style.width="100%";
+				img.style.marginTop="auto";
+				img.style.marginBottom="auto";
+			} else {
+				img.style.height="100%";
+				img.style.marginLeft="auto";
+				img.style.marginRight="auto";
+			}
+		img.style.display="block";
+		img.src=src;
+		lightbox_frame.append(img);
+	}
+}
+console.log(img_list);
+close.addEventListener("click", function() {
+	lightbox.style.display="none";
+})
+
+// On escape or close button, remove lightbox slider; get next image on right and left
+document.onkeydown = function(evt) {
+
+	evt = evt || window.event;
+	if(evt.keyCode ==27 ) {
+		lightbox.style.display= "none";
+	} else if (evt.keyCode == 39){
+		el = document.querySelector('.lightbox img')
+		currentImg = el.src;
+		console.log(currentImg);
+		
+		var index = img_list.findIndex(img => img === currentImg)
+		var next = index+1;
+
+		var parent_width = el.parentElement.offsetWidth;
+		var img_width = el.width;
+			if(img_width>parent_width){
+				el.style.width="100%";
+				el.style.height="auto";
+				el.style.marginTop="auto";
+				el.style.marginBottom="auto";
+			} else {
+				el.style.height="100%";
+				el.style.width="auto";
+				el.style.marginLeft="auto";
+				el.style.marginRight="auto";
+			}
+		el.style.display="block";
+		nextSrc = img_list[next];
+		// console.log(next);
+		el.src = nextSrc;
+		
+	} else if (evt.keyCode == 37){
+		el = document.querySelector('.lightbox img')
+		currentImg = el.src;
+		console.log(currentImg);
+		
+		var index = img_list.findIndex(img => img === currentImg)
+		var next = index-1;
+		el.src = next;
+
+		var parent_width = el.parentElement.offsetWidth;
+		var img_width = el.width;
+			if(img_width>parent_width){
+				el.style.width="100%";
+				el.style.height="auto";
+				el.style.marginTop="auto";
+				el.style.marginBottom="auto";
+			} else {
+				el.style.height="100%";
+				el.style.width="auto";
+				el.style.marginLeft="auto";
+				el.style.marginRight="auto";
+			}
+		el.style.display="block";
+		nextSrc = img_list[next];
+		el.src = nextSrc;
+	}
+}
 </script>
 <script src="../js/jquery.js"></script>
 <script src="../js/d3.min.js"></script>
