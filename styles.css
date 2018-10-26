@@ -20,6 +20,16 @@ body {
     top:0%;
     left:0%;
     margin:0;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
 }
 
 em {
@@ -707,6 +717,68 @@ margin:0%;
 
 }
 
+/*news card*/
+
+.news{
+    width:25%;
+    margin-left:5%;
+    margin-bottom:5%; 
+    overflow:hidden;
+    position:relative;
+    display:inline-block;
+    background-color:transparent;
+/*    border-radius:0.5em;*/
+     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+     cursor:pointer;
+}
+.news .overlay {
+    width:100%;
+    height:100%;
+    background-color:white;
+    opacity:0;
+    transition:0.25s ease-in;
+    z-index:2;
+}
+
+.news .overlay p {
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin:auto;
+    vertical-align:middle;
+    text-align:left;
+    font-size:1.5em;
+    font-weight:200;
+    width:80%;
+}
+
+byline {
+    font-size:0.5em;
+    font-style:italic;
+    padding-top:2%;
+}
+.news-cover {
+    width:100%;
+}
+.news:hover .overlay {
+    opacity:0.95;
+}
+
+.news-bounding {
+   width:auto;
+   height:100%;
+   overflow:hidden;
+   position:relative;
+}
+
+.headline {
+    opacity:0.1;
+    background-color:transparent;
+    padding:5%;
+}
+
 /*excerpt*/
 
 .excerpt {
@@ -733,6 +805,13 @@ margin:0%;
     color:#231F20;
     white-space: pre-line;
 
+}
+
+.excerpt h3 {
+    font-size:0.8em;
+    color:#231F20;
+    font-weight:normal;
+    font-style:italic;
 }
 
 .blurb {
@@ -1079,6 +1158,10 @@ margin:0%;
             margin:10%;
             padding:3% 4% 3% 3%;
             border: 0.1em solid #c2b59b;
+        }
+        .news {
+            width:90%;
+            margin-left:5%;
         }
     }
 
