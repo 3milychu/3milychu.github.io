@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
     var breadcrumb = document.getElementById("breadcrumb");
+    breadcrumb.innerHTML += "<a style='font-size:1.5em' href='visualvariables.html'>Visualize Uncertainty</a>";
     breadcrumb.innerHTML += "<a style='font-size:1em' href='kmeansfashion.html'>Forms of Attraction</a>";
     breadcrumb.innerHTML += "<a style='font-size:1.5em;' href='computationalart.html'>Epoch Runway</a>";
     breadcrumb.innerHTML += "<a style='font-size:1em;' href='culturaldata.html'>Met.erials</a>";
