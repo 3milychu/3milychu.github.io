@@ -897,7 +897,7 @@ byline {
 
 }
 input[type="text"]{
-    font-size:16px;
+    font-size:1em;
     padding:1%;
     color:#CCC;
 }
@@ -957,9 +957,20 @@ input[type="submit"]:hover{
     /*tablets and smaller*/
 
     @media screen and (max-width:1024px) {
-        .center_form .close {
+        .center_form  h3 {
+            font-size:2em;
+        }
+        input[type="text"]{
             font-size:3em;
+        }
+        .center_form .close {
+            font-size:0.8em;
             top:-5%;
+        }
+        input[type="submit"]{
+            margin-top:5%;
+            font-size:1.2em;
+            padding:5%;
         }
         #about-text {
             font-size:1.5em;
