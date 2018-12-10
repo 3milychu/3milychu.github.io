@@ -951,7 +951,8 @@ input[type="submit"]:hover{
 
     @media screen and (max-width:1024px) {
         .center_form .close {
-            top:-10%;
+            font-size:0.8em;
+            top:-5%;
         }
         #about-text {
             font-size:1.5em;
