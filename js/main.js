@@ -44,7 +44,7 @@ function secretMessage() {
             console.log(name);
             if(name == "oliver gomes"){
                 secret.innerHTML="";
-                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi Oliver,</h2><h3>If you're reading this, I just want to say that I've met with everyone I need to meet with, and Conde is #1. Please let me know if there's anything I can help with to make things the best they can be for everyone involved. I am open. I have great respect for your vision, enthusiasm and care for the future. You don't see that just anywhere. I would be so proud and excited. <br><br>Emily</h3></div>"
+                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi Oliver,</h2><h3>If you're reading this, I just want to say that I've pretty much met with everyone I really need to meet with, and Conde is #1. Please let me know if there's anything I can help with to make things the best they can be for everyone involved. I am open. I have great respect for your vision, enthusiasm and care for the future. You don't see that just anywhere. I would be so proud and excited. <br><br>Emily</h3></div>"
                 console.log("secret message sent");
                 closeMessage();
             } else {
