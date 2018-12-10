@@ -37,8 +37,10 @@ function closeNav (){
 function secretMessage() {
     var secret = document.querySelector('#secret');
     var secret_form = document.querySelector('input[type="submit"]');
+    var name_field = document.querySelector('input[name="name"]');
     var name = document.querySelector('input[name="name"]').value;
-    secret_form.addEventListener("click", function() {
+    name_field.addEventListener("change", function() {
+            name = document.querySelector('input[name="name"]').value;
             name = name.toLowerCase();
             console.log(name);
             if(name == "oliver gomes"){
@@ -65,6 +67,21 @@ function secretMessage() {
             }
     });
 };
+
+secretMessage();
+
+function enterNameInput() {
+    var name = document.querySelector('input[name="name"]')
+    var secret_form = document.querySelector('input[type="submit"]');
+    name.addEventListener("keyup", function(event) {
+      event.preventDefault();
+      if (event.keyCode === 13) {
+        secret_form.click();
+      }
+    });
+}
+
+enterNameInput();
 
 function closeMessage() {
     var close_message = document.querySelector('#close_message');
