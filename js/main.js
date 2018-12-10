@@ -34,6 +34,15 @@ function closeNav (){
 	document.getElementById("mySidenav").style.height="0%";
 };
 
+function toTitleCase(str) {
+    return str.replace(
+        /\w\S*/g,
+        function(txt) {
+            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+        }
+    );
+}
+
 function secretMessage() {
     var secret = document.querySelector('#secret');
     var secret_form = document.querySelector('input[type="submit"]');
@@ -52,14 +61,14 @@ function secretMessage() {
             } else if (name == "danielle carrick") {
                 document.body.style.zoom = 1.0;
                 secret.innerHTML="";
-                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hey Danielle,</h2><h3>Conde is where it's at. What's a girl got to do? Got me sending random messages into black holes..if I see you again this never happened. I mean, other places are not bad, but you got it going on. Just FYI.<br><br>Emily</h3></div>"
+                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hey Danielle,</h2><h3>Conde is where it's at. What's a girl got to do? Got me sending random messages into black holes while I wait...if I see you again this never happened. I mean, other places are not bad, but you got it going on. Just FYI.<br><br>Emily</h3></div>"
                 console.log("secret message sent");
                 closeMessage();
             }
             else {
                 secret.innerHTML="";
                 document.body.style.zoom = 1.0;
-                secret.innerHTML="<div class='center_form'><h2>No messages right now. Redirecting..</h2>";
+                secret.innerHTML="<div class='center_form'><h2>Hi " + toTitleCase(name) +"! No messages right now. Redirecting..</h2>";
                 setTimeout(function(){ 
                     scrollToTop();
                     secret.style.display="none";
