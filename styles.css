@@ -900,6 +900,8 @@ input[type="text"]{
     font-size:1em;
     padding:1%;
     color:#CCC;
+    border: none;
+    border-bottom:0.05em solid;
 }
 input[type="submit"]{
     background-color:#c2b59b;
@@ -962,6 +964,7 @@ input[type="submit"]:hover{
         }
         input[type="text"]{
             font-size:3em;
+            margin-left:-10%;
         }
         .center_form .close {
             font-size:0.8em;
