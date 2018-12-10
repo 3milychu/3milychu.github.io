@@ -68,7 +68,7 @@ function secretMessage() {
             else {
                 secret.innerHTML="";
                 document.body.style.zoom = 1.0;
-                secret.innerHTML="<div class='center_form'><h2>Hi " + toTitleCase(name) +"! No messages right now. Redirecting..</h2>";
+                secret.innerHTML="<div class='center_form'><h2>Hi " + toTitleCase(name) +"! No messages right now. Redirecting<ellipsis></ellipsis></h2>";
                 setTimeout(function(){ 
                     scrollToTop();
                     secret.style.display="none";

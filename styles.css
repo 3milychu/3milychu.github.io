@@ -932,6 +932,31 @@ input[type="submit"]:hover{
     background-color:white;
 }
 
+ellipsis:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4,end) 900ms infinite;      
+  animation: ellipsis steps(4,end) 900ms infinite;
+  content: "\2026"; /* ascii code for the ellipsis character */
+  width: 0em;
+  opacity:0;
+  transition:0.25s all ease-in-out;
+}
+
+@keyframes ellipsis {
+  to {
+    width: 1.5em;   
+    opacity:1; 
+  }
+}
+
+@-webkit-keyframes ellipsis {
+  to {
+    width: 1.5em;    
+  }
+}
+
 /*responsive
     /*monitors*/
 
