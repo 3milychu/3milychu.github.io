@@ -52,6 +52,7 @@ function secretMessage() {
                 document.body.style.zoom = 1.0;
                 secret.innerHTML="<div class='center_form'><h2>No messages today. Redirecting..</h2>";
                 setTimeout(function(){ 
+                    scrollToTop();
                     secret.style.display="none";
                 }, 2000);
             }
@@ -61,6 +62,13 @@ function secretMessage() {
 function closeMessage() {
     var close_message = document.querySelector('#close_message');
     close_message.addEventListener("click", function() {
+         document.body.style.zoom = 1.0;
+         scrollToTop();
          secret.style.display="none";
     })
 };
+
+function scrollToTop() {
+    var main_div = document.querySelector('.section-white')
+    main_div.scrollTop = 0;
+}

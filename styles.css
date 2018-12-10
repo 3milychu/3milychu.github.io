@@ -897,7 +897,7 @@ byline {
 
 }
 input[type="text"]{
-    font-size:1em;
+    font-size:16px;
     padding:1%;
     color:#CCC;
 }
@@ -916,11 +916,18 @@ input[type="submit"]{
 }
 input[type="submit"]:hover{
     background-color:#231F20;
-
 }
 .center_form .close {
+    font-size:0.8em;
+    background-color:#c2b59b;
+    color:white;
     padding:1%;
     width:auto;
+}
+.center_form .close:hover {
+    color:#231F20;
+    border: 0.05em solid #231F20;
+    background-color:white;
 }
 
 /*responsive
