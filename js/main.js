@@ -52,7 +52,7 @@ function secretMessage() {
                 secret.innerHTML="<div class='center_form'><h2>No messages today. Redirecting..</h2>";
                 setTimeout(function(){ 
                     secret.style.display="none";
-                }, 1000);
+                }, 2000);
             }
     });
 };

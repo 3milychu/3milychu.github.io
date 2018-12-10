@@ -883,7 +883,7 @@ byline {
     left:0;
 }
 .center_form {
-        position: relative;
+    position: relative;
     float: left;
     top: 50%;
     left: 50%;
@@ -893,7 +893,7 @@ byline {
     text-align:center;
     font-size:1.5em;
     font-weight:200;
-    width:80%;
+    width:50%;
 
 }
 input[type="text"]{
@@ -950,6 +950,9 @@ input[type="submit"]:hover{
     /*tablets and smaller*/
 
     @media screen and (max-width:1024px) {
+        .center_form .close {
+            top:-10%;
+        }
         #about-text {
             font-size:1.5em;
         }
