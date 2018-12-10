@@ -55,7 +55,7 @@ function secretMessage() {
             if(name == "oliver gomes"){
                 document.body.style.zoom = 1.0;
                 secret.innerHTML="";
-                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi Oliver,</h2><h3>If you're reading this, I just want to say *off the record* for me, Conde is #1. I'm not really a hardcore techie, just someone's who's good at design and technology and likes building with an organization I love and respect and would be proud up to represent everyday. Please let me know if there's anything I can help with to make things the best they can be for everyone involved. I am open. I have great respect for your vision, enthusiasm and care for the future. You don't see that just anywhere. <br><br>Emily</h3></div>"
+                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi Oliver,</h2><h3>If you're reading this, I just want to say *off the record* for me, Conde is #1. I'm not really a hardcore techie, just someones who's good at design and technology and likes building with an organization I love and respect and would be proud up to represent everyday. Please let me know if there's anything I can help with to make things the best they can be for everyone involved. I am open. I have great respect for your vision, enthusiasm and care for the future. You don't see that just anywhere. <br><br>Emily</h3></div>"
                 console.log("secret message sent");
                 closeMessage();
             } else if (name == "danielle carrick") {
