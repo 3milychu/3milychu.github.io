@@ -42,12 +42,14 @@ function secretMessage() {
             name = name.toLowerCase();
             console.log(name);
             if(name == "oliver gomes"){
+                document.body.style.zoom = 1.0;
                 secret.innerHTML="";
                 secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi Oliver,</h2><h3>If you're reading this, I just want to say *off the record* I've pretty much met with everyone I really need to meet with, and Conde is #1. Please let me know if there's anything I can help with to make things the best they can be for everyone involved. I am open. I have great respect for your vision, enthusiasm and care for the future. You don't see that just anywhere. I would be so proud and excited. <br><br>Emily</h3></div>"
                 console.log("secret message sent");
                 closeMessage();
             } else {
                 secret.innerHTML="";
+                document.body.style.zoom = 1.0;
                 secret.innerHTML="<div class='center_form'><h2>No messages today. Redirecting..</h2>";
                 setTimeout(function(){ 
                     secret.style.display="none";
