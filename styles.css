@@ -957,7 +957,7 @@ input[type="submit"]:hover{
     /*tablets and smaller*/
 
     @media screen and (max-width:1024px) {
-        .center_form  h3 {
+        #form1  h3 {
             font-size:2em;
         }
         input[type="text"]{
