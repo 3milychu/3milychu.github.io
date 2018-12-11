@@ -52,20 +52,20 @@ function secretMessage() {
             name = document.querySelector('input[name="name"]').value;
             name = name.toLowerCase();
             console.log(name);
-            if(name == "oliver gomes"){
-                document.body.style.zoom = 1.0;
-                secret.innerHTML="";
-                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi Oliver,</h2><h3>If you're reading this, I just want to say *off the record* for me, Conde is #1. I'm not really a hardcore techie, just someone who's good at design and technology and likes building with an organization I love and respect and would be proud to represent everyday. Please let me know if there's anything I can help with to make things the best they can be for everyone involved. I am open. I have great respect for your vision, enthusiasm and care for the future. You don't see that just anywhere. <br><br>Emily</h3></div>"
-                console.log("secret message sent");
-                closeMessage();
-            } else if (name == "danielle carrick") {
-                document.body.style.zoom = 1.0;
-                secret.innerHTML="";
-                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hey Danielle,</h2><h3>Conde is where it's at. What's a girl got to do? Got me sending random messages into black holes while I wait...if I see you again this never happened. I mean, other places are not bad, but you got it going on. Just FYI.<br><br>Emily</h3></div>"
-                console.log("secret message sent");
-                closeMessage();
-            }
-            else {
+            // if(name == "oliver gomes"){
+            //     document.body.style.zoom = 1.0;
+            //     secret.innerHTML="";
+            //     secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi Oliver,</h2><h3>If you're reading this, I just want to say *off the record* for me, Conde is #1. I'm not really a hardcore techie, just someone who's good at design and technology and likes building with an organization I love and respect and would be proud to represent everyday. Please let me know if there's anything I can help with to make things the best they can be for everyone involved. I am open. I have great respect for your vision, enthusiasm and care for the future. You don't see that just anywhere. <br><br>Emily</h3></div>"
+            //     console.log("secret message sent");
+            //     closeMessage();
+            // } else if (name == "danielle carrick") {
+            //     document.body.style.zoom = 1.0;
+            //     secret.innerHTML="";
+            //     secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hey Danielle,</h2><h3>Conde is where it's at. What's a girl got to do? Got me sending random messages into black holes while I wait...if I see you again this never happened. I mean, other places are not bad, but you got it going on. Just FYI.<br><br>Emily</h3></div>"
+            //     console.log("secret message sent");
+            //     closeMessage();
+            // }
+            // else {
                 secret.innerHTML="";
                 document.body.style.zoom = 1.0;
                 secret.innerHTML="<div class='center_form'><h2>Hi " + toTitleCase(name) +"! No messages right now. Redirecting<ellipsis></ellipsis></h2>";
@@ -73,7 +73,7 @@ function secretMessage() {
                     scrollToTop();
                     secret.style.display="none";
                 }, 2000);
-            }
+            // }
     });
 };
 
