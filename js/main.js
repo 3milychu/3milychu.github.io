@@ -67,7 +67,7 @@ function secretMessage() {
             } else if (name == "oliver gomes") {
                 document.body.style.zoom = 1.0;
                 secret.innerHTML="";
-                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi Oliver,</h2><h3>What if we greeted all clients personally in their data studios, and then gave them a mix of data-driven visualizations and multimedia to understand their customers? To the future,<br><br>Emily</h3></div>"
+                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi Oliver,</h2><h3>Thinking about how we can delight clients through personalized details in their data studios...your vision and direction are exciting and I look forward to the possibility of working on cutting-edge products together. To the future,<br><br>Emily</h3></div>"
                 console.log("secret message sent");
                 closeMessage();
             }
