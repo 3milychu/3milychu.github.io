@@ -70,6 +70,12 @@ function secretMessage() {
                 secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi Oliver,</h2><h3>Thinking about how we can delight clients through personalized details in their data studios...your vision and direction are exciting and I look forward to the possibility of working on cutting-edge products together. To the future,<br><br>Emily</h3></div>"
                 console.log("secret message sent");
                 closeMessage();
+            } else if (name == "michael francavilla") {
+                document.body.style.zoom = 1.0;
+                secret.innerHTML="";
+                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi Michael,</h2><h3>Thank you for your support and quick insights throughout the process. With appreciation,<br><br>Emily</h3></div>"
+                console.log("secret message sent");
+                closeMessage();
             }
             else {
                 secret.innerHTML="";
