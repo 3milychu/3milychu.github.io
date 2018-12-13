@@ -43,6 +43,14 @@ function toTitleCase(str) {
     );
 }
 
+notification = document.querySelector('#notification');
+notification.addEventListener("click", function() {
+    var secret = document.querySelector('#secret');
+    secret.style.display="inline-block";
+    secretMessage();
+})
+
+
 function secretMessage() {
     var secret = document.querySelector('#secret');
     var secret_form = document.querySelector('input[type="submit"]');

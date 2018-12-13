@@ -958,6 +958,55 @@ ellipsis:after {
   }
 }
 
+#notification {
+    position:fixed;
+    z-index:100;
+    width:5%;
+    bottom:5%;
+    right:1%;
+    cursor:pointer;
+    background-color:white;
+    border-radius:50%;
+    box-shadow: 0.5em 0.5em 2em #231F20;
+    padding:1%;
+}
+
+@keyframes jump {
+    0% {
+        transform:rotate(45deg);
+        transform:translateY(0px);
+    }
+    25% {
+        transform:rotate(-45deg);
+    }
+    50% {
+        transform:rotate(45deg);
+        transform:translateY(-50px);
+    }
+    90% {
+        transform:rotate(-45deg);
+        transform:translateY(0px);
+
+    }
+    100% {
+        transform:rotate(0deg);
+
+    }
+}
+
+#notification img {
+    width:100%;
+    margin:auto;
+    text-align:center;
+    transition:0.25s all;
+    animation: jump 0.7s 3 cubic-bezier(0,0.5,0.8,1);
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+#notification img:hover {
+    transform:scale(1.5);
+    transform-origin: 50% 50%;
+}
 /*responsive
     /*monitors*/
 
