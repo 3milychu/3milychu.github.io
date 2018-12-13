@@ -874,6 +874,7 @@ byline {
 }
 
 #secret {
+    display:none;
     position:fixed;
     background-color:white;
     width:100%;
