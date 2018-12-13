@@ -92,6 +92,12 @@ function secretMessage() {
                 setTimeout(function(){ 
                     scrollToTop();
                     secret.style.display="none";
+                    secret.innerHTML=`<div class="center_form" id="form1">
+                  <h3>Emily may have a secret message waiting for you. Who is visiting today?</h3>
+                  <input type="text" name="name" value="i.e. John Doe" onClick="this.setSelectionRange(0, this.value.length)">
+                  <br><br>
+                  <input type="submit" value="Submit">
+            </div>`
                 }, 2000);
             }
     });
