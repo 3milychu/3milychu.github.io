@@ -976,6 +976,7 @@ ellipsis:after {
     border-radius:50%;
     box-shadow: 0.5em 0.5em 2em #666666;
     padding:1%;
+    transition:0.25s all;
 }
 
 @keyframes jump {
@@ -1010,9 +1011,10 @@ ellipsis:after {
     animation-delay: 0.5s;
     animation-fill-mode: forwards;
 }
-#notification img:hover {
+#notification:hover {
     transform:scale(1.5);
     transform-origin: 50% 50%;
+    background-color:#FF8E69;
 }
 /*responsive
     /*monitors*/

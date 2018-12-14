@@ -118,6 +118,13 @@ function enterNameInput() {
 
 enterNameInput();
 
+var close_secret = document.querySelector('#close_prompt');
+close_prompt.addEventListener("click", function() {
+     document.body.style.zoom = 1.0;
+     scrollToTop();
+     secret.style.display="none";
+})
+
 function closeMessage() {
     var close_message = document.querySelector('#close_message');
     close_message.addEventListener("click", function() {
