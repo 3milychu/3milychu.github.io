@@ -960,14 +960,14 @@ ellipsis:after {
 
 #notification {
     position:fixed;
-    z-index:100;
+    z-index:5;
     width:5%;
     bottom:5%;
     right:1%;
     cursor:pointer;
     background-color:white;
     border-radius:50%;
-    box-shadow: 0.5em 0.5em 2em #231F20;
+    box-shadow: 0.5em 0.5em 2em #E6E6E6;
     padding:1%;
 }
 
