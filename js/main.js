@@ -88,7 +88,7 @@ function secretMessage() {
             } else if (name == "david nir") {
                 document.body.style.zoom = 1.0;
                 secret.innerHTML="";
-                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi David,</h2><h3>Thank you so much for the great work you do at Daily Kos! It is very hopeful to hear about the impact that one might be able to be part of on a daily basis. Cheers to future learnings and potential collaboration, Emily<br><br>Emily</h3></div>"
+                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi David,</h2><h3>Thank you so much for the great work you do at Daily Kos! It is very hopeful to hear about the impact that one might be able to be part of on a daily basis. Cheers to future learnings and potential collaboration,<br><br>Emily</h3></div>"
                 console.log("secret message sent");
                 closeMessage();
             }
