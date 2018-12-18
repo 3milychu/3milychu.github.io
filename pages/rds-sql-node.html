@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-41817854-5"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-41817854-5');
+		</script>
+	<title>Geo Planner</title>
+	<meta property='og:url' content='https://www.youtube.com/embed/MfMc4-nFW5E?vq=hd1080&amp;rel=0&amp;showinfo=0' />
+	<meta property="og:image" content="https://3milychu.github.io/assets/meterials-cover.gif">
+  	<link rel="image_src" href="https://3milychu.github.io/assets/meterials-gif.gif">
+	<link rel="stylesheet" type="text/css" href="../styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,900" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+</head>
+<body style="background-color:white;">
+
+<!-- Image lightbox -->
+	<div class="lightbox">
+		<div class="close">X</div>
+		<div class="lightbox-frame">
+		</div>
+	</div>
+
+<!-- github ribbon -->
+	<a href="https://github.com/3milychu/data-structures/week10"><img class="github" style="position: absolute; top: 7%; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+<!-- responsive menu -->
+<div id="mySidenav" class="sidenav">
+	
+	<span style="cursor:pointer">
+	<a class="closebtn"onmouseover="closeNav()">&times;</a></span>
+	<a href="../index.html"><span id="name">3milychu</span></a>
+	<span style ="cursor:pointer" id="projects" onmouseover="openNav()">&#9776;</span>
+</div>
+
+<!-- Heading -->
+
+<div class="heading2" style="text-align:center;">
+	<h1>Geo Planner</h1>
+</div>
+
+<div class = "section-white">
+
+
+<!-- Post -->
+<div class="post" style="padding-bottom:10%;">
+	<div class="post-media-single">
+		<div class="videoWrapper">
+			<iframe src="https://player.vimeo.com/video/306997282?&autoplay=1&muted=1" width="640" height="360" frameborder="0" allowfullscreen style="box-shadow:0.5em 0.5em 2em #CCC;border-radius:0.5em;"></iframe>
+		</div>
+	</div>
+
+<!-- Heading -->
+
+<div class="heading2" style="text-align:center;">	
+	<a href="http://18.191.98.251:8080/aameetings.html" target="new">
+		<div class="button" style="width:20%;margin:auto;padding:2%;">Launch Geo Planner</div>
+	</a>
+</div>
+
+</div>
+<!-- Post -->
+<div style="background-color:#FCFCFF;padding-bottom:10%;">
+	<div style="width:50%;margin:auto;text-align:center;padding:10% 0% 5% 0%;">
+		<h1 style="font-size:5em;display:inline;">00</h1>
+		<h1 style="display:inline;">Objective</h1>
+		<p>
+		This is a story about the decisions and compromises made in the design and build of a reliable, scalable and maintainable data-driven application, starting from raw unstructured data. From start to finish, this was a 4-month initiative.
+		</p>
+
+	<div style="width:100%;height:10%;overflow:hidden;margin:auto;">
+			<img class="lazy" style="width:100%" data-src="https://i.gifer.com/3i06.gif">
+	</div>
+
+	</div>
+</div>
+
+<!-- Post -->
+<div style="background-color:#F7F7F7;height:auto;padding-bottom:10%;">
+	<div style="width:50%;margin:auto;text-align:center;padding:10% 0%">
+		<h1 style="font-size:5em;display:inline;">01</h1>
+		<h1 style="display:inline;">Understanding The Raw Data</h1>
+		<p>
+		The raw data is a highly unstructured set of webpages providing the details of 371 meetings. Categories of information were identified at this stage, as well as noticing needed information is not neatly wrapped in elements. Other creative patterns need to be explored to algorithmically extract all needed information.
+		</p>
+
+	</div>
+
+<div style="margin:auto;text-align:center;padding-bottom:10%;">
+			<iframe src="https://player.vimeo.com/video/307001544?&background=1" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+	</div>
+</div>
+
+<!-- Post -->
+<div style="background-color:#FCFCFF;padding-bottom:10%;">
+	<div style="width:50%;margin:auto;text-align:center;padding:10% 0%;">
+		<h1 style="font-size:5em;display:inline;">02</h1>
+		<h1 style="display:inline;">Designing the Data Architecture</h1>
+		<p>
+		A database schema was conceptualized to understand what information needed to be extracted and stored, and in what manner. To keep options open, the design architecture considered: 1) the database as a collection of records, 2) each record would eventually be organized primarily by geolocation and time, and 3) the records should be in JSON document format to eventually support either nosql or sql design. 
+		</p>
+	</div>
+
+	<div style="width:70%;height:10%;overflow:hidden;margin:auto;">
+			<img class="lazy" style="width:100%" data-src="https://raw.githubusercontent.com/3milychu/data-structures/master/week4/assets/schematic.png">
+	</div>
+</div>
+
+<!-- Post -->
+<div style="height:auto;padding-bottom:10%;background-color:#F7F7F7;">
+	<div style="width:50%;margin:auto;text-align:center;padding:10% 0%;">
+		<h1 style="font-size:5em;display:inline;">03</h1>
+		<h1 style="display:inline;">Parsing and Connecting Data with Geolocation API</h1>
+		<p>
+		To parse the jungle of meetings from the unruly webpages, it seemed most natural to organize data by where they existed spatially (i.e. left-hand column, middle column, right column) because that was the only consistent order I immediately saw. Then the correct columns could be traversed by identifying which number they fell under (i.e. middle columns started from i=1 and exist for n+3). Content was parsed and organized by pulling all content and performing a regex search pattern for information identified in the data architecture design (see 02).
+		<br><br>
+		The parsed data then used the street address and zip code fields to match against a geolocation API to obtain latitudes and longitudes for each entry object.
+		</p>
+	</div>
+
+	<div style="margin:auto;text-align:center;padding-bottom:10%;">
+			<iframe src="https://player.vimeo.com/video/307001582?&background=1" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+	</div>
+	<div style="margin:auto;text-align:center;padding-bottom:10%;">
+			<iframe
+  src="https://carbon.now.sh/embed/?bg=rgba(171%2C%20184%2C%20195%2C%201)&t=seti&wt=none&l=auto&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fm=Hack&fs=14px&lh=133%25&si=false&code=var%2520fs%2520%253D%2520require('fs')%253B%250Avar%2520request%2520%253D%2520require('request')%253B%2520%250Avar%2520async%2520%253D%2520require('async')%253B%2520%250Avar%2520apiKey%2520%253D%2520process.env.TAMU_KEY%253B%250Aconsole.log(apiKey)%253B%250A%250Afunction%2520format(n)%2520%257B%250A%2520%2520%2520%2520return%2520(n%2520%253C%252010)%2520%253F%2520(%25220%2522%2520%252B%2520n)%2520%253A%2520n%253B%250A%257D%250A%250Afor%2520(var%2520i%253D2%253Bi%253C5%253Bi%252B%252B)%257B%250A%2520%2520%2520%2520getgeodata(i)%253B%250A%257D%250A%250Afunction%2520getgeodata%2520(i)%257B%250A%2520%2520%2520%2520var%2520file%2520%253D%2520format(i)%253B%250A%2520%2520%2520%2520var%2520addresses%2520%253D%2520%255B%255D%253B%250A%2520%2520%2520%2520var%2520json%2520%253D%2520fs.readFileSync(%2522parsed_data%252Fparsed_m%2522%252Bfile%252B%2522.json%2522)%253B%250A%2520%2520%2520%2520var%2520save_path%2520%253D%2520%2522parsed_data%252Fparsed_m%2522%252Bfile%252B%2522_geo.json%2522%253B%250A%2520%2520%2520%2520var%2520data%2520%253D%2520JSON.parse(json)%253B%250A%2520%2520%2520%2520var%2520result%2520%253D%2520%255B%255D%253B%250A%2520%2520%2520%2520var%2520constant%2520%253D%25200%253B%250A%2520%2520%2520%2520%250A%2520%2520%2520%2520for(var%2520i%2520in%2520data)%250A%2520%2520%2520%2520result.push(data%255Bi%255D)%253B%250A%2520%2520%2520%2520%250A%2520%2520%2520%2520for%2520(i%2520in%2520data)%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520var%2520address%2520%253D%2520data%255Bi%255D.meeting_address%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520var%2520zip%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520if%2520(data%255Bi%255D.zip%2520%253D%253D%2520null)%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520zip%2520%253D%2520%2522%2522%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%2520else%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520zip%2520%253D%2520data%255Bi%255D.zip%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%2520%2520%2520%2520addresses.push(%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520address%253A%2520address%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520zip%253A%2520zip%257D)%253B%250A%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%250A%2520%2520%2520%2520%252F%252F%2520test%2520with%2520one%2520address%250A%2520%2520%2520%2520%252F%252F%2520addresses.push(%257B%250A%2520%2520%2520%2520%252F%252F%2520%2520%2520%2520%2520address%253A%2520data%255B0%255D.meeting_address%252C%250A%2520%2520%2520%2520%252F%252F%2520%2520%2520%2520%2520zip%253A%2520data%255B0%255D.zip%252C%250A%2520%2520%2520%2520%252F%252F%2520%257D)%253B%250A%2520%2520%2520%2520console.log(addresses)%253B%250A%2520%2520%2520%2520%250A%2520%2520%2520%2520async.eachSeries(addresses%252C%2520function(value%252C%2520callback)%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520var%2520id%2520%253D%2520constant%252B%252B%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520console.log(id)%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520var%2520apiRequest%2520%253D%2520'https%253A%252F%252Fgeoservices.tamu.edu%252FServices%252FGeocode%252FWebService%252FGeocoderWebServiceHttpNonParsed_V04_01.aspx%253F'%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520apiRequest%2520%252B%253D%2520'streetAddress%253D'%2520%252B%2520value%255B'address'%255D.split('%2520').join('%252520')%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520apiRequest%2520%252B%253D%2520'%2526city%253DNew%252520York%252520City%2526state%253DNY'%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520apiRequest%2520%252B%253D%2520'%2526zip%253D'%2520%252B%2520value%255B'zip'%255D%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520apiRequest%2520%252B%253D%2520'%2526apikey%253D'%2520%252B%2520apiKey%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520apiRequest%2520%252B%253D%2520'%2526format%253Djson%2526version%253D4.01'%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520request(apiRequest%252C%2520function(err%252C%2520resp%252C%2520body)%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520if%2520(err)%2520%257Bthrow%2520err%253B%257D%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520else%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520var%2520obj%2520%253D%2520JSON.parse(body)%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520var%2520lat%2520%253D%2520obj%255B'OutputGeocodes'%255D%255B0%255D%255B'OutputGeocode'%255D%255B'Latitude'%255D%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520var%2520lng%2520%253D%2520obj%255B'OutputGeocodes'%255D%255B0%255D%255B'OutputGeocode'%255D%255B'Longitude'%255D%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%252F%252F%2520Push%2520to%2520meetingsData%2520array%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520result%255Bid%255D.latlong%2520%253D%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520lat%253A%2520lat%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520lng%253A%2520lng%250A%2520%2520%2520%2520%2509%2509%2509%2520%2520%2520%2520%257D%253B%250A%2520%2520%2520%2520%2509%2509%2520%2520%2520result%255Bid%255D.meeting_address%253D%2520obj.InputAddress%255B'StreetAddress'%255D%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D)%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520setTimeout(callback%252C%25202000)%253B%250A%2520%2520%2520%2520%257D%252C%2520function()%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520result%2520%253D%2520JSON.stringify(result)%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520fs.writeFile(save_path%252C%2520result%252C%2520'utf8')%250A%2520%2520%2520%2520%2520%2520%2520%2520console.log('***%2520***%2520***%2520***%2520***')%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520console.log('Number%2520of%2520meetings%2520in%2520this%2520zone%253A%2520')%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520console.log(result.length)%253B%250A%2520%2520%2520%2520%257D)%253B%250A%2520%2520%2520%2520%250A%257D&es=1x&wm=false"
+  style="transform:scale(0.7); width:1024px; height:473px; border:0; overflow:hidden;"
+  sandbox="allow-scripts allow-same-origin">
+</iframe>
+	</div>
+
+</div>
+
+<!-- Post -->
+<div style="background-color:#FCFCFF;padding-bottom:5%;">
+	<div style="width:50%;margin:auto;text-align:center;padding:10% 0%;">
+		<h1 style="font-size:5em;display:inline;">04</h1>
+		<h1 style="display:inline;">NoSQl and SQL Friendly Data</h1>
+		<p>
+		First exhibit: The data is parsed first as nosql-friendly entries following the database schema<br><br>
+		Second exhibit: Since ultimately an RDS was used, a script was written to easily convert the JSON to sql-friendly entries (line items of individual meetings)<br><br>
+		Third exhibit: The data sent to the RDS in AWS creates line items for each meeting, which can be later aggregated by geolocation and time in the application as desired by the database schema design.
+		</p>
+	</div>
+
+	<div style="margin:auto;text-align:center;padding-bottom:5%;">
+			<iframe src="https://player.vimeo.com/video/307001533?&background=1" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+	</div>
+<div style="margin:auto;text-align:center;padding-bottom:10%;"><iframe
+  src="https://carbon.now.sh/embed/?bg=rgba(171%2C%20184%2C%20195%2C%201)&t=seti&wt=none&l=auto&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fm=Hack&fs=14px&lh=133%25&si=false&code=var%2520fs%2520%253D%2520require('fs')%253B%250A%250A%250Afunction%2520format(n)%2520%257B%250A%2520%2520%2520%2520return%2520(n%2520%253C%252010)%2520%253F%2520(%25220%2522%2520%252B%2520n)%2520%253A%2520n%253B%250A%257D%250A%250Afor(var%2520f%253D1%253Bf%253C11%253Bf%252B%252B)%257B%250A%2520%2520%2520%2520%250A%2520%2520%2520%2520var%2520file%2520%253D%2520format(f)%253B%250A%2520%2520%2520%2520var%2520json%2520%253D%2520fs.readFileSync(%2522aadata%252Fparsed_data%252Fparsed_m%2522%2520%252B%2520file%2520%252B%2520%2522.json%2522)%253B%250A%2520%2520%2520%2520var%2520data%2520%253D%2520JSON.parse(json)%253B%250A%2520%2520%2520%2520%250A%2520%2520%2520%2520var%2520result%2520%253D%2520%255B%255D%253B%250A%2520%2520%2520%2520%250A%2520%2520%2520%2520for(var%2520i%253D0%253Bi%253Cdata.length%253Bi%252B%252B)%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520var%2520day%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520var%2520start%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520var%2520end%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520var%2520name%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520var%2520location%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520var%2520address%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520var%2520lat%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520var%2520long%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520var%2520region%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520var%2520type%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520var%2520interest%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520var%2520entry%2520%253D%2520data%255Bi%255D%253B%250A%2520%2520%2520%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520monday(i)%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520tuesday(i)%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520wednesday(i)%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520thursday(i)%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520friday(i)%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520saturday(i)%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520sunday(i)%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520result.push(%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520day%253A%2520day%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520start%253Astart%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520end%253A%2520end%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520name%253A%2520name%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520location%253A%2520location%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520address%253A%2520address%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520lat%253A%2520lat%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520long%253A%2520long%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520region%253A%2520region%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520type%253A%2520type%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520interest%253Ainterest%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D)%253B%250A%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%250A%2520%2520%2520%2520result%2520%253D%2520JSON.stringify(result)%253B%250A%2520%2520%2520%2520fs.writeFile(%2522data%252Fsql_m%2522%252Bfile%252B%2522.json%2522%252C%2520result%252C%2520'utf8')%250A%2520%2520%2520%2520%250A%257D%250A%250A%250Afunction%2520monday(i)%257B%250A%2520%2520%2520%2520var%2520monday%2520%253D%2520data%255Bi%255D%255B'meeting_times'%255D%255B'Monday'%255D%253B%250A%2520%2520%2520%2520var%2520test%2520%253D%2520monday.length%253E0%253B%250A%2520%2520%2520%2520if(test%2520%253D%253D%253D%2520true)%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520for(var%2520j%253D0%253Bj%253Cmonday.length%253Bj%252B%252B)%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520day%2520%253D%2520%2522Monday%2522%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520start%2520%253D%2520monday%255Bj%255D%255B'start'%255D%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520var%2520shours%2520%253D%2520Number(start.match(%252F%255E(%255Cd%252B)%252F)%255B1%255D)%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520var%2520sminutes%2520%253D%2520Number(start.match(%252F%253A(%255Cd%252B)%252F)%255B1%255D)%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520var%2520sAMPM%2520%253D%2520start.match(%252F%255Cs(.*)%2524%252F)%255B1%255D%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520if(sAMPM%2520%253D%253D%2520%2522PM%2522%2520%2526%2526%2520shours%253C12)%2520shours%2520%253D%2520shours%252B12%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520if(sAMPM%2520%253D%253D%2520%2522AM%2522%2520%2526%2526%2520shours%253D%253D12)%2520shours%2520%253D%2520shours-12%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520var%2520sHours%2520%253D%2520shours%2520%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520var%2520sMinutes%2520%253D%2520sminutes%2520%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520start%2520%253D%2520sHours%2520%252B%2520%2520%2522.%2522%2520%252B%2520sMinutes%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520start%2520%253D%2520parseFloat(start)%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520end%2520%253D%2520monday%255Bj%255D%255B'end'%255D%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520var%2520ehours%2520%253D%2520Number(end.match(%252F%255E(%255Cd%252B)%252F)%255B1%255D)%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520var%2520eminutes%2520%253D%2520Number(end.match(%252F%253A(%255Cd%252B)%252F)%255B1%255D)%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520var%2520eAMPM%2520%253D%2520end.match(%252F%255Cs(.*)%2524%252F)%255B1%255D%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520if(eAMPM%2520%253D%253D%2520%2522PM%2522%2520%2526%2526%2520ehours%253C12)%2520ehours%2520%253D%2520ehours%252B12%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520if(eAMPM%2520%253D%253D%2520%2522AM%2522%2520%2526%2526%2520ehours%253D%253D12)%2520ehours%2520%253D%2520ehours-12%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520var%2520eHours%2520%253D%2520ehours%2520%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520var%2520eMinutes%2520%253D%2520eminutes%2520%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520end%2520%253D%2520eHours%2520%252B%2520%2520%2522.%2522%2520%252B%2520eMinutes%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520end%2520%253D%2520parseFloat(end)%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520name%2520%253D%2520entry%255B'meeting_name'%255D%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520location%2520%253D%2520entry%255B'location_name'%255D%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520address%2520%253D%2520entry%255B'meeting_address'%255D%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520lat%2520%253D%2520entry%255B'latlong'%255D%255B'lat'%255D%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520long%2520%253D%2520entry%255B'latlong'%255D%255B'lng'%255D%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520region%2520%253D%2520file%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520if(monday%255Bj%255D%255B'details'%255D%255B'topic'%255D!%253Dundefined)%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520type%2520%253D%2520monday%255Bj%255D%255B'details'%255D%255B'topic'%255D%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257D%2520else%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520type%2520%253D%2520%2522undefined%2522%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257D%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520if(monday%255Bj%255D%255B'details'%255D%255B'interest'%255D!%253Dundefined)%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520interest%2520%253D%2520monday%255Bj%255D%255B'details'%255D%255B'interest'%255D%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257D%2520else%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520interest%2520%253D%2520%2522undefined%2522%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%253B%250A%2520%2520%2520%2520%257D%2520else%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%250A%2520%2520%2520%2520%257D%253B%250A%257D%250A%250A%252F%252Frepeat%2520for%2520tuesday%2520-%2520sunday(i)&es=2x&wm=false"
+  width="640" height="360" frameborder="0"
+  sandbox="allow-scripts allow-same-origin">
+	</iframe>
+</div>
+
+	<div style="margin:auto;text-align:center;padding-bottom:10%;">
+			<iframe src="https://player.vimeo.com/video/307001650?&background=1" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+	</div>
+</div>
+
+<!-- Post -->
+<div style="background-color:#FCFCFF;padding-bottom:10%;">
+	<div style="width:50%;margin:auto;text-align:center;padding:10% 0% 5% 0%;">
+		<h1 style="font-size:5em;display:inline;">05</h1>
+		<h1 style="display:inline;">Test Build Interface and Documentation</h1>
+		<p>
+		To map the data to an interface, a documentation for a test build was created to understand the minimal visual artifacts needed to satisfy gen.1 user assumptions, how those visual artifacts would be mapped to the data, and what level of interactivity is need to complete the experience. From these sepcs, the final application was built in node.js.
+		</p>
+
+	<div style="width:100%;height:10%;overflow:hidden;margin:auto;">
+			<img class="lazy" style="width:100%" data-src="https://3milychu.github.io/assets/aa-documentation.jpg">
+	</div>
+
+	</div>
+</div>
+
+<!-- Post -->
+<div style="background-color:#FCFCFF;padding-bottom:10%;">
+	<div style="width:50%;margin:auto;text-align:center;padding:10% 0%;">
+		<h1 style="font-size:5em;display:inline;">05</h1>
+		<h1 style="display:inline;">Plan Some Meetings</h1>
+	</div>
+	<a href="http://18.191.98.251:8080/aameetings.html" target="new">
+		<div class="button" style="width:20%;margin:auto;padding:2%;">Launch Geo Planner</div>
+	</a>
+
+</div>
+
+<!-- clear -->
+<div class="clear" style="color:white;">.
+</div>
+
+		<!-- Break -->
+		<div class="break">
+			<p>
+			<em>Data Source</em>
+			<img class="lazy" style="width:30%;" data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Logo_AA.svg/250px-Logo_AA.svg.png">
+
+
+			<em>Tools</em>
+			
+
+			<label>node.js</label> <label>Geolocation API (Texas A&M)</label> <label>Relational Database System Service (RDS) on AWS</label> <label>sql</label> <label>cloud9</label>
+			<label>html/css</label>
+
+			</p>
+
+		</div>
+
+
+	    <!-- Related Links-->
+
+		<div class="post" id="footer-child">
+			<div class="breadcrumb" id="breadcrumb">
+			</div>
+		</div>
+
+
+<script src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/jquery.lazy.min.js"></script>
+<script>
+$(document).ready(function() { $(function() {
+	     $('.lazy').Lazy({
+        scrollDirection: 'vertical',
+        effect: 'fadeIn',
+        effectTime: 500,
+        threshold: 0,
+        visibleOnly: true,
+        onError: function(element) {
+            console.log('error loading ' + element.data('src'));
+        }
+    });
+	    });});
+
+// Image lightbox
+var img_list = [];
+var lightbox = document.querySelector('.lightbox');
+var lightbox_frame = document.querySelector('.lightbox-frame');
+var images = document.getElementsByTagName('img');
+var close = document.querySelector('.close');
+for(i=0;i<images.length;i++){
+	images[i].style.cursor="pointer";
+	images[i].setAttribute("id","pic"+[i]);
+	img_list.push(images[i].getAttribute("data-src"));
+	images[i].onclick=function() {
+		lightbox.style.display="block";
+		lightbox_frame.innerHTML="";
+		var src = this.src;
+		var img = document.createElement('img');
+		var parent_width = this.parentElement.offsetWidth;
+		var img_width = this.width;
+			if(img_width>parent_width){
+				img.style.width="100%";
+				img.style.marginTop="auto";
+				img.style.marginBottom="auto";
+			} else {
+				img.style.height="100%";
+				img.style.marginLeft="auto";
+				img.style.marginRight="auto";
+			}
+		img.style.display="block";
+		img.src=src;
+		lightbox_frame.append(img);
+	}
+}
+console.log(img_list);
+close.addEventListener("click", function() {
+	lightbox.style.display="none";
+})
+
+// On escape or close button, remove lightbox slider; get next image on right and left
+document.onkeydown = function(evt) {
+
+	evt = evt || window.event;
+	if(evt.keyCode ==27 ) {
+		lightbox.style.display= "none";
+	} else if (evt.keyCode == 39){
+		el = document.querySelector('.lightbox img')
+		currentImg = el.src;
+		// console.log(currentImg);
+		
+		var index = img_list.findIndex(img => img === currentImg)
+		var next = index+1;
+
+		var parent_width = el.parentElement.offsetWidth;
+		var img_width = el.width;
+			if(img_width>parent_width){
+				el.style.width="100%";
+				el.style.height="auto";
+				el.style.marginTop="auto";
+				el.style.marginBottom="auto";
+			} else {
+				el.style.height="100%";
+				el.style.width="auto";
+				el.style.marginLeft="auto";
+				el.style.marginRight="auto";
+			}
+		el.style.display="block";
+		nextSrc = img_list[next];
+		// console.log(next);
+
+		el.src = nextSrc;
+	} else if (evt.keyCode == 37){
+		el = document.querySelector('.lightbox img')
+		currentImg = el.src;
+		console.log(currentImg);
+		
+		var index = img_list.findIndex(img => img === currentImg)
+		var next = index-1;
+		el.src = next;
+
+		var parent_width = el.parentElement.offsetWidth;
+		var img_width = el.width;
+			if(img_width>parent_width){
+				el.style.width="100%";
+				el.style.height="auto";
+				el.style.marginTop="auto";
+				el.style.marginBottom="auto";
+			} else {
+				el.style.height="100%";
+				el.style.width="auto";
+				el.style.marginLeft="auto";
+				el.style.marginRight="auto";
+			}
+
+		el.style.display="block";
+		nextSrc = img_list[next];
+		el.src = nextSrc;
+	}
+}
+</script>
+<script src="../js/d3.min.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>
