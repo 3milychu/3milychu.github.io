@@ -91,6 +91,18 @@ function secretMessage() {
                 secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi David,</h2><h3>Thank you so much for the great work you do at Daily Kos! It is very hopeful to hear about the impact that one might be able to be part of on a daily basis. Cheers to future learnings and potential collaboration,<br><br>Emily</h3></div>"
                 console.log("secret message sent");
                 closeMessage();
+            } else if (name == "wai lee chin feman") {
+                document.body.style.zoom = 1.0;
+                secret.innerHTML="";
+                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi Wai Lee,</h2><h3><img src='https://66.media.tumblr.com/c1241dcb8ee90f5b2c3c412f66ffb9db/tumblr_p1h1pi5p5B1qc4uvwo1_500.gif' width='80%'><br><br>Emily</h3></div>"
+                console.log("secret message sent");
+                closeMessage();
+            } else if (name == "meagan waller") {
+                document.body.style.zoom = 1.0;
+                secret.innerHTML="";
+                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi Meagan,</h2><h3>Googling unit testing...where have I been?<img src = 'https://media.giphy.com/media/l2QZZeDfBr3ypiHT2/giphy.gif' width='80%'></h3></div>"
+                console.log("secret message sent");
+                closeMessage();
             }
             else {
                 secret.innerHTML="";
