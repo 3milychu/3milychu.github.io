@@ -67,12 +67,6 @@ function secretMessage() {
                 secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi Madeline,</h2><h3>Can't wait to think further about ways to contribute together from delighting business partners and internal stakeholders to pushing forward exploration of Sotheby's collections. You know where to reach me :)<br><br>Emily</h3></div>"
                 console.log("secret message sent");
                 closeMessage();
-            } else if (name == "andy thornton") {
-                document.body.style.zoom = 1.0;
-                secret.innerHTML="";
-                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hey Andy,</h2><h3>Teach me how to make apps that allow others to build custom views of data! Hopefully we can collaborate soon...<br><br>Emily</h3></div>"
-                console.log("secret message sent");
-                closeMessage();
             } else if (name == "oliver gomes") {
                 document.body.style.zoom = 1.0;
                 secret.innerHTML="";
@@ -85,25 +79,7 @@ function secretMessage() {
                 secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi Michael,</h2><h3>Thank you for your support and quick insights throughout the process. With appreciation,<br><br>Emily</h3></div>"
                 console.log("secret message sent");
                 closeMessage();
-            } else if (name == "david nir") {
-                document.body.style.zoom = 1.0;
-                secret.innerHTML="";
-                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi David,</h2><h3>Thank you so much for the great work you do at Daily Kos! It is very hopeful to hear about the impact that one might be able to be part of on a daily basis. Cheers to future learnings and potential collaboration,<br><br>Emily</h3></div>"
-                console.log("secret message sent");
-                closeMessage();
-            } else if (name == "wai lee chin feman") {
-                document.body.style.zoom = 1.0;
-                secret.innerHTML="";
-                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi Wai Lee,</h2><h3><img src='https://66.media.tumblr.com/c1241dcb8ee90f5b2c3c412f66ffb9db/tumblr_p1h1pi5p5B1qc4uvwo1_500.gif' width='80%'><br><br>Emily</h3></div>"
-                console.log("secret message sent");
-                closeMessage();
-            } else if (name == "meagan waller") {
-                document.body.style.zoom = 1.0;
-                secret.innerHTML="";
-                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi Meagan,</h2><h3>Googling unit testing...where have I been?<img src = 'https://media.giphy.com/media/l2QZZeDfBr3ypiHT2/giphy.gif' width='80%'></h3></div>"
-                console.log("secret message sent");
-                closeMessage();
-            }
+            } 
             else {
                 secret.innerHTML="";
                 document.body.style.zoom = 1.0;
