@@ -61,26 +61,13 @@ function secretMessage() {
             name = document.querySelector('input[name="name"]').value;
             name = name.toLowerCase();
             console.log(name);
-            if(name == "madeline lissner"){
+            if(name == "toni best"){
                 document.body.style.zoom = 1.0;
                 secret.innerHTML="";
-                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi Madeline,</h2><h3>Can't wait to think further about ways to contribute together from delighting business partners and internal stakeholders to pushing forward exploration of Sotheby's collections. You know where to reach me :)<br><br>Emily</h3></div>"
+                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi Toni,</h2><h3>I love you :)<br><br>Emily</h3></div>"
                 console.log("secret message sent");
                 closeMessage();
-            } else if (name == "oliver gomes") {
-                document.body.style.zoom = 1.0;
-                secret.innerHTML="";
-                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi Oliver,</h2><h3>Thinking about how we can delight clients through personalized details in their data studios...your vision and direction are exciting and I look forward to the possibility of working on cutting-edge products together. To the future,<br><br>Emily</h3></div>"
-                console.log("secret message sent");
-                closeMessage();
-            } else if (name == "michael francavilla") {
-                document.body.style.zoom = 1.0;
-                secret.innerHTML="";
-                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi Michael,</h2><h3>Thank you for your support and quick insights throughout the process. With appreciation,<br><br>Emily</h3></div>"
-                console.log("secret message sent");
-                closeMessage();
-            } 
-            else {
+            } else {
                 secret.innerHTML="";
                 document.body.style.zoom = 1.0;
                 secret.innerHTML="<div class='center_form'><h2>Hi " + toTitleCase(name) +"! No messages right now. Redirecting<ellipsis></ellipsis></h2>";
