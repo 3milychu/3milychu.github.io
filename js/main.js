@@ -69,19 +69,24 @@ function secretMessage() {
                 console.log("secret message sent");
                 closeMessage();
             } else {
-                secret.innerHTML="";
+            //     secret.innerHTML="";
+            //     document.body.style.zoom = 1.0;
+            //     secret.innerHTML="<div class='center_form'><h2>Hi " + toTitleCase(name) +"! No messages right now. Redirecting<ellipsis></ellipsis></h2>";
+            //     setTimeout(function(){ 
+            //         scrollToTop();
+            //         secret.style.display="none";
+            //         secret.innerHTML=`<div class="center_form" id="form1">
+            //       <h3>Emily may have a secret message waiting for you. Who is visiting today?</h3>
+            //       <input type="text" name="name" value="i.e. John Doe" onClick="this.setSelectionRange(0, this.value.length)">
+            //       <br><br>
+            //       <input type="submit" value="Submit">
+            // </div>`
+            //     }, 2000);
                 document.body.style.zoom = 1.0;
-                secret.innerHTML="<div class='center_form'><h2>Hi " + toTitleCase(name) +"! No messages right now. Redirecting<ellipsis></ellipsis></h2>";
-                setTimeout(function(){ 
-                    scrollToTop();
-                    secret.style.display="none";
-                    secret.innerHTML=`<div class="center_form" id="form1">
-                  <h3>Emily may have a secret message waiting for you. Who is visiting today?</h3>
-                  <input type="text" name="name" value="i.e. John Doe" onClick="this.setSelectionRange(0, this.value.length)">
-                  <br><br>
-                  <input type="submit" value="Submit">
-            </div>`
-                }, 2000);
+                secret.innerHTML="";
+                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi " + toTitleCase(name) + ",</h2><h3>Hope you find something you like and enjoy your day! :) <br><br>Emily</h3></div>"
+                console.log("secret message sent");
+                closeMessage();
             }
     });
 };
