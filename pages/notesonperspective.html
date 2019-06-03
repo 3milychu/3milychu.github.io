@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-41817854-5"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-41817854-5');
+		</script>
+	<title>Notes on Perspective</title>
+	<meta property="og:image" content="https://3milychu.github.io/assets/epochrunway-cover.jpg">
+  	<link rel="image_src" href="https://3milychu.github.io/assets/epochrunway-cover.jpg">
+	<link rel="stylesheet" type="text/css" href="../styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,900" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+</head>
+<body style="background-color:white;">
+
+<!-- Image lightbox -->
+	<div class="lightbox">
+		<div class="close">X</div>
+		<div class="lightbox-frame">
+		</div>
+	</div>
+
+<!-- github ribbon -->
+<a href="https://github.com/3milychu/notesonperspective"><img class="github" style="position: absolute; top: 7%; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+<!-- responsive menu -->
+<div id="mySidenav" class="sidenav">
+	
+	<span style="cursor:pointer">
+	<a class="closebtn"onmouseover="closeNav()">&times;</a></span>
+	<a href="../index.html"><span id="name">3milychu</span></a>
+	<span style ="cursor:pointer" id="projects" onmouseover="openNav()">&#9776;</span>
+</div>
+
+<!-- Heading -->
+
+<div class="heading2" style="text-align:center;">
+	<h1>Notes on Perspective</h1>
+	<p>An application that visually reconstructs the thoughts and feelings which occurred during a
+classical musical performance // <em>Thesis dissertation, MS Data Visualization @ Parsons School of Design</em></p>
+</div>
+
+<div class = "section-white">
+
+
+<!-- Post -->
+
+	<div class="post-media-single">
+		<div class="videoWrapper">
+			<iframe src="https://player.vimeo.com/video/340018848?" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
+
+<!-- Heading -->
+
+<div class="heading2" style="text-align:center;">	
+	<a href="https://3milychu.github.io/notesonperspective" target="new">
+		<div class="button" style="width:20%;margin:auto;padding:2%;">Launch Notes on Perspective</div>
+	</a>
+	<br><br>
+	<a target="_blank" href="../assets/thesis/thesis.pdf">Read the thesis dissertation</a>
+	<br><br>
+
+</div>
+
+<!-- Post -->
+<div style="background-color:#FCFCFF;padding-bottom:5%;">
+	<div style="width:50%;margin:auto;text-align:center;padding:10% 0% 5% 0%;">
+		<h1 style="font-size:5em;display:inline;">00</h1>
+		<h1 style="display:inline;">Project Objective</h1>
+		<p>
+		Notes on Perspective is an application that visually reconstructs the thoughts and feelings which occurred during a classical musical critique at the Mannes School of Music in New York City. It experiments with making visually tangible and beautiful the thoughts and feelings that occured during this musical performance among the ensemble members. It visualizes a color score by clustering the musical score being performed by musical notation and sequential progression. Notes on Perspective acknowledges the shortcomings of digital artifacts in replicating lived experience, attempting to playfully humanize temporal data, bringing information to life. This approach to embodied data visualizations for temporal data is referred to as designing in Kairos.
+		</p>
+	</div>
+
+	<div style="margin:auto;text-align:center;padding-bottom:0%;">
+			<iframe src="https://player.vimeo.com/video/340030941?&muted=1&background=1" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+	</div>
+</div>
+
+<!-- Post -->
+<div style="background-color:#F7F7F7;height:auto;padding-bottom:5%;">
+	<div style="width:50%;margin:auto;text-align:center;padding:10% 0% 5% 0%">
+		<h1 style="font-size:5em;display:inline;">01</h1>
+		<h1 style="display:inline;">Data Architecture</h1>
+		<p>
+		Notes on Perspective is built as a single page application (SPA) with three states. Each state visually experiments with binding data to an abstraction of embodied experience: 1) situatedness, 2) activity and 3) perception. 
+		</p>
+	</div>
+
+	<div style="width:50%;overflow:hidden;margin:auto;">
+			<img class="lazy" style="width:100%" data-src="../assets/thesis/designschema.png">
+	</div>
+	
+</div>
+
+<!-- Post -->
+<div style="background-color:#FCFCFF;padding-bottom:5%;">
+	<div style="width:50%;margin:auto;text-align:center;padding:10% 0%;">
+		<h1 style="font-size:5em;display:inline;">02</h1>
+		<h1 style="display:inline;">Activity View</h1>
+		<p>The activity view display borrows from popular social media conventions to offer easy access to the raw data behind the data visualization. As the audio of the performance plays, the timestamp is continually checked against the reaction data to see if there are any reactions that occur in that moment. If there is, a function to get the reactions is executed. Notes on Perspective follows Khrouf et.al’s perspective in developing the application EventMedia, which mines events’ connections on the social web. The visualization of “distributed data fragments provides a key advantage not only to deliver enriched views, but also to gain insight into interesting sociological aspects. [The] goal is to build a web-based environment that allows users to discover meaningful, surprising or entertaining connections between events, media and people (Khrouf, Milicic, and Troncy 2014, 3-10).” To achieve this in context of the musical performance under visualization, Notes on Perspective pops up reaction data as comments in time to the performance, allowing interactors to focus on the connection between musical moments and particular thoughts and feelings experienced by the professional musicians in the study.
+		</p>
+	</div>
+
+	<div style="margin:auto;text-align:center;padding-bottom:0%;">
+			<iframe src="https://player.vimeo.com/video/340030924?&background=1" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+	</div>
+</div>
+
+
+<!-- Post -->
+<div style="background-color:#F7F7F7;padding-bottom:5%;">
+	<div style="width:50%;margin:auto;text-align:center;padding:10% 0%;">
+		<h1 style="font-size:5em;display:inline;">03</h1>
+		<h1 style="display:inline;">Situated (Theater) View</h1>
+		<p> In the situated view, participants are invited to meet the Ensemble class to personalize the humans driving the activity that are abstracted and visualized in all other aspects of the data visualization. To invoke a sense of personal identification and understanding of ensemble members as personalities, tooltips are offered to provide a view into personal details regarding their familiarity with the piece, the instruments they play, as well as random thoughts that refresh upon each new “encounter” (hover) over that ensemble member.
+		</p>
+	</div>
+
+	
+	<div style="margin:auto;text-align:center;padding-bottom:0%;">
+			<iframe src="https://player.vimeo.com/video/340032348?&background=1" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+	</div>
+</div>
+
+<!-- Post -->
+<div style="background-color:#FCFCFF;padding-bottom:5%;">
+	<div style="width:50%;margin:auto;text-align:center;padding:10% 0%;">
+		<h1 style="font-size:5em;display:inline;">04</h1>
+		<h1 style="display:inline;">Perception View</h1>
+		<p> Developing a design theory for building data visualizations sensitive to the ways that humans experience events in time and embodying that digitally is the original underpinning of this project. One of the fundamental properties of the visual world is that “it is filled with things that have meaning” and “we perceive a world whose fundamental variables are spatial and temporal - a world which extends and which endures” (Gibson 1974). Designing data in Kairos, then, seeks to create an environment that offers humans the affordance to perceive, subsequently interpreting, a dataset’s story and meaning by visually travelling through it.
+		</p>
+	</div>
+
+	<div style="margin:auto;text-align:center;padding-bottom:0%;">
+			<iframe src="https://player.vimeo.com/video/340032309?&background=1" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+	</div>
+</div>
+
+<!-- Post -->
+<div style="background-color:#F7F7F7;padding-bottom:5%;">
+	<div style="width:50%;margin:auto;text-align:center;padding:10% 0%;">
+		<h1 style="font-size:5em;display:inline;">05</h1>
+		<h1 style="display:inline;">Color Score</h1>
+		<p> A color version of the score was generated using a kmeans machine learning model that grouped each beat of the music by similarity in musical notation and sequential progression. Each theme is color coded and the impressions' background color represents which visual score theme we are in.
+		</p>
+	</div>
+
+	
+	<div style="margin:auto;text-align:center;padding-bottom:0%;">
+			<iframe src="https://player.vimeo.com/video/340032282?&background=1" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+	</div>
+</div>
+
+<!-- Post -->
+<div style="background-color:#FCFCFF;padding-bottom:5%;">
+	<div style="width:50%;margin:auto;text-align:center;padding:10% 0%;">
+		<h1 style="font-size:5em;display:inline;">06</h1>
+		<h1 style="display:inline;">Enter the Experience</h1>
+	</div>
+	<a href="https://3milychu.github.io/notesonperspective" target="new">
+		<div class="button" style="width:20%;margin:auto;padding:2%;">Launch Notes on Perspective</div>
+	</a>
+
+</div>
+
+<!-- clear -->
+<div class="clear" style="color:#FCFCFF;background-color:#FFFFFF;">.
+</div>
+
+		<!-- Break -->
+		<div class="break" style="background-color:#FFFFFF">
+			<p>
+			<em>Data Source</em>
+
+			<img class="lazy" style="width:30%;" data-src="https://pbs.twimg.com/profile_images/1012380994517848064/xP7N_ivd_400x400.jpg">
+
+
+			<em>Technologies</em>
+			
+
+			<label>javascript</label> <label>d3.js</label> <label>python</label> <label>kmeans</label>
+
+
+			<em>Special Thanks</em>
+
+Great appreciation goes out to those who provided instrumental feedback and guidance as well as generous provision of data sources that are the foundation of this project.
+
+Daniel Sauter, Associate Professor of Data Visualization @ Parsons
+Aaron Hill, MS Data Visualization Program Director @ Parsons
+Michael Schober, Professor of Psychology @ NSSR
+Neta Spiro, Research Fellow in Performance Science @ the Royal College of Music
+
+
+			<em>Project Archive</em>
+
+
+			<a href="https://github.com/3milychu/thesis" target="_blank">Github Repository</a>
+
+			</p>
+
+		</div>
+
+
+	    <!-- Related Links-->
+
+		<div class="post" id="footer-child">
+			<div class="breadcrumb" id="breadcrumb">
+			</div>
+		</div>
+
+
+<script src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/jquery.lazy.min.js"></script>
+<script>
+$(document).ready(function() { $(function() {
+	     $('.lazy').Lazy({
+        scrollDirection: 'vertical',
+        effect: 'fadeIn',
+        effectTime: 500,
+        threshold: 0,
+        visibleOnly: true,
+        onError: function(element) {
+            console.log('error loading ' + element.data('src'));
+        }
+    });
+	    });});
+
+
+// Image lightbox
+var img_list = [];
+var lightbox = document.querySelector('.lightbox');
+var lightbox_frame = document.querySelector('.lightbox-frame');
+var images = document.getElementsByTagName('img');
+var close = document.querySelector('.close');
+for(i=0;i<images.length;i++){
+	images[i].style.cursor="pointer";
+	images[i].setAttribute("id","pic"+[i]);
+	img_list.push(images[i].getAttribute("data-src"));
+	images[i].onclick=function() {
+		lightbox.style.display="block";
+		lightbox_frame.innerHTML="";
+		var src = this.src;
+		var img = document.createElement('img');
+		var parent_width = this.parentElement.offsetWidth;
+		var img_width = this.width;
+			if(img_width>parent_width){
+				img.style.width="100%";
+				img.style.marginTop="auto";
+				img.style.marginBottom="auto";
+			} else {
+				img.style.height="100%";
+				img.style.marginLeft="auto";
+				img.style.marginRight="auto";
+			}
+		img.style.display="block";
+		img.src=src;
+		lightbox_frame.append(img);
+	}
+}
+console.log(img_list);
+close.addEventListener("click", function() {
+	lightbox.style.display="none";
+})
+
+// On escape or close button, remove lightbox slider; get next image on right and left
+document.onkeydown = function(evt) {
+
+	evt = evt || window.event;
+	if(evt.keyCode ==27 ) {
+		lightbox.style.display= "none";
+	} else if (evt.keyCode == 39){
+		el = document.querySelector('.lightbox img')
+		currentImg = el.src;
+		// console.log(currentImg);
+		
+		var index = img_list.findIndex(img => img === currentImg)
+		var next = index+1;
+
+		var parent_width = el.parentElement.offsetWidth;
+		var img_width = el.width;
+			if(img_width>parent_width){
+				el.style.width="100%";
+				el.style.height="auto";
+				el.style.marginTop="auto";
+				el.style.marginBottom="auto";
+			} else {
+				el.style.height="100%";
+				el.style.width="auto";
+				el.style.marginLeft="auto";
+				el.style.marginRight="auto";
+			}
+		el.style.display="block";
+		nextSrc = img_list[next];
+		// console.log(next);
+		el.src = nextSrc;
+		
+	} else if (evt.keyCode == 37){
+		el = document.querySelector('.lightbox img')
+		currentImg = el.src;
+		console.log(currentImg);
+		
+		var index = img_list.findIndex(img => img === currentImg)
+		var next = index-1;
+		el.src = next;
+
+		var parent_width = el.parentElement.offsetWidth;
+		var img_width = el.width;
+			if(img_width>parent_width){
+				el.style.width="100%";
+				el.style.height="auto";
+				el.style.marginTop="auto";
+				el.style.marginBottom="auto";
+			} else {
+				el.style.height="100%";
+				el.style.width="auto";
+				el.style.marginLeft="auto";
+				el.style.marginRight="auto";
+			}
+		el.style.display="block";
+		nextSrc = img_list[next];
+		el.src = nextSrc;
+	}
+}
+</script>
+<script src="../js/d3.min.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>
