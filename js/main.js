@@ -69,7 +69,14 @@ function secretMessage() {
                 secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi Toni,</h2><h3>I love you :)<br><br>Emily</h3></div>"
                 console.log("secret message sent");
                 closeMessage();
-            } else {
+            } else if(name == "quixote vassilakis"){
+                document.body.style.zoom = 1.0;
+                secret.innerHTML="";
+                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi Quixote,</h2><h3>Today you are on my mind and I am missing you. I hope you are doing well and that you are happy. <br><br>Em</h3></div>"
+                console.log("secret message sent");
+                closeMessage();
+            }
+            else {
             //     secret.innerHTML="";
             //     document.body.style.zoom = 1.0;
             //     secret.innerHTML="<div class='center_form'><h2>Hi " + toTitleCase(name) +"! No messages right now. Redirecting<ellipsis></ellipsis></h2>";
