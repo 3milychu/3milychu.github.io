@@ -69,14 +69,25 @@ function secretMessage() {
                 secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi Toni,</h2><h3>I love you :)<br><br>Emily</h3></div>"
                 console.log("secret message sent");
                 closeMessage();
-            } else if(name == "quixote vassilakis"){
+            } else if(name == "jeongki lim"){
                 document.body.style.zoom = 1.0;
                 secret.innerHTML="";
-                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi Quixote,</h2><h3>Today you are on my mind and I am missing you. I hope you are doing well and that you are happy. <br><br>Em</h3></div>"
+                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi Jeongki,</h2><h3>Looking forward to our upcoming meeting!<br><br>Em</h3></div>"
                 console.log("secret message sent");
                 closeMessage();
-            }
-            else {
+            } else if(name == "justin bakse"){
+                document.body.style.zoom = 1.0;
+                secret.innerHTML="";
+                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi Justin,</h2><h3>What belongs to you, but other people use it more than you?<br><br>Em</h3></div>"
+                console.log("secret message sent");
+                closeMessage();
+            } else if(name == "alya alqarni"){
+                document.body.style.zoom = 1.0;
+                secret.innerHTML="";
+                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi Alya,</h2><h3>What are you working on next? :)<br><br>Em</h3></div>"
+                console.log("secret message sent");
+                closeMessage();
+            } else {
             //     secret.innerHTML="";
             //     document.body.style.zoom = 1.0;
             //     secret.innerHTML="<div class='center_form'><h2>Hi " + toTitleCase(name) +"! No messages right now. Redirecting<ellipsis></ellipsis></h2>";
