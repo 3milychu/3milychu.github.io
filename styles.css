@@ -192,7 +192,7 @@ label {
 }
 
 .section-white h1 {
-    text-align:left
+    text-align:center;
     font-weight:900;
     font-size:1em;
     color:#231f20;
@@ -1042,18 +1042,18 @@ ellipsis:after {
 
     /*tablets and smaller*/
 
-    @media screen and (max-width:1024px) {
+    @media screen and (max-width:767px) {
         #notification {
             width:15%;
             right:5%;
             bottom:2%;
         }
         #form1  h3 {
-            font-size:2em;
+            font-size:1em;
         }
         input[type="text"]{
-            font-size:3em;
-            margin-left:-10%;
+            font-size:1em;
+            margin-left:-20%;
         }
         .center_form .close {
             font-size:0.8em;
@@ -1061,7 +1061,8 @@ ellipsis:after {
         }
         input[type="submit"]{
             margin-top:5%;
-            font-size:1.2em;
+            font-size:0.5em;
+            letter-spacing:0.2em;
             padding:5%;
         }
         #about-text {
@@ -1069,7 +1070,7 @@ ellipsis:after {
         }
         label {
             font-weight:600;
-            font-size:1em;
+            font-size:0.5em;
             line-height:4em;
         }
         .media-holder-featured {
@@ -1131,27 +1132,26 @@ ellipsis:after {
         }
         /*menu*/
         .sidenav a {
-            font-size:3em;
+            font-size:2em;
             padding: 5% 2% 5% 10%;
         }
         .sidenav {
-            padding-top:20%;
+            padding-top:15%;
         }
         .sidenav .closebtn {
-        top: 80%;
+        top: 75%;
         font-size:3em;
         }
         #name {
-            padding:3%;
+            padding:2%;
             text-transform:uppercase;
             letter-spacing:0.3em;
-            padding-top:3%;
-            font-size:0.5em;
+            font-size:0.1em;
             margin-top:3%;
         }
         #projects {
             padding-top:4%;
-            font-size:4em;
+            font-size:2em;
             left:85%;
         }
         /*post*/
@@ -1165,7 +1165,7 @@ ellipsis:after {
             padding:0%;
         }
         .section-white h1 {
-            font-size:3em;
+            font-size:1em;
             margin:0% 0% 0% 3%;
             padding-left:0%;
         }
@@ -1271,16 +1271,16 @@ ellipsis:after {
             font-weight:900;
             margin-bottom:0;
             padding-bottom:1%;
-            font-size:2em;
+            font-size:1.5em;
         }
         .excerpt p {
-            font-size:1.5em;
+            font-size:1em;
             padding-top:0;
             margin-top:0;
         }
         #highlights{
             margin-top:30%;
-            font-size:3em;
+            font-size:1em;
         }
         .blurb {
             width:60%;
@@ -1318,7 +1318,7 @@ ellipsis:after {
             width:95%;
         }
         .close {
-            font-size:2em;
+            font-size:1em;
             right:0%;
             margin:10%;
             padding:3% 4% 3% 3%;
@@ -1337,7 +1337,7 @@ ellipsis:after {
         padding-top:10%;
         }
         .sidenav {
-            padding-top:15%;
+            padding-top:20%;
         }
         .sidenav a {
             padding-top:5%;
