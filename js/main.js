@@ -66,7 +66,13 @@ function secretMessage() {
             if(name == "toni best"){
                 document.body.style.zoom = 1.0;
                 secret.innerHTML="";
-                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi Toni,</h2><h3>Aduro makes everything possible <3 <br><br>Emily</h3></div>"
+                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi Toni,</h2><h3>I love you :)<br><br>Emily</h3></div>"
+                console.log("secret message sent");
+                closeMessage();
+            } else if(name == "jeongki lim"){
+                document.body.style.zoom = 1.0;
+                secret.innerHTML="";
+                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi Jeongki,</h2><h3>Looking forward to our upcoming meeting!<br><br>Em</h3></div>"
                 console.log("secret message sent");
                 closeMessage();
             } else if(name == "justin bakse"){
