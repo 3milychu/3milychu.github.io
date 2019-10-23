@@ -1,5 +1,5 @@
 h1, h2, h3, p, ul, ol, a, span, summary {
-    font-family: 'Sahitya', serif;
+    font-family: 'Playfair Display', serif;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -525,9 +525,9 @@ margin:0%;
     background-color:#c7b299;
     border: 0.2em solid #c7b299;
     padding:1%;
-    text-transform:uppercase;
-    letter-spacing:0.4em;
-    font-size:0.3em;
+/*    text-transform:uppercase;*/
+/*    letter-spacing:0.4em;*/
+    font-size:0.5em;
     margin-top:2%;
 }
 
@@ -836,10 +836,10 @@ byline {
     padding-top:2%;
     padding-bottom:2%;
     font-weight:300;
-/*    letter-spacing:0.1em;*/
-/*    text-transform:uppercase;*/
+    letter-spacing:0.1em;
+    text-transform:uppercase;
     color:#231F20;
-    font-size:1.5em;
+    font-size:1em;
     text-align:center;
 }
 .lightbox {
@@ -1145,8 +1145,8 @@ ellipsis:after {
         }
         #name {
             padding:3%;
-            text-transform:uppercase;
-            letter-spacing:0.3em;
+/*            text-transform:uppercase;
+            letter-spacing:0.3em;*/
             padding-top:3%;
             font-size:0.5em;
             margin-top:3%;
