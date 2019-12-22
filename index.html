@@ -1,508 +1,771 @@
 <!DOCTYPE html>
 <html>
-
-	<head>
-
+<head>
+	<title>emily 2020</title>
+	<meta property="og:image" content="assets/cover.png">
+	<link rel="image_src" href="assets/cover.png">
+	<meta name="description" content="emily is a data & interaction designer">
 		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-41817854-5"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-41817854-5"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
 
-		  gtag('config', 'UA-41817854-5');
-		</script>
+	  gtag('config', 'UA-41817854-5');
+	</script>
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	<meta name="viewport" content="width=device-width">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900&display=swap" rel="stylesheet">
+</head>
+<style>
+body {
+	color:#c2b59b;
+	font-family:'Playfair Display', sans-serif;
+	top:0;
+	left:0;
+	margin:0;
+	display:flex;
+	flex-wrap:wrap;
+	align-items:center;
+	justify-content: center;
+}
+#gallery {
+	margin-top:5%;
+	text-align:center;
+	max-width:100%;
+}
+.section {
+	margin:5% 0%;
+	width:100%;
+	text-align:center;
+	justify-content:center;
+	animation:1s fadeIn ease-in-out;
+}
+.section h1 {
+	font-weight: 300;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #231F20;
+    font-size: 1em;
+}
+portrait-card, landscape-card {
+	text-align:left;
+	background-color:#F2f2f2;
+	width:40%;
+	margin:2%;
+	line-height:0em;
+	animation:2s fadeIn ease-in-out;
+	transition:0.25s ease-in-out;
+}
+landscape-card:hover, portrait-card:hover {
+		box-shadow:0em -0.3em 1em #c2b59b;
+}
+portrait-card {
+	position:relative;
+	width:25%;
+    height:80vh;
+    overflow:hidden;
+    display:inline-block;
+    background-color:transparent;
+}
+byline {
+    font-size:0.5em;
+    font-style:italic;
+    padding-top:2%;
+}
+portrait-card .excerpt {
+	position:absolute;
+    width:100%;
+    height:100%;
+    background-color:white;
+    opacity:0;
+    transition:0.25s ease-in;
+    z-index:2;
+    line-height:1.5em;
+}
 
-		<title>Emily Chu</title>
-		 <meta property="og:image" content="https://raw.githubusercontent.com/3milychu/3milychu.github.io/master/assets/3milychu.png">
-  		<link rel="image_src" href="https://raw.githubusercontent.com/3milychu/3milychu.github.io/master/assets/3milychu.png">
-   		<meta name="description" content="Emily Chu is an interactive data storyteller.">
-		<link rel="stylesheet" type="text/css" href="styles.css">
-		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900&display=swap" rel="stylesheet">
-		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-		 <link rel="prefetch" href="assets/visuncertainty-cover-small.png">
-		 <link rel="prefetch" href="assets/clusteringfashion.png">
-		 <link rel="prefetch" href="assets/meterials-cover.png">
-		 <link rel="prefetch" href="assets/epochrunway-cover.png">
-		 <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+.overlay-bounding {
+	width:auto;
+   height:100%;
+   overflow:hidden;
+   position:relative;
+}
 
-	</head>
+portrait-card p {
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin:auto;
+    vertical-align:middle;
+    text-align:left;
+    font-size:1.5em;
+    font-weight:200;
+    width:80%;
+}
+portrait-card:hover .excerpt {
+    opacity:0.95;
+}
+img {
+	width:100%;
+}
+h4 {
+	color:#231F20;
+	font-weight:100;
+	font-size:1.5em;
+	line-height:1em;
+}
+p {
+	color:#231F20;
+	font-size:0.8em;
+}
+#writing_on_the_wall {
+	top:0%;
+	right:10%;
+	position:fixed;
+	z-index:1;
+	font-size:4em;
+	margin:0%;
+	cursor:pointer;
+	transition:0.25s ease-in;
+}
+#writing_on_the_wall:hover {
+	color:#231F20;
+}
+@keyframes fadeIn {
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+.watcher {
+	color:white;
+	width:100%;
+	height:10vh;
+	bottom:0;
+	position:absolute;
+	float:left;
+	font-size:3em;
+}
+.watcher div {
+	background-color:#c2b59b;
+	animation: 1.5s load ease-in;
+	height:100%;
+}
+@keyframes load {
+	0% {
+		width:0%;
+	}
+	100% {
+		width:100%;
+	}
+}
+.lightbox {
+    top:0;
+    left:0;
+    margin:0;
+    padding:0;
+    position:fixed;
+    z-index:200;
+    width:100%;
+    height:100%;
+    background-color:white;
+    display:none;
+}
+.lightbox-frame {
+/*    background-color:red;*/
+    width:50%;
+    height:50%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:12.5%;
+}
+.close {
+    position:absolute;
+    right:1%;
+    margin:2%;
+    font-weight:900;
+    padding:1%;
+    font-family: 'Playfair Display', serif;
+    color:#c2b59b;
+    border:0.05em solid #c2b59b;
+    width:1%;
+    cursor:pointer;
 
-	<body style="top:0;left:0;width:100%;">
+}
+.close:hover {
+    background-color:#231F20;
+    border:0.05em solid #231F20;
+    color:white;
+}
 
-		<!-- Notification -->
-		<div id="notification">
-			<img src="assets/notification2.png">
-		</div>
-		
+#secret {
+    display:none;
+    position:fixed;
+    background-color:white;
+    width:100%;
+    height:100vh;
+    z-index:2000;
+    top:0;
+    left:0;
+    font-weight:400;
+}
+.center_form {
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin:auto;
+    vertical-align:middle;
+    text-align:center;
+    font-size:1.5em;
+    font-weight:200;
+    width:50%;
 
-		<!-- Secret Message -->
-		<div id="secret">
-			<div class="close" id="close_prompt">X</div>
-			<div class="center_form" id="form1">
-				  <h3>Emily may have a secret message waiting for you. Who is visiting today?</h3>
-				  <input type="text" name="name" value="i.e. John Doe" onClick="this.setSelectionRange(0, this.value.length)">
-				  <br><br>
-				  <input type="submit" value="Submit">
-			</div> 
-		</div>
-		
-		<!-- responsive menu -->
-		<div id="mySidenav" class="sidenav">
-			
-			<span style="cursor:pointer">
-	    	<a class="closebtn"onmouseover="closeNav()">&times;</a></span>
+}
+input[type="text"]{
+    font-size:1em;
+    padding:1%;
+    color:#CCC;
+    border: none;
+    border-bottom:0.05em solid;
+}
+input[type="submit"]{
+    background-color:#c2b59b;
+    font-family: 'Playfair Display', serif;
+    font-weight:900;
+    font-size:0.6em;
+/*    letter-spacing:0.05em;*/
+    color:white;
+    border:none;
+    padding:3%;
+    cursor:pointer;
+    transition:0.25s all;
+/*    text-transform:uppercase;*/
+}
+input[type="submit"]:hover{
+    background-color:#231F20;
+}
+.center_form .close {
+    font-size:0.8em;
+    background-color:#c2b59b;
+    color:white;
+    padding:1%;
+    width:auto;
+}
+.center_form .close:hover {
+    color:#231F20;
+    border: 0.05em solid #231F20;
+    background-color:white;
+}
 
-	    	<a href="index.html"><span id="name">3milychu</span></a>
-	    	<span style ="cursor:pointer" id="projects" onmouseover="openNav()">&#9776;</span>
-		</div>
+ellipsis:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4,end) 900ms infinite;      
+  animation: ellipsis steps(4,end) 900ms infinite;
+  content: "\2026"; /* ascii code for the ellipsis character */
+  width: 0em;
+  opacity:0;
+  transition:0.25s all ease-in-out;
+}
 
-		<!-- Announcements -->
-		<div class = "section-white">
+@keyframes ellipsis {
+  to {
+    width: 1.5em;   
+    opacity:1; 
+  }
+}
 
-				<div class="heading2">
-					<h1 id="highlights">Announcements</h1>
-				</div>
+@-webkit-keyframes ellipsis {
+  to {
+    width: 1.5em;    
+  }
+}
 
-				<div id="interactives" style="display:block;margin-top:2%;">
+#notification {
+    position:fixed;
+    z-index:5;
+    width:5%;
+    bottom:5%;
+    right:1%;
+    cursor:pointer;
+    background-color:white;
+    border-radius:50%;
+    box-shadow: 0.5em 0.5em 2em #666666;
+    padding:1%;
+    transition:0.25s all;
+}
 
-					<!-- Piece -->
-						<div class="media-holder-featured">
-							<a href="https://schedule.sxsw.com/2020/events/PP1128191" target="_blank">
-								<div class="bounding">
-									<img class ="media-cover" src="assets/announcements/sxsw.png">
-								</div>
-							<div class="excerpt">
-								<h4>March 18 | SXSW Conference Presentation</h4>
-								<p>Will be presenting on visualizing sentiment data from shared musical experiences at SXSW 2020 as a part of the Future of Music Track</p>
+@keyframes jump {
+    0% {
+        transform:rotate(45deg);
+        transform:translateY(0px);
+    }
+    25% {
+        transform:rotate(-25deg);
+    }
+    70% {
+        transform:rotate(45deg);
+        transform:translateY(-50px);
+    }
+    90% {
+        transform:rotate(-25deg);
+        transform:translateY(0px);
 
-							</div>
-							</a>
-						</div>
+    }
+    100% {
+        transform:rotate(0deg);
 
-					<!-- Piece -->
-						<div class="media-holder-featured">
-							<a href="https://opencampus.newschool.edu/courses/CENC/7405/PCDD/0316/X1/web-development-ii-advanced" target="_blank">
-								<div class="bounding">
-									<img class ="media-cover" src="assets/announcements/opencampus.png">
-								</div>
-							<div class="excerpt">
-								<h4>Jan 21 | Web Development II</h4>
-								<p>Join my online course in the Web Design & Development Certificate at Open Campus, Parsons School of Design. Upcoming session: 1/21/2019 - 3/29/2019 </p>
+    }
+}
 
-							</div>
-							</a>
-						</div>
-
-				</div>
-
-		</div>
-
-		<!-- Featured Work -->
-		<div class = "section-white">
-
-				<div class="heading2">
-					<h1 id="highlights">Praxis</h1>
-				</div>
-
-				<div id="interactives" style="display:block;margin-top:2%;">
-
-
-					<!-- Piece -->
-						<div class="media-holder-featured">
-							<a href="pages/notesonperspective.html">
-								<div class="bounding">
-									<img class ="media-cover" src="https://raw.githubusercontent.com/3milychu/thesis/master/documentation/preview.png">
-								</div>
-							<div class="excerpt">
-								<h4>Notes on Perspective</h4>
-								<p>An experential application that visually reconstructs the thoughts and feelings which occurred during a classical musical performance.</em></p>
-
-								<div style="margin-left:-2%;">
-								<label>d3.js</label><label>javascript</label><label>python</label><label>kmeans</label>
-								</div>
-
-							</div>
-							</a>
-						</div>
-
-					<!-- Piece -->
-						<div class="media-holder-featured">
-							<a href="pages/kmeansfashion.html">
-								<div class="bounding">
-									<img class ="media-cover" src="assets/clusteringfashion-cover.png">
-								</div>
-							<div class="excerpt">
-								<h4>Forms of Attraction</h4>
-								<p>Using machine learning to cluster clothes and accessories by image similiarity, showing how certain forms gained momentum and became iconified over time.</p>
-
-								<div style="margin-left:-2%;">
-								<label>kmeans</label><label>python</label><label>d3.js</label><label>opencv</label>
-								<label>R</label>
-								</div>
-
-							</div>
-							</a>
-						</div>
-
-					<!-- Piece -->
-						<div class="media-holder-featured">
-							<a href="pages/visualvariables.html">
-								<div class="bounding">
-									<img class ="media-cover" src="assets/visuncertainty-cover-small.png">
-								</div>
-							<div class="excerpt">
-								<h4>Visualizing Uncertainty</h4>
-								<p>Calculator app to search contemporary artworks in the Tate Modern by Bertin's variables for the IEEE VIS Conference 2018 in Berlin.</p>
-
-								<div style="margin-left:-2%;">
-									<label>polymer</label><label>shadow.DOM</label><label>d3.js</label>
-									<label>ES6</label>
-								</div>
-
-							</div>
-							</a>
-						</div>
-
-					<!-- Piece -->
-						<div class="media-holder-featured">
-							<a href="https://3milychu.github.io/algorithmic-fairness" target="_blank">
-								<div class="bounding">
-									<img class ="media-cover" src="assets/af-cover.png">
-								</div>
-							<div class="excerpt">
-								<h4>Is it impossible to be fair?</h4>
-								<p>Interactive data journalism piece for the Jain Family Institute on algorithmic fairness, including thought experiment interactives and simulations.</em></p>
-
-								<div style="margin-left:-2%;">
-								<label>d3.js</label><label>javascript</label>
-								</div>
-
-							</div>
-							</a>
-						</div>
-
-				<!-- Piece -->
-						<div class="media-holder-featured">
-							<a href="pages/isa-app.html">
-								<div class="bounding">
-									<img class ="media-cover" src="assets/isa/cover.png">
-								</div>
-							<div class="excerpt">
-								<h4>Income Share Agreements App</h4>
-								<p>Web application for the Jain Family Institute to compare the economic consequences of taking out a loan versus an income-share agreement.</p>
-
-								<div style="margin-left:-2%;">
-									<label>javascript</label><label>d3.js</label><label>html/css</label><label>python</label>
-								</div>
-
-							</div>
-							</a>
-						</div>
-
-				<!-- Piece-->
-						<div class="media-holder-featured">
-							<a href="pages/computationalart.html">
-							<div class="bounding">
-								<img class ="media-cover" src="assets/epochrunway-cover.png">
-							</div>
-							<div class="excerpt">
-								<h4>Epoch Runway</h4>
-								<p>A computational fashion show to help you visually ingest the 7.6k items in the Metropolitan Museum of Art's Costume Institute.</p>
-
-								<div style="margin-left:-2%;">
-								<label>d3.js</label><label>computer vision</label><label>opencv</label><label>R</label>
-								</div>
-
-							</div>
-							</a>
-						</div>
-						
-					<!-- Piece -->
-						<div class="media-holder-featured">
-							<a href="pages/higgy.html">
-								<div class="bounding">
-									<img class ="media-cover" src="assets/higgy.png">
-								</div>
-							<div class="excerpt">
-								<h4>Higgy</h4>
-								<p>Higgy is a sensor that tracks the sentimentality of my household, measured by how often we visit our "sentimental corner". It reads real-time from a relational database to send results to an interface embodying Higgy.</p>
-
-								<div style="margin-left:-2%;">
-									<label>particle wifi IoT</label><label>AWS RDS</label><label>node.js</label>
-									<label>lottie.js</label>
-								</div>
-
-							</div>
-							</a>
-						</div>
-
-						<!-- Piece-->
-						<div class="media-holder-featured">
-							<a href="pages/culturaldata.html">
-								<div class="bounding">
-									<img class ="media-cover" src="assets/meterials-cover.png">
-								</div>
-							<div class="excerpt">
-								<h4>Met.erials</h4>
-								<p>Examining representative items of most frequently occuring mediums in the MET by designing an interface that spotlights representative items.</p>
-
-								<div style="margin-left:-2%;">
-								<label>NLP</label><label>python</label><label>d3.js</label><label>R</label><label>InVision</label>
-								</div>
-
-							</div>
-							</a>
-						</div>
-
-				<!-- Piece -->
-						<div class="media-holder-featured">
-							<a href="https://3milychu.github.io/mm-exercise" target="_blank">
-								<div class="bounding">
-									<img class ="media-cover" src="assets/es-cover.png">
-								</div>
-							<div class="excerpt">
-								<h4>Economic Stability Signatures</h4>
-								<p>A dashboard to help marketing managers better understand how economic stability influences customer segments for a Fortune 100 life insurance company.</p>
-
-								<div style="margin-left:-2%;">
-									<label>d3.js</label><label>python</label><label>R</label><label>html/css</label><label>javascript</label>
-								</div>
-
-							</div>
-							</a>
-						</div>
-
-						<!-- Piece -->
-						<div class="media-holder-featured">
-							<a href="pages/rds-sql-node.html">
-								<div class="bounding">
-									<img class ="media-cover" src="assets/sql-rds.png">
-								</div>
-							<div class="excerpt">
-								<h4>Geo Planner</h4>
-								<p>A Geo Planner focusing primarily on architecture design, data integrity, and creating reliable, scalable, maintainable applications. Data is parsed from unstructured web pages and cleaned for storage in an RDS.</p>
-
-								<div style="margin-left:-2%;">
-								<label>node.js</label><label>geocoding.API</label><label>sql</label><label>RDS</label><label>leaflet</label>
-								</div>
-
-							</div>
-							</a>
-						</div>
-
-				<!-- Piece -->
-						<div class="media-holder-featured">
-							<a href="pages/csmi.html">
-								<div class="bounding">
-									<img class ="media-cover" src="assets/csmi/bg.png">
-								</div>
-							<div class="excerpt">
-								<h4>Social Movement Networks</h4>
-								<p>Data consulting process and visualization to find cross-relational intersections of interest across the Center for Social Movements and Innovation.</p>
-
-								<div style="margin-left:-2%;">
-								<label>d3.js</label><label>python</label><label>Illustrator</label>
-								</div>
-
-							</div>
-							</a>
-						</div>
-						
-			<!-- Piece -->
-<!-- 						<div class="media-holder-featured">
-							<a href="https://3milychu.github.io/temporality" target="_blank">
-								<div class="bounding">
-									<img class ="media-cover" src="assets/temporality.png">
-								</div>
-							<div class="excerpt">
-								<h4>Expressing Temporality</h4>
-								<p>In progress playground to explore digital affordances to express time through light, depth, space, etc. accompanied by literature review and design research on the topic.</p>
-
-								<div style="margin-left:-2%;">
-									<label>three.js</label><label>datgui.js</label><label>Interaction Design</label>
-								</div>
-
-							</div>
-							</a>
-						</div>
- -->
-			<!-- Piece -->
-					<div class="media-holder-featured">
-						<a href="pages/m4bl.html">
-							<div class="bounding">
-								<img class ="media-cover" src="assets/m4bl/2_small.png">
-							</div>
-						<div class="excerpt">
-							<h4>Movement for Black Lives Animation</h4>
-							<p>A 3-minute animation for the Movement for Black Lives to present to donors by the Borealis Foundation and Black-Led Movement Fund</p>
-
-							<div style="margin-left:-2%;">
-							<label>Illustrator</label><label>After Effects</label><label>Premier Pro</label>
-							</div>
-						</div>
-						</a>
-					</div>
-
-				</div>
-
-<!-- Shows & Awards-->
-<div class="heading3">
-	<h1 class="section-header">Shows &amp; Awards</h1>
+#notification img {
+    width:100%;
+    margin:auto;
+    text-align:center;
+    transition:0.25s all;
+    animation: jump 0.7s 2 cubic-bezier(0,0.5,0.8,1);
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+#notification:hover {
+    transform:scale(1.5);
+    transform-origin: 50% 50%;
+    background-color:#FF8E69;
+}
+@media screen and (max-width:767px){
+	#writing_on_the_wall{
+		font-size:1.5em;
+	}
+	landscape-card, portrait-card{
+		width:80%;
+	}
+	#gallery {
+		margin-top:25%;
+	}
+	#writing_on_the_wall {
+		font-size:2.5em;
+	}
+    #notification {
+	    width:15%;
+	    right:5%;
+	    bottom:2%;
+	}
+    .close {
+        padding:3% 5%;
+    }
+    .center_form .close {
+        font-size:0.8em;
+        top:-5%;
+        padding:3% 5%;
+    }
+}
+</style>
+<body>
+<!-- secret message-->
+<div id="secret">
+	<div class="close" id="close_prompt">X</div>
+	<div class="center_form" id="form1">
+		  <h3>Emily may have a secret message waiting for you. Who is visiting today?</h3>
+		  <input type="text" name="name" value="i.e. Rad Person" onClick="this.setSelectionRange(0, this.value.length)">
+		  <br><br>
+		  <input type="submit" value="Submit">
+	</div> 
 </div>
 
-<!-- Item -->
-
-	<div class="media-holder-featured">
-		<a href="https://www.informationisbeautifulawards.com/showcase/4300-notes-on-perspective" target="new">
-			<div class="bounding">
-				<img class ="media-cover" src="https://mms.businesswire.com/media/20180605005839/en/661570/23/Logo.jpg">
-			</div>
-		<div class="excerpt">
-			<h4>Kantar Information is Beautiful 2019 Awards</h4>
-			<p>Notes on Perspective</a></em> made the Kantar Information is Beautiful 2019 shortlist for Arts, Entertainment & Culture. 115 projects were selected for the shortlist out of a longlist of 600+ entries.</p>
-
-		</div>
-		</a>
-	</div>
-
-<!-- Item -->
-
-	<div class="media-holder-featured">
-		<a href="https://www.informationisbeautifulawards.com/showcase/2652-forms-of-attraction" target="new">
-			<div class="bounding">
-				<img class ="media-cover" src="https://mms.businesswire.com/media/20180605005839/en/661570/23/Logo.jpg">
-			</div>
-		<div class="excerpt">
-			<h4>Kantar Information is Beautiful 2018 Awards</h4>
-			<p>Forms of Attraction</a></em> made the Kantar Information is Beautiful 2018 shortlist for People, Language & Identity. 101 projects were selected for the shortlist out of a longlist of 600+ entries.</p>
-
-		</div>
-		</a>
-	</div>
-
-	<!-- Item -->
-
-	<div class="media-holder-featured">
-		<a href="https://ww2.amstat.org/meetings/jsm/2018/conferenceinfo.cfm" target="new">
-			<div class="bounding">
-				<img class ="media-cover" src="assets/shows/dataartshow2018.jpg">
-			</div>
-		<div class="excerpt">
-			<h4>Data Art Show at JSM 2018</h4>
-			<p>Forms of Attraction</a></em> displayed at the Joint Statistical Meetings (JSM) 2018, the largest gathering of statisticians and data scientists held in North America. It is held jointly with the American Statistical Association, the Royal Statistical Society and the International Statistical Institute.</p>
-
-		</div>
-		</a>
-	</div>
-
-<!-- End Shows & Awards -->
-
-<!-- Articles & Press -->
-<br><br><br>
-<div class="heading3">
-	<h1 class="section-header">Articles &amp; Press Mentions</h1>
+<!-- notification -->
+<div id="notification">
+	<img src="assets/notification2.png">
 </div>
-<br>
 
-<!-- Item -->
+<!-- content -->
+<h1 id='writing_on_the_wall'>emily chu</h1>
+<div id='gallery'></div>
+</body>
 
-	<a href="https://medium.com/nightingale/color-coding-music-scores-with-machine-learning-a2443ef27d96" target="new">
-		<div class="news">
-			<div class="overlay">
-				<p>
-				Tutorial on color coding your own music score using machine learning, published by Nightingale, publication of the Data Visualization Society.
-				<byline>August 2019</byline>
-				</p>
-			</div>
+<script type="text/javascript">
+
+let path = 'data.csv'
+	body = document.querySelector('body')
+	gallery = document.querySelector('#gallery')
+	watcher1 = document.createElement('div')
+	watcher1.setAttribute('id','watcher')
+	watcher1.setAttribute('class','watcher')
+	watcher1.innerHTML="<div> </div>"
+	body.appendChild(watcher1)
+	about = document.querySelector('#writing_on_the_wall')
+
+d3.csv(path)
+.then(function(data){
+	createSections(data)
+	setTimeout(function() {
+		populate(data)
+		setImgAspect()
+		watcher1.style.display="none"
+	},1500)
+
+})
+.catch(function(error){
+})
+
+window.onresize=function() {
+	setImgAspect()
+}
+
+about.onclick=function() {
+	window.location.replace('pages/about.html');
+}
+
+// helpers
+   function titleCase(string) {
+      var sentence = string.toLowerCase().split(" ");
+      for(var i = 0; i< sentence.length; i++){
+         sentence[i] = sentence[i][0].toUpperCase() + sentence[i].slice(1);
+      }
+   document.write(sentence.join(" "));
+   return sentence;
+   }
+
+function shuffle(array) {
+  array.sort(() => Math.random() - 0.5);
+}
+
+
+function createSections(data){
+	const unique = (value, index, self) => {
+	  return self.indexOf(value) === index
+	}
+	let sections = []
+	data.forEach(function(item){
+		sections.push(item['section'])
+	})
+	unique_sections = sections.filter(unique)
+	unique_sections.forEach(function(item){
+		div = document.createElement('div')
+		div.setAttribute('class','section')
+		div.setAttribute('id',item)
+		h1 = document.createElement('h1')
+		h1.innerHTML=item
+		div.appendChild(h1)
+		gallery.appendChild(div)
+	})
+	watcher1.click()
+	watcher1.value=1
+}
+
+function setImgAspect() {
+	let imgs = document.images,
+	    len = imgs.length,
+	    counter = 0;
+
+	[].forEach.call( imgs, function( img ) {
+	    img.addEventListener( 'load', incrementCounter, false );
+	} );
+	function incrementCounter() {
+	    counter++;
+	    if ( counter === len ) {
+	    	set1 = document.querySelectorAll('landscape-card')
+	    	set1.forEach(function(item){
+	    		id=item.id
+	    		console.log(id)
+	    		fixAspectRatio('#'+id)
+	    	})
+	    }
+	}
+
+	function fixAspectRatio(item){
+		item = document.querySelector(item)
+		img = item.querySelector('.bounding')
+		caption = item.querySelector('.excerpt')
+		height1= getheight(img)
+		height2 = getheight(caption)
+		setheight(item, height1, height2)
+	}
+}
+
+function getheight(item){
+	let style = item.getComputedStyle
+		marginTop = parseInt(style.marginTop)
+		marginBottom=parseInt(style.marginBottom)
+	return item.clientHeight+marginTop+marginBottom
+}
+
+function setheight(item, height1, height2){
+	item.style.height=(height1+height2)+"px"
+}
+
+
+function populate(data){
+	let sections = document.querySelectorAll('.section')
+	console.log(sections)
+	sections.forEach(function(section){
+		section=section.id
+		section_data = data.filter(function(d){
+			return d.section==section
+		})
+		shuffle(section_data)
+		counter=0
+		section_data.forEach(function(item){
+			if(item['section']!='press'){
+				counter++
+				a=item['a']
+				img=item['img']
+				h4=item['h4']
+				p=item['p']
+
+				// parent
+				card = document.createElement('landscape-card')
+				card.setAttribute('id',"lc-"+counter)
+				// link
+				link = document.createElement('a')
+				link.setAttribute('slot','lc-slot-1')
+				link.href=a
+				link.setAttribute('target',"_blank")
+				link.setAttribute('slot','lc-slot-1')
+				// bounded img
+				bounding = document.createElement('div')
+				bounding.setAttribute('class','bounding')
+				b1 = document.createElement('img')
+				b1.setAttribute('slot','lc-slot-2')
+				b1.src=img
+				// excerpt with h4 and p
+				excerpt = document.createElement('div')
+				excerpt.setAttribute('class','excerpt')
+				e1 = document.createElement('h4')
+				e1.setAttribute('slot','lc-slot-3')
+				e1.style.margin="0%"
+				e1.style.padding="5% 0%"
+				e2 = document.createElement('p')
+				e2.setAttribute('slot','lc-slot-3')
+				e1.innerHTML=h4
+				e2.innerHTML=p
+				target=document.querySelector("#"+section)
+				bounding.appendChild(b1)
+				excerpt.appendChild(e1)
+				excerpt.appendChild(e2)
+				card.appendChild(bounding)
+				card.appendChild(excerpt)
+				link.appendChild(card)
+				target.appendChild(link)
+			} else {
+			counter++
+			a=item['a']
+			img=item['img']
+			h4=item['h4']
+			p=item['p']
+
+			// parent
+			card = document.createElement('portrait-card')
+			card.setAttribute('id',"lc-"+counter)
+			// link
+			link = document.createElement('a')
+			link.setAttribute('slot','lc-slot-1')
+			link.href=a
+			link.setAttribute('target',"_blank")
+			link.setAttribute('slot','lc-slot-1')
+			// bounded img
+			bounding = document.createElement('div')
+			bounding.setAttribute('class','overlay-bounding')
+			b1 = document.createElement('img')
+			b1.setAttribute('slot','lc-slot-2')
+			b1.src=img
+			// excerpt with h4 and p
+			excerpt = document.createElement('div')
+			excerpt.setAttribute('class','excerpt')
+			e1 = document.createElement('h4')
+			e1.setAttribute('slot','lc-slot-3')
+			e1.style.margin="0%"
+			e1.style.padding="5% 0%"
+			e2 = document.createElement('p')
+			e2.setAttribute('slot','lc-slot-3')
+			e1.innerHTML=h4
+			e2.innerHTML=p
+			target=document.querySelector("#"+section)
+			bounding.appendChild(b1)
+			excerpt.appendChild(e1)
+			excerpt.appendChild(e2)
+			card.appendChild(excerpt)
+			card.appendChild(bounding)
+			link.appendChild(card)
+			target.appendChild(link)	
+			}
 			
-				<div class="news-bounding">
-					<img class ="news-cover" src="assets/news/news5.jpeg">
-				</div>
-		</div>
-	</a>
+		})
+	})
+}
 
-
-<!-- Item -->
-
-	<a href="https://blogs.newschool.edu/news/2018/10/parsons-ms-data-viz-partners-with-the-met-to-visualize-their-digital-collection/#.W9IaEWJKhTZ" target="new">
-		<div class="news">
-			<div class="overlay">
-				<p>
-				<em>Forms of Attraction</em> mentioned in New School press release on Parsons collaboration with the MET
-				<byline>October 2018</byline>
-				</p>
+customElements.define('landscape-card', class extends HTMLElement {
+	constructor() {
+		super()
+		this.attachShadow({mode:'open'}).innerHTML=`
+		<style>
+		:host {
+			display:inline-block;
+			content:contain;
+			width:100%;
+			height:auto;
+			border-radius:2em;
+			overflow:hidden;
+		}
+		::slotted(img){
+			display:block;
+			height:100%;
+			width:auto;
+		}
+		::slotted(.bounding){
+			display:block;
+			width:100%;
+			overflow:hidden;
+		}
+		::slotted(.excerpt){
+			display:block;
+			width:90%;
+			height:fit-content;
+			padding:0% 5%;
+			line-height:1em;
+		}
+		</style>
+		<slot></slot>
+		<slot name='lc-slot-1'><a slot='lc-slot-1' href="" target="_blank">
+			<div class="bounding">
+				<slot name='lc-slot-2'><img name='lc-slot-2' class ="media-cover" src=""></slot>
 			</div>
-			
-				<div class="news-bounding">
-					<img class ="news-cover" src="assets/news/news1.jpg">
-				</div>
-		</div>
-	</a>
-
-<!-- Item -->
-
-	<a href="https://www.metmuseum.org/blogs/now-at-the-met/2018/met-collection-api" target="new">
-		<div class="news">
-			<div class="overlay">
-				<p>
-				<em>Forms of Attraction</em> mentioned in MET blog post on release of Open Access API
-				<byline>October 2018</byline>
-				</p>
+			<div class="excerpt">
+				<slot name-'lc-slot-3'><h4 name='lc-slot-3'></h4></slot>
+				<slot name='lc-slot-4'><p name='lc-slot-4'></p></slot>
 			</div>
-			
-				<div class="news-bounding">
-					<img class ="news-cover" src="assets/news/news2.jpg">
-				</div>
-		</div>
-	</a>
+		</a></slot>
+		`
+	}
+})
 
-
-<!-- Item -->
-
-	<a href="https://mashable.com/article/the-met-museum-api/#x9aNkunjhsqa" target="new">
-		<div class="news">
-			<div class="overlay">
-				<p>
-				<em>Met.erials</em> mentioned in Mashable article on MET's effors to digitalize their collection
-				<byline>October 2018</byline>
-				</p>
+customElements.define('portrait-card', class extends HTMLElement {
+	constructor() {
+		super()
+		this.attachShadow({mode:'open'}).innerHTML=`
+		<style>
+		:host {
+			display:inline-block;
+			position:relative;
+			content:contain;
+			width:100%;
+			height:auto;
+			border-radius:2em;
+			overflow:hidden;
+			background-color:transparent;
+		}
+		::slotted(.bounding){
+			display:block;
+		}
+		::slotted(.excerpt){
+			display:block;
+		}
+		</style>
+		<slot></slot>
+		<slot name='lc-slot-1'><a slot='lc-slot-1' href="" target="_blank">
+			<div class="excerpt">
+				<slot name-'lc-slot-3'><h4 name='lc-slot-3'></h4></slot>
+				<slot name='lc-slot-4'><p name='lc-slot-4'></p></slot>
 			</div>
-			
-				<div class="news-bounding">
-					<img class ="news-cover" src="assets/news/news3.jpg">
-				</div>
-		</div>
-	</a>
-
-
-<!-- Item -->
-
-	<a href="https://data-matters.nyc/?p=18808" target="new">
-		<div class="news">
-			<div class="overlay">
-				<p>
-				Article on the concept of "lifelong analytics" published by Data Matters - a publication at the Center for Data Arts headed by Ben Rubin.
-				<byline>April 2018</byline>
-				</p>
+			<div class="bounding">
+				<slot name='lc-slot-2'><img name='lc-slot-2' class ="media-cover" src=""></slot>
 			</div>
-			
-				<div class="news-bounding">
-					<img class ="news-cover" src="assets/news/news4.jpg">
-				</div>
-		</div>
-	</a>
+		</a></slot>
+		`
+	}
+})
+
+function toTitleCase(str) {
+    return str.replace(
+        /\w\S*/g,
+        function(txt) {
+            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+        }
+    );
+}
+
+notification = document.querySelector('#notification');
+notification.addEventListener("click", function() {
+    var secret = document.querySelector('#secret');
+    secret.style.display="inline-block";
+    secretMessage();
+})
 
 
+function secretMessage() {
+    var secret = document.querySelector('#secret');
+    var secret_form = document.querySelector('input[type="submit"]');
+    var name_field = document.querySelector('input[name="name"]');
+    var name = document.querySelector('input[name="name"]').value;
+    name_field.addEventListener("change", function() {
+            name = document.querySelector('input[name="name"]').value;
+            name = name.toLowerCase();
+            console.log(name);
+            if(name == "toni best"){
+                document.body.style.zoom = 1.0;
+                secret.innerHTML="";
+                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi Toni,</h2><h3>Aduro makes everything possible <3 <br><br>Emily</h3></div>"
+                console.log("secret message sent");
+                closeMessage();
+            } else if(name == "anu addanki"){
+                document.body.style.zoom = 1.0;
+                secret.innerHTML="";
+                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi Anu,</h2><h3>Happy holidays<br><br>Emily</h3></div>"
+                console.log("secret message sent");
+                closeMessage();
+            } else {
+                document.body.style.zoom = 1.0;
+                secret.innerHTML="";
+                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi " + toTitleCase(name) + ",</h2><h3>Hope you find something you like and enjoy your day! :) <br><br>Emily</h3></div>"
+                console.log("secret message sent");
+                closeMessage();
+            }
+    });
+};
 
-<!-- End Articles -->
-	</div>
+secretMessage();
 
-</div>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.min.js'></script>
-<script src="js/main.js"></script>
+function enterNameInput() {
+    var name = document.querySelector('input[name="name"]')
+    var secret_form = document.querySelector('input[type="submit"]');
+    name.addEventListener("keyup", function(event) {
+      event.preventDefault();
+      if (event.keyCode === 13) {
+        secret_form.click();
+      }
+    });
+}
 
-	</body>
+enterNameInput();
 
+var close_secret = document.querySelector('#close_prompt');
+close_prompt.addEventListener("click", function() {
+     document.body.style.zoom = 1.0;
+     scrollToTop();
+     secret.style.display="none";
+})
+
+function closeMessage() {
+    var close_message = document.querySelector('#close_message');
+    close_message.addEventListener("click", function() {
+         document.body.style.zoom = 1.0;
+         scrollToTop();
+         secret.style.display="none";
+    })
+};
+
+
+function scrollToTop() {
+    var body = document.querySelector('body')
+    body.scrollTop = 0;
+}
+	
+</script>
 </html>
