@@ -5,6 +5,7 @@
 	<meta property="og:image" content="assets/cover.png">
 	<link rel="image_src" href="assets/cover.png">
 	<meta name="description" content="emily is a data & interaction designer">
+	<link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-41817854-5"></script>
 	<script>
@@ -25,6 +26,8 @@ body {
 	top:0;
 	left:0;
 	margin:0;
+	width:100%;
+	height:100vh;
 	display:flex;
 	flex-wrap:wrap;
 	align-items:center;
@@ -42,12 +45,17 @@ body {
 	justify-content:center;
 	animation:1s fadeIn ease-in-out;
 }
+.section_header {
+	display:none;
+	animation:1s fadeIn ease-in-out;
+}
 .section h1 {
 	font-weight: 300;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: #231F20;
     font-size: 1em;
+    transition:1s ease-in-out;
 }
 portrait-card, landscape-card {
 	text-align:left;
@@ -121,18 +129,25 @@ p {
 	color:#231F20;
 	font-size:0.8em;
 }
-#writing_on_the_wall {
-	top:0%;
-	right:10%;
-	position:fixed;
-	z-index:1;
-	font-size:4em;
-	margin:0%;
-	cursor:pointer;
-	transition:0.25s ease-in;
+#name {
+	position: fixed;
+    top: 1%;
+    float: left;
+    left: 5%;
+    z-index: 8;
+    color: white;
+    background-color: #c7b299;
+    border: 0.2em solid #c7b299;
+    padding: 1%;
+    font-size: 1em;
+    margin-top: 2%;
+    transition:0.25s ease-in-out;
+    cursor:pointer;
 }
-#writing_on_the_wall:hover {
-	color:#231F20;
+#name:hover {
+    color: #231f20;
+    border: 0.2em solid #231f20;
+    background-color:white;
 }
 @keyframes fadeIn {
 	0% {
@@ -263,6 +278,12 @@ input[type="submit"]:hover{
     border: 0.05em solid #231F20;
     background-color:white;
 }
+#welcome {
+	position:relative;
+	font-size:5em;
+	padding:5% ;
+	line-height:1em;
+}
 
 ellipsis:after {
   overflow: hidden;
@@ -326,6 +347,7 @@ ellipsis:after {
     }
 }
 
+
 #notification img {
     width:100%;
     margin:auto;
@@ -341,18 +363,16 @@ ellipsis:after {
     background-color:#FF8E69;
 }
 @media screen and (max-width:767px){
-	#writing_on_the_wall{
-		font-size:1.5em;
+	#name{
+		font-size:1.2em;
+		padding:2%;
 	}
 	landscape-card, portrait-card{
 		width:80%;
 		margin:7% 5%;
 	}
 	#gallery {
-		margin-top:15%;
-	}
-	#writing_on_the_wall {
-		font-size:2.5em;
+		margin-top:25%;
 	}
     #notification {
 	    width:15%;
@@ -392,7 +412,8 @@ ellipsis:after {
 </div>
 
 <!-- content -->
-<h1 id='writing_on_the_wall'>emily chu</h1>
+<h1 id='name'>3milychu</h1>
+<h1 id='welcome'> </h1>
 <div id='gallery'></div>
 </body>
 
@@ -406,20 +427,42 @@ let path = 'data.csv'
 	watcher1.setAttribute('class','watcher')
 	watcher1.innerHTML="<div> </div>"
 	body.appendChild(watcher1)
-	about = document.querySelector('#writing_on_the_wall')
+	about = document.querySelector('#name')
+	welcome = document.querySelector('#welcome')
+	messages = ['Have we met before?', "Oh, what a lovely day!", "Let's talk!", "Three, two, one...", "Hey, I've been waiting for you!", "What comes before Part B?", "Feelin' good?", "Let's do great things.", "I'm ready if you are.", "Design the love you want to see.", "Data + design + code = <3", "Luck is on your side today."]
+
+// about.style.transform=
 
 d3.csv(path)
 .then(function(data){
 	createSections(data)
+	getWelcome()
 	setTimeout(function() {
 		populate(data)
 		setImgAspect()
+		appear('section_header')
 		watcher1.style.display="none"
+		welcome.style.display="none"
 	},1500)
 
 })
 .catch(function(error){
 })
+
+function getWelcome() {
+	select = Math.floor(Math.random()*messages.length)+0
+	selection = messages[select]
+	welcome.innerHTML=selection
+}
+
+function appear(elementClass){
+	elements = document.querySelectorAll('.'+elementClass)
+	console.log('testing')
+	console.log(elements)
+	for(i=0;i<elements.length;i++){
+		elements[i].style.display="block"
+	}
+}
 
 window.onresize=function() {
 	setImgAspect()
@@ -458,6 +501,7 @@ function createSections(data){
 		div.setAttribute('class','section')
 		div.setAttribute('id',item)
 		h1 = document.createElement('h1')
+		h1.classList.add('section_header')
 		h1.innerHTML=item
 		div.appendChild(h1)
 		gallery.appendChild(div)
