@@ -438,12 +438,12 @@ d3.csv(path)
 	createSections(data)
 	getWelcome()
 	setTimeout(function() {
+		body.style.height="auto"
+		welcome.style.display="none"
+		appear('section_header')
 		populate(data)
 		setImgAspect()
-		appear('section_header')
 		watcher1.style.display="none"
-		welcome.style.display="none"
-		body.style.height="auto"
 	},1500)
 
 })
