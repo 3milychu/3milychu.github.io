@@ -11,18 +11,23 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
     var breadcrumb = document.getElementById("breadcrumb");
+    breadcrumb.innerHTML += "<a style='font-size:1.5em' href='https://github.com/3milychu/goodvibes.html'>Good Vibes</a>";
+    breadcrumb.innerHTML += "<a style='font-size:1em' href='https://www.uplabs.com/posts/electricity-usage-data-visualization'>Electricity Tracking App</a>";
+    breadcrumb.innerHTML += "<a style='font-size:1.5em' href='kmeansfashion.html'>Kairos</a>";
+     breadcrumb.innerHTML += "<a style='font-size:1em' href='http://3milychu.github.io/algorithmic-fairness'>Is it impossible to be fair?</a>";
     breadcrumb.innerHTML += "<a style='font-size:1.5em' href='notesonperspective.html'>Notes on Perspective</a>";
     breadcrumb.innerHTML += "<a style='font-size:1em' href='higgy.html'>Higgy</a>";
     breadcrumb.innerHTML += "<a style='font-size:1.5em' href='visualvariables.html'>Visualize Uncertainty</a>";
     breadcrumb.innerHTML += "<a style='font-size:1em' href='kmeansfashion.html'>Forms of Attraction</a>";
-    breadcrumb.innerHTML += "<a style='font-size:1.5em' href='rds-sql-node.html'>Geo Planner</a>";
+    breadcrumb.innerHTML += "<a style='font-size:1.5em' href='rds-sql-node.html'>Meeting Planner</a>";
     breadcrumb.innerHTML += "<a style='font-size:1em;' href='culturaldata.html'>Met.erials</a>";
     breadcrumb.innerHTML += "<a style='font-size:1.5em;' href='computationalart.html'>Epoch Runway</a>";
     breadcrumb.innerHTML += "<a style='font-size:1em' target=blank href='3milychu.github.io/mm-exercise'>Economic Stability Signatures</a>";
     breadcrumb.innerHTML += "<a style='font-size:1.5em' href='csmi.html'>CSMI Insights</a>";
     breadcrumb.innerHTML += "<a style='font-size:1em' href='isa-app.html'>Income Share Agreements App</a>";
     breadcrumb.innerHTML += "<a style='font-size:1.5em;' href='m4bl.html'>Movement for Black Lives</a>";
-    breadcrumb.innerHTML += "<a style='font-size:1em' href='about.html'>About</a>";
+    breadcrumb.innerHTML += "<a style='font-size:1em' href='flourishing.html'>Flourishing</a>";
+    breadcrumb.innerHTML += "<a style='font-size:1.5em' href='about.html'>About</a>";
 
 });
 
