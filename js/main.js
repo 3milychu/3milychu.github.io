@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
     var breadcrumb = document.getElementById("breadcrumb");
-    breadcrumb.innerHTML += "<a style='font-size:1.5em' href='https://github.com/3milychu/goodvibes.html'>Good Vibes</a>";
+    breadcrumb.innerHTML += "<a style='font-size:1.5em' href='https://github.com/3milychu/goodvibes'>Good Vibes</a>";
     breadcrumb.innerHTML += "<a style='font-size:1em' href='https://www.uplabs.com/posts/electricity-usage-data-visualization'>Electricity Tracking App</a>";
     breadcrumb.innerHTML += "<a style='font-size:1.5em' href='kmeansfashion.html'>Kairos</a>";
      breadcrumb.innerHTML += "<a style='font-size:1em' href='http://3milychu.github.io/algorithmic-fairness'>Is it impossible to be fair?</a>";
