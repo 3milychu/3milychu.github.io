@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-41817854-5"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-41817854-5');
+		</script>
+	<title>Visualizing Flourishing</title>
+	<meta property="og:image" content="https://3milychu.github.io/assets/epochrunway-cover.jpg">
+  	<link rel="image_src" href="https://3milychu.github.io/assets/epochrunway-cover.jpg">
+	<link rel="stylesheet" type="text/css" href="../styles.css">
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+</head>
+<body style="background-color:white;">
+
+<!-- Image lightbox -->
+	<div class="lightbox">
+		<div class="close">X</div>
+		<div class="lightbox-frame">
+		</div>
+	</div>
+
+<!-- responsive menu -->
+<div id="mySidenav" class="sidenav">
+	
+	<span style="cursor:pointer">
+	<a class="closebtn"onmouseover="closeNav()">&times;</a></span>
+	<a href="../index.html"><span id="name">3milychu</span></a>
+	<span style ="cursor:pointer" id="projects" onmouseover="openNav()">&#9776;</span>
+</div>
+
+<!-- Heading -->
+
+<div class="heading2" style="text-align:center;">
+	<h1>Visualizing Flourishing</h1>
+</div>
+
+<div class = "section-white">
+
+
+<!-- Post -->
+
+	<div class="post-media-single">
+		<div class="videoWrapper">
+			<iframe src="https://player.vimeo.com/video/386080273?background=1" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
+<!-- Heading -->
+
+<div class="heading2" style="text-align:center;padding-bottom:5%;">	
+	<a href="https://3milychu.github.io/flourishing/demo/index.html" target="new">
+		<div class="button" style="width:20%;margin:auto;padding:2%;">Launch Individual View</div>
+	</a>
+	<br><br>
+	<a href="https://3milychu.github.io/flourishing/demo-admin/index.html" target="new">
+		<div class="button" style="width:20%;margin:auto;padding:2%;">Launch Admin View</div>
+	</a>
+</div>
+
+
+<!-- Post -->
+<div style="background-color:#FCFCFF;padding-bottom:10%;">
+	<img width="100%;" style="margin-top:2%;padding-bottom:3%;" src="../assets/flourishing/1.png">
+	<img width="100%;" style="margin-top:2%;padding-bottom:3%;" src="../assets/flourishing/2.png">
+	<img width="100%;" style="margin-top:2%;padding-bottom:3%;" src="../assets/flourishing/3.png">
+	<img width="100%;" style="margin-top:2%;padding-bottom:3%;" src="../assets/flourishing/4.png">
+	<img width="100%;" style="margin-top:2%;padding-bottom:3%;" src="../assets/flourishing/5.png">
+</div>
+
+
+<!-- Post -->
+<div style="background-color:#F7F7F7;padding-top:5%;padding-bottom:5%">
+	<a href="https://3milychu.github.io/flourishing/demo/index.html" target="new">
+		<div class="button" style="width:20%;margin:auto;padding:2%;">Launch Individual View</div>
+	</a>
+	<br><br>
+	<a href="https://3milychu.github.io/flourishing/demo-admin/index.html" target="new">
+		<div class="button" style="width:20%;margin:auto;padding:2%;">Launch Admin View</div>
+	</a>
+</div>
+
+<!-- clear -->
+<div class="clear" style="color:#F7F7F7;background-color:#F7F7F7;">.
+</div>
+
+		<!-- Break -->
+		<div class="break">
+			<p>
+			<em>Organization</em>
+			<img class="lazy" style="width:30%;" data-src="https://adurolife.com/wp-content/uploads/2020/01/aduro-logo-2020-red.png">
+
+
+			<em>Tools</em>
+			
+
+			 <label>html/css/js</label> <label>d3.js</label>
+			</p>
+
+		</div>
+
+
+	    <!-- Related Links-->
+
+		<div class="post" id="footer-child">
+			<div class="breadcrumb" id="breadcrumb">
+			</div>
+		</div>
+
+
+<script src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/jquery.lazy.min.js"></script>
+<script>
+$(document).ready(function() { $(function() {
+	     $('.lazy').Lazy({
+        scrollDirection: 'vertical',
+        effect: 'fadeIn',
+        effectTime: 500,
+        threshold: 0,
+        visibleOnly: true,
+        onError: function(element) {
+            console.log('error loading ' + element.data('src'));
+        }
+    });
+	    });});
+
+
+// Image lightbox
+var img_list = [];
+var lightbox = document.querySelector('.lightbox');
+var lightbox_frame = document.querySelector('.lightbox-frame');
+var images = document.getElementsByTagName('img');
+var close = document.querySelector('.close');
+for(i=0;i<images.length;i++){
+	images[i].style.cursor="pointer";
+	images[i].setAttribute("id","pic"+[i]);
+	img_list.push(images[i].getAttribute("data-src"));
+	images[i].onclick=function() {
+		lightbox.style.display="block";
+		lightbox_frame.innerHTML="";
+		var src = this.src;
+		var img = document.createElement('img');
+		var parent_width = this.parentElement.offsetWidth;
+		var img_width = this.width;
+			if(img_width>parent_width){
+				img.style.width="100%";
+				img.style.marginTop="auto";
+				img.style.marginBottom="auto";
+			} else {
+				img.style.height="100%";
+				img.style.marginLeft="auto";
+				img.style.marginRight="auto";
+			}
+		img.style.display="block";
+		img.src=src;
+		lightbox_frame.append(img);
+	}
+}
+console.log(img_list);
+close.addEventListener("click", function() {
+	lightbox.style.display="none";
+})
+
+// On escape or close button, remove lightbox slider; get next image on right and left
+document.onkeydown = function(evt) {
+
+	evt = evt || window.event;
+	if(evt.keyCode ==27 ) {
+		lightbox.style.display= "none";
+	} else if (evt.keyCode == 39){
+		el = document.querySelector('.lightbox img')
+		currentImg = el.src;
+		// console.log(currentImg);
+		
+		var index = img_list.findIndex(img => img === currentImg)
+		var next = index+1;
+
+		var parent_width = el.parentElement.offsetWidth;
+		var img_width = el.width;
+			if(img_width>parent_width){
+				el.style.width="100%";
+				el.style.height="auto";
+				el.style.marginTop="auto";
+				el.style.marginBottom="auto";
+			} else {
+				el.style.height="100%";
+				el.style.width="auto";
+				el.style.marginLeft="auto";
+				el.style.marginRight="auto";
+			}
+		el.style.display="block";
+		nextSrc = img_list[next];
+		// console.log(next);
+		el.src = nextSrc;
+		
+	} else if (evt.keyCode == 37){
+		el = document.querySelector('.lightbox img')
+		currentImg = el.src;
+		console.log(currentImg);
+		
+		var index = img_list.findIndex(img => img === currentImg)
+		var next = index-1;
+		el.src = next;
+
+		var parent_width = el.parentElement.offsetWidth;
+		var img_width = el.width;
+			if(img_width>parent_width){
+				el.style.width="100%";
+				el.style.height="auto";
+				el.style.marginTop="auto";
+				el.style.marginBottom="auto";
+			} else {
+				el.style.height="100%";
+				el.style.width="auto";
+				el.style.marginLeft="auto";
+				el.style.marginRight="auto";
+			}
+		el.style.display="block";
+		nextSrc = img_list[next];
+		el.src = nextSrc;
+	}
+}
+</script>
+<script src="../js/d3.min.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>
