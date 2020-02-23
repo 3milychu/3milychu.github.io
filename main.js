@@ -22,7 +22,8 @@ function scrollSidebar() {
 				avatar.style.marginLeft=window.innerWidth/3 + 'px'
 				avatar.style.marginTop="0%"
 			} else {
-				avatar.style.marginLeft=window.innerWidth/1.19 + 'px'
+				avatar.style.marginRight="0%"
+				avatar.style.marginLeft="auto"
 				avatar.style.marginTop="0%"
 			}
 		}
@@ -32,12 +33,15 @@ function scrollSidebar() {
 			if (praxis.offsetTop-(window.innerHeight*.20) > window.pageYOffset){
 				avatar.style.marginTop="0%"
 				avatar.style.marginLeft="0%"
+				avatar.style.marginRight="0%"
 			} else if (contact.offsetTop-(window.innerHeight*.20) > window.pageYOffset) {
 				avatar.style.marginTop=window.innerHeight/3 + 'px'
 				avatar.style.marginLeft="0%"
+				avatar.style.marginRight="0%"
 			} else {
 				avatar.style.marginTop=window.innerHeight/1.38 + 'px'
 				avatar.style.marginLeft="0%"
+				avatar.style.marginRight="0%"
 			}
 		}
 	}

@@ -175,7 +175,7 @@ em {
 }
 @media screen and (max-width:550px){
 	h2 {
-		font-size:5em;
+		font-size:4em;
 		width:100%;
 	}
 	.section p {
@@ -199,5 +199,14 @@ em {
 	}
 	#detail {
 		width:100%;
+	}
+	#contact h3 {
+		margin:0%;
+		padding:0%;
+		font-size:0.8em;
+		line-height:0.5em;
+	}
+	#contact a {
+		background-color:transparent;
 	}
 }
