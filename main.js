@@ -6,15 +6,43 @@ close = document.querySelector('.fa')
 
 
 // scrolling avatar
-window.onscroll=function() {
-	if (praxis.offsetTop > window.pageYOffset){
-		avatar.style.marginTop="0%"
-	} else if (contact.offsetTop > window.pageYOffset) {
-		avatar.style.marginTop=window.innerHeight/3 + 'px'
+scrollSidebar()
+
+window.onresize=function() {
+	scrollSidebar()
+}
+
+function scrollSidebar() {
+	if(window.innerWidth<550){
+		window.onscroll=function() {
+			if (praxis.offsetTop-(window.innerHeight*.20) > window.pageYOffset){
+				avatar.style.marginLeft="0%"
+				avatar.style.marginTop="0%"
+			} else if (contact.offsetTop-(window.innerHeight*.20) > window.pageYOffset) {
+				avatar.style.marginLeft=window.innerWidth/3 + 'px'
+				avatar.style.marginTop="0%"
+			} else {
+				avatar.style.marginLeft=window.innerWidth/1.19 + 'px'
+				avatar.style.marginTop="0%"
+			}
+		}
+
 	} else {
-		avatar.style.marginTop=window.innerHeight/1.38 + 'px'
+		window.onscroll=function() {
+			if (praxis.offsetTop-(window.innerHeight*.20) > window.pageYOffset){
+				avatar.style.marginTop="0%"
+				avatar.style.marginLeft="0%"
+			} else if (contact.offsetTop-(window.innerHeight*.20) > window.pageYOffset) {
+				avatar.style.marginTop=window.innerHeight/3 + 'px'
+				avatar.style.marginLeft="0%"
+			} else {
+				avatar.style.marginTop=window.innerHeight/1.38 + 'px'
+				avatar.style.marginLeft="0%"
+			}
+		}
 	}
 }
+
 
 // praxis links
 links = praxis.querySelectorAll('h2')

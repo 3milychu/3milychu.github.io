@@ -30,7 +30,7 @@ body, html {
 	margin-left:-15%;
 }
 .section {
-	min-height:100vh;
+	min-height:90vh;
 }
 
 .section h1 {
@@ -119,9 +119,15 @@ em {
 }
 #detail {
 	position:fixed;
+	right:0;
+	width:80%;
+	height:100vh;
 	margin-top:100vh;
-	transition:0.25s ease-in-out;
+	transition:0.5s ease-in-out;
 	background-color:white;
+}
+#detail h1 {
+	color:#262424;
 }
 #detail .content {
 	text-align:center;
