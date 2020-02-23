@@ -1,0 +1,183 @@
+body, html {
+	font-family:'Zilla Slab', sans-serif;
+	width:100%;
+	top:0;
+	left:0;
+	margin:0;
+	color:#101010;
+	background-color:#262424;
+	height:100%;
+}
+
+.sidebar {
+	width:12em;
+	height:100vh;
+	border: 1em solid #FFFFFF;
+	box-sizing: border-box;
+	border-radius: 10em;
+	position:fixed;
+}
+
+.avatar {
+	border-radius:50%;
+	width:10em;
+	height:10em;
+	overflow:hidden;
+	transition:0.25s ease-in-out;
+}
+.avatar img {
+	width:150%;
+	margin-left:-15%;
+}
+.section {
+	min-height:100vh;
+}
+
+.section h1 {
+	font-size:2em;
+	font-weight:200;
+	color:white;
+}
+
+.section p {
+	font-weight:200;
+	font-size:5em;
+	line-height:0.8em;
+	letter-spacing:-0.05em;
+}
+
+.section .content {
+	margin:5% 0%;
+	width:80%;
+	float:right;
+}
+
+#about {
+	background-color:#FC264C;
+}
+#praxis {
+	background-color:#262424;
+	height:100%;
+}
+#contact {
+	background-color:#FC264C;
+}
+#praxis .content {
+	margin:5% 0%;
+}
+h2 {
+	color:white;
+	font-size:10em;
+	letter-spacing:-0.1em;
+	line-height:0.5em;
+	margin:0%;
+	font-weight:200;
+	cursor:pointer;
+	transition:0.25s ease-in-out;
+}
+h2 i {
+	opacity:0;
+	border: 0.05em solid white;
+    border-radius: 50%;
+    font-size: 0.2em;
+    padding: 2% 4% 1% 1%;
+    margin: 0% 4%;
+    transition:0.25s ease-in-out;
+}
+h2:hover {
+	color:#FC264C;
+}
+h2:hover i {
+	opacity:1;
+}
+h3 {
+	width:fit-content;
+	padding:2%;
+	font-weight:200;
+	font-size:1em;
+	line-height:0.2em;
+	margin:0%;
+	padding:0%;
+	cursor:pointer;
+}
+h3 i {
+	opacity:0;
+	color:white;
+	vertical-align: middle;
+	font-size:2em!important;
+    transition:0.25s ease-in-out;
+}
+h3:hover {
+	border-bottom:0.2em solid white;
+}
+h3:hover i {
+	opacity:1;
+}
+em {
+	font-style:normal;
+	font-weight:800;
+}
+#detail {
+	position:fixed;
+	margin-top:100vh;
+	transition:0.25s ease-in-out;
+	background-color:white;
+}
+#detail .content {
+	text-align:center;
+}
+.fa {
+	margin: auto;
+    text-align: center;
+    font-size: 1.5em;
+    border: 0.05em solid #262424;
+    padding: 0.5em 0.8em;
+    border-radius: 50%;
+    cursor: pointer;
+    transition:0.25s ease-in-out;
+}
+.fa:hover {
+	background-color:#262424;
+	color:white;
+}
+
+@media screen and (max-width:900px){
+	.sidebar {
+		width:5em;
+	}
+	.avatar {
+		width:3em;
+		height:3em;
+	}
+	h2 {
+		font-size:7em;
+	}
+}
+@media screen and (max-width:550px){
+	h2 {
+		font-size:5em;
+		width:100%;
+	}
+	.section p {
+		font-size:4em;
+		width:90%;
+	}
+	.section .content {
+		margin: 5% 10%;
+   		width: 80%;
+    	float: left
+	}
+	.sidebar {
+		width:100%;
+		height:5em;
+		bottom:5%;
+	}
+	#praxis .content {
+		margin: 5% 10%;
+   		width: 80%;
+    	float: left
+	}
+	#detail {
+		width:100%;
+	}
+}
