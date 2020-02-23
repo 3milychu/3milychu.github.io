@@ -130,12 +130,13 @@ em {
 	color:#262424;
 }
 #detail .content {
+	width:100%;
 	text-align:center;
 }
 .fa {
 	margin: auto;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 3em!important;
     border: 0.05em solid #262424;
     padding: 0.5em 0.8em;
     border-radius: 50%;
