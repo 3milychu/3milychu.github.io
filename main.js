@@ -60,15 +60,30 @@ links[1].onclick=function() {
 	detail.style.marginTop='0vh'
 	detail.style.top='0%'
 	h1 = detail.querySelector('h1')
-	h1.innerHTML='Experiments'
+	h1.innerHTML='Research'
 	p = detail.querySelector('p')
-	p.innerHTML='Coming Soon'
+	p.innerHTML="<div class='list'><h3>Text clustering</h3><div class='item'><em>Semantic Dive</em>Interface for visualizing and exploring semantic relationships in text corpuses with researchers from Parsons faculty</div></div>"
+	p.innerHTML+="<div class='list'><h3>Real-time audience collection and visualization</h3><div class='item'><em>Live audience sentiment visualization</em>Interface & visualization of real-time audience sentiment during an event</div></div>"
+	p.innerHTML+="<div class='list'><h3>Data sonification</h3><div class='item'><em>Criminal</em>Interface & sonification of compas verdicts by ProPublica</div></div>"
+	a = detail.querySelector('#link')
+	a.innerHTML=""
 	close.onclick=function() {
 			detail.style.marginTop='100vh'
 	}
 }
 links[2].onclick=function() {
-	window.open('https://www.newschool.edu/parsons/faculty/emily-chu/', '_blank')
+	detail.style.marginTop='0vh'
+	detail.style.top='0%'
+	h1 = detail.querySelector('h1')
+	h1.innerHTML='Courses'
+	p = detail.querySelector('p')
+	p.innerHTML="<div class='list'><h3>Spring 2020</h3><div class='item'>Core Interaction Studio, BFA Communication Design</div><div class='item'>Information Visualization, BAA Strategic Design & Management</div><div class='item'>Graphic Design: Visual Storytelling, Open Campus</div></div><div class='list'><h3>Summer 2020</h3><div class='item'>Web Development II, Open Campus</div></div><div class='list'><h3>Fall 2020</h3><div class='item'>Information Visualization - Online, BAA Strategic Design & Management</div></div><div class='list'><h3>Spring 2021</h3><div class='item'>Research & Development Methods, BAA Strategic Design & Management</div></div>"
+	a = detail.querySelector('#link')
+	a.href='https://www.newschool.edu/parsons/faculty/emily-chu/'
+	a.innerHTML="@ Parsons School of Design"
+	close.onclick=function() {
+			detail.style.marginTop='100vh'
+	}
 }
 links[3].onclick=function() {
 	detail.style.marginTop='0vh'
@@ -76,7 +91,12 @@ links[3].onclick=function() {
 	h1 = detail.querySelector('h1')
 	h1.innerHTML='Talks'
 	p = detail.querySelector('p')
-	p.innerHTML='Coming Soon'
+	p.innerHTML="<div class='list'><h3>Upcoming</h3><div class='item'><em>TBD</em><a target ='_blank' href=''>Visualizing shared musical experience @ SXSW, Online</a></div></div>"
+	p.innerHTML+="<div class='list'><h3>Past</h3><div class='item'><em>3/23/2020</em><a target ='_blank' href='https://www.crowdcast.io/e/women-in-data-science/register'>Notes on Perspective @ IBM</a></div><div class='item'><em>10/3/2020</em><a target ='_blank' href='https://www.eventbrite.com/e/advance-your-data-career-lightning-talks-and-breakout-sessions-tickets-64644410171#'>Data Analysis in Healthcare @ IBM</a></div><div class='item'><em>6/7/2020</em><a href='https://www.aigany.org/event/fresh-grad-2019-part-2/'>Notes on Perspective @ AIGA NY</a></div></div>"
+	a = detail.querySelector('#link')
+	console.log(a)
+	a.href= ''
+	a.innerHTML=""
 	close.onclick=function() {
 			detail.style.marginTop='100vh'
 	}

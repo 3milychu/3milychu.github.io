@@ -45,7 +45,46 @@ body, html {
 	line-height:0.8em;
 	letter-spacing:-0.05em;
 }
-
+#detail .list {
+	margin: 2% 0%;
+}
+#detail h3 {
+	text-align:left;
+	font-size:1.5em;
+	line-height:1em;
+	font-weight:900;
+}
+#detail p {
+	width:90%;
+	font-size:1em;
+	line-height:1em;
+	padding:0% 5%;
+}
+#detail .item {
+	font-size:1em;
+	line-height:1em;
+	font-weight:400;
+	text-align:left;
+}
+.item em {
+	font-weight:400;
+	font-style:italic;
+	margin-right:2%;
+}
+#detail a {
+	display: block;
+    text-align: left;
+    font-style: normal;
+    color: #FC264C;
+    width: fit-content;
+    margin: 5%;
+    letter-spacing: -0.05em;
+    font-weight: 200
+}
+.item a {
+	display:inline-block!important;
+	margin:0%!important;
+}
 .section .content {
 	margin:5% 0%;
 	width:80%;
@@ -175,8 +214,11 @@ em {
 }
 @media screen and (max-width:550px){
 	h2 {
-		font-size:4em;
+		font-size:7em;
 		width:100%;
+	}
+	h2 i {
+		padding: 2% 5% 1% 2%;
 	}
 	.section p {
 		font-size:4em;
@@ -199,6 +241,9 @@ em {
 	}
 	#detail {
 		width:100%;
+	}
+	#detail .content {
+		width:80%;
 	}
 	#contact h3 {
 		margin:0%;
