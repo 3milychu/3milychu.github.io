@@ -91,7 +91,7 @@ links[3].onclick=function() {
 	h1 = detail.querySelector('h1')
 	h1.innerHTML='Talks'
 	p = detail.querySelector('p')
-	p.innerHTML="<div class='list'><h3>Upcoming</h3><div class='item'><em>TBD</em><a target ='_blank' href=''>Visualizing shared musical experience @ SXSW, Online</a></div></div>"
+	p.innerHTML="<div class='list'><h3>Upcoming</h3><div class='item'><em>TBD</em><a target ='_blank' href='https://schedule.sxsw.com/2020/events/PP1128191'>Visualizing shared musical experience @ SXSW, Online</a></div></div>"
 	p.innerHTML+="<div class='list'><h3>Past</h3><div class='item'><em>3/23/2020</em><a target ='_blank' href='https://www.crowdcast.io/e/women-in-data-science/register'>Notes on Perspective @ IBM</a></div><div class='item'><em>10/3/2020</em><a target ='_blank' href='https://www.eventbrite.com/e/advance-your-data-career-lightning-talks-and-breakout-sessions-tickets-64644410171#'>Data Analysis in Healthcare @ IBM</a></div><div class='item'><em>6/7/2020</em><a href='https://www.aigany.org/event/fresh-grad-2019-part-2/'>Notes on Perspective @ AIGA NY</a></div></div>"
 	a = detail.querySelector('#link')
 	console.log(a)
