@@ -18,17 +18,23 @@ window.onresize=function() {
 function scrollSidebar() {
 	if(window.innerWidth<550){
 		window.onscroll=function() {
-			if (praxis.offsetTop-(window.innerHeight*.20) > window.pageYOffset){
-				avatar.style.marginLeft="0%"
-				avatar.style.marginTop="0%"
-			} else if (contact.offsetTop-(window.innerHeight*.20) > window.pageYOffset) {
-				avatar.style.marginLeft=window.innerWidth/3 + 'px'
-				avatar.style.marginTop="0%"
+			position = window.scrollY
+			width = document.documentElement.scrollHeight - document.documentElement.clientHeight
+			console.log(position, width)
+			percent = position/width
+			rect = sidebar.getBoundingClientRect();
+			sidebar_w = rect.width - avatar.clientWidth
+			border = parseFloat(getComputedStyle(sidebar).borderWidth);
+			console.log(border)
+			console.log(sidebar_w)
+			console.log(percent, d3.format(".0%")(percent))
+			avatar.style.marginTop="0%"
+			if (percent < .90){
+				avatar.style.marginLeft= (percent * sidebar_w)  + "px"
 			} else {
-				avatar.style.marginRight="0%"
-				avatar.style.marginLeft="auto"
-				avatar.style.marginTop="0%"
+				avatar.style.marginLeft= (percent * sidebar_w) - (border*2)  + "px"
 			}
+			
 		}
 
 	} else {
