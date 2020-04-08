@@ -23,7 +23,7 @@ body, html {
 	width:10em;
 	height:10em;
 	overflow:hidden;
-	transition:0.25s ease-in-out;
+	transition:0.25s linear;
 }
 .avatar img {
 	width:150%;
