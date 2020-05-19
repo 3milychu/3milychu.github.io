@@ -760,25 +760,19 @@ function secretMessage() {
             name = document.querySelector('input[name="name"]').value;
             name = name.toLowerCase();
             console.log(name);
-            if(name == "toni best"){
-                document.body.style.zoom = 1.0;
-                secret.innerHTML="";
-                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi Toni,</h2><h3>Thank you for everything<br><br>Emily</h3></div>"
-                console.log("secret message sent");
-                closeMessage();
-            } else if(name == "anu addanki"){
-                document.body.style.zoom = 1.0;
-                secret.innerHTML="";
-                secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi Anu,</h2><h3>Happy holidays<br><br>Emily</h3></div>"
-                console.log("secret message sent");
-                closeMessage();
-            } else {
+            // if(name == ""){
+            //     document.body.style.zoom = 1.0;
+            //     secret.innerHTML="";
+            //     secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi,</h2><h3>_____<br><br>Emily</h3></div>"
+            //     console.log("secret message sent");
+            //     closeMessage();
+            // } else {
                 document.body.style.zoom = 1.0;
                 secret.innerHTML="";
                 secret.innerHTML="<div class='center_form'><div class='close' id='close_message'>X</div><h2>Hi " + toTitleCase(name) + ",</h2><h3>Hope you find something you like and enjoy your day! :) <br><br>Emily</h3></div>"
                 console.log("secret message sent");
                 closeMessage();
-            }
+            // }
     });
 };
 
