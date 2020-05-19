@@ -3,7 +3,10 @@ document.addEventListener('DOMContentLoaded', function(){
     // alert("Ready");
 
     var sideNav = document.getElementById("mySidenav");
+    // sideNav.innerHTML += "<a href='https://3milychu.github.io/index.html'>Home</a>";
+    // sideNav.innerHTML += "<a href='https://3milychu.github.io/pages/collabs.html'>Collaborations</a>";
     sideNav.innerHTML += "<a href='https://3milychu.github.io/pages/about.html'>About</a>";
+    // sideNav.innerHTML += "<a href='https://3milychu.github.io/pages/philosophy.html'>Process</a>";
     sideNav.innerHTML += "<a href='https://linkedin.com/in/3milychu' target='_blank'>LinkedIn</a>";
 
 
@@ -13,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function(){
     breadcrumb.innerHTML += "<a style='font-size:1.5em' href='kmeansfashion.html'>Kairos</a>";
      breadcrumb.innerHTML += "<a style='font-size:1em' href='http://3milychu.github.io/algorithmic-fairness'>Is it impossible to be fair?</a>";
     breadcrumb.innerHTML += "<a style='font-size:1.5em' href='notesonperspective.html'>Notes on Perspective</a>";
+    breadcrumb.innerHTML += "<a style='font-size:1em' href='higgy.html'>Higgy</a>";
     breadcrumb.innerHTML += "<a style='font-size:1.5em' href='visualvariables.html'>Visualize Uncertainty</a>";
     breadcrumb.innerHTML += "<a style='font-size:1em' href='kmeansfashion.html'>Forms of Attraction</a>";
     breadcrumb.innerHTML += "<a style='font-size:1.5em' href='rds-sql-node.html'>Meeting Planner</a>";
