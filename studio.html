@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>emily's projects</title>
+	<title>studio</title>
 	<link href="https://fonts.googleapis.com/css?family=Zilla+Slab:200,400,600,700&display=swap" rel="stylesheet">
 	<meta name="description" content="emily is a data & interaction designer">
 	<link rel="stylesheet" type="text/css" href="style-home.css">
@@ -65,8 +65,7 @@ h2:hover {
 }
 </style>
 <body>
-
-<h2>projects</h2>
+<h2>studio</h2>
 
 <a href="nop-full.html">
 <div class='holder'>
@@ -110,6 +109,8 @@ h2:hover {
 <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js?ver=1.3.2'></script>
 <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js'></script>
 <script type="text/javascript">
+detect()
+
 window.onresize=function() {
 	detect()
 }
@@ -118,9 +119,10 @@ function detect() {
 	if(window.innerWidth>767){
 		horizontal()
 	} else {
-		location.reload()
+		reloadPage();
 	}
 }
+
 
 function horizontal() {
 	$(document).ready(function() {
@@ -130,5 +132,21 @@ function horizontal() {
 	});
 	});
 }
+
+function reloadPage() {
+// The last "domLoading" Time //
+var currentDocumentTimestamp =
+new Date(performance.timing.domLoading).getTime();
+// Current Time //
+var now = Date.now();
+// Ten Seconds //
+var tenSec = 10 * 1000;
+// Plus Ten Seconds //
+var plusTenSec = currentDocumentTimestamp + tenSec;
+if (now > plusTenSec) {
+location.reload();
+} else {}
+}
+
 </script>
 </html>

@@ -67,7 +67,7 @@ console.log(links)
 
 links[0].onclick=function() {
 	console.log('open')
-	window.open('projects.html', '_blank')
+	window.open('studio.html', '_blank')
 }
 links[1].onclick=function() {
 	detail.style.marginTop='0vh'
