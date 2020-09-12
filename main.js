@@ -29,10 +29,14 @@ function scrollSidebar() {
 			console.log(sidebar_w)
 			console.log(percent, d3.format(".0%")(percent))
 			avatar.style.marginTop="0%"
+			rotation="rotate("+Math.round(percent*300)+"deg);"
+			console.log(rotation)
 			if (percent < .90){
 				avatar.style.marginLeft= (percent * sidebar_w)  + "px"
+				avatar.style.transform=rotation
 			} else {
 				avatar.style.marginLeft= (percent * sidebar_w) - (border*2)  + "px"
+				avatar.style.transform=rotation
 			}
 			
 		}
@@ -48,12 +52,16 @@ function scrollSidebar() {
 			border = parseFloat(getComputedStyle(sidebar).borderWidth);
 			console.log(border)
 			console.log(sidebar_h)
-			console.log(percent, d3.format(".0%")(percent))
+			console.log(percent, d3.format(".0%")(percent), percent*300)
 			avatar.style.marginLeft="0%"
+			rotation="rotate("+Math.round(percent*300)+"deg);"
+			console.log(rotation)
 			if (percent < .90){
 				avatar.style.marginTop= (percent * sidebar_h)  + "px"
+				avatar.style.transform=rotation
 			} else {
 				avatar.style.marginTop= (percent * sidebar_h) - (border*2)  + "px"
+				avatar.style.transform=rotation
 			}
 			
 		}
