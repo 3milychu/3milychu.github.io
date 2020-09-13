@@ -28,14 +28,22 @@ body, html {
     line-height:0em;
 }
 iframe, img, .videoWrapper {
-	text-align:center;
+	vertical-align:top;
 	top:0;
 	left:0;
 	width:90%;
-	height:auto;
-	margin:0%;
+	height:100vh;
+	margin:-0.5%;
 	padding:0%;
 	display:inline-block;
+		transition:0.5s ease-in-out;
+	-ms-interpolation-mode: bicubic;
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+	  filter: gray; /* IE6-9 */
+	  -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+}
+img:hover {
+	filter:none;
 }
 .vertical {
 	vertical-align:top;
@@ -84,18 +92,13 @@ a h2:hover {
 h2:hover {
 	color:white;
 }
-.text {
-	vertical-align:top;
-	padding-left: 20%;
-	width:100%;
-}
 a{
 	text-decoration:none;
 }
 .text h2 {
 	margin-top: 20%;
     white-space: normal;
-    width: 50%;
+    width: 80%;
 	color:white;
 	opacity:50%;
 }
@@ -104,7 +107,51 @@ a{
 	opacity:80%;
 	box-shadow:0em 0em 7em #f2f2f2 0.5;
 }
+
+.text {
+	position:relative;
+	vertical-align:top;
+	padding:0% 20%;
+	width:50%;
+	white-space: normal;
+	height:100vh;
+	display:flex;
+	text-align:left;
+	justify-content:center;
+	align-items:center;
+	color:#FC264C;
+	opacity:45%;
+}
+.text h1 {
+	line-height:initial;
+	background-color:transparent;
+}
+#first {
+	width:80%;
+}
+#first p {
+	padding:0% 5%;
+}
+.marquee {
+	animation: marquee 30s linear infinite;
+}
+@keyframes marquee {
+	0% {
+		opacity:0;
+		margin-bottom:-200vh;
+	}
+	5%{
+		opacity:1;
+	}
+	100% {
+		opacity:1;
+		margin-bottom:250vh;
+	}
+}
 @media screen and (max-width:767px){
+	body, html {
+			overflow-y:scroll;
+	}
 	iframe, img, .videoWrapper {
 		width: 100%;
 		height: auto;
@@ -113,9 +160,14 @@ a{
 	}
 	.vertical {
 		width:100%;
+		display:block;
 	}
 	#first {
-		margin-top:30%;
+		width:100%;
+	}
+	.marquee {
+		animation:none;
+		display:block;
 	}
 }
 </style>
@@ -123,26 +175,44 @@ a{
 
 <div class='fixed'>
 <a href="studio.html"><h2 style='display:inline-block'> < </h2></a><h2 style='display:inline-block'>notes on perspective</h2>
-<h1>Visualizing audience response to a live musical performance in real-time</h1>
+<!-- <h1>Visualizing audience response to a live musical performance in real-time</h1> -->
 </div>
 
 <div class='section'>
 
-<img id='first' src="assets/nop-live.jpeg">
+<div class='vertical' id="first">
+	<div class='text'>
+		<h1>Notes on Perspective Live</h1>
+		<p>Visualizing audience responses during live musical performances</p>
+	</div>
+</div>
 
 <img class='vertical' src="assets/nop-live2.jpg">
 
-<div class="videoWrapper">
-	<iframe src="https://player.vimeo.com/video/420173362" width="360" height="315" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+<img src="assets/nop-live.jpeg">
+
+<a href="https://player.vimeo.com/video/420173362" target="_blank">
+	<img src="assets/noplive-video.png">
+</a>
+
+<div class='vertical' id="first">
+	<div class='text'>
+		<h1>Original design</h1>
+		<p class='marquee'>Interface mapping of survey data taken from a Mannes School of Music musical critique by researchers Michael Schober and Neta Spiro</p>
+	</div>
 </div>
+
+<a href="https://3milychu.github.io/notesonperspective" target='_blank'>
+	<img src="assets/nop-cover2.png">
+</a>
 
 <a href="https://3milychu.github.io/notesonperspective" target='_blank'>
 	<img src="assets/nop-cover.png">
 </a>
 
-<div class="videoWrapper">
-	<iframe width="360" height="315" src="https://www.youtube.com/embed/KaL8bF-1SSM?start=727&mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+<a href="https://www.youtube.com/embed/KaL8bF-1SSM?start=727&mute=1" target="_blank">
+	<img src="assets/nop-video.png">
+</a>
 
 <div class='vertical'>
 	<div class='text'>
@@ -155,10 +225,9 @@ a{
 </div>
 
 </body>
-	<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js?ver=1.3.2'></script>
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js?ver=1.3.2'></script>
 <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js'></script>
 <script type="text/javascript">
-
 detect()
 
 window.onresize=function() {
