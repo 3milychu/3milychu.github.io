@@ -98,7 +98,7 @@ links[2].onclick=function() {
 	h1 = detail.querySelector('h1')
 	h1.innerHTML='Courses'
 	p = detail.querySelector('p')
-	p.innerHTML="<div class='list'><h3>Spring 2020</h3><div class='item'>Core Interaction Studio, BFA Communication Design</div><div class='item'>Information Visualization, BAA Strategic Design & Management</div><div class='item'>Graphic Design: Visual Storytelling, Open Campus</div></div><div class='list'><h3>Summer 2020</h3><div class='item'>Web Development II, Open Campus</div></div><div class='list'><h3>Fall 2020</h3><div class='item'>Information Visualization - Online, BAA Strategic Design & Management</div></div><div class='list'><h3>Spring 2021</h3><div class='item'>Research & Development Methods, BAA Strategic Design & Management</div></div>"
+	p.innerHTML="<div class='list'><h3>Ongoing</h3><div class='item'>Information Design for Infographics and Visual Storytelling - Online, Open Campus</div></div><div class='list'><h3>Fall 2020</h3><div class='item'>Information Visualization - Online, BAA Strategic Design & Management</div><div class='item'>CD Foundations: Interaction - Online, BFA Communication Design</div></div><div class='list'><h3>Spring 2021</h3><div class='item'>Research & Development Methods, BAA Strategic Design & Management</div></div>"
 	a = detail.querySelector('#link')
 	a.href='https://www.newschool.edu/parsons/faculty/emily-chu/'
 	a.innerHTML="@ Parsons School of Design"
@@ -112,8 +112,8 @@ links[3].onclick=function() {
 	h1 = detail.querySelector('h1')
 	h1.innerHTML='Talks'
 	p = detail.querySelector('p')
-	p.innerHTML="<div class='list'><h3>Upcoming</h3><div class='item'><em>TBD</em><a target ='_blank' href='https://schedule.sxsw.com/2020/events/PP1128191'>Visualizing shared musical experience @ SXSW, Online</a></div></div>"
-	p.innerHTML+="<div class='list'><h3>Past</h3><div class='item'><em>3/23/2020</em><a target ='_blank' href='https://www.crowdcast.io/e/women-in-data-science/register'>Notes on Perspective @ IBM</a></div><div class='item'><em>10/3/2019</em><a target ='_blank' href='https://www.eventbrite.com/e/advance-your-data-career-lightning-talks-and-breakout-sessions-tickets-64644410171#'>Data Analysis in Healthcare @ IBM</a></div><div class='item'><em>6/7/2019</em><a href='https://www.aigany.org/event/fresh-grad-2019-part-2/'>Notes on Perspective @ AIGA NY</a></div></div>"
+	p.innerHTML="<div class='list'><h3>Upcoming</h3><div class='item'><em>12/7/2020</em><a target ='_blank' href='https://www.womenindata.org/dataart'>Designing Audioreactive Visualizations: Creating art from music data, Data + Art @ Women in Data</a></div></div>"
+	p.innerHTML+="<div class='list'><h3>Past</h3><div class='item'><em>Summer 2020</em><a target ='_blank' href='https://schedule.sxsw.com/2020/events/PP1128191'>Visualizing shared musical experience @ SXSW 2020, Online</a></div><div class='item'><em>3/23/2020</em><a target ='_blank' href='https://www.crowdcast.io/e/women-in-data-science/register'>Notes on Perspective @ IBM</a></div><div class='item'><em>10/3/2019</em><a target ='_blank' href='https://www.eventbrite.com/e/advance-your-data-career-lightning-talks-and-breakout-sessions-tickets-64644410171#'>Data Analysis in Healthcare @ IBM</a></div><div class='item'><em>6/7/2019</em><a href='https://www.aigany.org/event/fresh-grad-2019-part-2/'>Notes on Perspective @ AIGA NY</a></div></div>"
 	a = detail.querySelector('#link')
 	console.log(a)
 	a.href= ''
