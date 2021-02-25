@@ -8,17 +8,27 @@
 </head>
 <style type="text/css">
 body, html {
-font-family:'Zilla Slab', sans-serif;
-width:100%;
-top:0;
-left:0;
-margin:0;
-color:#101010;
-/*background-color:#FC264C;*/
-/*background-color:#262424;*/
-height:100%;
-overflow-x:none;
+	font-family:'Zilla Slab', sans-serif;
+	width:100%;
+	top:0;
+	left:0;
+	margin:0;
+	color:#101010;
+	/*background-color:#FC264C;*/
+	/*background-color:#262424;*/
+	height:100%;
+	overflow-x:none;
     margin-bottom:20em;
+    animation: fade 1s ease-in-out;
+}
+
+@keyframes fade {
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
 }
 h2 {
 	color:#FC264C;

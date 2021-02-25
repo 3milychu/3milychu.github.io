@@ -19,7 +19,16 @@ body, html {
     white-space:nowrap;
     letter-spacing: 0em;
     line-height:0em;
+    animation: fade 1s ease-in-out;
+}
 
+@keyframes fade {
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
 }
 h2 {
 	color:white;
@@ -56,6 +65,26 @@ h2:hover {
 	color:white;
 }
 
+#name {
+	font-size:1.2em;
+	font-weight:700;
+	position:fixed;
+	right:0;
+	z-index:100;
+	margin:2%;
+	border:0.3em solid #FC264C;
+	padding:2% 1%;
+	width:fit-content;
+	background-color:white;
+	backdrop-filter: blur(5em);
+	transition:0.25s;
+	cursor:pointer;
+}
+#name:hover {
+	background-color:#FC264C;
+	color:white;
+}
+
 @media screen and (max-width:767px){
 	.holder, img {
 		cursor:pointer;
@@ -70,6 +99,9 @@ h2:hover {
 </style>
 <body>
 <h2>studio</h2>
+
+<h3 id='name' data-scroll-sticky data-scroll-target='#intro' onclick="location.href='index.html';">emily chu</h3>
+
 
 <a href="codex.html">
 <div class='holder'>
