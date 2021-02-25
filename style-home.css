@@ -91,6 +91,23 @@ body, html {
 	width:80%;
 	float:right;
 }
+#about a {
+	text-align:center;
+	text-decoration:none;
+    font-style: normal;
+    color: #262424;
+    width: fit-content;
+    letter-spacing: -0.05em;
+    font-weight: 200;
+    transition:0.25s;
+    margin:2%;
+    padding:0.5% 2%;
+    border:0.2em solid #262424;
+}
+#about a:hover {
+	background-color:#FC264C;
+	color:white;
+}
 #about {
 	background-color:#FC264C;
 }
