@@ -132,4 +132,7 @@ mails[0].onclick=function() {
 mails[1].onclick=function() {
 	window.open('mailto:chue134@newschool.edu', '_blank')
 }
+mails[2].onclick=function() {
+	window.open('mailto:3milychu@gmail.com', '_blank')
+}
 
