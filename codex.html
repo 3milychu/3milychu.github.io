@@ -164,5 +164,11 @@ img {
 	  el: document.querySelector('[data-scroll-container]'),
 	  smooth: true
 	});
+
+	if(window.innerWidth<550){
+		targets= document.querySelectorAll('data-scroll-section')
+		targets.forEach(item => 
+			item.style.paddingBottom='5em!important'
+			)}
 </script>
 </html>
