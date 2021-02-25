@@ -118,47 +118,47 @@ iframe {
 
 	<div data-scroll-section class='spacer'></div>
 
-	<div data-scroll-section>
+	<div data-scroll-section id='freep'>
 		<div data-scroll data-scroll-speed='2'  data-scroll-repeat='true'>
 			<img src="assets/art/attractor1.png">
-			<div class='text'>
+			<div class='text' data-scroll-direction="horizontal" >
 				<h3>Evolution of a Free Particle in Nth-dimension</h3>
 				<a href="https://www.instagram.com/p/CB_Wb3fn9-k/">View audiovisual</a>
 			</div>
 		</div>
 	</div>
 
-	<div data-scroll-section>
+	<div data-scroll-section id='fundamentals'>
 		<div data-scroll data-scroll-speed='1'  data-scroll-repeat='true' data-scroll-delay='1'>
 			<iframe src="https://player.vimeo.com/video/516798319" width="640" height="419" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-			<div class='text'>
+			<div class='text' data-scroll-direction="horizontal" >
 				<h3>Fundamentals</h3>
 				<!-- <a href="https://www.instagram.com/reel/CFqO_-VnO4_/">View clip</a> -->
 			</div>
 		</div>
 	</div>
 
-	<div data-scroll-section>
+	<div data-scroll-section id='serial'>
 		<div data-scroll data-scroll-speed='2' data-scroll-repeat='true'>
 			<img src="assets/art/serial1.jpeg">
-			<div class='text'>
+			<div class='text' data-scroll-direction="horizontal" >
 				<h3>Serial</h3>
 				<a href="https://www.instagram.com/p/CATay1wH6Lj/">View audiovisual</a>
 			</div>
 		</div>
 	</div>
 
-	<div data-scroll-section>
+	<div data-scroll-section id='ribbons'>
 		<div data-scroll data-scroll-speed='1'  data-scroll-repeat='true'>
 			<img src="assets/art/ribbons.jpeg">
-			<div class='text'>
+			<div class='text' data-scroll-direction="horizontal">
 				<h3>Ribbons</h3>
 				<a href="https://www.instagram.com/p/B_dd2o5HK-5/">View audiovisual</a>
 			</div>
 		</div>
 	</div>
 
-	<div data-scroll-section>
+	<div data-scroll-section id='snoflae'>
 		<div data-scroll data-scroll-speed='2' data-scroll-repeat='true'>
 			<img src="assets/art/snoflae.jpeg">
 			<div class='text'>
@@ -168,7 +168,7 @@ iframe {
 		</div>
 	</div>
 
-		<div data-scroll-section>
+		<div data-scroll-section id='sandstorm'>
 		<div data-scroll data-scroll-speed='1' data-scroll-repeat='true'>
 			<img src="assets/art/sandstorm1.jpeg">
 			<div class='text'>
@@ -183,7 +183,9 @@ iframe {
 
 </body>
 <script type="text/javascript">
-	const scroller = new LocomotiveScroll({
+body = document.querySelector('body')
+body.onload=function() {
+		const scroller = new LocomotiveScroll({
 	  el: document.querySelector('[data-scroll-container]'),
 	  smooth: true
 	});
@@ -193,5 +195,7 @@ iframe {
 		targets.forEach(item => 
 			item.style.paddingBottom='5em!important'
 			)}
+
+}
 </script>
 </html>
