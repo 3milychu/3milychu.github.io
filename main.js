@@ -77,7 +77,13 @@ links[0].onclick=function() {
 	console.log('open')
 	window.location.replace('studio.html')
 }
+
 links[1].onclick=function() {
+	console.log('open')
+	window.location.replace('product.html')
+}
+
+links[2].onclick=function() {
 	detail.style.marginTop='0vh'
 	detail.style.top='0%'
 	h1 = detail.querySelector('h1')
@@ -92,7 +98,7 @@ links[1].onclick=function() {
 			detail.style.marginTop='100vh'
 	}
 }
-links[2].onclick=function() {
+links[3].onclick=function() {
 	detail.style.marginTop='0vh'
 	detail.style.top='0%'
 	h1 = detail.querySelector('h1')
@@ -106,7 +112,7 @@ links[2].onclick=function() {
 			detail.style.marginTop='100vh'
 	}
 }
-links[3].onclick=function() {
+links[4].onclick=function() {
 	detail.style.marginTop='0vh'
 	detail.style.top='0%'
 	h1 = detail.querySelector('h1')
