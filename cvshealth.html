@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> 
+		<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Zilla+Slab:200,400,600,700&display=swap" rel="stylesheet">
+		
+</head>
+<style type="text/css">
+body, html {
+	font-family:'Zilla Slab', sans-serif;
+	width:100%;
+	top:0;
+	left:0;
+	margin:0;
+	color:#101010;
+	/*background-color:#FC264C;*/
+	/*background-color:#262424;*/
+	height:100%;
+	overflow-x:none;
+    margin-bottom:20em;
+    animation: fade 1s ease-in-out;
+}
+
+@keyframes fade {
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+h2 {
+	color:#FC264C;
+	font-size:10em;
+	letter-spacing:-0.1em;
+	line-height:0.5em;
+	margin:0%;
+	font-weight:200;
+	cursor:pointer;
+	transition:0.25s ease-in-out;
+}
+h3, h4 {
+	text-align:left;
+	width:80%;
+	margin:auto;
+}
+em{
+	font-weight:400;
+	font-style:normal;
+}
+h4 {
+	font-weight:400;
+	line-height:3em;
+	padding:5%;
+}
+p {
+	font-weight:200;
+	font-size:5em;
+	line-height:0.8em;
+	letter-spacing:-0.05em;
+}
+#intro{
+/*	background-color:#FC264C;*/
+	z-index:101;
+}
+.text {
+	width:100%;
+	margin:auto;
+	text-align:center;
+}
+a {
+	text-align:center;
+	text-decoration:none;
+    font-style: normal;
+    color: #FC264C;
+    width: fit-content;
+    letter-spacing: -0.05em;
+    font-weight: 200;
+    transition:0.25s;
+    margin:2%;
+    padding:0.5% 2%;
+    border:0.2em solid #262424;
+}
+a:hover {
+	background-color:#FC264C;
+	color:white;
+}
+img {
+	width:100%;
+	display:inline-block;
+}
+.medium {
+	width:50%;
+	text-align:center;
+}
+#name {
+	position:fixed;
+	right:0;
+	z-index:100;
+	margin:2%;
+	border:0.3em solid #FC264C;
+	padding:1%;
+	width:fit-content;
+	background-color:white;
+	backdrop-filter: blur(5em);
+	transition:0.25s;
+	cursor:pointer;
+}
+#name:hover {
+	background-color:#262424;
+	color:white;
+}
+.spacer {
+	width:100%;
+	height:10em;
+}
+iframe {
+	margin:auto;
+	align:center;
+	text-align:center;
+	display:block;
+}
+@media screen and (max-width:767px){
+	#name{
+		font-size:2em;
+		position:sticky;
+		float:right;
+	}
+	.text {
+		padding-bottom:2em;
+	}
+}
+</style>
+<body>
+
+<h3 id='name' data-scroll-sticky data-scroll-target='#intro' onclick="location.href='index.html';">emily chu</h3>
+
+<div data-scroll-container>
+
+	<div data-scroll-section id='intro'>
+		<div data-scroll data-scroll-speed='2'  data-scroll-repeat='true'>
+			<img src="assets/martech/cvs-cover.gif">
+		</div>
+	</div>
+
+	<div data-scroll-section class='spacer'></div>
+
+
+	<div data-scroll-section id='one'>
+		<div data-scroll data-scroll-speed='-3' data-scroll-class='appear' data-scroll-repeat='true'>
+			<p>redesign of custom demographics insights product for CVS</p>
+			<h2>cvs health hub</h2>
+		</div>
+	</div>
+
+	<div data-scroll-section class='spacer'></div>
+
+	<div data-scroll-section class='spacer'></div>
+
+	<div data-scroll-section id='two'>
+		<div data-scroll data-scroll-speed='2' data-scroll-repeat='true'>
+			<!-- <img src="assets/martech/Comp-Vibrant.png"> -->
+			<div class='text' data-scroll-direction="horizontal" >
+				<h3>Role <em>Senior Product Designer, redesign consult</em></h3>
+				<h3>Team <em>Product Design, Product Innovation @ Kinesso, IPG</em></h3>
+				<h3>Design & Development <em>2020-2021</em></h3>
+				<h4>CVS Health Hub is a custom client product that our partner agencies offer to help store owners gain insight into the demographics surrounding CVS stores and health hubs. The redesign solved for aligning UX/UI with an updated design system, easier map navigation and filtering, as well as focusing user attention on key demographic insights clearly.</h4>
+			</div>
+		</div>
+	</div>
+
+	<div data-scroll-section id='three'>
+		<div data-scroll data-scroll-speed='1'  data-scroll-repeat='true'>
+			<img src="assets/martech/cvs-original.png">
+			<div class='text' data-scroll-direction="horizontal">
+				<h4>The version of CVS health hub before redesign is pictured here. Made in R Shiny, it was subject to limited design customizations. Product owners wanted to update it to make it more usable for the client, better summarize key insights for store owners, reflect the updated design style in use, and make it more easy to theme across partner agencies. </h4>
+			</div>
+		</div>
+	</div>
+
+	<div data-scroll-section id='four'>
+		<div data-scroll data-scroll-speed='1' data-scroll-repeat='true'>
+			<img src="assets/martech/cvs-themes.gif">
+			<div class='text'>
+				<h4>The redesigned product clarifies which locations are cvs health hubs vs. storefronts, organizes map points into expandable clusters to avoid overlapping points, improves readability of key summary insights, and provides easy theming across partner agencies using just their primary brand color.</h4>
+		</div>
+	</div>
+
+	<div data-scroll-section class='spacer'></div>
+</div>
+
+</body>
+<script type="text/javascript">
+body = document.querySelector('body')
+body.onload=function() {
+		const scroller = new LocomotiveScroll({
+	  el: document.querySelector('[data-scroll-container]'),
+	  smooth: true
+	});
+
+	if(window.innerWidth<550){
+		targets= document.querySelectorAll('data-scroll-section')
+		targets.forEach(item => 
+			item.style.paddingBottom='5em!important'
+			)}
+
+}
+</script>
+</html>

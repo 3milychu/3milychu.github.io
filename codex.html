@@ -65,9 +65,16 @@ a {
     letter-spacing: -0.05em;
     font-weight: 200;
     transition:0.25s;
-    margin:2%;
     padding:0.5% 2%;
     border:0.2em solid #262424;
+}
+h4{
+	width:80%;
+	line-height:2em;
+	font-weight:400;
+	margin:auto;
+	text-align:left;
+	margin-top:2em;
 }
 a:hover {
 	background-color:#FC264C;
@@ -113,12 +120,6 @@ iframe {
 		position:fixed;
 		float:right;
 	}
-	.text {
-		padding-bottom:2em;
-	}
-	a{
-		line-height:5em;
-	}
 }
 </style>
 <body>
@@ -141,6 +142,7 @@ iframe {
 			<div class='text' data-scroll-direction="horizontal" >
 				<h3>Iridescence</h3>
 				<a href="https://www.instagram.com/p/CLxDePQnUfG/">View motion graphic clip</a>
+				<h4>Iridescence uses the geometry of strange attractors, which exist in n-dimensional space and are subject to more complex shapes and intersections than foundational geometry. pi modifies the rgb color values over time as the form generates, creating an iridescent effect. Reminiscient of a peacock feather, this piece was created as a commentary on the complex dynamics of attraction in animal behavior.</h4>
 			</div>
 		</div>
 	</div>
@@ -151,6 +153,7 @@ iframe {
 			<div class='text' data-scroll-direction="horizontal" >
 				<h3>Fundamentals (clip)</h3>
 				<!-- <a href="https://www.instagram.com/reel/CFqO_-VnO4_/">View clip</a> -->
+				<h4>The only audioreactive aspect of this piece is the modification of the natural path of the item's scaling from the center by the amplitude of the podcast tied to it. The audio is an excerpt from Ezra Klein’s conversation with Suzanne Mettler on how we’ve arrived at a moment when all four kinds of threats that drive political crises are simultaneously present for the first time. The neon growth is a symbolization of the odd cancer that we have developed as a society, and its shaky path the deviation that we take from our natural roots.</h4>
 			</div>
 		</div>
 	</div>
@@ -161,6 +164,7 @@ iframe {
 			<div class='text' data-scroll-direction="horizontal" >
 				<h3>Serial</h3>
 				<a href="https://www.instagram.com/p/CATay1wH6Lj/">View audiovisual</a>
+				<h4>Serial updates the quotidian barcode to current visual trends used in product design: rounded corners, inner shadows, geometric fonts. The coded animation randomizes each number displayed at any given time between 1-9, suggesting infinite permutations. Serial presents a glossy visage of serial consumption and its projections of desirability and modernity.</h4>
 			</div>
 		</div>
 	</div>
@@ -171,6 +175,7 @@ iframe {
 			<div class='text' data-scroll-direction="horizontal">
 				<h3>Ribbons</h3>
 				<a href="https://www.instagram.com/p/B_dd2o5HK-5/">View audiovisual</a>
+				<h4>Ribbons is generated solely out of recursing lines and curved lines, the most primitive and elementary shapes that create our world. Its path is rooted in the gosper curve, but its path is modified by the audio's amplitude.</h4>
 			</div>
 		</div>
 	</div>
@@ -181,6 +186,7 @@ iframe {
 			<div class='text'>
 				<h3>Snoflae</h3>
 				<a href="https://www.instagram.com/p/B_Y2XDen1ej/">View motion graphic</a>
+				<h4>Snoflae was one of the first iterations in a set of gosper curve / turtle tessellation inquiries. The original combination typically creates what we identify to be a snowflake pattern. However, this version rounds what are typically hard angles and modifies the recursions to create a softer pattern with connotations of a signature used in ink seals. The colors were chosen to reflect the heritage/identity of East Asian descendants.</h4>
 			</div>
 		</div>
 	</div>
@@ -191,6 +197,7 @@ iframe {
 			<div class='text'>
 				<h3>Sandstorm</h3>
 				<a href="https://www.instagram.com/p/CJHP6RwHF8p/">View audiovisual</a>
+				<h4>Sandwork is an ambient film inspired by a 2020 research finding that even sand dunes, while inanimate, have the capacity to communicate with each other. The scenes displayed uses frequency data from the audio to influence the behavior, position and wind factor of sand figurines at any given point.</h4>
 			</div>
 		</div>
 	</div>
@@ -206,13 +213,6 @@ body.onload=function() {
 	  el: document.querySelector('[data-scroll-container]'),
 	  smooth: true
 	});
-
-	if(window.innerWidth<550){
-		targets= document.querySelectorAll('data-scroll-section')
-		targets.forEach(item => 
-			item.style.paddingBottom='5em!important'
-			)}
-
 }
 </script>
 </html>
