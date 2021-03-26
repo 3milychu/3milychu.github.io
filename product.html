@@ -27,9 +27,9 @@ body, html {
 	width:100%;
 	height:100vh;
 	display:inline-flex;
+/*	justify-content:center;*/
 	align-items:center;
 	overflow:none;
-	margin-left:5%;
 }
 @keyframes fade {
 	0% {
@@ -49,6 +49,7 @@ h2 {
 	background-color:#262424;
 	font-size:2em;
 	letter-spacing:0em;
+	width:fit-content;
 }
 .holder {
 	overflow:none;
@@ -69,7 +70,7 @@ img {
   -webkit-filter: grayscale(100%); */
 }
 .holder:hover img {
-	transform:scale(1.1);
+	transform:scale(1.05);
 	filter:none;
 }
 h2:hover {
@@ -102,6 +103,10 @@ h2:hover {
 		display:block;
 		width:100%;
 		height:auto;
+		margin-left:0em;
+	}
+	.holder:hover img {
+		transform:scale(1);
 	}
 	body, html {
 		overflow-y: visible;
@@ -111,6 +116,10 @@ h2:hover {
 	}
 	#name:hover {
 		background-color:#FC264C;
+	}
+	.main {
+		margin-top:15vh;
+		display:block;
 	}
 }
 </style>
@@ -122,9 +131,15 @@ h2:hover {
 <div class='main'>
 
 	<a href="splash.html">
-	<div class='holder'>
-		<img src="assets/martech/Comp-Vibrant.png">
-	</div>
+		<div class='holder'>
+			<img src="assets/martech/Comp-Vibrant.png">
+		</div>
+	</a>	
+
+	<a href="splash.html">
+		<div class='holder'>
+			<img src="assets/martech/Data Viz-K.png">
+		</div>
 	</a>	
 
 </div>
