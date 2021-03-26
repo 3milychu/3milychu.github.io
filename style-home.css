@@ -130,6 +130,7 @@ h2 {
 	font-weight:200;
 	cursor:pointer;
 	transition:0.25s ease-in-out;
+	padding:0em;
 }
 h2 i {
 	opacity:0;
