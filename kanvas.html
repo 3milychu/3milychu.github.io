@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kanvas</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> 
+		<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Zilla+Slab:200,400,600,700&display=swap" rel="stylesheet">
+		
+</head>
+<style type="text/css">
+body, html {
+	font-family:'Zilla Slab', sans-serif;
+	width:100%;
+	top:0;
+	left:0;
+	margin:0;
+	color:#101010;
+	/*background-color:#FC264C;*/
+	/*background-color:#262424;*/
+	height:100%;
+	overflow-x:none;
+    margin-bottom:20em;
+    animation: fade 1s ease-in-out;
+}
+
+@keyframes fade {
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+h2 {
+	color:#FC264C;
+	font-size:10em;
+	letter-spacing:-0.1em;
+	line-height:0.5em;
+	margin:0%;
+	font-weight:200;
+	cursor:pointer;
+	transition:0.25s ease-in-out;
+}
+h3, h4 {
+	text-align:left;
+	width:80%;
+	margin:auto;
+}
+em{
+	font-weight:400;
+	font-style:normal;
+}
+h4 {
+	font-weight:400;
+	line-height:3em;
+	padding:5%;
+}
+p {
+	font-weight:200;
+	font-size:5em;
+	line-height:0.8em;
+	letter-spacing:-0.05em;
+}
+#intro{
+/*	background-color:#FC264C;*/
+	z-index:101;
+}
+.text {
+	width:100%;
+	margin:auto;
+	text-align:center;
+}
+a {
+	text-align:center;
+	text-decoration:none;
+    font-style: normal;
+    color: #FC264C;
+    width: fit-content;
+    letter-spacing: -0.05em;
+    font-weight: 200;
+    transition:0.25s;
+    margin:2%;
+    padding:0.5% 2%;
+    border:0.2em solid #262424;
+}
+a:hover {
+	background-color:#FC264C;
+	color:white;
+}
+img {
+	width:100%;
+	display:inline-block;
+}
+.medium {
+	width:50%;
+	text-align:center;
+}
+#name {
+	position:fixed;
+	right:0;
+	z-index:100;
+	margin:2%;
+	border:0.3em solid #FC264C;
+	padding:1%;
+	width:fit-content;
+	background-color:white;
+	backdrop-filter: blur(5em);
+	transition:0.25s;
+	cursor:pointer;
+}
+#name:hover {
+	background-color:#262424;
+	color:white;
+}
+.spacer {
+	width:100%;
+	height:10em;
+}
+iframe {
+	margin:auto;
+	align:center;
+	text-align:center;
+	display:block;
+}
+@media screen and (max-width:767px){
+	#name{
+		font-size:2em;
+		position:sticky;
+		float:right;
+	}
+	.text {
+		padding-bottom:2em;
+	}
+}
+</style>
+<body>
+
+<h3 id='name' data-scroll-sticky data-scroll-target='#intro' onclick="location.href='index.html';">emily chu</h3>
+
+<div data-scroll-container>
+
+	<div data-scroll-section id='intro'>
+		<div data-scroll data-scroll-speed='2'  data-scroll-repeat='true'>
+			<img src="assets/martech/Kanvas-UI.gif">
+		</div>
+	</div>
+
+	<div data-scroll-section class='spacer'></div>
+
+
+	<div data-scroll-section id='one'>
+		<div data-scroll data-scroll-speed='-3' data-scroll-class='appear' data-scroll-repeat='true'>
+			<p>design & development of an API developer portal for Interpublic Group</p>
+			<h2>kanvas</h2>
+		</div>
+	</div>
+
+	<div data-scroll-section class='spacer'></div>
+
+	<div data-scroll-section class='spacer'></div>
+
+	<div data-scroll-section id='two'>
+		<div data-scroll data-scroll-speed='2' data-scroll-repeat='true'>
+			<!-- <img src="assets/martech/Comp-Vibrant.png"> -->
+			<div class='text' data-scroll-direction="horizontal" >
+				<h3>Role <em>Senior Product Designer</em></h3>
+				<h3>Team <em>Product Design, Product Innovation @ Kinesso, IPG</em></h3>
+				<h3>Design & Development <em>2020-2021</em></h3>
+				<h4>kanvas is an API developer portal that our team built to house its adtech APIs to third parties, including Acxiom, Playground XYZ, and the Trade Desk. The goal was to design a future-forward interface that fit within the Kinesso product suite, but could standalone as an external-facing product. The New York Product Design team led conception, ideation and information architecture, and worked with production-level designers to finalize assets for developer handoff.</h4>
+				<a href="https://www.adweek.com/brand-marketing/ipg-kinesso-launching-developer-community-acxiom/">View press release</a>
+			</div>
+		</div>
+	</div>
+
+	<div data-scroll-section id='three'>
+		<div data-scroll data-scroll-speed='1'  data-scroll-repeat='true'>
+			<img src="assets/martech/Kanvas-wires.png">
+			<div class='text' data-scroll-direction="horizontal">
+				<h4>Wireframes developed for the project through user research, in collaboration with engineers and developers who would use the portal, as well as the Product Development team leading the project</h4>
+			</div>
+		</div>
+	</div>
+
+	<div data-scroll-section id='four'>
+		<div data-scroll data-scroll-speed='2' data-scroll-repeat='true'>
+			<img src="assets/martech/Kanvas-concepts.png">
+			<div class='text' data-scroll-direction="horizontal">
+				<h4>Selection of several concept themes developed during ideation. The team met with stakeholders weekly to conduct user research and test/validate design direction.</h4>
+			</div>
+		</div>
+	</div>
+
+	<div data-scroll-section id='five'>
+		<div data-scroll data-scroll-speed='1' data-scroll-repeat='true'>
+			<img src="assets/martech/Kanvas-UI.gif">
+			<div class='text'>
+				<h4>Excerpts of the final UI design selected for production, displaying parts of the login, account creation, and docs navigation user flow.</h4>
+		</div>
+	</div>
+	</div>
+
+	<div data-scroll-section id='six'>
+		<div data-scroll data-scroll-speed='1' data-scroll-repeat='true'>
+			<img src="assets/martech/Kanvas-fs.png">
+			<div class='text'>
+				<h4>Shot of functional specifications developed for developer handoff, including sitemap and functionality for each section of the sitemap.</h4>
+		</div>
+	</div>
+
+	<div data-scroll-section id='seven'>
+		<div data-scroll data-scroll-speed='1' data-scroll-repeat='true'>
+			<img src="assets/martech/Kanvas-uikit.png">
+			<div class='text'>
+				<h4>UI kit developed for maintenance of the Kanvas design as well as to document component design, states and styles for developers.</h4>
+		</div>
+	</div>
+
+	</div>
+
+	<div data-scroll-section class='spacer'></div>
+</div>
+
+</body>
+<script type="text/javascript">
+body = document.querySelector('body')
+body.onload=function() {
+		const scroller = new LocomotiveScroll({
+	  el: document.querySelector('[data-scroll-container]'),
+	  smooth: true
+	});
+
+	if(window.innerWidth<550){
+		targets= document.querySelectorAll('data-scroll-section')
+		targets.forEach(item => 
+			item.style.paddingBottom='5em!important'
+			)}
+
+}
+</script>
+</html>
