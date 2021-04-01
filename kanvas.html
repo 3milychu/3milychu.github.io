@@ -128,9 +128,6 @@ iframe {
 		position:sticky;
 		float:right;
 	}
-	.text {
-		padding-bottom:2em;
-	}
 }
 </style>
 <body>
@@ -167,7 +164,7 @@ iframe {
 				<h3>Team <em>Product Design, Product Innovation @ Kinesso, IPG</em></h3>
 				<h3>Design & Development <em>2020-2021</em></h3>
 				<h4>kanvas is an API developer portal that our team built to house its adtech APIs to third parties, including Acxiom, Playground XYZ, and the Trade Desk. The goal was to design a future-forward interface that fit within the Kinesso product suite, but could standalone as an external-facing product. The New York Product Design team led conception, ideation and information architecture, and worked with production-level designers to finalize assets for developer handoff.</h4>
-				<a href="https://www.adweek.com/brand-marketing/ipg-kinesso-launching-developer-community-acxiom/">View press release</a>
+				<h3 style='text-align:center;'><a href="https://www.adweek.com/brand-marketing/ipg-kinesso-launching-developer-community-acxiom/">View press release</a></h3>
 			</div>
 		</div>
 	</div>
@@ -228,13 +225,6 @@ body.onload=function() {
 	  el: document.querySelector('[data-scroll-container]'),
 	  smooth: true
 	});
-
-	if(window.innerWidth<550){
-		targets= document.querySelectorAll('data-scroll-section')
-		targets.forEach(item => 
-			item.style.paddingBottom='5em!important'
-			)}
-
 }
 </script>
 </html>
