@@ -106,6 +106,11 @@ h2:hover {
 		height:auto;
 		margin-left:0em;
 	}
+	.holder {
+		width:90%;
+		margin:auto;
+		margin-bottom:4%;
+	}
 	.holder:hover img {
 		transform:scale(1);
 	}
@@ -120,8 +125,41 @@ h2:hover {
 		margin:5%;
 		font-size:1em;
 		padding:3%;
-/*		border:0.1em solid #FC264C;*/
 	}
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+	.holder, img {
+		cursor:pointer;
+		display:block;
+		width:%;
+		height:auto;
+		margin-left:0em;
+	}
+	.holder {
+		width:90%;
+		margin:auto;
+		margin-bottom:4%;
+	}
+	.holder:hover img {
+		transform:scale(1);
+	}
+	body, html {
+		overflow-y: visible;
+	}
+	.main {
+		margin-top:15vh;
+		display:block;
+	}
+	#name {
+		margin:5%;
+		font-size:1em;
+		padding:3%;
+	}
+
 }
 </style>
 <body>
@@ -137,15 +175,15 @@ h2:hover {
 		</div>
 	</a>	
 
-	<a href="splash.html">
-		<div class='holder'>
-			<img src="assets/martech/Data Viz-K.png">
-		</div>
-	</a>	
-
 	<a href="audience.html">
 		<div class='holder'>
 			<img src="assets/martech/ux/Audience-cover.png">
+		</div>
+	</a>
+
+	<a href="splash.html">
+		<div class='holder'>
+			<img src="assets/martech/Data Viz-K.png">
 		</div>
 	</a>	
 
