@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
+</head>
+<style type="text/css">
+	html, body {
+		margin:0;
+		height:100vh;
+		top:0;
+		left:0;
+/*		animation:10s scale ease-in-out infinite;*/
+		background-color:'#0D0D0D';
+
+	}
+	@keyframes scale {
+		0%{
+			transform:scale(1);
+
+		}
+		50%{
+			transform:scale(1.5);
+
+		}
+		100%{
+			transform:scale(1);
+
+		}
+	}
+</style>
+<body>
+
+</body>
+<script type="text/javascript">
+
+	var soundFile;
+	let bass=420;
+	let mid=15;
+	let treble=80;
+	let counter = Math.PI/3.5
+	let angle;
+	let time = 0
+	
+
+	 function preload() {
+    	soundFile = loadSound(['files/growingup:mothergod.m4a']);
+ 	 }
+
+	function setup(){
+		createCanvas(window.innerWidth,window.innerHeight)
+	  	fft = new p5.FFT();
+	  	frameRate(100);  
+
+	}
+	function draw(){
+		fft.analyze();
+	    bass = (int)(fft.getEnergy("bass"));
+	    lmid = (int)(fft.getEnergy("lowMid"));
+	    mid = (int)(fft.getEnergy("mid"));
+	    hmid = (int)(fft.getEnergy("highMid"));
+	    treble = (int)(fft.getEnergy("treble"));
+	    smooth(treble)
+	    smooth(mid)
+	    smooth(bass)
+	    treble= map(treble, 0, 300, 100, 200, 0.1);
+	    bass = map(bass, 0, 300, 50, 100, 0.1);
+	    mid = map(mid, 0, 300, 100, 200, 0.1);
+		stroke('#3B3B40')
+		time++
+		// if(time%15==0){
+			background('#283059')
+			// background('#F26052')
+		// 	stroke('#3B3B40')
+		stroke('#D99D8F')
+		smooth();
+		// }
+		translate(window.innerWidth/1.85 , window.innerHeight/1.7)
+		counter = counter + parseFloat(0.00002)
+    	angle = sin(counter)
+    	console.log(angle)
+    	pattern(50,0, treble, mid, bass)
+	}
+
+	function pattern(length, weight, treble, mid, bass){
+		strokeWeight(weight)
+		// line(length,length,0,-length/50)
+		bezier(bass, 20, 10, 0, mid, 90, 15, mid);
+		translate(0, -length)
+		fill_color=color(59, 59, 64);
+		fill_color.setAlpha(0.2);
+		fill(fill_color)
+			
+		if(length>1){
+			push()
+            	rotate(-angle)
+            	pattern(length*.99, 0.3, treble, mid, bass)
+            	stroke('#D9F216')
+        	pop()
+		 }
+	
+	}
+
+	// on key pressed...
+	function keyPressed(e) {
+
+	  // spacebar pauses
+	  if (e.keyCode == 32) {
+	    if (soundFile.isPlaying()) {
+	      soundFile.pause();
+	    } else {
+	      soundFile.play();
+	      (console.log('playing'))
+	    }
+	  }
+
+	  // 'n' keypress toggles normalize on/off
+	  if (e.keyCode == 78) {
+	    amplitude.toggleNormalize();
+	  }
+
+	}
+
+</script>
+</html>
