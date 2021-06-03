@@ -90,8 +90,8 @@ links[2].onclick=function() {
 	h1.innerHTML='Research'
 	p = detail.querySelector('p')
 	p.innerHTML="<div class='list'><h3>Text clustering</h3><div class='item'><em>Semantic Dive</em>Interface for visualizing and exploring semantic relationships in text corpuses with researchers from Parsons faculty</div></div>"
-	p.innerHTML+="<div class='list'><h3>Real-time audience collection and visualization</h3><div class='item'><em>Live audience sentiment visualization</em>Interface & visualization of real-time audience sentiment during an event</div></div>"
-	p.innerHTML+="<div class='list'><h3>Data sonification</h3><div class='item'><em>Criminal</em>Interface & sonification of compas verdicts by ProPublica</div></div>"
+	p.innerHTML+="<div class='list'><h3>Real-time audience sentiment collection and visualization</h3><div class='item'><em>Notes on Perspective Live</em>Interface & visualization of real-time audience sentiment during an event</div></div>"
+	p.innerHTML+="<div class='list'><h3>Discrepancies and Disagreements in Classical Chamber Musicians’ Characterisations of a Performance</h3><div class='item'><em>Music & Science Journal publication</em>Time-based visualizations for Neta Spiro and Michael Schober's research on agreements between classical musicians' reflections of a performance.</div></div>"
 	a = detail.querySelector('#link')
 	a.innerHTML=""
 	close.onclick=function() {
@@ -104,7 +104,8 @@ links[3].onclick=function() {
 	h1 = detail.querySelector('h1')
 	h1.innerHTML='Courses'
 	p = detail.querySelector('p')
-	p.innerHTML="<div class='list'><h3>Ongoing</h3><div class='item'>Information Design for Infographics and Visual Storytelling - Online, Open Campus</div></div><div class='list'><h3>Fall 2020</h3><div class='item'>Information Visualization - Online, BAA Strategic Design & Management</div><div class='item'>CD Foundations: Interaction - Online, BFA Communication Design</div></div><div class='list'><h3>Spring 2021</h3><div class='item'>Research & Development Methods, BAA Strategic Design & Management</div></div>"
+	p.innerHTML="<div class='list'><h3>Ongoing</h3><div class='item'>Information Design for Infographics and Visual Storytelling - Online, Open Campus</div></div><div class='list'><h3>Fall 2021</h3><div class='item'>Information Visualization</div><div class='item'>Research & Development Methods</div></div></div>"
+	p.innerHTML+=""
 	a = detail.querySelector('#link')
 	a.href='https://www.newschool.edu/parsons/faculty/emily-chu/'
 	a.innerHTML="@ Parsons School of Design"
