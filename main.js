@@ -134,7 +134,7 @@ links[4].onclick=function() {
 mails = contact.querySelectorAll('h3')
 console.log(mails)
 mails[0].onclick=function() {
-	window.open('mailto:emily.chu@kinesso.com', '_blank')
+	window.open('mailto:emily.chu@openfin.co', '_blank')
 }
 mails[1].onclick=function() {
 	window.open('mailto:chue134@newschool.edu', '_blank')
