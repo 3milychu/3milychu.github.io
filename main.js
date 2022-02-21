@@ -117,9 +117,9 @@ links[4].onclick=function() {
 	detail.style.marginTop='0vh'
 	detail.style.top='0%'
 	h1 = detail.querySelector('h1')
-	h1.innerHTML='Talks'
+	h1.innerHTML='Events'
 	p = detail.querySelector('p')
-	p.innerHTML="<div class='list'><h3>Upcoming</h3></div><div class='item'><em>TBD</em></div>"
+	p.innerHTML="<div class='list'><h3>Upcoming</h3></div><div class='item'><em>3/11 - 3/17/2022</em><a target ='_blank' href=''>Culture Gate to Existence (Physical Group Show) @ THE HOLY ART. London, England.</a></div>"
 	p.innerHTML+="<div class='list'><h3>Past</h3><div class='item'><em>8/19/2021</em><a target ='_blank' href='https://www.facebook.com/Mysoundmyway/'>Visualization and Interaction of Live Concerts @ 2021 MYSOUNDMYWAY International Conference (2021臺北音樂不斷電)</a></div><div class='item'><em>12/7/2020</em><a target ='_blank' href='https://www.youtube.com/watch?v=rfDMF3KRLlU&t=3s'>Designing Audioreactive Visualizations: Creating art from music data, Data + Art @ Women in Data</a></div><div class='item'><em>06/12/2020</em><a target ='_blank' href='https://aapor.secure-platform.com/a/solicitations/11/sessiongallery/338/application/3463'>Visualizing Time-Based Qualitative Data about Music Performance @ AAPOR Annual Conference 2020</a></div><div class='item'><em>Summer 2020</em><a target ='_blank' href='https://schedule.sxsw.com/2020/events/PP1128191'>Visualizing shared musical experience @ SXSW 2020, Online</a></div><div class='item'><em>3/23/2020</em><a target ='_blank' href='https://www.crowdcast.io/e/women-in-data-science/register'>Notes on Perspective @ IBM</a></div><div class='item'><em>10/3/2019</em><a target ='_blank' href='https://www.eventbrite.com/e/advance-your-data-career-lightning-talks-and-breakout-sessions-tickets-64644410171#'>Data Analysis in Healthcare @ IBM</a></div><div class='item'><em>6/7/2019</em><a href='https://www.aigany.org/event/fresh-grad-2019-part-2/'>Notes on Perspective @ AIGA NY</a></div></div>"
 	a = detail.querySelector('#link')
 	console.log(a)
