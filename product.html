@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>product design</title>
+	<title>product</title>
 	<link href="https://fonts.googleapis.com/css?family=Zilla+Slab:200,400,600,700&display=swap" rel="stylesheet">
 	<meta name="description" content="emily is a data & interaction designer">
 	<link rel="stylesheet" type="text/css" href="style-home.css">
@@ -9,86 +9,52 @@
       rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-41817854-5"></script>
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	<meta charset="utf-8"> 
+	<script>
+
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-41817854-5');
+	</script>
 </head>
 <style type="text/css">
-body, html {
-	width:100%;
-	height:100vh;
-	background-color:white;
-	overflow-x: scroll;
-    overflow-y: hidden;
-    white-space:nowrap;
-    letter-spacing: 0em;
-    line-height:0em;
-    animation: fade 1s ease-in-out;
+button {
+		margin: 0;
+		font-size: 2em;
+		font-family:'Zilla Slab', sans-serif;
+		cursor: pointer;
+		text-align:center;
+		text-decoration:none;
+		background-color: #FC264C;
+    font-style: normal;
+    color: #262424;
+    width: fit-content;
+    letter-spacing: -0.05em;
+    font-weight: 200;
+    transition:0.25s;
+    margin:2% 2% 2% 0%;
+    padding:1% 4%;
+    border:0.2em solid #262424;
 }
-
-.main {
-	width:100%;
-	height:100vh;
-	display:inline-flex;
-/*	justify-content:center;*/
-	align-items:center;
-	overflow:none;
-}
-@keyframes fade {
-	0% {
-		opacity:0;
-	}
-	100% {
-		opacity:1;
-	}
-}
-h2 {
-	color:white;
-	padding:2%;
-	position:fixed;
-	z-index:100;
-	top:3%;
-	left:3%;
-	background-color:#262424;
-	font-size:2em;
-	letter-spacing:0em;
-	width:fit-content;
-}
-.holder {
-	overflow:hidden;
-	width:auto;
-	height:80vh;
-	margin-left:4em;
-	cursor:pointer;
-	border-radius:1em;
-	transition:0.5s ease-in-out;
-}
-img {
-	cursor:pointer;
-	display:inline-block;
-	width:auto;
-	height:100%;
-	-ms-interpolation-mode: bicubic;
-/*	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); 
-  filter: gray; 
-  -webkit-filter: grayscale(100%); */
-}
-.holder:hover {
-	transform:scale(1.05);
-	filter:none;
-}
-h2:hover {
+button:hover {
+	background-color:#FC264C;
 	color:white;
 }
-
 #name {
-	font-size:1.5em;
+	font-size:1.2em;
 	font-weight:700;
 	position:fixed;
 	right:0;
 	z-index:100;
-	margin:1.5%;
-	border:0.3em solid #FC264C;
-	padding:1.5%;
+	margin:2%;
+	border:0.3em solid white;
+	padding:2% 1%;
 	width:fit-content;
-	background-color:white;
+	background-color:#FC264C;
 	backdrop-filter: blur(5em);
 	transition:0.25s;
 	cursor:pointer;
@@ -97,159 +63,194 @@ h2:hover {
 	background-color:#262424;
 	color:white;
 }
-
-@media screen and (max-width:767px){
-	.holder, img {
-		cursor:pointer;
-		display:block;
-		width:100%;
-		height:auto;
-		margin-left:0em;
-	}
-	.holder {
-		width:90%;
-		margin:auto;
-		margin-bottom:4%;
-	}
-	.holder:hover img {
-		transform:scale(1);
-	}
-	body, html {
-		overflow-y: visible;
-	}
-	.main {
-		margin-top:15vh;
-		display:block;
-	}
-	#name {
-		margin:5%;
-		font-size:1em;
-		padding:3%;
-	}
-}
-
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-	.holder, img {
-		cursor:pointer;
-		display:block;
-		width:%;
-		height:auto;
-		margin-left:0em;
-	}
-	.holder {
-		width:90%;
-		margin:auto;
-		margin-bottom:4%;
-	}
-	.holder:hover img {
-		transform:scale(1);
-	}
-	body, html {
-		overflow-y: visible;
-	}
-	.main {
-		margin-top:15vh;
-		display:block;
-	}
-	#name {
-		margin:5%;
-		font-size:1em;
-		padding:3%;
-	}
-
+#detail p {
+	font-size: 1.2em;
+	line-height: 2em;
+	text-align: left;
 }
 </style>
 <body>
-<h2>product</h2>
 
-<h3 id='name' data-scroll-sticky data-scroll-target='#intro' onclick="location.href='index.html';">emily chu</h3>
+<h3 id='name' onclick="location.href='index.html';">emily chu</h3>
 
-<div class='main'>
+<!-- sidebar slider -->
+<div class='sidebar'>
+	<div class='avatar'>
+		<img src="assets/parsons.jpg">		
+	</div>
+</div>
 
-	<a href="splash.html">
-		<div class='holder'>
-			<img src="assets/martech/Comp-Vibrant.png">
-		</div>
-	</a>	
 
-	<a href="audience.html">
-		<div class='holder'>
-			<img src="assets/martech/ux/Audience-cover.png">
-		</div>
-	</a>
+<!-- content -->
 
-	<a href="splash.html">
-		<div class='holder'>
-			<img src="assets/martech/Data Viz-K.png">
-		</div>
-	</a>	
+<!-- about -->
+<div class='section' id='about'>
+	<div class='content'>
+		<h1>approach</h1>
+		<p>Leading design innovation for elegant, data-driven, enterprise interfaces</p>
+	</div>
+</div>
 
-	<a href="cvshealth.html">
-		<div class='holder'>
-			<img src="https://media.githubusercontent.com/media/3milychu/3milychu.github.io/master/assets/martech/cvs-cover.gif">
-		</div>
-	</a>	
+<!-- praxis -->
+<div class='section' id='background'>
+	<div class='content'>
+		<h1>background</h1>
+		<h2>design thinking leadership<i>&#x2197;</i></h2>
+		<h2>UX/UI design direction<i>&#x2197;</i></h2>
+		<h2>R&D innovation<i>&#x2197;</i></h2>
+	</div>
+</div>
 
-	<a href="dxa.html">
-		<div class='holder'>
-			<img src="https://media.githubusercontent.com/media/3milychu/3milychu.github.io/master/assets/martech/dxa/summary2-small.gif">
-		</div>
-	</a>	
+<!-- contact -->
+<div class='section' id='contact'>
+	<div class='content'>
+		<h1>work</h1>
+		<p>Design direction & education</p>
+		<h3>Director of UI Design, Kinesso @ IPG (2022)<i class="material-icons">open_in_new</i></h3>
+		<h3>Director of Product Design, OpenFin (2021)<i class="material-icons">open_in_new</i></h3>
+		<h3>Lecturer, Parsons School of Design (2019-Present) <i class="material-icons">open_in_new</i></h3>
+		<button>View projects</button>
+		
+	</div>
+</div>
 
-	<a href="kanvas.html">
-		<div class='holder'>
-			<img src="assets/martech/Kanvas-UI-4.png">
-		</div>
-	</a>	
 
+<!-- info detail -->
+<div class='section' id='detail'>
+	<div class='content'>
+		<h1></h1>
+		<p></p>
+		<a href="" id='link'></a>
+		<i class="fa">&#xf107;</i>
+	</div>
 </div>
 
 
 </body>
-<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js?ver=1.3.2'></script>
-<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js'></script>
 <script type="text/javascript">
-detect()
+background = document.querySelector('#background')
+contact = document.querySelector('#contact')
+button = document.querySelector('button')
+avatar = document.querySelector('.avatar')
+close = document.querySelector('.fa')
+sidebar = document.querySelector('.sidebar')
+body = document.querySelector('body')
+html = document.documentElement;
+	// scrolling avatar
+scrollSidebar()
 
 window.onresize=function() {
-	detect()
+	scrollSidebar()
 }
 
-function detect() {
-	if(window.innerWidth>767){
-		horizontal()
+function scrollSidebar() {
+	if(window.innerWidth<550){
+		window.onscroll=function() {
+			position = window.scrollY
+			width = document.documentElement.scrollHeight - document.documentElement.clientHeight
+			console.log(position, width)
+			percent = position/width
+			rect = sidebar.getBoundingClientRect();
+			sidebar_w = rect.width - avatar.clientWidth
+			border = parseFloat(getComputedStyle(sidebar).borderWidth);
+			console.log(border)
+			console.log(sidebar_w)
+			console.log(percent, d3.format(".0%")(percent))
+			avatar.style.marginTop="0%"
+			rotation="rotate("+Math.round(percent*300)+"deg);"
+			console.log(rotation)
+			if (percent < .90){
+				avatar.style.marginLeft= (percent * sidebar_w)  + "px"
+				avatar.style.transform=rotation
+			} else {
+				avatar.style.marginLeft= (percent * sidebar_w) - (border*2)  + "px"
+				avatar.style.transform=rotation
+			}
+			
+		}
+
 	} else {
-		reloadPage();
+		window.onscroll=function() {
+			position = window.scrollY
+			height = document.documentElement.scrollHeight - document.documentElement.clientHeight
+			console.log(position, height)
+			percent = position/height
+			rect = sidebar.getBoundingClientRect();
+			sidebar_h = rect.height - avatar.clientHeight
+			border = parseFloat(getComputedStyle(sidebar).borderWidth);
+			console.log(border)
+			console.log(sidebar_h)
+			console.log(percent, d3.format(".0%")(percent), percent*300)
+			avatar.style.marginLeft="0%"
+			rotation="rotate("+Math.round(percent*300)+"deg);"
+			console.log(rotation)
+			if (percent < .90){
+				avatar.style.marginTop= (percent * sidebar_h)  + "px"
+				avatar.style.transform=rotation
+			} else {
+				avatar.style.marginTop= (percent * sidebar_h) - (border*2)  + "px"
+				avatar.style.transform=rotation
+			}
+			
+		}
 	}
 }
 
+// background info
 
-function horizontal() {
-	$(document).ready(function() {
-	$('html, body, *').mousewheel(function(e, delta) {
-	this.scrollLeft -= (delta);
-	e.preventDefault();
-	});
-	});
+links = background.querySelectorAll('h2')
+console.log(links)
+
+links[0].onclick=function() {
+	detail.style.marginTop='0vh'
+	detail.style.top='0%'
+	h1 = detail.querySelector('h1')
+	h1.innerHTML='Design thinking leadership'
+	p = detail.querySelector('p')
+	p.innerHTML="<em>Perspective</em> / Design-first organizations benefit from products that are not only visually excellent and work well, but an experience that puts people, collaboration, and research first. Leading with design is a commitment to thoughtful processes that are adaptive and impactful because they shift necessarily with the people and environments in flux they grow with. Design leadership that encourages and strengthens organizations' processes for continual learning, research and innovation is also highly participatory, inclusive and curious."
+	a = detail.querySelector('#link')
+	a.innerHTML=""
+	close.onclick=function() {
+			detail.style.marginTop='100vh'
+	}
+}
+links[1].onclick=function() {
+	detail.style.marginTop='0vh'
+	detail.style.top='0%'
+	h1 = detail.querySelector('h1')
+	h1.innerHTML='UX/UI Direction'
+	p = detail.querySelector('p')
+	p.innerHTML="<em>Human-centered</em> / Care for and understand users' workflows to design for happy paths and reduced friction<br> <em>Simplicity</em> / Design for powerful but lightweight design systems that scale well from common base scenarios <br> <em>Elegance and Delight</em> / Elegantly iterating from familiar patterns and delighting users by anticipating their needs <br> <em>Teamwork and Collaboration</em> / Fostering an environment of collaboration and transparency, respectfully supporting and challenging one another"
+	close.onclick=function() {
+			detail.style.marginTop='100vh'
+	}
+}
+links[2].onclick=function() {
+	detail.style.marginTop='0vh'
+	detail.style.top='0%'
+	h1 = detail.querySelector('h1')
+	h1.innerHTML='R&D Innovation'
+	p = detail.querySelector('p')
+	p.innerHTML="<em>Keep the Passion Alive</em> / Cultivate inner lives that are excited about how innovations can better our lives and our communities<br> <em>Look Beyond Trends</em> / The newest technologies and highest profile projects might not be the most impactful, it might be more lowkey and closer to your own community <br> <em>Seek out Diverse Viewpoints</em> / Always question whether you can widen your circle of perspectives to be more inclusive of BIPOC, LGBTQ+ and marginalized voices <br> <em>Love to Test</em> / Test often, frequently, and curiously"
+	close.onclick=function() {
+			detail.style.marginTop='100vh'
+	}
 }
 
-function reloadPage() {
-// The last "domLoading" Time //
-var currentDocumentTimestamp =
-new Date(performance.timing.domLoading).getTime();
-// Current Time //
-var now = Date.now();
-// Ten Seconds //
-var tenSec = 10 * 1000;
-// Plus Ten Seconds //
-var plusTenSec = currentDocumentTimestamp + tenSec;
-if (now > plusTenSec) {
-location.reload();
-} else {}
+// contact links
+mails = contact.querySelectorAll('h3')
+console.log(mails)
+mails[0].onclick=function() {
+	window.open('https://www.interpublic.com/our-companies/kinesso/', '_blank')
 }
-
+mails[1].onclick=function() {
+	window.open('https://www.openfin.co/', '_blank')
+}
+mails[2].onclick=function() {
+	window.open('https://www.newschool.edu/parsons/faculty/emily-chu/', '_blank')
+}
+button.onclick=function() {
+	location.href = "product2.html";
+}
 </script>
 </html>

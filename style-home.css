@@ -115,7 +115,7 @@ body, html {
 	background-color:#262424;
 	height:125%;
 }
-#contact {
+#contact, #work{
 	background-color:#FC264C;
 }
 #praxis .content {
@@ -146,6 +146,10 @@ h2:hover {
 }
 h2:hover i {
 	opacity:1;
+}
+#background h2 {
+	font-size: 5em;
+	line-height: 0.8em;
 }
 h3 {
 	width:fit-content;
