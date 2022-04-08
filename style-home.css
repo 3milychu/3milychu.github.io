@@ -147,10 +147,6 @@ h2:hover {
 h2:hover i {
 	opacity:1;
 }
-#background h2 {
-	font-size: 5em;
-	line-height: 0.8em;
-}
 h3 {
 	width:fit-content;
 	padding:2%;
