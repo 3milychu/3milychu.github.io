@@ -80,7 +80,7 @@ links[0].onclick=function() {
 
 links[1].onclick=function() {
 	console.log('open')
-	window.location.replace('product.html')
+	window.open('https://emilychu.webflow.io')
 }
 
 links[2].onclick=function() {
