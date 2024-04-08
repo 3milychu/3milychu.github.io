@@ -104,7 +104,7 @@ links[3].onclick=function() {
 	h1 = detail.querySelector('h1')
 	h1.innerHTML='Courses'
 	p = detail.querySelector('p')
-	p.innerHTML="<div class='list'><h3>Ongoing</h3><div class='item'>Information Design for Infographics and Visual Storytelling - Online, Open Campus</div></div><div class='list'><h3>Fall 2021</h3><div class='item'>Information Visualization</div><div class='item'>Research & Development Methods</div></div></div>"
+	p.innerHTML="<div class='list'><h3>Ongoing</h3><div class='item'>Information Visualization, Strategic Design Management</div></div><div class='list'><h3>Past</h3><div class='item'>Information Visualization</div><div class='item'>Research & Development Methods</div><div class='item'>Core Studio: Interaction</div><div class='item'>Communication Design: Foundations</div></div></div>"
 	p.innerHTML+=""
 	a = detail.querySelector('#link')
 	a.href='https://www.newschool.edu/parsons/faculty/emily-chu/'
